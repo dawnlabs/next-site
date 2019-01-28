@@ -285,7 +285,7 @@ export default () => (
           max-width: 25rem;
         }
         .width-m {
-          max-width: 38rem;
+          max-width: 40rem;
         }
         .width-l {
           margin: 0 auto;

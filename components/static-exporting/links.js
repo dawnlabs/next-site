@@ -49,8 +49,8 @@ export default () => (
         .earth-img {
           user-drag: none;
           user-select: none;
-          height: 308px;
-          max-width: 1006px;
+          height: 300px;
+          max-width: 100%;
           margin: 0 auto;
           background: url(/static/images/earth.png);
           background-repeat: no-repeat;
@@ -69,11 +69,19 @@ export default () => (
             margin-bottom: 3rem;
             max-width: 20rem;
           }
+
+          .column:last-child {
+            margin-bottom: 0;
+          }
+
+          .earth-img {
+            height: 240px;
+          }
         }
 
         @media screen and (max-width: 640px) {
           .earth-img {
-            height: 200px;
+            height: 180px;
           }
         }
       `}

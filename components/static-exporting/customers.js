@@ -5,15 +5,17 @@ import Blockchain from '../icons/companies/blockchain';
 export default () => (
   <Container padding wide>
     <div className="row">
-      <div className="center">
+      <div className="left-container">
         <h2>{`Who's Using Static Next.js`}</h2>
         <div className="whos-using-img" />
-        <Blockchain />
+        <div className="logo">
+          <Blockchain />
+        </div>
       </div>
 
       <div className="divider" />
 
-      <div className="list-container">
+      <div className="right-container">
         <h2>Perfect For</h2>
         <div>Static Next.js is a great choice for:</div>
         <ul>
@@ -42,32 +44,6 @@ export default () => (
     </div>
     <style jsx>
       {`
-        .whos-using-img {
-          user-select: none;
-          user-drag: none;
-          height: 332px;
-          width: 487px;
-          background: url(/static/images/whos-using.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
-
-        .divider {
-          height: 24rem;
-          border-right: 1px solid #eaeaea;
-          margin: 0 4rem;
-        }
-
-        .row {
-          align-items: flex-start;
-          justify-content: center;
-          display: flex;
-        }
-
-        .center {
-          text-align: center;
-        }
-
         h2 + div {
           margin-top: 3rem;
         }
@@ -88,10 +64,54 @@ export default () => (
           margin-left: 0.5rem;
         }
 
+        .left-container,
+        .right-container {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        .left-container {
+          text-align: center;
+          align-items: center;
+        }
+
+        .whos-using-img {
+          display: flex;
+          flex-shrink: 0;
+          flex-basis: 300px;
+          width: 100%;
+          user-select: none;
+          user-drag: none;
+          background: url(/static/images/whos-using.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        .divider {
+          height: 24rem;
+          border-right: 1px solid #eaeaea;
+          margin: 0 4rem;
+        }
+
+        .row {
+          align-items: flex-start;
+          justify-content: center;
+          display: flex;
+          margin: 0 1rem;
+        }
+
         @media screen and (max-width: 960px) {
           .divider,
-          .list-container {
+          .right-container {
             display: none;
+          }
+
+          .logo {
+            display: flex;
+            justify-content: center;
+            width: 60%;
           }
         }
       `}

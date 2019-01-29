@@ -102,8 +102,8 @@ export default withPure(() => (
               <a>Features</a>
             </h4>
             <p>
-              <Link href="/features/static-exports">
-                <a>Static Exports</a>
+              <Link href="/features/static-exporting">
+                <a>Static Exporting</a>
               </Link>
             </p>
           </div>

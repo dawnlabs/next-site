@@ -23,7 +23,7 @@ function generateFrames(white, onRender) {
   */
   const data = [
     {
-      duration: white ? 500 : 2000,
+      duration: 500,
       0: <Prompt white={white} />,
       1: <Caret />
     },
@@ -191,6 +191,7 @@ function generateFrames(white, onRender) {
     },
     {
       duration: 850,
+      showResult: true,
       6: (
         <>
           <span className="bold">
@@ -250,7 +251,7 @@ export default class Console extends React.PureComponent {
         white={white}
         alias={alias}
         mini={mini}
-        height={280}
+        height={289}
         mobileHeight={300}
         backgroundColor="black"
       >

@@ -36,7 +36,7 @@ export default () => (
           display: flex;
           flex-direction: column;
           justify-content: center;
-          margin-left: 2rem;
+          margin-left: 3rem;
         }
 
         .switching-img {
@@ -48,7 +48,7 @@ export default () => (
         }
 
         .content {
-          margin: 2rem 0;
+          margin: 1rem 0;
           max-width: 25rem;
         }
 
@@ -61,10 +61,6 @@ export default () => (
             align-items: center;
             text-align: center;
             margin-left: 0;
-          }
-
-          .content {
-            margin: 1rem 0;
           }
         }
       `}

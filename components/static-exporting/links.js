@@ -51,6 +51,7 @@ export default () => (
           user-select: none;
           height: 308px;
           max-width: 1006px;
+          margin: 0 auto;
           background: url(/static/images/earth.png);
           background-repeat: no-repeat;
           background-size: contain;

@@ -10,11 +10,15 @@ export default class Window extends React.PureComponent {
       white,
       alias,
       mini,
-      caption = null
+      caption = null,
+      height: propHeight,
+      scroll,
+      title,
+      children
     } = this.props;
 
-    const height = null != this.props.height ? `${this.props.height}px` : null;
-    const noScroll = false === this.props.scroll;
+    const height = propHeight != null ? `${propHeight}px` : null;
+    const noScroll = scroll === false;
 
     const classes = ['window'];
 
@@ -40,16 +44,14 @@ export default class Window extends React.PureComponent {
           <span className="icon minimize" />
           <span className="icon fullScreen" />
           <div
-            className={'title ' + (titleBg ? 'title-bg' : '')}
+            className={`title ${titleBg ? 'title-bg' : ''}`}
             style={{ color: titleColor }}
           >
-            {this.props.title}
+            {title}
           </div>
         </div>
 
-        <div className={'body ' + (noScroll ? 'noScroll' : '')}>
-          {this.props.children}
-        </div>
+        <div className={`body ${noScroll ? 'noScroll' : ''}`}>{children}</div>
 
         {caption && <p className="caption">{caption}</p>}
 

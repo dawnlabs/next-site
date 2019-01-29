@@ -18,7 +18,12 @@ export default () => (
 
     <div className="animation-row">
       <div className="terminal-wrapper">
-        <Terminal running="true" showBrowser={() => {}} />
+        <Terminal
+          running="true"
+          showResult={() => {
+            /* TODO trigger showing show result file structure */
+          }}
+        />
       </div>
     </div>
 

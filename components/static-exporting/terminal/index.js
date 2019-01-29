@@ -1,8 +1,6 @@
-// Packages
 import React from 'react';
 import { Keyframes, Frame } from 'react-keyframes';
 
-// Components
 import Window from './window';
 import Prompt from './prompt';
 import Caret from './caret';
@@ -209,21 +207,21 @@ function generateFrames(white, onRender) {
     }
   ];
 
-  let showBrowser;
+  let showResult;
 
   for (let i = 0; i < data.length; ++i) {
     for (const line in data[i]) {
       if (line === 'duration') {
         duration = data[i][line];
-      } else if (line === 'showBrowser') {
-        showBrowser = true;
+      } else if (line === 'showResult') {
+        showResult = true;
       } else {
         current[line] = data[i][line];
       }
     }
 
     frames.push(
-      <Frame duration={duration} key={i} onRender={showBrowser && onRender}>
+      <Frame duration={duration} key={i} onRender={showResult && onRender}>
         {[...current]}
       </Frame>
     );
@@ -234,7 +232,8 @@ function generateFrames(white, onRender) {
 
 export default class Console extends React.PureComponent {
   render() {
-    const { white, alias, mini, running, showBrowser } = this.props;
+    const { white, alias, mini, running, showResult } = this.props;
+
     const classes = ['console'];
 
     if (white) {
@@ -258,36 +257,34 @@ export default class Console extends React.PureComponent {
         <div className={classes.join(' ')}>
           {running && (
             <Keyframes component="pre">
-              {generateFrames(white, showBrowser)}
+              {generateFrames(white, showResult)}
             </Keyframes>
           )}
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-                pre {
-                  font-size: 13px;
-                  font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-                  DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-                  line-height: 17px;
-                  margin: 0;
-                  white-space: pre;
-                }
-                .console.mini pre {
-                  font-size: 11px;
-                  line-height: 15px;
-                }
-                .highlight {
-                  color: #00FFFF;
-                }
-                .bold {
-                  font-weight: 600;
-                }
-                .dim {
-                  opacity: 0.5;
-                }
-              `
-            }}
-          />
+          <style>
+            {`
+            pre {
+              font-size: 13px;
+              font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+              DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+              line-height: 17px;
+              margin: 0;
+              white-space: pre;
+            }
+            .console.mini pre {
+              font-size: 11px;
+              line-height: 15px;
+            }
+            .highlight {
+              color: #00FFFF;
+            }
+            .bold {
+              font-weight: 600;
+            }
+            .dim {
+              opacity: 0.5;
+            }
+          `}
+          </style>
         </div>
         <style jsx>
           {`

@@ -13,7 +13,7 @@ export default () => (
 
       <div className="divider" />
 
-      <div>
+      <div className="list-container">
         <h2>Perfect For</h2>
         <div>Static Next.js is a great choice for:</div>
         <ul>
@@ -55,7 +55,7 @@ export default () => (
         .divider {
           height: 24rem;
           border-right: 1px solid #eaeaea;
-          margin: 0 8rem;
+          margin: 0 4rem;
         }
 
         .row {
@@ -86,6 +86,13 @@ export default () => (
         li span {
           height: 2rem;
           margin-left: 0.5rem;
+        }
+
+        @media screen and (max-width: 960px) {
+          .divider,
+          .list-container {
+            display: none;
+          }
         }
       `}
     </style>

@@ -15,20 +15,23 @@ export default () => (
       </div>
     </div>
 
-    <ul>
-      <li>
-        <Checkmark inverse />
-        <h4>File system-based routing</h4>
-      </li>
-      <li>
-        <Checkmark inverse />
-        <h4>Hot-code reloading</h4>
-      </li>
-      <li>
-        <Checkmark inverse />
-        <h4>Zero-config production builds</h4>
-      </li>
-    </ul>
+    <div className="list-container">
+      <ul>
+        <li>
+          <Checkmark inverse />
+          <h4>File system-based routing</h4>
+        </li>
+        <li>
+          <Checkmark inverse />
+          <h4>Hot-code reloading</h4>
+        </li>
+        <li>
+          <Checkmark inverse />
+          <h4>Zero-config production builds</h4>
+        </li>
+      </ul>
+    </div>
+
     <style jsx>
       {`
         h4 {
@@ -38,13 +41,15 @@ export default () => (
 
         ul {
           display: flex;
-          flex: 1;
+          margin: 0;
+          padding: 0;
           justify-content: center;
           list-style-type: none;
         }
 
         li {
           display: flex;
+          flex: 1 0;
           align-items: center;
           margin: 0 2rem 1rem 2rem;
         }
@@ -61,6 +66,21 @@ export default () => (
         .center {
           display: flex;
           justify-content: center;
+        }
+
+        @media screen and (max-width: 640px) {
+          ul {
+            flex-direction: column;
+          }
+
+          li {
+            margin: 1rem;
+          }
+
+          .list-container {
+            display: flex;
+            justify-content: center;
+          }
         }
       `}
     </style>

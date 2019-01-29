@@ -5,7 +5,7 @@ export default () => (
   <Container wide padding center dotBackground>
     <h1>Static Sites, No Compromise</h1>
 
-    <div className="margin">
+    <div className="content">
       <p>
         Leverage the speed and simplicity of static <br /> sites with the full
         power of <b>Next.js</b>
@@ -18,7 +18,7 @@ export default () => (
 
     <style jsx>
       {`
-        .margin {
+        .content {
           margin: 3rem 0;
         }
       `}

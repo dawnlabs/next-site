@@ -28,21 +28,20 @@ export default () => (
     <style jsx>{`
       .flex {
         display: flex;
+        align-items: center;
         justify-content: center;
-      }
-
-      .flex > div {
-        margin: 0 2rem;
+        margin: 0 1rem;
       }
 
       .col {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-right: 2rem;
       }
 
       .content {
-        margin: 3rem 0;
+        margin: 2rem 0;
         max-width: 25rem;
       }
 
@@ -50,8 +49,24 @@ export default () => (
         user-select: none;
         user-drag: none;
         width: 500px;
-        height: 385px;
+        height: 300px;
         background-color: red;
+      }
+
+      @media screen and (max-width: 640px) {
+        .learn-img {
+          display: none;
+        }
+
+        .col {
+          align-items: center;
+          text-align: center;
+          margin-right: 0;
+        }
+
+        .content {
+          margin: 1rem 0;
+        }
       }
     `}</style>
   </Container>

@@ -51,10 +51,29 @@ export default () => (
           user-select: none;
           height: 308px;
           max-width: 1006px;
-          margin: auto;
           background: url(/static/images/earth.png);
           background-repeat: no-repeat;
           background-size: contain;
+          background-position: bottom;
+        }
+
+        @media screen and (max-width: 960px) {
+          .flex {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .column {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 20rem;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .earth-img {
+            height: 200px;
+          }
         }
       `}
     </style>

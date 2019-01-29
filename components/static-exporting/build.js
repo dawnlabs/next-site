@@ -1,4 +1,5 @@
 import Container from '../container';
+import Terminal from './terminal';
 
 export default () => (
   <Container wide dark center>
@@ -15,7 +16,11 @@ export default () => (
       </div>
     </div>
 
-    <div className="build-img" />
+    <div className="animation-row">
+      <div className="terminal-wrapper">
+        <Terminal running="true" showBrowser={() => {}} />
+      </div>
+    </div>
 
     <style jsx>
       {`
@@ -39,13 +44,21 @@ export default () => (
           margin: 0 2rem;
         }
 
-        .build-img {
+        .animation-row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+
           max-width: 100%;
           height: 300px;
-          background: url(/static/images/build.png);
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
+        }
+
+        .terminal-wrapper {
+          width: 480px;
         }
 
         @media screen and (max-width: 960px) {

@@ -8,8 +8,9 @@ export default () => (
       <div className="max-width">
         <SectionHeader
           title="Best in Class Developer Experience"
-          description="Next.js puts development ergonomics front and center. Exporting is as easy
-      as running a single command — no configuration necessary."
+          description={`
+          Next.js puts development ergonomics front and center. Exporting is as easy
+          as running a single command — no configuration necessary.`}
         />
       </div>
     </div>

@@ -6,7 +6,7 @@ export default () => (
   <Container padding wide>
     <div className="row">
       <div className="center">
-        <h2>Who's Using Static Next.js</h2>
+        <h2>{`Who's Using Static Next.js`}</h2>
         <div className="whos-using-img" />
         <Blockchain />
       </div>

@@ -15,39 +15,41 @@ export default class Build extends React.PureComponent {
   render() {
     return (
       <Container wide dark center>
-        <div className="content">
-          <div className="row">
-            <div>
-              <Checkmark inverse />
-              <h4>Faster Delivery</h4>
-            </div>
-            <div>
-              <Checkmark inverse />
-              <h4>Modern Frontend Features</h4>
-            </div>
-            <div>
-              <Checkmark inverse />
-              <h4>No Lock-In</h4>
-            </div>
-            <div>
-              <Checkmark inverse />
-              <h4>Painless Developer Workflow</h4>
+        <div className="col">
+          <div className="content">
+            <div className="row">
+              <div>
+                <Checkmark inverse />
+                <h4>Faster Delivery</h4>
+              </div>
+              <div>
+                <Checkmark inverse />
+                <h4>Modern Frontend Features</h4>
+              </div>
+              <div>
+                <Checkmark inverse />
+                <h4>No Lock-In</h4>
+              </div>
+              <div>
+                <Checkmark inverse />
+                <h4>Painless Developer Workflow</h4>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="animation-row">
-          <div className="input">
-            <Input />
-          </div>
-          <div className="terminal-wrapper">
-            <Terminal
-              running="true"
-              showResult={() => this.setState({ showResult: true })}
-            />
-          </div>
-          <div className="result">
-            <Result animating={this.state.showResult} />
+          <div className="animation-row">
+            <div className="input">
+              <Input />
+            </div>
+            <div className="terminal-wrapper">
+              <Terminal
+                running="true"
+                showResult={() => this.setState({ showResult: true })}
+              />
+            </div>
+            <div className="result">
+              <Result animating={this.state.showResult} />
+            </div>
           </div>
         </div>
         <style jsx>
@@ -55,13 +57,18 @@ export default class Build extends React.PureComponent {
             .content {
               display: flex;
               justify-content: center;
+              margin: 2rem 0 1rem 0;
+            }
+
+            .col {
+              display: flex;
+              flex-direction: column;
             }
 
             .row {
               display: flex;
               align-items: center;
               justify-content: space-around;
-              padding: 2rem;
             }
 
             .row > div {
@@ -79,7 +86,7 @@ export default class Build extends React.PureComponent {
               display: flex;
               justify-content: center;
               align-items: center;
-              margin-bottom: 2rem;
+              margin: 1rem 0 2rem 0;
 
               max-width: 100%;
               height: 300px;
@@ -96,11 +103,21 @@ export default class Build extends React.PureComponent {
             }
 
             @media screen and (max-width: 960px) {
+              .content {
+                margin: 1rem 0 2rem 0;
+              }
+              .animation-row {
+                margin: 2rem 0 1rem 0;
+              }
+              .col {
+                flex-direction: column-reverse;
+              }
               .row {
                 flex-direction: column;
                 align-items: flex-start;
               }
             }
+
             @media screen and (max-width: 840px) {
               .terminal-wrapper {
                 padding: 0 2rem;

@@ -1,15 +1,58 @@
-import React from "react";
+import React from 'react';
 
-import Container from "../container";
-import Checkmark from "../icons/checkmark";
+import Container from '../container';
+import Checkmark from '../icons/checkmark';
 
-import Terminal from "./terminal";
-import Input from "./input";
-import Result from "./result";
+import Terminal from './terminal';
+import Input from './input';
+import Result from './result';
 
 export default class Build extends React.PureComponent {
   state = {
-    showResult: false
+    showResult: false,
+    demoInView: true
+  };
+
+  demo = React.createRef();
+
+  componentDidMount() {
+    const { scrollY } = window;
+    const demoInView = scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
+    if (demoInView !== this.state.demoInView) {
+      this.setState({ demoInView });
+    }
+    this.scrollspy();
+  }
+
+  componentWillUnmount() {
+    window.cancelAnimationFrame(this.scrollSpyID);
+  }
+
+  scrollspy = () => {
+    this.scrollSpyID = requestAnimationFrame(() => {
+      const { scrollY } = window;
+
+      if (scrollY === this.lastFrameScroll) {
+        this.lastFrameScroll = scrollY;
+        return this.scrollspy();
+      }
+
+      this.lastFrameScroll = scrollY;
+
+      // Section animation triggers
+      const demoInView = scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
+
+      if (demoInView !== this.state.demoInView) {
+        this.setState(
+          {
+            demoInView
+          },
+          this.scrollspy
+        );
+      } else {
+        this.scrollspy();
+      }
+    });
   };
 
   render() {
@@ -17,29 +60,29 @@ export default class Build extends React.PureComponent {
       <Container wide dark center>
         <div className="col">
           <div className="content">
-            <div className="row">
-              <div>
+            <ul>
+              <li>
                 <Checkmark inverse />
                 <h4>Faster Delivery</h4>
-              </div>
-              <div>
+              </li>
+              <li>
                 <Checkmark inverse />
                 <h4>Modern Frontend Features</h4>
-              </div>
-              <div>
+              </li>
+              <li>
                 <Checkmark inverse />
                 <h4>No Lock-In</h4>
-              </div>
-              <div>
+              </li>
+              <li>
                 <Checkmark inverse />
                 <h4>Painless Developer Workflow</h4>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
-          <div className="animation-row">
+          <div ref={this.demo} className="animation-row">
             <div className="input">
-              <Input />
+              <Input animating={this.state.demoInView} />
             </div>
             <div className="terminal-wrapper">
               <Terminal
@@ -65,21 +108,29 @@ export default class Build extends React.PureComponent {
               flex-direction: column;
             }
 
-            .row {
+            ul {
+              padding: 0;
+              margin: 0 1rem;
+              display: flex;
+              list-style-type: none;
+              align-items: center;
+              justify-content: space-between;
+              width: 64rem;
+            }
+
+            li {
               display: flex;
               align-items: center;
-              justify-content: space-around;
             }
 
             .row > div {
               display: flex;
               align-items: center;
-              margin: 0 1rem;
             }
 
             h4 {
               height: 2rem;
-              margin-left: 0.5rem;
+              margin: 0 0 0 0.5rem;
             }
 
             .animation-row {
@@ -90,16 +141,21 @@ export default class Build extends React.PureComponent {
 
               max-width: 100%;
               height: 300px;
-              background-repeat: no-repeat;
-              background-size: contain;
-              background-position: center;
             }
 
             .terminal-wrapper {
               width: 480px;
               z-index: 1;
               /* tune position of terminal with respect to input and output */
-              margin-top: -12px;
+              margin-top: -36px;
+              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48),
+                0px 14px 50px rgba(0, 0, 0, 0.38);
+            }
+
+            .input,
+            .result {
+              /* TODO confirm this is a necessary optimization */
+              visibility: ${this.state.demoInView ? 'visible' : 'hidden'};
             }
 
             @media screen and (max-width: 960px) {
@@ -112,9 +168,13 @@ export default class Build extends React.PureComponent {
               .col {
                 flex-direction: column-reverse;
               }
-              .row {
+              ul {
+                width: auto;
                 flex-direction: column;
                 align-items: flex-start;
+              }
+              li {
+                margin: 1rem 0;
               }
             }
 

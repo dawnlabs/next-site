@@ -1,5 +1,6 @@
+import Head from 'next/head';
+
 import Page from '../../components/page';
-import Screen from '../../components/screen';
 import Header from '../../components/header';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
@@ -15,26 +16,28 @@ import Customers from '../../components/static-exporting/customers';
 
 export default () => (
   <Page>
+    <Head>
+      <title>Static Exporting - Next.js Features</title>
+    </Head>
     <MediaQueryConsumer>
       {({ isMobile }) => (
         <Header
           height={64 + (isMobile ? 32 : 0)}
           shadow={!isMobile}
-          defaultActive
+          dotBackground
+          active={32}
         >
           <Navbar />
         </Header>
       )}
     </MediaQueryConsumer>
-    <Screen offset={64 + 400}>
-      <Hero />
-      <Build />
-      <Links />
-      <Learn />
-      <Features />
-      <Docs />
-      <Customers />
-    </Screen>
+    <Hero />
+    <Build />
+    <Links />
+    <Learn />
+    <Features />
+    <Docs />
+    <Customers />
     <Footer />
   </Page>
 );

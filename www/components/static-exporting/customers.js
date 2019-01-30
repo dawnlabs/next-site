@@ -1,13 +1,13 @@
-import Container from "../container";
-import SectionHeader from "../section-header";
-import Checkmark from "../icons/checkmark";
-import Blockchain from "../icons/companies/blockchain";
-import Expo from "../icons/companies/expo";
-import Blockstack from "../icons/companies/blockstack";
-import Material from "../icons/companies/material-ui";
-import Plotly from "../icons/companies/plotly";
+import Container from '../container';
+import SectionHeader from '../section-header';
+import Checkmark from '../icons/checkmark';
+import Blockchain from '../icons/companies/blockchain';
+import Expo from '../icons/companies/expo';
+import Blockstack from '../icons/companies/blockstack';
+import Material from '../icons/companies/material-ui';
+import Plotly from '../icons/companies/plotly';
 
-import Carousel from "./carousel";
+import Carousel from './carousel';
 
 export default () => (
   <Container padding wide>
@@ -17,31 +17,31 @@ export default () => (
       <div className="carousel-container">
         <Carousel>
           <div className="col">
-            <div className="screen expo" />
+            <a href="https://expo.io/" className="screen expo" />
             <div className="logo">
               <Expo />
             </div>
           </div>
           <div className="col">
-            <div className="screen blockchain" />
+            <a href="https://blockchain.com/" className="screen blockchain" />
             <div className="logo">
               <Blockchain />
             </div>
           </div>
           <div className="col">
-            <div className="screen plotly" />
+            <a href="https://plot.ly/" className="screen plotly" />
             <div className="logo plotly-logo">
               <Plotly />
             </div>
           </div>
           <div className="col">
-            <div className="screen material" />
+            <a href="https://material-ui.com/" className="screen material" />
             <div className="logo">
               <Material />
             </div>
           </div>
           <div className="col">
-            <div className="screen blockstack" />
+            <a href="https://blockstack.org/" className="screen blockstack" />
             <div className="logo">
               <Blockstack />
             </div>
@@ -51,7 +51,7 @@ export default () => (
 
       <div className="divider" />
 
-      <div className="row">
+      <div className="perfect-for">
         <h4>Perfect For:</h4>
         <ul>
           <li>
@@ -79,6 +79,8 @@ export default () => (
           padding: 0;
           margin: 0;
           display: flex;
+          flex: 1;
+          justify-content: space-between;
           list-style-type: none;
         }
 
@@ -93,7 +95,7 @@ export default () => (
         }
 
         li span {
-          height: 30px;
+          height: 1.8rem;
           margin-left: 0.5rem;
         }
 
@@ -107,10 +109,13 @@ export default () => (
           align-items: center;
         }
 
-        .row {
+        .perfect-for {
           display: flex;
-          justify-content: center;
+          width: 100%;
           align-items: center;
+          margin: 0 auto;
+          padding: 0 1rem;
+          max-width: 1024px;
         }
 
         .left-container {
@@ -122,11 +127,11 @@ export default () => (
           display: flex;
           justify-content: center;
           margin-top: 1rem;
-          width: 10rem;
+          width: 12.5rem;
         }
 
         .plotly-logo {
-          width: 4rem;
+          width: 7rem;
           margin-top: 0.5rem;
         }
 
@@ -157,6 +162,7 @@ export default () => (
           background-size: contain;
           background-position: center;
           margin-top: -2rem;
+          cursor: pointer;
         }
 
         .divider {
@@ -174,12 +180,12 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           ul,
-          .row {
+          .perfect-for {
             flex-direction: column;
           }
 
           li {
-            margin: 1rem;
+            margin: 1rem 0;
           }
 
           .carousel-container {

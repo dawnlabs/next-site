@@ -12,12 +12,16 @@ export default () => (
       </p>
     </div>
 
-    <Button invert href="/learn/excel/static-html-export">
+    <Button invert href="#links">
       Learn More
     </Button>
 
     <style jsx>
       {`
+        h1 {
+          font-size: 46px;
+        }
+
         .content {
           margin: 3rem 0;
         }

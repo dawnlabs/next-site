@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import ArrowNext from "../icons/arrow-next";
-import ArrowPrev from "../icons/arrow-previous";
+import ArrowNext from '../icons/arrow-next';
+import ArrowPrev from '../icons/arrow-previous';
 
 const slideWidth = 43.5; //rem
 const tabletSlideWidth = 23; //rem
@@ -32,7 +32,7 @@ export default class Carousel extends React.PureComponent {
       <div className="carousel">
         <div className="slides">
           {React.Children.map(children, (child, i) => (
-            <div className={`slide ${i === index ? "selected" : ""}`}>
+            <div className={`slide ${i === index ? 'selected' : ''}`}>
               {child}
             </div>
           ))}
@@ -70,12 +70,14 @@ export default class Carousel extends React.PureComponent {
             margin: 0 3.5rem;
             opacity: 0.3;
             transition: opacity ease-in 250ms;
+            pointer-events: none;
           }
 
           .slide.selected {
             opacity: 1;
             transform: scale(1.1);
             transition: transform ease-in 250ms;
+            pointer-events: auto;
           }
 
           .arrow {

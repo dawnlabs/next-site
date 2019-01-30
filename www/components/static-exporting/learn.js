@@ -17,7 +17,7 @@ export default () => (
         </div>
 
         <div>
-          <Button invert href="/learn">
+          <Button invert href="/learn/excel/static-html-export">
             Learn Next.js
           </Button>
         </div>

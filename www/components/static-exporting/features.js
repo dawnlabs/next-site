@@ -1,6 +1,6 @@
-import Container from "../container";
-import SectionHeader from "../section-header";
-import Checkmark from "../icons/checkmark";
+import Container from '../container';
+import SectionHeader from '../section-header';
+import Checkmark from '../icons/checkmark';
 
 export default () => (
   <Container padding>
@@ -35,8 +35,9 @@ export default () => (
     <style jsx>
       {`
         h4 {
+          height: 2rem;
+          margin: 0 0 0 0.5rem;
           font-size: 1rem;
-          margin: 0;
         }
 
         ul {
@@ -49,17 +50,9 @@ export default () => (
 
         li {
           display: flex;
-          flex: 1 0;
+          flex: 1 0 19rem;
+          justify-content: center;
           align-items: center;
-        }
-
-        li:not(:last-child) {
-          margin-right: 1rem;
-        }
-
-        li h4 {
-          height: 2rem;
-          margin-left: 0.5rem;
         }
 
         .max-width {
@@ -74,10 +67,13 @@ export default () => (
         @media screen and (max-width: 960px) {
           ul {
             flex-direction: column;
+            justify-content: flex-start;
           }
 
           li {
+            flex: 1 0;
             margin: 1rem 0;
+            justify-content: flex-start;
           }
 
           .list-container {

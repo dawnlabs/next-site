@@ -1,74 +1,120 @@
 import Container from '../container';
+import SectionHeader from '../section-header';
 import Checkmark from '../icons/checkmark';
 import Blockchain from '../icons/companies/blockchain';
+import Expo from '../icons/companies/expo';
+import Blockstack from '../icons/companies/blockstack';
+import Material from '../icons/companies/material-ui';
+import Plotly from '../icons/companies/plotly';
+
+import Carousel from './carousel';
 
 export default () => (
   <Container padding wide>
-    <div className="row">
-      <div className="left-container">
-        <h2>{`Who's Using Static Next.js`}</h2>
-        <div className="whos-using-img" />
-        <div className="logo">
-          <Blockchain />
+    <div className="col">
+      <SectionHeader id="customers" title="Who's Using Static Next.js" />
+
+      <Carousel>
+        <div className="col">
+          <div className="screen expo" />
+          <div className="logo">
+            <Expo />
+          </div>
         </div>
-      </div>
+        <div className="col">
+          <div className="screen blockchain" />
+          <div className="logo">
+            <Blockchain />
+          </div>
+        </div>
+        <div className="col">
+          <div className="screen plotly" />
+          <div className="logo plotly-logo">
+            <Plotly />
+          </div>
+        </div>
+        <div className="col">
+          <div className="screen material" />
+          <div className="logo">
+            <Material />
+          </div>
+        </div>
+        <div className="col">
+          <div className="screen blockstack" />
+          <div className="logo">
+            <Blockstack />
+          </div>
+        </div>
+      </Carousel>
 
       <div className="divider" />
 
-      <div className="right-container">
-        <h2>Perfect For</h2>
-        <div>Static Next.js is a great choice for:</div>
+      <div className="row">
+        <h4>Perfect For:</h4>
         <ul>
-          <li>
-            <Checkmark />
-            <span>Landing pages</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>Blogs</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>Documentation and tutorials</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>Style guides</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>and more...</span>
-          </li>
+          <div>
+            <li>
+              <Checkmark />
+              <span>Landing pages</span>
+            </li>
+            <li>
+              <Checkmark />
+              <span>Blogs</span>
+            </li>
+          </div>
+
+          <div>
+            <li>
+              <Checkmark />
+              <span>Documentation and tutorials</span>
+            </li>
+            <li>
+              <Checkmark />
+              <span>Style guides</span>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
     <style jsx>
       {`
-        h2 + div {
-          margin-top: 3rem;
-        }
-
         ul {
           padding: 0;
+          margin: 0;
+          display: flex;
           list-style-type: none;
+        }
+
+        h4 {
+          margin: 0;
         }
 
         li {
           display: flex;
           align-items: center;
-          margin-bottom: 1rem;
+          margin: 0 1.5rem;
         }
 
         li span {
-          height: 2rem;
+          height: 30px;
           margin-left: 0.5rem;
         }
 
-        .left-container,
-        .right-container {
+        ul > div {
+          display: flex;
+        }
+
+        .col {
           display: flex;
           flex-direction: column;
-          flex: 1;
+          align-items: center;
+          margin: 1rem;
+        }
+
+        .row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .left-container {
@@ -76,42 +122,79 @@ export default () => (
           align-items: center;
         }
 
-        .whos-using-img {
+        .logo {
           display: flex;
-          flex-shrink: 0;
-          flex-basis: 300px;
-          width: 100%;
+          justify-content: center;
+          margin-top: 1rem;
+          width: 10rem;
+        }
+
+        .plotly-logo {
+        }
+
+        .expo {
+          background: url(/static/images/static-exporting/expo-screen.png);
+        }
+        .blockchain {
+          background: url(/static/images/static-exporting/blockchain-screen.png);
+        }
+        .plotly {
+          background: url(/static/images/static-exporting/plotly-screen.png);
+        }
+        .material {
+          background: url(/static/images/static-exporting/material-screen.png);
+        }
+        .blockstack {
+          background: url(/static/images/static-exporting/blockstack-screen.png);
+        }
+
+        .screen {
+          display: flex;
+          flex: 1;
+          flex-basis: 10rem;
+          width: 20rem;
           user-select: none;
           user-drag: none;
-          background: url(/static/images/whos-using.png);
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
+          margin-top: -2rem;
         }
 
         .divider {
-          height: 24rem;
-          border-right: 1px solid #eaeaea;
-          margin: 0 4rem;
-        }
-
-        .row {
-          align-items: flex-start;
-          justify-content: center;
-          display: flex;
-          margin: 0 1rem;
+          width: 90%;
+          max-width: 60rem;
+          border-bottom: 1px solid #eaeaea;
+          margin: 3rem 0;
         }
 
         @media screen and (max-width: 960px) {
-          .divider,
-          .right-container {
-            display: none;
+          ul > div {
+            flex-direction: column;
+            margin: 1rem 0;
           }
 
-          .logo {
-            display: flex;
-            justify-content: center;
-            width: 60%;
+          li {
+            margin: 1rem;
+          }
+
+          .row {
+            flex-direction: column;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          ul {
+            flex-direction: column;
+            margin-top: 2rem;
+          }
+
+          ul > div {
+            margin: 0;
+          }
+
+          li {
+            margin: 1rem;
           }
         }
       `}

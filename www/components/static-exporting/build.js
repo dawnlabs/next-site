@@ -9,7 +9,50 @@ import Result from './result';
 
 export default class Build extends React.PureComponent {
   state = {
-    showResult: false
+    showResult: false,
+    demoInView: true
+  };
+
+  demo = React.createRef();
+
+  componentDidMount() {
+    const { scrollY } = window;
+    const demoInView = scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
+    if (demoInView !== this.state.demoInView) {
+      this.setState({ demoInView });
+    }
+    this.scrollspy();
+  }
+
+  componentWillUnmount() {
+    window.cancelAnimationFrame(this.scrollSpyID);
+  }
+
+  scrollspy = () => {
+    this.scrollSpyID = requestAnimationFrame(() => {
+      const { scrollY } = window;
+
+      if (scrollY === this.lastFrameScroll) {
+        this.lastFrameScroll = scrollY;
+        return this.scrollspy();
+      }
+
+      this.lastFrameScroll = scrollY;
+
+      // Section animation triggers
+      const demoInView = scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
+
+      if (demoInView !== this.state.demoInView) {
+        this.setState(
+          {
+            demoInView
+          },
+          this.scrollspy
+        );
+      } else {
+        this.scrollspy();
+      }
+    });
   };
 
   render() {
@@ -37,9 +80,9 @@ export default class Build extends React.PureComponent {
             </ul>
           </div>
 
-          <div className="animation-row">
+          <div ref={this.demo} className="animation-row">
             <div className="input">
-              <Input />
+              <Input animating={this.state.demoInView} />
             </div>
             <div className="terminal-wrapper">
               <Terminal
@@ -107,6 +150,12 @@ export default class Build extends React.PureComponent {
               margin-top: -36px;
               box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48),
                 0px 14px 50px rgba(0, 0, 0, 0.38);
+            }
+
+            .input,
+            .result {
+              /* TODO confirm this is a necessary optimization */
+              visibility: ${this.state.demoInView ? 'visible' : 'hidden'};
             }
 
             @media screen and (max-width: 960px) {

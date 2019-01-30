@@ -93,7 +93,7 @@ export default class Build extends React.PureComponent {
               width: 480px;
               z-index: 1;
               /* tune position of terminal with respect to input and output */
-              margin-top: -30px;
+              margin-top: -36px;
               box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48), 0px 14px 50px rgba(0, 0, 0, 0.38);
             }
 

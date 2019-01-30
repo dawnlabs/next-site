@@ -1,9 +1,10 @@
 import React from "react";
 import planetaryjs from "planetary.js";
 
-import Container from "../container";
-import SectionHeader from "../section-header";
-import Button from "../button";
+import Container from '../container';
+import SectionHeader from '../section-header';
+import { GenericLink } from '../text/link';
+import LOCATIONS from './locations';
 
 export default class Links extends React.PureComponent {
   componentDidMount() {
@@ -28,13 +29,10 @@ export default class Links extends React.PureComponent {
 
     globe.loadPlugin(planetaryjs.plugins.pings());
     this.interval = setInterval(() => {
-      const lat = Math.random() * 170 - 85;
-      const lng = Math.random() * 360 - 180;
-      globe.plugins.pings.add(lng, lat, {
-        color: "#0076ff",
-        ttl: 1500,
-        angle: Math.random() * 10
-      });
+      const cdnIndex = Math.floor(Math.random() * LOCATIONS.length)
+      const { lat, lng } = LOCATIONS[cdnIndex]
+
+      globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 1500, angle: Math.random() * 10 });
     }, 300);
 
     const canvas = this.globe.current;

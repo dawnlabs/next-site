@@ -247,8 +247,8 @@ export default class Console extends React.PureComponent {
         title={null}
         alias={alias}
         mini={mini}
-        height={289}
-        mobileHeight={300}
+        height={275}
+        mobileHeight={275}
         backgroundColor="black"
       >
         <div className={classes.join(' ')}>

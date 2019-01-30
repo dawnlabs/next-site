@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Container from "../container";
-import Checkmark from "../icons/checkmark";
+import Container from '../container';
+import Checkmark from '../icons/checkmark';
 
-import Terminal from "./terminal";
-import Input from "./input";
-import Result from "./result";
+import Terminal from './terminal';
+import Input from './input';
+import Result from './result';
 
 export default class Build extends React.PureComponent {
   state = {
@@ -42,10 +42,7 @@ export default class Build extends React.PureComponent {
               <Input />
             </div>
             <div className="terminal-wrapper">
-              <Terminal
-                running="true"
-                showResult={() => this.setState({ showResult: true })}
-              />
+              <Terminal running="true" showResult={() => this.setState({ showResult: true })} />
             </div>
             <div className="result">
               <Result animating={this.state.showResult} />
@@ -90,16 +87,13 @@ export default class Build extends React.PureComponent {
 
               max-width: 100%;
               height: 300px;
-              background-repeat: no-repeat;
-              background-size: contain;
-              background-position: center;
             }
 
             .terminal-wrapper {
               width: 480px;
               z-index: 1;
               /* tune position of terminal with respect to input and output */
-              margin-top: -12px;
+              margin-top: -30px;
             }
 
             @media screen and (max-width: 960px) {

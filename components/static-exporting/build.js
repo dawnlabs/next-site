@@ -1,7 +1,9 @@
 import React from 'react';
-import Container from '../container';
-import Terminal from './terminal';
 
+import Container from '../container';
+import Checkmark from '../icons/checkmark';
+
+import Terminal from './terminal';
 import Input from './input';
 import Result from './result';
 
@@ -15,13 +17,21 @@ export default class Build extends React.PureComponent {
       <Container wide dark center>
         <div className="content">
           <div className="row">
-            <div className="pair">
-              <div>Faster Delivery</div>
-              <div>Modern Frontend Features</div>
+            <div>
+              <Checkmark inverse />
+              <h4>Faster Delivery</h4>
             </div>
-            <div className="pair">
-              <div>No Lock-In</div>
-              <div>Painless Developer Workflow</div>
+            <div>
+              <Checkmark inverse />
+              <h4>Modern Frontend Features</h4>
+            </div>
+            <div>
+              <Checkmark inverse />
+              <h4>No Lock-In</h4>
+            </div>
+            <div>
+              <Checkmark inverse />
+              <h4>Painless Developer Workflow</h4>
             </div>
           </div>
         </div>
@@ -45,8 +55,23 @@ export default class Build extends React.PureComponent {
 
             .row {
               display: flex;
-              max-width: 64rem;
+              align-items: center;
+              width: 72rem;
+              max-width: 100%;
               padding: 2rem;
+            }
+
+            .row > div {
+              display: flex;
+              flex: 1 0;
+              justify-content: center;
+              align-items: center;
+              margin-right
+            }
+
+            h4 {
+              height: 2rem;
+              margin-left: 0.5rem;
             }
 
             .pair {

@@ -122,11 +122,11 @@ export default () => (
           display: flex;
           justify-content: center;
           margin-top: 1rem;
-          width: 10rem;
+          width: 12.5rem;
         }
 
         .plotly-logo {
-          width: 4rem;
+          width: 7rem;
           margin-top: 0.5rem;
         }
 

@@ -14,38 +14,40 @@ export default () => (
     <div className="col">
       <SectionHeader id="customers" title="Who's Using Static Next.js" />
 
-      <Carousel>
-        <div className="col">
-          <div className="screen expo" />
-          <div className="logo">
-            <Expo />
+      <div className="carousel-container">
+        <Carousel>
+          <div className="col">
+            <div className="screen expo" />
+            <div className="logo">
+              <Expo />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen blockchain" />
-          <div className="logo">
-            <Blockchain />
+          <div className="col">
+            <div className="screen blockchain" />
+            <div className="logo">
+              <Blockchain />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen plotly" />
-          <div className="logo plotly-logo">
-            <Plotly />
+          <div className="col">
+            <div className="screen plotly" />
+            <div className="logo plotly-logo">
+              <Plotly />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen material" />
-          <div className="logo">
-            <Material />
+          <div className="col">
+            <div className="screen material" />
+            <div className="logo">
+              <Material />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen blockstack" />
-          <div className="logo">
-            <Blockstack />
+          <div className="col">
+            <div className="screen blockstack" />
+            <div className="logo">
+              <Blockstack />
+            </div>
           </div>
-        </div>
-      </Carousel>
+        </Carousel>
+      </div>
 
       <div className="divider" />
 
@@ -108,7 +110,6 @@ export default () => (
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 1rem;
         }
 
         .row {
@@ -130,6 +131,8 @@ export default () => (
         }
 
         .plotly-logo {
+          width: 4rem;
+          margin-top: 0.5rem;
         }
 
         .expo {
@@ -151,8 +154,8 @@ export default () => (
         .screen {
           display: flex;
           flex: 1;
-          flex-basis: 10rem;
-          width: 20rem;
+          flex-basis: 20.5rem;
+          width: 36.5rem;
           user-select: none;
           user-drag: none;
           background-repeat: no-repeat;
@@ -165,7 +168,13 @@ export default () => (
           width: 90%;
           max-width: 60rem;
           border-bottom: 1px solid #eaeaea;
-          margin: 3rem 0;
+          margin: 5rem 0 3rem 0;
+        }
+
+        .carousel-container {
+          margin-top: 3rem;
+          height: 22rem;
+          width: 100%;
         }
 
         @media screen and (max-width: 960px) {

@@ -3,60 +3,65 @@ import React from 'react';
 import ArrowNext from '../icons/arrow-next';
 import ArrowPrev from '../icons/arrow-previous';
 
+const slideWidth = 43.5; //rem
+
 export default class Carousel extends React.Component {
-  origin = Math.floor(React.Children.count(this.props.children) / 2);
+  constructor(props) {
+    super(props);
 
-  state = {
-    offset: 0
-  };
+    this.count = React.Children.count(this.props.children);
 
-  next = () => this.setState(({ offset }) => ({ offset: ++offset }));
-  prev = () => this.setState(({ offset }) => ({ offset: --offset }));
+    this.state = {
+      index: Math.floor(this.count / 2)
+    };
+  }
+
+  next = () => this.setState(({ index }) => ({ index: ++index }));
+  prev = () => this.setState(({ index }) => ({ index: --index }));
 
   render() {
     const { children } = this.props;
-    const { offset } = this.state;
+    const { index } = this.state;
 
-    const selected = this.origin + offset;
-    const showNext = offset < this.origin;
-    const showPrev = offset > -this.origin;
+    const showNext = index < this.count - 1;
+    const showPrev = index > 0;
+    const offset = slideWidth + slideWidth / 2 + slideWidth * index;
 
     return (
       <div className="carousel">
         <div className="slides">
           {React.Children.map(children, (child, i) => (
-            <div className={i === selected ? 'selected' : ''}>{child}</div>
+            <div className={`slide ${i === index ? 'selected' : ''}`}>
+              {child}
+            </div>
           ))}
         </div>
 
         {showNext && (
-          <div className="next" onClick={this.next}>
+          <div className="arrow next" onClick={this.next}>
             <ArrowNext color="#8c8c8c" />
           </div>
         )}
         {showPrev && (
-          <div className="previous" onClick={this.prev}>
+          <div className="arrow previous" onClick={this.prev}>
             <ArrowPrev color="#8c8c8c" />
           </div>
         )}
         <style jsx>{`
           .carousel {
             position: relative;
-            display: flex;
-            flex-basis: 200px;
+            height: 100%;
             width: 100%;
           }
 
-          .slides > div {
+          .slide {
+            margin: 0 3.5rem;
             opacity: 0.3;
             transition: opacity 500ms;
           }
 
-          .slides > .selected {
+          .slide.selected {
             opacity: 1;
-          }
-
-          .selected {
             transform: scale(1.1);
             transition: transform 500ms;
           }
@@ -65,18 +70,23 @@ export default class Carousel extends React.Component {
             display: flex;
             position: absolute;
             top: 0;
-            right: 100%;
+            left: 100%;
             transition: transform 500ms;
-            transform: translateX(calc(50vw + 860px - ${350 * offset}px));
+            transform: translateX(-${offset}rem);
           }
 
-          .next,
-          .previous {
+          .arrow {
             position: absolute;
-            top: 3rem;
+            top: 30%;
+            transform: scale(2.5);
             cursor: pointer;
             user-select: none;
           }
+
+          .arrow:hover > svg * {
+            stroke: #fff;
+          }
+
           .next {
             right: 4rem;
           }

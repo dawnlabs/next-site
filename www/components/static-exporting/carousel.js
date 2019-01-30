@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import ArrowNext from '../icons/arrow-next';
-import ArrowPrev from '../icons/arrow-previous';
+import ArrowNext from "../icons/arrow-next";
+import ArrowPrev from "../icons/arrow-previous";
 
 const slideWidth = 43.5; //rem
+const mobileSlideWidth = 23; //rem
 
-export default class Carousel extends React.Component {
+export default class Carousel extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -25,13 +26,12 @@ export default class Carousel extends React.Component {
 
     const showNext = index < this.count - 1;
     const showPrev = index > 0;
-    const offset = slideWidth / 2 + slideWidth * index;
 
     return (
       <div className="carousel">
         <div className="slides">
           {React.Children.map(children, (child, i) => (
-            <div className={`slide ${i === index ? 'selected' : ''}`}>
+            <div className={`slide ${i === index ? "selected" : ""}`}>
               {child}
             </div>
           ))}
@@ -54,6 +54,17 @@ export default class Carousel extends React.Component {
             width: 100%;
           }
 
+          .slides {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: transform 500ms;
+            transform: translateX(
+              calc(-50vw - ${slideWidth / 2 + slideWidth * index}rem)
+            );
+          }
+
           .slide {
             margin: 0 3.5rem;
             opacity: 0.3;
@@ -66,18 +77,9 @@ export default class Carousel extends React.Component {
             transition: transform 500ms;
           }
 
-          .slides {
-            display: flex;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            transition: transform 500ms;
-            transform: translateX(calc(-50vw - ${offset}rem));
-          }
-
           .arrow {
             position: absolute;
-            top: 30%;
+            top: 8rem;
             transform: scale(2.5);
             cursor: pointer;
             user-select: none;
@@ -94,12 +96,26 @@ export default class Carousel extends React.Component {
             left: 4rem;
           }
 
-          @media screen and (max-width: 640px) {
+          @media screen and (max-width: 960px) {
             .next {
               right: 2rem;
             }
             .previous {
               left: 2rem;
+            }
+            .slides {
+              transform: translateX(
+                calc(
+                  -50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * index}rem
+                )
+              );
+            }
+            .slide {
+              margin: 0 2rem;
+            }
+            .arrow {
+              top: 2rem;
+              transform: scale(2);
             }
           }
         `}</style>

@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import Page from '../../components/page';
 import Screen from '../../components/screen';
 import Header from '../../components/header';
@@ -15,6 +17,9 @@ import Customers from '../../components/static-exporting/customers';
 
 export default () => (
   <Page>
+    <Head>
+      <title>Static Exporting - Next.js Features</title>
+    </Head>
     <MediaQueryConsumer>
       {({ isMobile }) => (
         <Header

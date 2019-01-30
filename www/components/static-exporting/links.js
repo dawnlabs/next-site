@@ -1,26 +1,28 @@
-import React from 'react';
-import planetaryjs from 'planetary.js';
+import React from "react";
+import planetaryjs from "planetary.js";
 
-import Container from '../container';
-import SectionHeader from '../section-header';
-import { GenericLink } from '../text/link';
+import Container from "../container";
+import SectionHeader from "../section-header";
+import Button from "../button";
 
 export default class Links extends React.PureComponent {
   componentDidMount() {
     const globe = planetaryjs.planet();
     globe.loadPlugin(
       planetaryjs.plugins.earth({
-        topojson: { file: '/static/world-110m.json' },
-        oceans: { fill: '#fefefe' },
-        land: { fill: '#eee' },
-        borders: { stroke: '#E5E3E3' }
+        topojson: { file: "/static/world-110m.json" },
+        oceans: { fill: "#fefefe" },
+        land: { fill: "#eee" },
+        borders: { stroke: "#E5E3E3" }
       })
     );
 
     const width = window.innerWidth;
     const height = window.innerHeight - 120;
 
-    globe.projection.translate([width / 2, height / 2]).scale(Math.min(width, height) / 2);
+    globe.projection
+      .translate([width / 2, height / 2])
+      .scale(Math.min(width, height) / 2);
 
     this.animateGlobe(globe);
 
@@ -28,7 +30,11 @@ export default class Links extends React.PureComponent {
     this.interval = setInterval(() => {
       const lat = Math.random() * 170 - 85;
       const lng = Math.random() * 360 - 180;
-      globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 1500, angle: Math.random() * 10 });
+      globe.plugins.pings.add(lng, lat, {
+        color: "#0076ff",
+        ttl: 1500,
+        angle: Math.random() * 10
+      });
     }, 300);
 
     const canvas = this.globe.current;
@@ -37,7 +43,7 @@ export default class Links extends React.PureComponent {
     if (window.devicePixelRatio == 2) {
       canvas.width = 800;
       canvas.height = 800;
-      const context = canvas.getContext('2d');
+      const context = canvas.getContext("2d");
       context.scale(2, 2);
     }
 
@@ -48,7 +54,8 @@ export default class Links extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+    const cancelAnimationFrame =
+      window.cancelAnimationFrame || window.mozCancelAnimationFrame;
     cancelAnimationFrame(this.globeAnimation);
     clearInterval(this.interval);
   }
@@ -85,35 +92,39 @@ export default class Links extends React.PureComponent {
             <div className="column">
               <h3>Unrivaled Performance</h3>
               <p>
-                Static sites can be deployed to CDNs for minimal latency, zero server load, and
-                faster global delivery.
+                Static sites can be deployed to CDNs for minimal latency, zero
+                server load, and faster global delivery.
               </p>
-              <GenericLink href="/showcase">View Showcase</GenericLink>
+              <Button href="/showcase">View Showcase</Button>
             </div>
 
             <div className="column">
               <h3>Deploy Anywhere</h3>
               <p>
-                Host your static site cheaply and easily with any provider such as Now, Github
-                Pages, or Amazon S3.
+                Host your static site cheaply and easily with any provider such
+                as Now, Github Pages, or Amazon S3.
               </p>
-              <GenericLink href="/docs">View Full Documentation</GenericLink>
+              <Button href="/docs">View Full Documentation</Button>
             </div>
 
             <div className="column">
               <h3>Dead Simple</h3>
               <p>
-                With no moving parts, static sites are secure, effortless to maintain, and easy to
-                reason about.
+                With no moving parts, static sites are secure, effortless to
+                maintain, and easy to reason about.
               </p>
-              <GenericLink href="/learn">Learn Next.js</GenericLink>
+              <Button href="/learn">Learn Next.js</Button>
             </div>
           </div>
         </Container>
         <div className="globe-container">
           <canvas
             ref={this.globe}
-            style={{ width: '100%', marginLeft: '50%', transform: 'translate(-50%)' }}
+            style={{
+              width: "100%",
+              marginLeft: "50%",
+              transform: "translate(-50%)"
+            }}
           />
         </div>
         <style jsx>

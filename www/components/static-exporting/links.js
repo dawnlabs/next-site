@@ -5,7 +5,7 @@ import Container from '../container';
 import SectionHeader from '../section-header';
 import { GenericLink } from '../text/link';
 
-export default class extends React.PureComponent {
+export default class Links extends React.PureComponent {
   componentDidMount() {
     const globe = planetaryjs.planet();
     globe.loadPlugin(
@@ -22,23 +22,7 @@ export default class extends React.PureComponent {
 
     globe.projection.translate([width / 2, height / 2]).scale(Math.min(width, height) / 2);
 
-    const requestAnimationFrame =
-      window.requestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.msRequestAnimationFrame;
-
-    const component = this;
-    function step(timestamp) {
-      const rotation = globe.projection.rotate();
-      rotation[0] += 0.1;
-      if (rotation[0] >= 180) rotation[0] -= 360;
-      globe.projection.rotate(rotation);
-
-      component.globeAnimation = requestAnimationFrame(step);
-    }
-
-    component.globeAnimation = requestAnimationFrame(step);
+    this.animateGlobe(globe);
 
     globe.loadPlugin(planetaryjs.plugins.pings());
     this.interval = setInterval(() => {
@@ -68,6 +52,23 @@ export default class extends React.PureComponent {
     cancelAnimationFrame(this.globeAnimation);
     clearInterval(this.interval);
   }
+
+  animateGlobe = globe => {
+    const requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame;
+
+    this.globeAnimation = requestAnimationFrame(() => {
+      const rotation = globe.projection.rotate();
+      rotation[0] += 0.1;
+      if (rotation[0] >= 180) rotation[0] -= 360;
+      globe.projection.rotate(rotation);
+
+      this.animateGlobe(globe);
+    });
+  };
 
   globe = React.createRef();
 

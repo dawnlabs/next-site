@@ -67,7 +67,7 @@ export default class Carousel extends React.Component {
             top: 0;
             right: 100%;
             transition: transform 500ms;
-            transform: translateX(calc(50vw + 860px - ${340 * offset}px));
+            transform: translateX(calc(50vw + 860px - ${350 * offset}px));
           }
 
           .next,

@@ -14,8 +14,8 @@ export default ({ inverse }) => (
       <path
         d="M13 16.3333L15.9167 19.25L22.1667 13"
         stroke={inverse ? '#fff' : '#000'}
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </g>
     <defs>

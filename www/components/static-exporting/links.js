@@ -21,7 +21,9 @@ export default class Links extends React.PureComponent {
     const width = window.innerWidth;
     const height = window.innerHeight - 120;
 
-    globe.projection.translate([width / 2, height / 2]).scale(Math.min(width, height) / 2);
+    globe.projection
+      .translate([width / 2, height / 2])
+      .scale(Math.min(width, height) / 2);
 
     this.animateGlobe(globe);
 
@@ -54,7 +56,8 @@ export default class Links extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+    const cancelAnimationFrame =
+      window.cancelAnimationFrame || window.mozCancelAnimationFrame;
     cancelAnimationFrame(this.globeAnimation);
     clearInterval(this.interval);
   }
@@ -83,6 +86,7 @@ export default class Links extends React.PureComponent {
       <div>
         <Container padding>
           <SectionHeader
+            anchor="links"
             title="Push Your Site to the Edge"
             description="Get your site to users faster, all while saving money, time, and headaches"
           />
@@ -91,8 +95,8 @@ export default class Links extends React.PureComponent {
             <div className="column">
               <h3>Unrivaled Performance</h3>
               <p>
-                Static sites can be deployed to CDNs for minimal latency, zero server load, and
-                faster global delivery.
+                Static sites can be deployed to CDNs for minimal latency, zero
+                server load, and faster global delivery.
               </p>
               <Button href="/showcase">View Showcase</Button>
             </div>
@@ -100,8 +104,8 @@ export default class Links extends React.PureComponent {
             <div className="column">
               <h3>Deploy Anywhere</h3>
               <p>
-                Host your static site cheaply and easily with any provider such as Now, Github
-                Pages, or Amazon S3.
+                Host your static site cheaply and easily with any provider such
+                as Now, Github Pages, or Amazon S3.
               </p>
               <Button href="/docs">View Full Documentation</Button>
             </div>
@@ -109,10 +113,12 @@ export default class Links extends React.PureComponent {
             <div className="column">
               <h3>Dead Simple</h3>
               <p>
-                With no moving parts, static sites are secure, effortless to maintain, and easy to
-                reason about.
+                With no moving parts, static sites are secure, effortless to
+                maintain, and easy to reason about.
               </p>
-              <Button href="/learn">Learn Next.js</Button>
+              <Button href="/learn/excel/static-html-export">
+                Learn Next.js
+              </Button>
             </div>
           </div>
         </Container>

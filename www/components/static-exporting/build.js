@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Container from '../container';
-import Checkmark from '../icons/checkmark';
+import Container from "../container";
+import Checkmark from "../icons/checkmark";
 
-import Terminal from './terminal';
-import Input from './input';
-import Result from './result';
+import Terminal from "./terminal";
+import Input from "./input";
+import Result from "./result";
 
 export default class Build extends React.PureComponent {
   state = {
@@ -15,39 +15,41 @@ export default class Build extends React.PureComponent {
   render() {
     return (
       <Container wide dark center>
-        <div className="content">
-          <div className="row">
-            <div>
-              <Checkmark inverse />
-              <h4>Faster Delivery</h4>
-            </div>
-            <div>
-              <Checkmark inverse />
-              <h4>Modern Frontend Features</h4>
-            </div>
-            <div>
-              <Checkmark inverse />
-              <h4>No Lock-In</h4>
-            </div>
-            <div>
-              <Checkmark inverse />
-              <h4>Painless Developer Workflow</h4>
+        <div className="col">
+          <div className="content">
+            <div className="row">
+              <div>
+                <Checkmark inverse />
+                <h4>Faster Delivery</h4>
+              </div>
+              <div>
+                <Checkmark inverse />
+                <h4>Modern Frontend Features</h4>
+              </div>
+              <div>
+                <Checkmark inverse />
+                <h4>No Lock-In</h4>
+              </div>
+              <div>
+                <Checkmark inverse />
+                <h4>Painless Developer Workflow</h4>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="animation-row">
-          <div className="input">
-            <Input />
-          </div>
-          <div className="terminal-wrapper">
-            <Terminal
-              running="true"
-              showResult={() => this.setState({ showResult: true })}
-            />
-          </div>
-          <div className="result">
-            <Result animating={this.state.showResult} />
+          <div className="animation-row">
+            <div className="input">
+              <Input />
+            </div>
+            <div className="terminal-wrapper">
+              <Terminal
+                running="true"
+                showResult={() => this.setState({ showResult: true })}
+              />
+            </div>
+            <div className="result">
+              <Result animating={this.state.showResult} />
+            </div>
           </div>
         </div>
         <style jsx>
@@ -55,22 +57,24 @@ export default class Build extends React.PureComponent {
             .content {
               display: flex;
               justify-content: center;
+              margin: 2rem 0 1rem 0;
+            }
+
+            .col {
+              display: flex;
+              flex-direction: column;
             }
 
             .row {
               display: flex;
               align-items: center;
               justify-content: space-around;
-              flex-wrap: wrap;
-              padding: 2rem;
-              max-width: 96rem;
             }
 
             .row > div {
               display: flex;
-              justify-content: center;
               align-items: center;
-              min-width: 16rem;
+              margin: 0 1rem;
             }
 
             h4 {
@@ -78,20 +82,11 @@ export default class Build extends React.PureComponent {
               margin-left: 0.5rem;
             }
 
-            .pair {
-              display: flex;
-            }
-
-            .pair > div {
-              display: flex;
-              margin: 0 2rem;
-            }
-
             .animation-row {
               display: flex;
               justify-content: center;
               align-items: center;
-              margin-bottom: 2rem;
+              margin: 1rem 0 2rem 0;
 
               max-width: 100%;
               height: 300px;
@@ -107,13 +102,19 @@ export default class Build extends React.PureComponent {
               margin-top: -12px;
             }
 
-            @media screen and (max-width: 1024px) {
-              .row {
-                max-width: 48rem;
+            @media screen and (max-width: 960px) {
+              .content {
+                margin: 1rem 0 2rem 0;
               }
-              .row > div {
-                justify-content: flex-start;
-                min-width: 16rem;
+              .animation-row {
+                margin: 2rem 0 1rem 0;
+              }
+              .col {
+                flex-direction: column-reverse;
+              }
+              .row {
+                flex-direction: column;
+                align-items: flex-start;
               }
             }
 

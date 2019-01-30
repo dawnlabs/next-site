@@ -1,78 +1,75 @@
-import Container from '../container';
-import SectionHeader from '../section-header';
-import Checkmark from '../icons/checkmark';
-import Blockchain from '../icons/companies/blockchain';
-import Expo from '../icons/companies/expo';
-import Blockstack from '../icons/companies/blockstack';
-import Material from '../icons/companies/material-ui';
-import Plotly from '../icons/companies/plotly';
+import Container from "../container";
+import SectionHeader from "../section-header";
+import Checkmark from "../icons/checkmark";
+import Blockchain from "../icons/companies/blockchain";
+import Expo from "../icons/companies/expo";
+import Blockstack from "../icons/companies/blockstack";
+import Material from "../icons/companies/material-ui";
+import Plotly from "../icons/companies/plotly";
 
-import Carousel from './carousel';
+import Carousel from "./carousel";
 
 export default () => (
   <Container padding wide>
     <div className="col">
       <SectionHeader id="customers" title="Who's Using Static Next.js" />
 
-      <Carousel>
-        <div className="col">
-          <div className="screen expo" />
-          <div className="logo">
-            <Expo />
+      <div className="carousel-container">
+        <Carousel>
+          <div className="col">
+            <div className="screen expo" />
+            <div className="logo">
+              <Expo />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen blockchain" />
-          <div className="logo">
-            <Blockchain />
+          <div className="col">
+            <div className="screen blockchain" />
+            <div className="logo">
+              <Blockchain />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen plotly" />
-          <div className="logo plotly-logo">
-            <Plotly />
+          <div className="col">
+            <div className="screen plotly" />
+            <div className="logo plotly-logo">
+              <Plotly />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen material" />
-          <div className="logo">
-            <Material />
+          <div className="col">
+            <div className="screen material" />
+            <div className="logo">
+              <Material />
+            </div>
           </div>
-        </div>
-        <div className="col">
-          <div className="screen blockstack" />
-          <div className="logo">
-            <Blockstack />
+          <div className="col">
+            <div className="screen blockstack" />
+            <div className="logo">
+              <Blockstack />
+            </div>
           </div>
-        </div>
-      </Carousel>
+        </Carousel>
+      </div>
 
       <div className="divider" />
 
       <div className="row">
         <h4>Perfect For:</h4>
         <ul>
-          <div>
-            <li>
-              <Checkmark />
-              <span>Landing pages</span>
-            </li>
-            <li>
-              <Checkmark />
-              <span>Blogs</span>
-            </li>
-          </div>
-
-          <div>
-            <li>
-              <Checkmark />
-              <span>Documentation and tutorials</span>
-            </li>
-            <li>
-              <Checkmark />
-              <span>Style guides</span>
-            </li>
-          </div>
+          <li>
+            <Checkmark />
+            <span>Landing pages</span>
+          </li>
+          <li>
+            <Checkmark />
+            <span>Blogs</span>
+          </li>
+          <li>
+            <Checkmark />
+            <span>Documentation and tutorials</span>
+          </li>
+          <li>
+            <Checkmark />
+            <span>Style guides</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -108,7 +105,6 @@ export default () => (
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 1rem;
         }
 
         .row {
@@ -130,6 +126,8 @@ export default () => (
         }
 
         .plotly-logo {
+          width: 4rem;
+          margin-top: 0.5rem;
         }
 
         .expo {
@@ -151,8 +149,8 @@ export default () => (
         .screen {
           display: flex;
           flex: 1;
-          flex-basis: 10rem;
-          width: 20rem;
+          flex-basis: 20.5rem;
+          width: 36.5rem;
           user-select: none;
           user-drag: none;
           background-repeat: no-repeat;
@@ -165,21 +163,36 @@ export default () => (
           width: 90%;
           max-width: 60rem;
           border-bottom: 1px solid #eaeaea;
-          margin: 3rem 0;
+          margin: 5rem 0 3rem 0;
+        }
+
+        .carousel-container {
+          margin-top: 3rem;
+          height: 22rem;
+          width: 100%;
         }
 
         @media screen and (max-width: 960px) {
-          ul > div {
+          ul,
+          .row {
             flex-direction: column;
-            margin: 1rem 0;
           }
 
           li {
             margin: 1rem;
           }
 
-          .row {
-            flex-direction: column;
+          .carousel-container {
+            height: 12rem;
+          }
+
+          .screen {
+            flex-basis: 10rem;
+            width: 19rem;
+          }
+
+          .divider {
+            margin: 3rem 0 2rem 0;
           }
         }
 
@@ -195,6 +208,15 @@ export default () => (
 
           li {
             margin: 1rem;
+          }
+
+          .carousel-container {
+            height: 10rem;
+          }
+
+          .screen {
+            flex-basis: 8rem;
+            width: 14rem;
           }
         }
       `}

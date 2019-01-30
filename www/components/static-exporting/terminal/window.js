@@ -7,7 +7,6 @@ export default class Window extends React.PureComponent {
       backgroundColor,
       borderColor,
       titleBg,
-      white,
       alias,
       mini,
       caption = null,
@@ -22,10 +21,6 @@ export default class Window extends React.PureComponent {
 
     const classes = ['window'];
 
-    if (white) {
-      classes.push('white');
-    }
-
     if (alias) {
       classes.push('alias');
     }
@@ -35,18 +30,12 @@ export default class Window extends React.PureComponent {
     }
 
     return (
-      <div
-        className={classes.join(' ')}
-        style={{ backgroundColor, borderColor, height }}
-      >
+      <div className={classes.join(' ')} style={{ backgroundColor, borderColor, height }}>
         <div className="header">
           <span className="icon close" />
           <span className="icon minimize" />
           <span className="icon fullScreen" />
-          <div
-            className={`title ${titleBg ? 'title-bg' : ''}`}
-            style={{ color: titleColor }}
-          >
+          <div className={`title ${titleBg ? 'title-bg' : ''}`} style={{ color: titleColor }}>
             {title}
           </div>
         </div>
@@ -64,11 +53,6 @@ export default class Window extends React.PureComponent {
               position: relative;
               border-radius: 5px;
               box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.1);
-            }
-            .window.white {
-              border: 0;
-              box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.12);
-              background: #fff;
             }
             .window.alias,
             .window.mini {
@@ -136,9 +120,8 @@ export default class Window extends React.PureComponent {
             .title {
               color: #999;
               font-size: 12px;
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-                'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-                'Droid Sans', 'Helvetica Neue', sans-serif;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
               position: absolute;
               top: 3px;
               left: 0;

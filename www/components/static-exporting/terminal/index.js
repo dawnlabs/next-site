@@ -8,7 +8,7 @@ import Caret from './caret';
 import { FONT_FAMILY_MONO } from '../../css-config';
 
 // simplify frames data and only stores deltas
-function generateFrames(white, onRender) {
+function generateFrames(onRender) {
   const frames = [];
   const current = [];
   let duration = 0;
@@ -24,7 +24,7 @@ function generateFrames(white, onRender) {
   const data = [
     {
       duration: 500,
-      0: <Prompt white={white} />,
+      0: <Prompt />,
       1: <Caret />
     },
     {
@@ -109,7 +109,7 @@ function generateFrames(white, onRender) {
           <br />
         </>
       ),
-      2: <Prompt white={white} />,
+      2: <Prompt />,
       3: <Caret />
     },
     {
@@ -204,7 +204,7 @@ function generateFrames(white, onRender) {
           <br />
         </>
       )
-      // 7: <Prompt white={white} />,
+      // 7: <Prompt />,
       // 8: <Caret />,
     }
   ];
@@ -234,13 +234,9 @@ function generateFrames(white, onRender) {
 
 export default class Console extends React.PureComponent {
   render() {
-    const { white, alias, mini, running, showResult } = this.props;
+    const { alias, mini, running, showResult } = this.props;
 
     const classes = ['console'];
-
-    if (white) {
-      classes.push('white');
-    }
 
     if (mini) {
       classes.push('mini');
@@ -249,7 +245,6 @@ export default class Console extends React.PureComponent {
     return (
       <Window
         title={null}
-        white={white}
         alias={alias}
         mini={mini}
         height={289}
@@ -257,11 +252,7 @@ export default class Console extends React.PureComponent {
         backgroundColor="black"
       >
         <div className={classes.join(' ')}>
-          {running && (
-            <Keyframes component="pre">
-              {generateFrames(white, showResult)}
-            </Keyframes>
-          )}
+          {running && <Keyframes component="pre">{generateFrames(showResult)}</Keyframes>}
           <style>
             {`
             pre {
@@ -297,9 +288,6 @@ export default class Console extends React.PureComponent {
               line-height: 24px;
               margin: 0 16px;
               text-align: left;
-            }
-            .console.white {
-              color: #000;
             }
             .console.mini {
               font-size: 10px;

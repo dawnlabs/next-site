@@ -74,6 +74,8 @@ export default class Build extends React.PureComponent {
             .terminal-wrapper {
               width: 480px;
               z-index: 1;
+              /* tune position of terminal with respect to input and output */
+              margin-top: -12px;
             }
 
             @media screen and (max-width: 960px) {

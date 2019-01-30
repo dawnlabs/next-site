@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Container from '../container';
-import Checkmark from '../icons/checkmark';
+import Container from "../container";
+import Checkmark from "../icons/checkmark";
 
-import Terminal from './terminal';
-import Input from './input';
-import Result from './result';
+import Terminal from "./terminal";
+import Input from "./input";
+import Result from "./result";
 
 export default class Build extends React.PureComponent {
   state = {
@@ -61,30 +61,18 @@ export default class Build extends React.PureComponent {
               display: flex;
               align-items: center;
               justify-content: space-around;
-              flex-wrap: wrap;
               padding: 2rem;
-              max-width: 96rem;
             }
 
             .row > div {
               display: flex;
-              justify-content: center;
               align-items: center;
-              min-width: 16rem;
+              margin: 0 1rem;
             }
 
             h4 {
               height: 2rem;
               margin-left: 0.5rem;
-            }
-
-            .pair {
-              display: flex;
-            }
-
-            .pair > div {
-              display: flex;
-              margin: 0 2rem;
             }
 
             .animation-row {
@@ -107,16 +95,12 @@ export default class Build extends React.PureComponent {
               margin-top: -12px;
             }
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 960px) {
               .row {
-                max-width: 48rem;
-              }
-              .row > div {
-                justify-content: flex-start;
-                min-width: 16rem;
+                flex-direction: column;
+                align-items: flex-start;
               }
             }
-
             @media screen and (max-width: 840px) {
               .terminal-wrapper {
                 padding: 0 2rem;

@@ -54,27 +54,22 @@ export default () => (
       <div className="row">
         <h4>Perfect For:</h4>
         <ul>
-          <div>
-            <li>
-              <Checkmark />
-              <span>Landing pages</span>
-            </li>
-            <li>
-              <Checkmark />
-              <span>Blogs</span>
-            </li>
-          </div>
-
-          <div>
-            <li>
-              <Checkmark />
-              <span>Documentation and tutorials</span>
-            </li>
-            <li>
-              <Checkmark />
-              <span>Style guides</span>
-            </li>
-          </div>
+          <li>
+            <Checkmark />
+            <span>Landing pages</span>
+          </li>
+          <li>
+            <Checkmark />
+            <span>Blogs</span>
+          </li>
+          <li>
+            <Checkmark />
+            <span>Documentation and tutorials</span>
+          </li>
+          <li>
+            <Checkmark />
+            <span>Style guides</span>
+          </li>
         </ul>
       </div>
     </div>
@@ -178,21 +173,15 @@ export default () => (
         }
 
         @media screen and (max-width: 960px) {
-          ul > div {
+          ul,
+          .row {
             flex-direction: column;
-            margin: 1rem 0;
           }
 
           li {
             margin: 1rem;
           }
 
-          .row {
-            flex-direction: column;
-          }
-        }
-
-        @media screen and (max-width: 960px) {
           .carousel-container {
             height: 12rem;
           }

@@ -49,12 +49,9 @@ export default () => (
 
         li {
           display: flex;
-          flex: 1 0;
+          flex: 1 0 19rem;
+          justify-content: center;
           align-items: center;
-        }
-
-        li:not(:last-child) {
-          margin-right: 1rem;
         }
 
         li h4 {
@@ -74,10 +71,13 @@ export default () => (
         @media screen and (max-width: 960px) {
           ul {
             flex-direction: column;
+            justify-content: flex-start;
           }
 
           li {
-            margin: 1rem 0;
+            flex-basis: 0;
+            justify-content: flex-start;
+            margin: 2rem 0;
           }
 
           .list-container {

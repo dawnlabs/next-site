@@ -1,5 +1,5 @@
-import Container from '../container';
-import Button from '../button';
+import Container from "../container";
+import Button from "../button";
 
 export default () => (
   <Container wide padding center dotBackground>
@@ -18,6 +18,10 @@ export default () => (
 
     <style jsx>
       {`
+        h1 {
+          font-size: 46px;
+        }
+
         .content {
           margin: 3rem 0;
         }

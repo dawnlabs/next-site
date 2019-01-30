@@ -118,6 +118,10 @@ export default class Build extends React.PureComponent {
             }
 
             @media screen and (max-width: 840px) {
+              .terminal-wrapper {
+                padding: 0 2rem;
+              }
+
               .input,
               .result {
                 display: none;

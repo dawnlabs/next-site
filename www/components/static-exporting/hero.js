@@ -1,5 +1,5 @@
-import Container from "../container";
-import Button from "../button";
+import Container from '../container';
+import Button from '../button';
 
 export default () => (
   <Container wide padding center dotBackground>

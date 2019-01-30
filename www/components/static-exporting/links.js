@@ -1,5 +1,5 @@
-import React from "react";
-import planetaryjs from "planetary.js";
+import React from 'react';
+import planetaryjs from 'planetary.js';
 
 import Container from '../container';
 import SectionHeader from '../section-header';
@@ -11,10 +11,10 @@ export default class Links extends React.PureComponent {
     const globe = planetaryjs.planet();
     globe.loadPlugin(
       planetaryjs.plugins.earth({
-        topojson: { file: "/static/world-110m.json" },
-        oceans: { fill: "#fefefe" },
-        land: { fill: "#eee" },
-        borders: { stroke: "#E5E3E3" }
+        topojson: { file: '/static/world-110m.json' },
+        oceans: { fill: '#fefefe' },
+        land: { fill: '#eee' },
+        borders: { stroke: '#E5E3E3' }
       })
     );
 
@@ -29,10 +29,14 @@ export default class Links extends React.PureComponent {
 
     globe.loadPlugin(planetaryjs.plugins.pings());
     this.interval = setInterval(() => {
-      const cdnIndex = Math.floor(Math.random() * LOCATIONS.length)
-      const { lat, lng } = LOCATIONS[cdnIndex]
+      const cdnIndex = Math.floor(Math.random() * LOCATIONS.length);
+      const { lat, lng } = LOCATIONS[cdnIndex];
 
-      globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 1500, angle: Math.random() * 10 });
+      globe.plugins.pings.add(lng, lat, {
+        color: '#0076ff',
+        ttl: 1500,
+        angle: Math.random() * 10
+      });
     }, 300);
 
     const canvas = this.globe.current;
@@ -41,7 +45,7 @@ export default class Links extends React.PureComponent {
     if (window.devicePixelRatio == 2) {
       canvas.width = 800;
       canvas.height = 800;
-      const context = canvas.getContext("2d");
+      const context = canvas.getContext('2d');
       context.scale(2, 2);
     }
 
@@ -119,9 +123,9 @@ export default class Links extends React.PureComponent {
           <canvas
             ref={this.globe}
             style={{
-              width: "100%",
-              marginLeft: "50%",
-              transform: "translate(-50%)"
+              width: '100%',
+              marginLeft: '50%',
+              transform: 'translate(-50%)'
             }}
           />
         </div>

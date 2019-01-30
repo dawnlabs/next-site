@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Container from "../container";
-import Checkmark from "../icons/checkmark";
+import Container from '../container';
+import Checkmark from '../icons/checkmark';
 
-import Terminal from "./terminal";
-import Input from "./input";
-import Result from "./result";
+import Terminal from './terminal';
+import Input from './input';
+import Result from './result';
 
 export default class Build extends React.PureComponent {
   state = {

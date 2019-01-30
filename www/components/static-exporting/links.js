@@ -5,103 +5,47 @@ import Container from '../container';
 import SectionHeader from '../section-header';
 import { GenericLink } from '../text/link';
 
-// This plugin will automatically rotate the globe around its vertical
-// axis a configured number of degrees every second.
-function autorotate(degPerSec) {
-  // Planetary.js plugins are functions that take a `planet` instance
-  // as an argument...
-  return function(planet) {
-    let lastTick = null;
-    let paused = false;
-    planet.plugins.autorotate = {
-      pause() {
-        paused = true;
-      },
-      resume() {
-        paused = false;
-      }
-    };
-    // ...and configure hooks into certain pieces of its lifecycle.
-    planet.onDraw(() => {
-      if (paused || !lastTick) {
-        lastTick = new Date();
-      } else {
-        const now = new Date();
-        const delta = now - lastTick;
-        // This plugin uses the built-in projection (provided by D3)
-        // to rotate the globe each time we draw it.
-        const rotation = planet.projection.rotate();
-        rotation[0] += (degPerSec * delta) / 1000;
-        if (rotation[0] >= 180) rotation[0] -= 360;
-        planet.projection.rotate(rotation);
-        lastTick = now;
-      }
-    });
-  };
-}
-
-function autoscale(options = {}) {
-  return function(planet) {
-    planet.onInit(function() {
-      const width = window.innerWidth + (options.extraWidth || 0);
-      const height = window.innerHeight + (options.extraHeight || 0);
-      planet.projection.scale(Math.min(width, height) / 2);
-    });
-  };
-}
-
-function autocenter(options = {}) {
-  let needsCentering = false;
-  let globe = null;
-
-  const resize = function() {
-    const width = window.innerWidth + (options.extraWidth || 0);
-    const height = window.innerHeight + (options.extraHeight || 0);
-    globe.canvas.width = width;
-    globe.canvas.height = height;
-    globe.projection.translate([width / 2, height / 2]);
-  };
-
-  return function(planet) {
-    globe = planet;
-    planet.onInit(function() {
-      needsCentering = true;
-      d3.select(window).on('resize', function() {
-        needsCentering = true;
-      });
-    });
-
-    planet.onDraw(function() {
-      if (needsCentering) {
-        resize();
-        needsCentering = false;
-      }
-    });
-  };
-}
-
 export default class extends React.PureComponent {
   componentDidMount() {
     const globe = planetaryjs.planet();
-    globe.loadPlugin(autocenter({ extraHeight: -120 }));
-    globe.loadPlugin(autoscale({ extraHeight: -120 }));
-    globe.loadPlugin(autorotate(2));
     globe.loadPlugin(
       planetaryjs.plugins.earth({
         topojson: { file: '/static/world-110m.json' },
-        oceans: { fill: '#eeeeee' },
-        land: { fill: '#111' },
-        borders: { stroke: '#999' }
+        oceans: { fill: '#fefefe' },
+        land: { fill: '#eee' },
+        borders: { stroke: '#E5E3E3' }
       })
     );
-    // globe.loadPlugin(planetaryjs.plugins.pings());
-    // globe.projection.scale(175).translate([200, 175]).rotate([0, -10, 0]);
 
+    const width = window.innerWidth;
+    const height = window.innerHeight - 120;
+
+    globe.projection.translate([width / 2, height / 2]).scale(Math.min(width, height) / 2);
+
+    const requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame;
+
+    const component = this;
+    function step(timestamp) {
+      const rotation = globe.projection.rotate();
+      rotation[0] += 0.1;
+      if (rotation[0] >= 180) rotation[0] -= 360;
+      globe.projection.rotate(rotation);
+
+      component.globeAnimation = requestAnimationFrame(step);
+    }
+
+    component.globeAnimation = requestAnimationFrame(step);
+
+    globe.loadPlugin(planetaryjs.plugins.pings());
     this.interval = setInterval(() => {
-      // const lat = Math.random() * 170 - 85;
-      // const lng = Math.random() * 360 - 180;
-      // globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 2000, angle: Math.random() * 10 });
-    }, 150);
+      const lat = Math.random() * 170 - 85;
+      const lng = Math.random() * 360 - 180;
+      globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 1500, angle: Math.random() * 10 });
+    }, 300);
 
     const canvas = this.globe.current;
     // Special code to handle high-density displays (e.g. retina, some phones)
@@ -113,10 +57,15 @@ export default class extends React.PureComponent {
       context.scale(2, 2);
     }
 
+    canvas.width = width;
+    canvas.height = height;
+
     globe.draw(canvas);
   }
 
   componentWillUnmount() {
+    const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+    cancelAnimationFrame(this.globeAnimation);
     clearInterval(this.interval);
   }
 

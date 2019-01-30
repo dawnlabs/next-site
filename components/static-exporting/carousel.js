@@ -4,16 +4,11 @@ import ArrowNext from '../icons/arrow-next';
 import ArrowPrev from '../icons/arrow-previous';
 
 export default class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
+  origin = Math.floor(React.Children.count(this.props.children) / 2);
 
-    this.count = React.Children.count(props.children);
-    this.origin = Math.floor(this.count / 2);
-
-    this.state = {
-      offset: 0
-    };
-  }
+  state = {
+    offset: 0
+  };
 
   next = () => this.setState(({ offset }) => ({ offset: ++offset }));
   prev = () => this.setState(({ offset }) => ({ offset: --offset }));

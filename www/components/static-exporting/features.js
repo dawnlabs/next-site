@@ -35,8 +35,9 @@ export default () => (
     <style jsx>
       {`
         h4 {
+          height: 2rem;
+          margin: 0 0 0 0.5rem;
           font-size: 1rem;
-          margin: 0;
         }
 
         ul {
@@ -52,11 +53,6 @@ export default () => (
           flex: 1 0 19rem;
           justify-content: center;
           align-items: center;
-        }
-
-        li h4 {
-          height: 2rem;
-          margin-left: 0.5rem;
         }
 
         .max-width {
@@ -75,9 +71,9 @@ export default () => (
           }
 
           li {
-            flex-basis: 0;
+            flex: 1 0;
+            margin: 1rem 0;
             justify-content: flex-start;
-            margin: 2rem 0;
           }
 
           .list-container {

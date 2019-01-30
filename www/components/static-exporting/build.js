@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Container from '../container';
-import Checkmark from '../icons/checkmark';
+import Container from "../container";
+import Checkmark from "../icons/checkmark";
 
-import Terminal from './terminal';
-import Input from './input';
-import Result from './result';
+import Terminal from "./terminal";
+import Input from "./input";
+import Result from "./result";
 
 export default class Build extends React.PureComponent {
   state = {
@@ -17,24 +17,24 @@ export default class Build extends React.PureComponent {
       <Container wide dark center>
         <div className="col">
           <div className="content">
-            <div className="row">
-              <div>
+            <ul>
+              <li>
                 <Checkmark inverse />
                 <h4>Faster Delivery</h4>
-              </div>
-              <div>
+              </li>
+              <li>
                 <Checkmark inverse />
                 <h4>Modern Frontend Features</h4>
-              </div>
-              <div>
+              </li>
+              <li>
                 <Checkmark inverse />
                 <h4>No Lock-In</h4>
-              </div>
-              <div>
+              </li>
+              <li>
                 <Checkmark inverse />
                 <h4>Painless Developer Workflow</h4>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
           <div className="animation-row">
@@ -42,7 +42,10 @@ export default class Build extends React.PureComponent {
               <Input />
             </div>
             <div className="terminal-wrapper">
-              <Terminal running="true" showResult={() => this.setState({ showResult: true })} />
+              <Terminal
+                running="true"
+                showResult={() => this.setState({ showResult: true })}
+              />
             </div>
             <div className="result">
               <Result animating={this.state.showResult} />
@@ -62,11 +65,19 @@ export default class Build extends React.PureComponent {
               flex-direction: column;
             }
 
-            .row {
+            ul {
+              padding: 0;
+              margin: 0 1rem;
               display: flex;
+              list-style-type: none;
               align-items: center;
               justify-content: space-between;
               width: 64rem;
+            }
+
+            li {
+              display: flex;
+              align-items: center;
             }
 
             .row > div {
@@ -76,7 +87,7 @@ export default class Build extends React.PureComponent {
 
             h4 {
               height: 2rem;
-              margin-left: 0.5rem;
+              margin: 0 0 0 0.5rem;
             }
 
             .animation-row {
@@ -94,7 +105,8 @@ export default class Build extends React.PureComponent {
               z-index: 1;
               /* tune position of terminal with respect to input and output */
               margin-top: -36px;
-              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48), 0px 14px 50px rgba(0, 0, 0, 0.38);
+              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48),
+                0px 14px 50px rgba(0, 0, 0, 0.38);
             }
 
             @media screen and (max-width: 960px) {
@@ -107,10 +119,13 @@ export default class Build extends React.PureComponent {
               .col {
                 flex-direction: column-reverse;
               }
-              .row {
+              ul {
                 width: auto;
                 flex-direction: column;
                 align-items: flex-start;
+              }
+              li {
+                margin: 1rem 0;
               }
             }
 

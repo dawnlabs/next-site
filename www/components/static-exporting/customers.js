@@ -51,7 +51,7 @@ export default () => (
 
       <div className="divider" />
 
-      <div className="row">
+      <div className="perfect-for">
         <h4>Perfect For:</h4>
         <ul>
           <li>
@@ -79,6 +79,8 @@ export default () => (
           padding: 0;
           margin: 0;
           display: flex;
+          flex: 1;
+          justify-content: space-between;
           list-style-type: none;
         }
 
@@ -93,7 +95,7 @@ export default () => (
         }
 
         li span {
-          height: 30px;
+          height: 1.8rem;
           margin-left: 0.5rem;
         }
 
@@ -107,10 +109,13 @@ export default () => (
           align-items: center;
         }
 
-        .row {
+        .perfect-for {
           display: flex;
-          justify-content: center;
+          width: 100%;
           align-items: center;
+          margin: 0 auto;
+          padding: 0 1rem;
+          max-width: 1024px;
         }
 
         .left-container {
@@ -175,12 +180,12 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           ul,
-          .row {
+          .perfect-for {
             flex-direction: column;
           }
 
           li {
-            margin: 1rem;
+            margin: 1rem 0;
           }
 
           .carousel-container {

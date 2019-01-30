@@ -90,6 +90,7 @@ export default props => (
           z-index: 0;
           opacity: 0;
           animation: ${props.animating ? '1s fade-in-right ease forwards 50ms' : 'none'};
+          shape-rendering: auto;
         }
       `}
     </style>

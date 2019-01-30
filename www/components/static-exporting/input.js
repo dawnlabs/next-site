@@ -90,6 +90,7 @@ export default () => (
 
         svg {
           z-index: 2;
+          shape-rendering: auto;
         }
 
         .line-dash {

@@ -6,7 +6,7 @@ export default () => (
   <div>
     <Container padding>
       <SectionHeader
-        title="Ditch Your Server"
+        title="Push Your Site to the Edge"
         description="Get your site to users faster, all while saving money, time, and headaches"
       />
 

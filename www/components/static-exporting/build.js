@@ -65,13 +65,13 @@ export default class Build extends React.PureComponent {
             .row {
               display: flex;
               align-items: center;
-              justify-content: space-around;
+              justify-content: space-between;
+              width: 64rem;
             }
 
             .row > div {
               display: flex;
               align-items: center;
-              margin: 0 1rem;
             }
 
             h4 {
@@ -108,6 +108,7 @@ export default class Build extends React.PureComponent {
                 flex-direction: column-reverse;
               }
               .row {
+                width: auto;
                 flex-direction: column;
                 align-items: flex-start;
               }

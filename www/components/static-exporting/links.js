@@ -120,7 +120,10 @@ export default class extends React.PureComponent {
           </div>
         </Container>
         <div className="globe-container">
-          <canvas ref={this.globe} style={{ width: '100vw' }} />
+          <canvas
+            ref={this.globe}
+            style={{ width: '800px', marginLeft: '50%', transform: 'translate(-50%)' }}
+          />
         </div>
         <style jsx>
           {`
@@ -130,7 +133,7 @@ export default class extends React.PureComponent {
 
             .globe-container {
               width: 100%;
-              height: 250px;
+              height: 200px;
               overflow: hidden;
             }
 

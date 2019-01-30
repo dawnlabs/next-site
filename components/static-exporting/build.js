@@ -37,14 +37,18 @@ export default class Build extends React.PureComponent {
         </div>
 
         <div className="animation-row">
-          <Input />
+          <div className="input">
+            <Input />
+          </div>
           <div className="terminal-wrapper">
             <Terminal
               running="true"
               showResult={() => this.setState({ showResult: true })}
             />
           </div>
-          <Result animating={this.state.showResult} />
+          <div className="result">
+            <Result animating={this.state.showResult} />
+          </div>
         </div>
         <style jsx>
           {`
@@ -56,17 +60,17 @@ export default class Build extends React.PureComponent {
             .row {
               display: flex;
               align-items: center;
-              width: 72rem;
-              max-width: 100%;
+              justify-content: space-around;
+              flex-wrap: wrap;
               padding: 2rem;
+              max-width: 96rem;
             }
 
             .row > div {
               display: flex;
-              flex: 1 0;
               justify-content: center;
               align-items: center;
-              margin-right
+              min-width: 16rem;
             }
 
             h4 {
@@ -103,31 +107,20 @@ export default class Build extends React.PureComponent {
               margin-top: -12px;
             }
 
-            @media screen and (max-width: 960px) {
-              .pair > div {
-                margin: 0 1rem;
+            @media screen and (max-width: 1024px) {
+              .row {
+                max-width: 48rem;
+              }
+              .row > div {
+                justify-content: flex-start;
+                min-width: 16rem;
               }
             }
 
-            @media screen and (max-width: 640px) {
-              .build-img {
-                height: 200px;
-              }
-
-              .pair {
-                flex-direction: column;
-                align-items: center;
-                margin: 0 2rem;
-              }
-
-              .pair > div {
-                align-items: center;
-                min-height: 36px;
-                margin: 0;
-              }
-
-              .pair > div:first-child {
-                margin-bottom: 2rem;
+            @media screen and (max-width: 840px) {
+              .input,
+              .result {
+                display: none;
               }
             }
           `}

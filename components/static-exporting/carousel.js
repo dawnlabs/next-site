@@ -25,7 +25,7 @@ export default class Carousel extends React.Component {
 
     const showNext = index < this.count - 1;
     const showPrev = index > 0;
-    const offset = slideWidth + slideWidth / 2 + slideWidth * index;
+    const offset = slideWidth / 2 + slideWidth * index;
 
     return (
       <div className="carousel">
@@ -72,7 +72,7 @@ export default class Carousel extends React.Component {
             top: 0;
             left: 100%;
             transition: transform 500ms;
-            transform: translateX(-${offset}rem);
+            transform: translateX(calc(-50vw - ${offset}rem));
           }
 
           .arrow {

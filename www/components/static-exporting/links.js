@@ -40,9 +40,51 @@ function autorotate(degPerSec) {
   };
 }
 
+function autoscale(options = {}) {
+  return function(planet) {
+    planet.onInit(function() {
+      const width = window.innerWidth + (options.extraWidth || 0);
+      const height = window.innerHeight + (options.extraHeight || 0);
+      planet.projection.scale(Math.min(width, height) / 2);
+    });
+  };
+}
+
+function autocenter(options = {}) {
+  let needsCentering = false;
+  let globe = null;
+
+  const resize = function() {
+    const width = window.innerWidth + (options.extraWidth || 0);
+    const height = window.innerHeight + (options.extraHeight || 0);
+    globe.canvas.width = width;
+    globe.canvas.height = height;
+    globe.projection.translate([width / 2, height / 2]);
+  };
+
+  return function(planet) {
+    globe = planet;
+    planet.onInit(function() {
+      needsCentering = true;
+      d3.select(window).on('resize', function() {
+        needsCentering = true;
+      });
+    });
+
+    planet.onDraw(function() {
+      if (needsCentering) {
+        resize();
+        needsCentering = false;
+      }
+    });
+  };
+}
+
 export default class extends React.PureComponent {
   componentDidMount() {
     const globe = planetaryjs.planet();
+    globe.loadPlugin(autocenter({ extraHeight: -120 }));
+    globe.loadPlugin(autoscale({ extraHeight: -120 }));
     globe.loadPlugin(autorotate(2));
     globe.loadPlugin(
       planetaryjs.plugins.earth({
@@ -52,14 +94,13 @@ export default class extends React.PureComponent {
         borders: { stroke: '#999' }
       })
     );
-    globe.loadPlugin(planetaryjs.plugins.pings());
-    globe.projection.scale(175).translate([200, 175]);
-    // .rotate([0, -10, 0]);
+    // globe.loadPlugin(planetaryjs.plugins.pings());
+    // globe.projection.scale(175).translate([200, 175]).rotate([0, -10, 0]);
 
     this.interval = setInterval(() => {
-      const lat = Math.random() * 170 - 85;
-      const lng = Math.random() * 360 - 180;
-      globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 2000, angle: Math.random() * 10 });
+      // const lat = Math.random() * 170 - 85;
+      // const lng = Math.random() * 360 - 180;
+      // globe.plugins.pings.add(lng, lat, { color: '#0076ff', ttl: 2000, angle: Math.random() * 10 });
     }, 150);
 
     const canvas = this.globe.current;
@@ -122,7 +163,7 @@ export default class extends React.PureComponent {
         <div className="globe-container">
           <canvas
             ref={this.globe}
-            style={{ width: '800px', marginLeft: '50%', transform: 'translate(-50%)' }}
+            style={{ width: '100%', marginLeft: '50%', transform: 'translate(-50%)' }}
           />
         </div>
         <style jsx>

@@ -17,31 +17,31 @@ export default () => (
       <div className="carousel-container">
         <Carousel>
           <div className="col">
-            <div className="screen expo" />
+            <a href="https://expo.io/" className="screen expo" />
             <div className="logo">
               <Expo />
             </div>
           </div>
           <div className="col">
-            <div className="screen blockchain" />
+            <a href="https://blockchain.com/" className="screen blockchain" />
             <div className="logo">
               <Blockchain />
             </div>
           </div>
           <div className="col">
-            <div className="screen plotly" />
+            <a href="https://plot.ly/" className="screen plotly" />
             <div className="logo plotly-logo">
               <Plotly />
             </div>
           </div>
           <div className="col">
-            <div className="screen material" />
+            <a href="https://material-ui.com/" className="screen material" />
             <div className="logo">
               <Material />
             </div>
           </div>
           <div className="col">
-            <div className="screen blockstack" />
+            <a href="https://blockstack.org/" className="screen blockstack" />
             <div className="logo">
               <Blockstack />
             </div>
@@ -157,6 +157,7 @@ export default () => (
           background-size: contain;
           background-position: center;
           margin-top: -2rem;
+          cursor: pointer;
         }
 
         .divider {

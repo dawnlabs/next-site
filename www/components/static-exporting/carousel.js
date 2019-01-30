@@ -70,12 +70,14 @@ export default class Carousel extends React.PureComponent {
             margin: 0 3.5rem;
             opacity: 0.3;
             transition: opacity ease-in 250ms;
+            pointer-events: none;
           }
 
           .slide.selected {
             opacity: 1;
             transform: scale(1.1);
             transition: transform ease-in 250ms;
+            pointer-events: auto;
           }
 
           .arrow {

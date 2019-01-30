@@ -4,7 +4,8 @@ import ArrowNext from "../icons/arrow-next";
 import ArrowPrev from "../icons/arrow-previous";
 
 const slideWidth = 43.5; //rem
-const mobileSlideWidth = 23; //rem
+const tabletSlideWidth = 23; //rem
+const mobileSlideWidth = 18; //rem
 
 export default class Carousel extends React.PureComponent {
   constructor(props) {
@@ -59,7 +60,7 @@ export default class Carousel extends React.PureComponent {
             position: absolute;
             top: 0;
             left: 100%;
-            transition: transform 500ms;
+            transition: transform ease-out 400ms;
             transform: translateX(
               calc(-50vw - ${slideWidth / 2 + slideWidth * index}rem)
             );
@@ -68,13 +69,13 @@ export default class Carousel extends React.PureComponent {
           .slide {
             margin: 0 3.5rem;
             opacity: 0.3;
-            transition: opacity 500ms;
+            transition: opacity ease-in 250ms;
           }
 
           .slide.selected {
             opacity: 1;
             transform: scale(1.1);
-            transition: transform 500ms;
+            transition: transform ease-in 250ms;
           }
 
           .arrow {
@@ -102,6 +103,29 @@ export default class Carousel extends React.PureComponent {
             }
             .previous {
               left: 2rem;
+            }
+            .slides {
+              transform: translateX(
+                calc(
+                  -50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * index}rem
+                )
+              );
+            }
+            .slide {
+              margin: 0 2rem;
+            }
+            .arrow {
+              top: 2rem;
+              transform: scale(2);
+            }
+          }
+
+          @media screen and (max-width: 640px) {
+            .next {
+              right: 1rem;
+            }
+            .previous {
+              left: 1rem;
             }
             .slides {
               transform: translateX(

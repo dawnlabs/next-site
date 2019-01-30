@@ -201,6 +201,10 @@ export default () => (
             flex-basis: 10rem;
             width: 19rem;
           }
+
+          .divider {
+            margin: 3rem 0 2rem 0;
+          }
         }
 
         @media screen and (max-width: 640px) {
@@ -215,6 +219,15 @@ export default () => (
 
           li {
             margin: 1rem;
+          }
+
+          .carousel-container {
+            height: 10rem;
+          }
+
+          .screen {
+            flex-basis: 8rem;
+            width: 14rem;
           }
         }
       `}

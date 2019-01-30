@@ -1,6 +1,6 @@
-import Container from '../container';
-import SectionHeader from '../section-header';
-import Checkmark from '../icons/checkmark';
+import Container from "../container";
+import SectionHeader from "../section-header";
+import Checkmark from "../icons/checkmark";
 
 export default () => (
   <Container padding>
@@ -77,7 +77,7 @@ export default () => (
           }
 
           li {
-            margin: 1rem;
+            margin: 1rem 0;
           }
 
           .list-container {

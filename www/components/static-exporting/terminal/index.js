@@ -184,6 +184,7 @@ function generateFrames(white, onRender) {
       5: (
         <>
           <br />> exporting path: /about
+          <br />> exporting path: /dashboard
           <br />> exporting path: /index
           <br />> exporting path: /<br />
         </>

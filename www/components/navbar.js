@@ -231,7 +231,8 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                     // transform: translate3d(0, 30%, 0);
                     opacity: 0;
                   }
-                  :global(.active) nav .logo {
+                  :global(.active) nav .logo,
+                  :global(.show-logo) nav .logo {
                     pointer-events: unset;
                     // transform: translate3d(0, 0, 0);
                     opacity: 1;

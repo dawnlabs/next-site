@@ -159,7 +159,7 @@ export default class Carousel extends React.PureComponent {
               margin: 0 2rem;
             }
             .arrow {
-              top: 2rem;
+              top: 1rem;
               transform: scale(2);
             }
           }

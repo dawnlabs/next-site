@@ -49,7 +49,7 @@ export default class Links extends React.PureComponent {
 
     canvas.width = width;
     canvas.height = height;
-    
+
     this.animateGlobe(globe);
     globe.draw(canvas);
   }
@@ -122,9 +122,7 @@ export default class Links extends React.PureComponent {
           </div>
         </Container>
         <div className="globe-container">
-          <canvas
-            ref={this.globe}
-          />
+          <canvas ref={this.globe} />
         </div>
         <style jsx>
           {`
@@ -133,7 +131,7 @@ export default class Links extends React.PureComponent {
               margin-left: 50%;
               transform: translate(-50%);
             }
-            
+
             .flex {
               display: flex;
             }

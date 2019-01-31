@@ -13,14 +13,6 @@ function generateFrames(onRender) {
   const current = [];
   let duration = 0;
 
-  /**
-    [
-      frame: {
-        duration,
-        [changed line]: component
-      }
-    ]
-  */
   const data = [
     {
       duration: 500,
@@ -234,23 +226,12 @@ function generateFrames(onRender) {
 
 export default class Console extends React.PureComponent {
   render() {
-    const { alias, mini, running, showResult } = this.props;
+    const { running, showResult } = this.props;
 
     const classes = ['console'];
 
-    if (mini) {
-      classes.push('mini');
-    }
-
     return (
-      <Window
-        title={null}
-        alias={alias}
-        mini={mini}
-        height={275}
-        mobileHeight={275}
-        backgroundColor="black"
-      >
+      <Window title={null} height={275} mobileHeight={275} backgroundColor="black">
         <div className={classes.join(' ')}>
           {running && <Keyframes component="pre">{generateFrames(showResult)}</Keyframes>}
           <style>
@@ -262,10 +243,6 @@ export default class Console extends React.PureComponent {
               line-height: 17px;
               margin: 0;
               white-space: pre;
-            }
-            .console.mini pre {
-              font-size: 11px;
-              line-height: 15px;
             }
             .highlight {
               color: #00FFFF;
@@ -288,11 +265,6 @@ export default class Console extends React.PureComponent {
               line-height: 24px;
               margin: 0 16px;
               text-align: left;
-            }
-            .console.mini {
-              font-size: 10px;
-              line-height: 11px;
-              margin: 0 7px;
             }
             .console i {
               font-style: normal;

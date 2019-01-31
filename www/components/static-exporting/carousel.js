@@ -99,6 +99,7 @@ export default class Carousel extends React.PureComponent {
           }
 
           .arrow {
+            display: flex;
             position: absolute;
             top: 8rem;
             transform: scale(2.5);

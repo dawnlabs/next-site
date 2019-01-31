@@ -25,7 +25,7 @@ export default () => (
           height={64 + (isMobile ? 32 : 0)}
           shadow={!isMobile}
           dotBackground
-          active={32}
+          active={64}
         >
           <Navbar />
         </Header>

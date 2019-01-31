@@ -35,6 +35,7 @@ export default withMediaQuery(({ title, description, children }) => (
           -webkit-text-size-adjust: 100%;
           height: 100%;
           box-sizing: border-box;
+          scroll-behavior: smooth;
         }
         *,
         *:before,
@@ -57,7 +58,6 @@ export default withMediaQuery(({ title, description, children }) => (
           text-rendering: optimizeLegibility;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          scroll-behavior: smooth;
         }
         html,
         body {

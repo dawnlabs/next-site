@@ -34,6 +34,10 @@ export default () => (
 
     <style jsx>
       {`
+        h2 {
+          line-height: 1.3;
+        }
+
         h4 {
           height: 2rem;
           margin: 0 0 0 0.5rem;
@@ -44,13 +48,12 @@ export default () => (
           display: flex;
           margin: 0;
           padding: 0;
-          justify-content: center;
+          justify-content: space-around;
           list-style-type: none;
         }
 
         li {
           display: flex;
-          flex: 1 0 19rem;
           justify-content: center;
           align-items: center;
         }
@@ -62,6 +65,11 @@ export default () => (
         .center {
           display: flex;
           justify-content: center;
+        }
+
+        .list-container {
+          max-width: 900px;
+          margin: 0 auto;
         }
 
         @media screen and (max-width: 960px) {

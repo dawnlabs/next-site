@@ -1,11 +1,16 @@
 import Container from '../container';
 import Button from '../button';
 
+import BoxOfFeatures from './svg/BoxOfFeatures';
+
 export default () => (
   <Container padding wide gray>
     <div className="flex">
       <div className="col">
-        <h2>Powerful Features, Out of the Box</h2>
+        <h2 className="f0 fw6">
+          Powerful Features,
+          <br /> Out of the Box
+        </h2>
 
         <div className="content">
           <p>
@@ -23,45 +28,55 @@ export default () => (
         </div>
       </div>
 
-      <div className="learn-img" />
+      <div>
+        <div className="box-of-features-container">
+          <BoxOfFeatures />
+        </div>
+      </div>
     </div>
     <style jsx>{`
       .flex {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        margin: 0 1rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        max-width: 1024px;
       }
 
       .col {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: 3rem;
+      }
+
+      h2 {
+        line-height: 1.3;
       }
 
       .content {
-        margin: 1rem 0;
+        margin: 1rem 0 1.5rem;
         max-width: 25rem;
       }
 
-      .learn-img {
-        user-select: none;
-        user-drag: none;
-        width: 500px;
-        height: 300px;
-        background-color: red;
+      .box-of-features-container {
+        position: relative;
+        width: 400px;
+        height: 240px;
       }
 
-      @media screen and (max-width: 640px) {
-        .learn-img {
+      @media screen and (max-width: 960px) {
+        .flex {
+          justify-content: center;
+        }
+
+        .box-of-features-container {
           display: none;
         }
 
         .col {
           align-items: center;
           text-align: center;
-          margin-right: 0;
         }
       }
     `}</style>

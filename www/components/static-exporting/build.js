@@ -4,8 +4,8 @@ import Container from '../container';
 import Checkmark from '../icons/checkmark';
 
 import Terminal from './terminal';
-import Input from './input';
-import Result from './result';
+import Input from './svg/Input';
+import Result from './svg/Result';
 
 export default class Build extends React.PureComponent {
   state = {
@@ -102,7 +102,8 @@ export default class Build extends React.PureComponent {
             .content {
               display: flex;
               justify-content: center;
-              margin: 2rem 0 1rem 0;
+              max-width: 1024px;
+              margin: 2.5rem auto;
             }
 
             .col {
@@ -139,7 +140,7 @@ export default class Build extends React.PureComponent {
               display: flex;
               justify-content: center;
               align-items: center;
-              margin: 1rem 0 2rem 0;
+              margin: 0 0 1rem;
 
               max-width: 100%;
               height: 300px;
@@ -160,12 +161,12 @@ export default class Build extends React.PureComponent {
               visibility: ${this.state.demoInView ? 'visible' : 'hidden'};
             }
 
-            @media screen and (max-width: 960px) {
+            @media screen and (max-width: 1024px) {
               .content {
                 margin: 1rem 0 2rem 0;
               }
               .animation-row {
-                margin: 2rem 0 1rem 0;
+                margin: 3rem 0 1rem 0;
               }
               .col {
                 flex-direction: column-reverse;

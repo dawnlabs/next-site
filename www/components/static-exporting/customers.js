@@ -94,6 +94,14 @@ export default () => (
           margin: 0 1.5rem;
         }
 
+        li:first-child {
+          margin-left: 3rem;
+        }
+
+        li:last-child {
+          margin-right: 0;
+        }
+
         li span {
           height: 1.8rem;
           margin-left: 0.5rem;
@@ -126,13 +134,12 @@ export default () => (
         .logo {
           display: flex;
           justify-content: center;
-          margin-top: 1rem;
+          margin-top: 2rem;
           width: 12.5rem;
         }
 
         .plotly-logo {
           width: 7rem;
-          margin-top: 0.5rem;
         }
 
         .expo {
@@ -191,15 +198,12 @@ export default () => (
         @media screen and (max-width: 960px) {
           ul,
           .perfect-for {
-            flex-direction: column;
-          }
-
-          li {
-            margin: 1rem 0;
+            display: none;
           }
 
           .carousel-container {
             height: 12rem;
+            margin-bottom: 2rem;
           }
 
           .screen {
@@ -208,24 +212,11 @@ export default () => (
           }
 
           .divider {
-            margin: 3rem 0 2rem 0;
+            display: none;
           }
         }
 
         @media screen and (max-width: 640px) {
-          ul {
-            flex-direction: column;
-            margin-top: 2rem;
-          }
-
-          ul > div {
-            margin: 0;
-          }
-
-          li {
-            margin: 1rem;
-          }
-
           .carousel-container {
             height: 10rem;
           }

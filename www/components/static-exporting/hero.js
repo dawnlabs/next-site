@@ -1,12 +1,6 @@
 import Container from '../container';
 import Button from '../button';
 
-const scrollToLinks = () =>
-  document.querySelector('#links').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-
 export default () => (
   <Container wide padding center dotBackground>
     <h1>
@@ -20,14 +14,15 @@ export default () => (
       </p>
     </div>
 
-    <Button invert onClick={scrollToLinks}>
+    <Button invert href="#links">
       Learn More
     </Button>
 
     <style jsx>
       {`
         h1 {
-          font-size: 46px;
+          font-size: 2.887rem;
+          line-height: 1.3;
         }
 
         h1 br {
@@ -41,6 +36,14 @@ export default () => (
         @media screen and (max-width: 640px) {
           h1 br {
             display: initial;
+          }
+
+          h1 {
+            font-size: 1.802032470703125em;
+          }
+
+          .content {
+            margin: 2.5rem 1rem;
           }
         }
 

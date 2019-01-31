@@ -1,6 +1,12 @@
 import Container from '../container';
 import Button from '../button';
 
+const scrollToLinks = () =>
+  document.querySelector('#links').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+
 export default () => (
   <Container wide padding center dotBackground>
     <h1>Static Sites, No Compromise</h1>
@@ -12,7 +18,7 @@ export default () => (
       </p>
     </div>
 
-    <Button invert href="#links">
+    <Button invert onClick={scrollToLinks}>
       Learn More
     </Button>
 

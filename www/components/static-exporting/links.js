@@ -25,8 +25,6 @@ export default class Links extends React.PureComponent {
       .translate([width / 2, height / 2])
       .scale(Math.min(width, height) / 2);
 
-    this.animateGlobe(globe);
-
     globe.loadPlugin(planetaryjs.plugins.pings());
     this.interval = setInterval(() => {
       const cdnIndex = Math.floor(Math.random() * LOCATIONS.length);
@@ -52,6 +50,7 @@ export default class Links extends React.PureComponent {
     canvas.width = width;
     canvas.height = height;
 
+    this.animateGlobe(globe);
     globe.draw(canvas);
   }
 
@@ -123,17 +122,16 @@ export default class Links extends React.PureComponent {
           </div>
         </Container>
         <div className="globe-container">
-          <canvas
-            ref={this.globe}
-            style={{
-              width: '100%',
-              marginLeft: '50%',
-              transform: 'translate(-50%)'
-            }}
-          />
+          <canvas ref={this.globe} />
         </div>
         <style jsx>
           {`
+            canvas {
+              width: 100%;
+              margin-left: 50%;
+              transform: translate(-50%);
+            }
+
             .flex {
               display: flex;
             }

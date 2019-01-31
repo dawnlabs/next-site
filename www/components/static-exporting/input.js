@@ -128,7 +128,9 @@ export default props => (
 
         .line-dash {
           z-index: 0;
-          animation: ${props.animating ? '20s shift linear forwards infinite' : 'none'};
+          animation: ${props.animating
+            ? '20s shift linear forwards infinite'
+            : 'none'};
         }
       `}
     </style>

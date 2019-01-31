@@ -17,7 +17,8 @@ export default class Build extends React.PureComponent {
 
   componentDidMount() {
     const { scrollY } = window;
-    const demoInView = scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
+    const demoInView =
+      scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
     if (demoInView !== this.state.demoInView) {
       this.setState({ demoInView });
     }
@@ -40,7 +41,8 @@ export default class Build extends React.PureComponent {
       this.lastFrameScroll = scrollY;
 
       // Section animation triggers
-      const demoInView = scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
+      const demoInView =
+        scrollY <= this.demo.current.offsetTop + this.demo.current.clientHeight;
 
       if (demoInView !== this.state.demoInView) {
         this.setState(
@@ -85,7 +87,10 @@ export default class Build extends React.PureComponent {
               <Input animating={this.state.demoInView} />
             </div>
             <div className="terminal-wrapper">
-              <Terminal running="true" showResult={() => this.setState({ showResult: true })} />
+              <Terminal
+                running="true"
+                showResult={() => this.setState({ showResult: true })}
+              />
             </div>
             <div className="result">
               <Result animating={this.state.showResult} />
@@ -145,7 +150,8 @@ export default class Build extends React.PureComponent {
               z-index: 1;
               /* tune position of terminal with respect to input and output */
               margin-top: -36px;
-              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48), 0px 14px 50px rgba(0, 0, 0, 0.38);
+              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48),
+                0px 14px 50px rgba(0, 0, 0, 0.38);
             }
 
             .input,

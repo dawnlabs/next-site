@@ -122,16 +122,17 @@ export default class Links extends React.PureComponent {
           </div>
         </Container>
         <div className="globe-container">
-          <canvas ref={this.globe} />
+          <canvas
+            ref={this.globe}
+            style={{
+              width: '100%',
+              marginLeft: '50%',
+              transform: 'translate(-50%)'
+            }}
+          />
         </div>
         <style jsx>
           {`
-            canvas {
-              width: 100%;
-              margin-left: 50%;
-              transform: translate(-50%);
-            }
-
             .flex {
               display: flex;
             }

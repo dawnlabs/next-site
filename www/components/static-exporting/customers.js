@@ -115,7 +115,7 @@ export default () => (
           align-items: center;
           margin: 0 auto;
           padding: 0 1rem;
-          max-width: 1024px;
+          max-width: 64rem;
         }
 
         .left-container {
@@ -176,10 +176,10 @@ export default () => (
         }
 
         .divider {
-          width: 90%;
-          max-width: 60rem;
+          width: calc(100% - 2rem);
+          max-width: 64rem;
           border-bottom: 1px solid #eaeaea;
-          margin: 5rem 0 3rem 0;
+          margin: 6rem 0 3rem 0;
         }
 
         .carousel-container {

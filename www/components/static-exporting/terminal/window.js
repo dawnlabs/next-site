@@ -7,9 +7,6 @@ export default class Window extends React.PureComponent {
       backgroundColor,
       borderColor,
       titleBg,
-      alias,
-      mini,
-      caption = null,
       height: propHeight,
       scroll,
       title,
@@ -20,14 +17,6 @@ export default class Window extends React.PureComponent {
     const noScroll = scroll === false;
 
     const classes = ['window'];
-
-    if (alias) {
-      classes.push('alias');
-    }
-
-    if (mini) {
-      classes.push('mini');
-    }
 
     return (
       <div className={classes.join(' ')} style={{ backgroundColor, borderColor, height }}>
@@ -42,8 +31,6 @@ export default class Window extends React.PureComponent {
 
         <div className={`body ${noScroll ? 'noScroll' : ''}`}>{children}</div>
 
-        {caption && <p className="caption">{caption}</p>}
-
         <style jsx>
           {`
             .window {
@@ -53,13 +40,6 @@ export default class Window extends React.PureComponent {
               position: relative;
               border-radius: 5px;
               box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.1);
-            }
-            .window.alias,
-            .window.mini {
-              box-shadow: none;
-            }
-            .window.mini {
-              background: #000;
             }
             .header {
               width: 100%;
@@ -74,9 +54,6 @@ export default class Window extends React.PureComponent {
               position: absolute;
               overflow: auto;
             }
-            .window.mini .body {
-              padding-top: 20px;
-            }
             .body.noScroll {
               overflow: hidden;
             }
@@ -89,9 +66,6 @@ export default class Window extends React.PureComponent {
               top: 52%;
               transform: translateY(-50%);
             }
-            .mini .icon {
-              top: 30%;
-            }
             .close {
               background-color: #ff5f56;
               left: 13px;
@@ -103,19 +77,6 @@ export default class Window extends React.PureComponent {
             .fullScreen {
               background-color: #27c93f;
               left: 53px;
-            }
-            .mini .icon {
-              width: 7px;
-              height: 7px;
-            }
-            .mini .close {
-              left: 7px;
-            }
-            .mini .minimize {
-              left: 18px;
-            }
-            .mini .fullScreen {
-              left: 30px;
             }
             .title {
               color: #999;
@@ -134,24 +95,6 @@ export default class Window extends React.PureComponent {
             }
             .title-bg {
               background-color: #f7f7f7;
-            }
-            .mini .title {
-              display: none;
-            }
-            .caption {
-              color: #999;
-              font-size: 12px;
-              margin: 0;
-              text-align: center;
-              position: absolute;
-              bottom: -50px;
-              width: 100%;
-            }
-            @media (max-width: 350px) {
-              .caption {
-                bottom: -60px;
-                padding: 0 20px;
-              }
             }
           `}
         </style>

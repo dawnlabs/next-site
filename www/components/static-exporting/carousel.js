@@ -1,4 +1,5 @@
 import React from 'react';
+import posed, { PoseGroup } from 'react-pose';
 
 import ArrowNext from '../icons/arrow-next';
 import ArrowPrev from '../icons/arrow-previous';
@@ -7,47 +8,58 @@ const slideWidth = 43.5; //rem
 const tabletSlideWidth = 23; //rem
 const mobileSlideWidth = 18; //rem
 
+const Item = posed.div({
+  flip: {
+    transition: {
+      ease: 'easeOut',
+      duration: 250
+    }
+  }
+});
+
 export default class Carousel extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.count = React.Children.count(this.props.children);
 
+    this.pivot = Math.floor(this.count / 2);
     this.state = {
-      index: Math.floor(this.count / 2)
+      index: this.pivot
     };
   }
 
-  next = () => this.setState(({ index }) => ({ index: ++index }));
-  prev = () => this.setState(({ index }) => ({ index: --index }));
+  next = () => this.setState(({ index }) => ({ index: (index + 1) % this.count }));
+  prev = () => this.setState(({ index }) => ({ index: index === 0 ? this.count - 1 : index - 1 }));
 
   render() {
-    const { children } = this.props;
+    const { pivot } = this;
     const { index } = this.state;
+    const children = React.Children.toArray(this.props.children);
 
-    const showNext = index < this.count - 1;
-    const showPrev = index > 0;
+    let newChildren = [];
+    for (let i = 0; i < this.count; i++) {
+      newChildren.push(children[(index + i) % this.count]);
+    }
 
     return (
       <div className="carousel">
         <div className="slides">
-          {React.Children.map(children, (child, i) => (
-            <div className={`slide ${i === index ? 'selected' : ''}`}>
-              {child}
-            </div>
-          ))}
+          <PoseGroup animateOnMount={false}>
+            {newChildren.map((child, i) => (
+              <Item key={child.props.children[0].props.href}>
+                <div className={`slide ${i === pivot ? 'selected' : ''}`}>{child}</div>
+              </Item>
+            ))}
+          </PoseGroup>
         </div>
 
-        {showNext && (
-          <div className="arrow next" onClick={this.next}>
-            <ArrowNext color="#8c8c8c" />
-          </div>
-        )}
-        {showPrev && (
-          <div className="arrow previous" onClick={this.prev}>
-            <ArrowPrev color="#8c8c8c" />
-          </div>
-        )}
+        <div className="arrow next" onClick={this.next}>
+          <ArrowNext color="#8c8c8c" />
+        </div>
+        <div className="arrow previous" onClick={this.prev}>
+          <ArrowPrev color="#8c8c8c" />
+        </div>
         <style jsx>{`
           .carousel {
             position: relative;
@@ -61,9 +73,7 @@ export default class Carousel extends React.PureComponent {
             top: 0;
             left: 100%;
             transition: transform ease-out 400ms;
-            transform: translateX(
-              calc(-50vw - ${slideWidth / 2 + slideWidth * index}rem)
-            );
+            transform: translateX(calc(-50vw - ${slideWidth / 2 + slideWidth * pivot}rem));
           }
 
           .slide {
@@ -108,9 +118,7 @@ export default class Carousel extends React.PureComponent {
             }
             .slides {
               transform: translateX(
-                calc(
-                  -50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * index}rem
-                )
+                calc(-50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * pivot}rem)
               );
             }
             .slide {
@@ -131,9 +139,7 @@ export default class Carousel extends React.PureComponent {
             }
             .slides {
               transform: translateX(
-                calc(
-                  -50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * index}rem
-                )
+                calc(-50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * pivot}rem)
               );
             }
             .slide {

@@ -1,20 +1,9 @@
 import React from 'react';
 
-export default class Caret extends React.Component {
-  shouldComponentUpdate() {
-    return false;
-  }
-
+export default class Caret extends React.PureComponent {
   render() {
-    const { mini } = this.props;
-    const classes = ['caret'];
-
-    if (mini) {
-      classes.push('mini');
-    }
-
     return (
-      <span className={classes.join(' ')}>
+      <span className="caret">
         <style jsx>
           {`
             .caret {
@@ -23,10 +12,6 @@ export default class Caret extends React.Component {
               width: 7px;
               height: 15px;
               vertical-align: middle;
-            }
-            .caret.mini {
-              width: 6px;
-              height: 11px;
             }
           `}
         </style>

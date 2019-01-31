@@ -177,7 +177,7 @@ export default () => (
 
         .divider {
           width: calc(100% - 2rem);
-          max-width: 64rem;
+          max-width: 62rem;
           border-bottom: 1px solid #eaeaea;
           margin: 6rem 0 3rem 0;
         }

@@ -80,7 +80,7 @@ export default function BoxOfFeatures() {
           }
 
           .slide {
-            animation: slide 5s ease-in-out infinite alternate;
+            animation: slide 3s ease-in-out infinite alternate;
           }
 
           .no-switching {

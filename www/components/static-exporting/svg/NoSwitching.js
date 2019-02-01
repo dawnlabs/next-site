@@ -81,6 +81,8 @@ export default function BoxOfFeatures() {
 
           .slide {
             animation: slide 3s ease-in-out infinite alternate;
+            transform: translateZ(0);
+            backface-visibility: hidden;
           }
 
           .no-switching {

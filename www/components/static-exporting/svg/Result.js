@@ -124,17 +124,7 @@ export default props => (
           }
         }
 
-        @keyframes shift {
-          from {
-            stroke-dashoffset: 0%;
-          }
-          to {
-            stroke-dashoffset: -100%;
-          }
-        }
-
         .result .line-dash {
-          animation: ${props.animating ? '20s shift linear forwards infinite' : 'none'};
           z-index: 3;
         }
 
@@ -142,6 +132,8 @@ export default props => (
           z-index: 0;
           opacity: 0;
           animation: ${props.animating ? '1s fade-in-right ease forwards 50ms' : 'none'};
+          transform: translateZ(0);
+          backface-visibility: hidden;
           shape-rendering: auto;
         }
       `}

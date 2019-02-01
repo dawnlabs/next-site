@@ -47,28 +47,24 @@ export default class Globe extends React.PureComponent {
     canvas.width = width;
     canvas.height = height;
 
+    this.rotation = globe.projection.rotate();
     this.animateGlobe(globe);
     globe.draw(canvas);
   }
 
   componentWillUnmount() {
-    const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
-    cancelAnimationFrame(this.globeAnimation);
+    window.cancelAnimationFrame(this.globeAnimation);
     clearInterval(this.interval);
   }
 
   animateGlobe = globe => {
-    const requestAnimationFrame =
-      window.requestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.webkitRequestAnimationFrame ||
-      window.msRequestAnimationFrame;
-
-    this.globeAnimation = requestAnimationFrame(() => {
-      const rotation = globe.projection.rotate();
-      rotation[0] += 0.1;
-      if (rotation[0] >= 180) rotation[0] -= 360;
-      globe.projection.rotate(rotation);
+    if (this.globeAnimation) {
+      window.cancelAnimationFrame(this.globeAnimation);
+    }
+    this.globeAnimation = window.requestAnimationFrame(() => {
+      this.rotation[0] += 0.1;
+      if (this.rotation[0] >= 180) this.rotation[0] -= 360;
+      globe.projection.rotate(this.rotation);
 
       this.animateGlobe(globe);
     });

@@ -73,6 +73,7 @@ export default props => (
       <path
         d="M0 116.5H57"
         stroke="#C7C7C7"
+        strokeWidth={2}
         strokeDasharray="3 3"
         className="line-dash"
       />

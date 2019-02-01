@@ -14,6 +14,7 @@ export default props => (
         d="M213 156h60"
         stroke="#C7C7C7"
         strokeDasharray="3 3"
+        strokeWidth={2}
         className="line-dash"
       />
       <g opacity="0.4">

@@ -21,7 +21,7 @@ export default () => (
     <style jsx>
       {`
         h1 {
-          font-size: 46px;
+          font-size: 2.887rem;
         }
 
         h1 br {
@@ -35,6 +35,10 @@ export default () => (
         @media screen and (max-width: 640px) {
           h1 br {
             display: initial;
+          }
+
+          h1 {
+            font-size: 1.802032470703125em;
           }
         }
 

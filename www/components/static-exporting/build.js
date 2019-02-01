@@ -157,7 +157,6 @@ export default class Build extends React.PureComponent {
 
             .input,
             .result {
-              /* TODO confirm this is a necessary optimization */
               visibility: ${this.state.demoInView ? 'visible' : 'hidden'};
             }
 

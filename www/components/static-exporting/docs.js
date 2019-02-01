@@ -7,7 +7,7 @@ export default () => (
       <div className="switching-img" />
 
       <div className="col">
-        <h2>No More Switching Frameworks</h2>
+        <h2 className="f0 fw6">No More Switching Frameworks</h2>
         <div className="content">
           <p>
             With the flexibility to target any frontend environment, choosing

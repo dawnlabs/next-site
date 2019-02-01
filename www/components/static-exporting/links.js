@@ -92,7 +92,7 @@ export default class Links extends React.PureComponent {
 
           <div className="flex">
             <div className="column">
-              <h3>Unrivaled Performance</h3>
+              <h3 className="f3 fw6">Unrivaled Performance</h3>
               <p>
                 Static sites can be deployed to CDNs for minimal latency, zero
                 server load, and faster global delivery.
@@ -101,7 +101,7 @@ export default class Links extends React.PureComponent {
             </div>
 
             <div className="column">
-              <h3>Deploy Anywhere</h3>
+              <h3 className="f3 fw6">Deploy Anywhere</h3>
               <p>
                 Host your static site cheaply and easily with any provider such
                 as Now, Github Pages, or Amazon S3.
@@ -110,7 +110,7 @@ export default class Links extends React.PureComponent {
             </div>
 
             <div className="column">
-              <h3>Dead Simple</h3>
+              <h3 className="f3 fw6">Dead Simple</h3>
               <p>
                 With no moving parts, static sites are secure, effortless to
                 maintain, and easy to reason about.
@@ -135,6 +135,7 @@ export default class Links extends React.PureComponent {
           {`
             .flex {
               display: flex;
+              margin: 0 -1.5rem;
             }
 
             .globe-container {

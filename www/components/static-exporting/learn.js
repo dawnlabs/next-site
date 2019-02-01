@@ -5,7 +5,7 @@ export default () => (
   <Container padding wide gray>
     <div className="flex">
       <div className="col">
-        <h2>Powerful Features, Out of the Box</h2>
+        <h2 className="f0 fw6">Powerful Features, Out of the Box</h2>
 
         <div className="content">
           <p>

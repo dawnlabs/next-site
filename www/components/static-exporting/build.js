@@ -102,7 +102,8 @@ export default class Build extends React.PureComponent {
             .content {
               display: flex;
               justify-content: center;
-              margin: 2rem 0 1rem 0;
+              max-width: 1024px;
+              margin: 2.5rem auto;
             }
 
             .col {
@@ -139,7 +140,7 @@ export default class Build extends React.PureComponent {
               display: flex;
               justify-content: center;
               align-items: center;
-              margin: 1rem 0 2rem 0;
+              margin: 0 0 1rem;
 
               max-width: 100%;
               height: 300px;

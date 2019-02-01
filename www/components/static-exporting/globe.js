@@ -84,7 +84,7 @@ export default class Globe extends React.PureComponent {
         style={{
           width: '100%',
           marginLeft: '50%',
-          transform: 'translate(-50%)'
+          transform: 'translate3d(-50%,0,0)'
         }}
       />
     );

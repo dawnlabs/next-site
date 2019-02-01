@@ -95,15 +95,8 @@ export default props => (
           />
           <feOffset dy={2} />
           <feGaussianBlur stdDeviation={5} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.48 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.48 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -111,21 +104,9 @@ export default props => (
           />
           <feOffset dy={14} />
           <feGaussianBlur stdDeviation={25} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.38 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.38 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
@@ -134,11 +115,11 @@ export default props => (
       {`
         @keyframes fade-in-right {
           from {
-            transform: translateX(-100%);
+            transform: translate3d(-100%, 0, 0);
             opacity: 0;
           }
           to {
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
             opacity: 1;
           }
         }
@@ -153,18 +134,14 @@ export default props => (
         }
 
         .result .line-dash {
-          animation: ${props.animating
-            ? '20s shift linear forwards infinite'
-            : 'none'};
+          animation: ${props.animating ? '20s shift linear forwards infinite' : 'none'};
           z-index: 3;
         }
 
         .result {
           z-index: 0;
           opacity: 0;
-          animation: ${props.animating
-            ? '1s fade-in-right ease forwards 50ms'
-            : 'none'};
+          animation: ${props.animating ? '1s fade-in-right ease forwards 50ms' : 'none'};
           shape-rendering: auto;
         }
       `}

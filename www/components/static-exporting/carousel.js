@@ -29,8 +29,7 @@ export default class Carousel extends React.PureComponent {
     };
   }
 
-  next = () =>
-    this.setState(({ index }) => ({ index: (index + 1) % this.count }));
+  next = () => this.setState(({ index }) => ({ index: (index + 1) % this.count }));
   prev = () =>
     this.setState(({ index }) => ({
       index: index === 0 ? this.count - 1 : index - 1
@@ -52,9 +51,7 @@ export default class Carousel extends React.PureComponent {
           <PoseGroup animateOnMount={false}>
             {newChildren.map((child, i) => (
               <Item key={child.props.children[0].props.href}>
-                <div className={`slide ${i === pivot ? 'selected' : ''}`}>
-                  {child}
-                </div>
+                <div className={`slide ${i === pivot ? 'selected' : ''}`}>{child}</div>
               </Item>
             ))}
           </PoseGroup>
@@ -79,9 +76,7 @@ export default class Carousel extends React.PureComponent {
             top: 0;
             left: 100%;
             transition: transform ease-out 400ms;
-            transform: translateX(
-              calc(-50vw - ${slideWidth / 2 + slideWidth * pivot}rem)
-            );
+            transform: translate3d(calc(-50vw - ${slideWidth / 2 + slideWidth * pivot}rem), 0, 0);
           }
 
           .slide {
@@ -127,9 +122,7 @@ export default class Carousel extends React.PureComponent {
             }
             .slides {
               transform: translateX(
-                calc(
-                  -50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * pivot}rem
-                )
+                calc(-50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * pivot}rem)
               );
             }
             .slide {
@@ -150,9 +143,7 @@ export default class Carousel extends React.PureComponent {
             }
             .slides {
               transform: translateX(
-                calc(
-                  -50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * pivot}rem
-                )
+                calc(-50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * pivot}rem)
               );
             }
             .slide {

@@ -11,10 +11,9 @@ export default () => (
 
         <div className="content">
           <p>
-            Just because it’s a static site, doesn’t mean it should act like it.
-            With automatic code-splitting, dynamic imports, and page
-            prefetching, Next.js creates static sites that load fast and feel
-            fluid.
+            Just because it’s a static site, doesn’t mean it should act like it. With automatic
+            code-splitting, dynamic imports, and page prefetching, Next.js creates static sites that
+            load fast and feel fluid.
           </p>
         </div>
 
@@ -25,7 +24,10 @@ export default () => (
         </div>
       </div>
 
-      <BoxOfFeatures />
+      <div className="relative">
+        <div className="cover" />
+        <BoxOfFeatures />
+      </div>
     </div>
     <style jsx>{`
       .flex {
@@ -45,6 +47,20 @@ export default () => (
       .content {
         margin: 1rem 0;
         max-width: 25rem;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .cover {
+        background: linear-gradient(90deg, #f6f6f6 14.53%, rgba(255, 255, 255, 0) 35.16%),
+          linear-gradient(360deg, #f6f6f6 0%, rgba(255, 255, 255, 0) 29.35%),
+          linear-gradient(180deg, #f6f6f6 0%, rgba(246, 246, 246, 0) 32.92%);
+        left: -3rem;
+        position: absolute;
+        width: calc(50vw + 6rem);
+        height: 100%;
       }
 
       @media screen and (max-width: 640px) {

@@ -7,7 +7,7 @@ export default () => (
   <Container padding wide gray>
     <div className="flex">
       <div className="col">
-        <h2 className="f0 fw6">Powerful Features, Out of the Box</h2>
+        <h2 className="f0 fw6">Powerful Features,<br /> Out of the Box</h2>
 
         <div className="content">
           <p>
@@ -24,43 +24,42 @@ export default () => (
         </div>
       </div>
 
-      <div className="relative">
-        <div className="cover" />
-        <BoxOfFeatures />
+      <div>
+        <div className="box-of-features-container">
+          <BoxOfFeatures />
+        </div>
       </div>
     </div>
     <style jsx>{`
       .flex {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin: 0 1rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        max-width: 1024px;
+
       }
 
       .col {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: 3rem;
+        padding-right: 8rem;
+      }
+
+      h2 {
+        line-height: 1.3;
       }
 
       .content {
-        margin: 1rem 0;
+        margin: 1rem 0 1.5rem;
         max-width: 25rem;
       }
 
-      .relative {
+      .box-of-features-container {
         position: relative;
-      }
-
-      .cover {
-        background: linear-gradient(90deg, #f6f6f6 14.53%, rgba(255, 255, 255, 0) 35.16%),
-          linear-gradient(360deg, #f6f6f6 0%, rgba(255, 255, 255, 0) 29.35%),
-          linear-gradient(180deg, #f6f6f6 0%, rgba(246, 246, 246, 0) 32.92%);
-        left: -3rem;
-        position: absolute;
-        width: calc(50vw + 6rem);
-        height: 100%;
+        width: 400px;
+        height: 240px;
       }
 
       @media screen and (max-width: 640px) {

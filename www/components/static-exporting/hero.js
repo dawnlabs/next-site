@@ -22,6 +22,7 @@ export default () => (
       {`
         h1 {
           font-size: 2.887rem;
+          line-height: 1.3;
         }
 
         h1 br {
@@ -39,6 +40,10 @@ export default () => (
 
           h1 {
             font-size: 1.802032470703125em;
+          }
+
+          .content {
+            margin: 2.5rem 1rem;
           }
         }
 

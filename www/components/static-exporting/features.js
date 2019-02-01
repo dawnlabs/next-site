@@ -34,6 +34,10 @@ export default () => (
 
     <style jsx>
       {`
+        h2 {
+          line-height: 1.3;
+        }
+
         h4 {
           height: 2rem;
           margin: 0 0 0 0.5rem;
@@ -61,6 +65,11 @@ export default () => (
         .center {
           display: flex;
           justify-content: center;
+        }
+
+        .list-container {
+          max-width: 900px;
+          margin: 0 auto;
         }
 
         @media screen and (max-width: 960px) {

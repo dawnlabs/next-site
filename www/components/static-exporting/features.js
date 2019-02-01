@@ -44,13 +44,12 @@ export default () => (
           display: flex;
           margin: 0;
           padding: 0;
-          justify-content: center;
+          justify-content: space-around;
           list-style-type: none;
         }
 
         li {
           display: flex;
-          flex: 1 0 19rem;
           justify-content: center;
           align-items: center;
         }

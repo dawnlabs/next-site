@@ -1,6 +1,8 @@
 import Container from '../container';
 import Button from '../button';
 
+import BoxOfFeatures from './svg/BoxOfFeatures';
+
 export default () => (
   <Container padding wide gray>
     <div className="flex">
@@ -9,10 +11,9 @@ export default () => (
 
         <div className="content">
           <p>
-            Just because it’s a static site, doesn’t mean it should act like it.
-            With automatic code-splitting, dynamic imports, and page
-            prefetching, Next.js creates static sites that load fast and feel
-            fluid.
+            Just because it’s a static site, doesn’t mean it should act like it. With automatic
+            code-splitting, dynamic imports, and page prefetching, Next.js creates static sites that
+            load fast and feel fluid.
           </p>
         </div>
 
@@ -23,7 +24,7 @@ export default () => (
         </div>
       </div>
 
-      <div className="learn-img" />
+      <BoxOfFeatures />
     </div>
     <style jsx>{`
       .flex {
@@ -43,14 +44,6 @@ export default () => (
       .content {
         margin: 1rem 0;
         max-width: 25rem;
-      }
-
-      .learn-img {
-        user-select: none;
-        user-drag: none;
-        width: 500px;
-        height: 300px;
-        background-color: red;
       }
 
       @media screen and (max-width: 640px) {

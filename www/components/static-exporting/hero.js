@@ -12,7 +12,7 @@ export default () => (
       </p>
     </div>
 
-    <Button invert href="/learn">
+    <Button invert href="/learn/excel/static-html-export">
       Learn More
     </Button>
 

@@ -51,7 +51,10 @@ export default () => (
           display: flex;
           flex: 1 0;
           align-items: center;
-          margin: 0 2rem 1rem 2rem;
+        }
+
+        li:not(:last-child) {
+          margin-right: 1rem;
         }
 
         li h4 {
@@ -68,7 +71,7 @@ export default () => (
           justify-content: center;
         }
 
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 960px) {
           ul {
             flex-direction: column;
           }

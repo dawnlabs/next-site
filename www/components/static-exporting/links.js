@@ -52,7 +52,7 @@ export default () => (
           height: 300px;
           max-width: 100%;
           margin: 0 auto;
-          background: url(/static/images/earth.png);
+          background: url(/static/images/static-exporting/earth.png);
           background-repeat: no-repeat;
           background-size: contain;
           background-position: bottom;

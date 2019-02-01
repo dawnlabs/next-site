@@ -42,7 +42,6 @@ export default () => (
           display: flex;
           flex-direction: column;
           justify-content: center;
-          margin-right: 3rem;
         }
 
         h2 {
@@ -62,15 +61,18 @@ export default () => (
           max-width: 25rem;
         }
 
-        @media screen and (max-width: 640px) {
-          .switching-img {
+        @media screen and (max-width: 960px) {
+          .flex {
+            justify-content: center;
+          }
+
+          .no-switching-container {
             display: none;
           }
 
           .col {
             align-items: center;
             text-align: center;
-            margin-left: 0;
           }
         }
       `}

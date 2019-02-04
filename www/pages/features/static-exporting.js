@@ -5,6 +5,7 @@ import Header from '../../components/header';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
 import { MediaQueryConsumer } from '../../components/media-query';
+import SocialMeta from '../../components/social-meta';
 
 import Hero from '../../components/static-exporting/hero';
 import Build from '../../components/static-exporting/build';
@@ -27,6 +28,12 @@ export default () => (
         content="Static site generation, Static exporting, Static exports, Next, JavaScript, Web Framework"
       />
     </Head>
+    <SocialMeta
+      title="Static Exporting - Next.js Features"
+      description="Leverage the speed and simplicity of static sites with the full power of Next.js"
+      image="/static/twitter-cards/static-exporting.png"
+      url="https://nexts.org/features/static-exporting"
+    />
     <MediaQueryConsumer>
       {({ isMobile }) => (
         <Header height={64 + (isMobile ? 32 : 0)} shadow={!isMobile} dotBackground active={64}>

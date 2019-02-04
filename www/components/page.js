@@ -47,9 +47,8 @@ export default withMediaQuery(({ title, description, children }) => (
           min-height: 100%;
           margin: 0;
           line-height: 1.65;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-            'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-            'Helvetica Neue', sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+            'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
           font-size: 16px;
           font-weight: 400;
           min-width: 320px;
@@ -89,9 +88,8 @@ export default withMediaQuery(({ title, description, children }) => (
         }
         code {
           font-size: 0.9em;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
-            serif;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+            Bitstream Vera Sans Mono, Courier New, monospace, serif;
         }
         code:before,
         code:after {
@@ -164,7 +162,7 @@ export default withMediaQuery(({ title, description, children }) => (
           font-weight: 900;
         }
         .subtitle {
-          color: #999;
+          color: #949494;
         }
         .mute {
           color: #757575;

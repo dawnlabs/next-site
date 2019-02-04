@@ -9,7 +9,7 @@ export default () => (
         <SectionHeader
           title="Best in Class Developer Experience"
           description={`
-          Next.js puts development ergonomics front and center. Exporting is as easy
+          Next.js puts development ergonomics front and center. Static exporting is as easy
           as running a single command — no configuration necessary.`}
         />
       </div>

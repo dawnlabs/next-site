@@ -12,7 +12,7 @@ import Carousel from './carousel';
 export default () => (
   <Container padding wide>
     <div className="col">
-      <SectionHeader id="customers" title="Who's Using Static Next.js" />
+      <SectionHeader id="customers" title="Who's Using Static Exports" />
 
       <div className="carousel-container">
         <Carousel>

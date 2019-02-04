@@ -14,6 +14,28 @@ const Item = posed.div({
       ease: 'easeOut',
       duration: 250
     }
+  },
+  unselected: {
+    originX: 50,
+    originY: 50,
+    transition: {
+      ease: 'easeIn',
+      duration: 250
+    },
+    opacity: 0.3,
+    scale: 1,
+    pointerEvents: 'none'
+  },
+  selected: {
+    originX: 50,
+    originY: 50,
+    transition: {
+      ease: 'easeIn',
+      duration: 250
+    },
+    opacity: 1,
+    scale: 1.1,
+    pointerEvents: 'auto'
   }
 });
 
@@ -50,8 +72,11 @@ export default class Carousel extends React.PureComponent {
         <div className="slides">
           <PoseGroup animateOnMount={false}>
             {newChildren.map((child, i) => (
-              <Item key={child.props.children[0].props.href}>
-                <div className={`slide ${i === pivot ? 'selected' : ''}`}>{child}</div>
+              <Item
+                pose={i === pivot ? 'selected' : 'unselected'}
+                key={child.props.children[0].props.href}
+              >
+                <div className="slide">{child}</div>
               </Item>
             ))}
           </PoseGroup>
@@ -81,16 +106,6 @@ export default class Carousel extends React.PureComponent {
 
           .slide {
             margin: 0 3.5rem;
-            opacity: 0.3;
-            transition: opacity ease-in 250ms;
-            pointer-events: none;
-          }
-
-          .slide.selected {
-            opacity: 1;
-            transform: scale(1.1);
-            transition: transform ease-in 250ms;
-            pointer-events: auto;
           }
 
           .arrow {

@@ -38,7 +38,7 @@ export default class Links extends React.PureComponent {
             </div>
 
             <div className="column">
-              <h3 className="f3 fw6">Dead Simple</h3>
+              <h3 className="f3 fw6">Exceptionally Simple</h3>
               <p>
                 With no moving parts, static sites are secure, effortless to maintain, and easy to
                 reason about.

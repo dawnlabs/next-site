@@ -18,15 +18,18 @@ export default () => (
   <Page>
     <Head>
       <title>Static Exporting - Next.js Features</title>
+      <meta
+        name="description"
+        content="Leverage the speed and simplicity of static sites with the full power of Next.js"
+      />
+      <meta
+        name="keywords"
+        content="Static site generation, Static exporting, Static exports, Next, JavaScript, Web Framework"
+      />
     </Head>
     <MediaQueryConsumer>
       {({ isMobile }) => (
-        <Header
-          height={64 + (isMobile ? 32 : 0)}
-          shadow={!isMobile}
-          dotBackground
-          active={64}
-        >
+        <Header height={64 + (isMobile ? 32 : 0)} shadow={!isMobile} dotBackground active={64}>
           <Navbar />
         </Header>
       )}

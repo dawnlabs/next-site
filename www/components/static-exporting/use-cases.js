@@ -31,47 +31,49 @@ export default () => (
             </div>
             <style jsx>
               {`
-        .perfect-for {
-          display: flex;
-          width: 100%;
-          align-items: center;
-          margin: 0 auto;
-          padding: 2rem 1rem;
-          max-width: 64rem;
-        }
+                .perfect-for {
+                  display: flex;
+                  width: 100%;
+                  align-items: center;
+                  margin: 0 auto;
+                  padding: 2rem 1rem;
+                  max-width: 64rem;
+                }
 
-        h4 {
-          font-size: 1rem;
-          margin: 0;
-        }
+                h4 {
+                  font-size: 1rem;
+                  margin: 0;
+                }
 
-        ul {
-          padding: 0;
-          margin: 0 0 0 3.5rem;
-          display: flex;
-          flex: 1;
-          justify-content: space-between;
-          list-style-type: none;
-        }
+                ul {
+                  padding: 0;
+                  margin: 0 0 0 3.5rem;
+                  display: flex;
+                  flex: 1;
+                  justify-content: space-between;
+                  list-style-type: none;
+                }
 
-        li {
-          display: flex;
-          align-items: center;
-        }
+                li {
+                  display: flex;
+                  align-items: center;
+                }
 
-        li span {
-          height: 1.8rem;
-          margin-left: 0.5rem;
-        }
+                li span {
+                  height: 1.8rem;
+                  margin-left: 0.5rem;
+                }
 
-        ul > div {
-          display: flex;
-        }
-      `}
+                ul > div {
+                  display: flex;
+                }
+              `}
             </style>
           </Container>
         );
       }
+
+      return null;
     }}
   </MediaQueryConsumer>
 );

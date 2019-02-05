@@ -59,7 +59,7 @@ export default () => (
         }
 
         .max-width {
-          max-width: 32rem;
+          max-width: 34rem;
         }
 
         .center {

@@ -86,6 +86,10 @@ export default class Links extends React.PureComponent {
               .earth-img {
                 height: 180px;
               }
+
+              .globe-container {
+                display: none;
+              }
             }
           `}
         </style>

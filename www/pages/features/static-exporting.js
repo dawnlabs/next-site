@@ -9,6 +9,7 @@ import SocialMeta from '../../components/social-meta';
 
 import Hero from '../../components/static-exporting/hero';
 import Build from '../../components/static-exporting/build';
+import UseCases from '../../components/static-exporting/use-cases';
 import Links from '../../components/static-exporting/links';
 import Learn from '../../components/static-exporting/learn';
 import Features from '../../components/static-exporting/features';
@@ -43,6 +44,7 @@ export default () => (
     </MediaQueryConsumer>
     <Hero />
     <Build />
+    <UseCases />
     <Links />
     <Learn />
     <Features />

@@ -1,6 +1,5 @@
 import Container from '../container';
 import SectionHeader from '../section-header';
-import Checkmark from '../icons/checkmark';
 import Blockchain from '../icons/companies/blockchain';
 import Expo from '../icons/companies/expo';
 import Blockstack from '../icons/companies/blockstack';
@@ -48,82 +47,18 @@ export default () => (
           </div>
         </Carousel>
       </div>
-
-      <div className="divider" />
-
-      <div className="perfect-for">
-        <h4>Perfect For:</h4>
-        <ul>
-          <li>
-            <Checkmark />
-            <span>Landing pages</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>Blogs</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>Documentation and tutorials</span>
-          </li>
-          <li>
-            <Checkmark />
-            <span>Style guides</span>
-          </li>
-        </ul>
-      </div>
     </div>
     <style jsx>
       {`
-        ul {
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex: 1;
-          justify-content: space-between;
-          list-style-type: none;
-        }
-
         h4 {
           margin: 0;
-        }
-
-        li {
-          display: flex;
-          align-items: center;
-          margin: 0 1.5rem;
-        }
-
-        li:first-child {
-          margin-left: 3rem;
-        }
-
-        li:last-child {
-          margin-right: 0;
-        }
-
-        li span {
-          height: 1.8rem;
-          margin-left: 0.5rem;
-        }
-
-        ul > div {
-          display: flex;
         }
 
         .col {
           display: flex;
           flex-direction: column;
           align-items: center;
-        }
-
-        .perfect-for {
-          display: flex;
-          width: 100%;
-          align-items: center;
-          margin: 0 auto;
-          padding: 0 1rem;
-          max-width: 64rem;
+          padding-bottom: 2rem;
         }
 
         .left-container {
@@ -196,14 +131,8 @@ export default () => (
         }
 
         @media screen and (max-width: 960px) {
-          ul,
-          .perfect-for {
-            display: none;
-          }
-
           .carousel-container {
             height: 12rem;
-            margin-bottom: 2rem;
           }
 
           .screen {

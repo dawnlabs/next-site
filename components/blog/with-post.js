@@ -106,7 +106,7 @@ export default meta => ({ children }) => {
 
   return (
     <MDXProvider components={components}>
-      <Page title={meta.title + ' - Next.js Blog'}>
+      <Page title={`Next.js - Blog - ${meta.title}`}>
         <SocialMeta
           image={'/static' + meta.link + '/twitter-card.png'}
           {...meta}

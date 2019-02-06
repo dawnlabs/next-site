@@ -26,7 +26,7 @@ class Reviews extends React.Component {
     return (
       <ReactDisqusThread
         shortname="learnnextjs"
-        title="Learn Next.js Reviews"
+        title="Learn - Reviews | Next.js"
         identifier="/reviews"
         url={window.location.href}
         category_id="123456"
@@ -38,14 +38,14 @@ class Reviews extends React.Component {
     return (
       <Layout>
         <Head>
-          <title>Reviews - {SITE_NAME}</title>
+          <title>Learn - Reviews | {SITE_NAME}</title>
         </Head>
         <Profile />
         <div className="reviews-page">
           <h1>Reviews</h1>
           <p>What do you think about these lessons?</p>
           <div className="comments">
-            { this.getComments() }
+            {this.getComments()}
           </div>
         </div>
         <Footer />

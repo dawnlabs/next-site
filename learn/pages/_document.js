@@ -8,7 +8,6 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>Learn | Next.js</title>
           <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
           <meta name="description" content="Next.js is a lightweight framework for static and server-rendered applications" />
           <meta name="twitter:site" content="@zeithq" />

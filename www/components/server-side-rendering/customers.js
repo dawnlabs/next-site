@@ -4,12 +4,12 @@ import Carousel from '../carousel';
 
 import Invision from '../icons/companies/invision';
 import Hulu from '../icons/companies/hulu';
-import Boosted from '../icons/companies/boosted'
+import Boosted from '../icons/companies/boosted';
 import Scale from '../icons/companies/scale';
 import OpenCollective from '../icons/companies/opencollective';
 import Twitch from '../icons/companies/twitch';
 import Expo from '../icons/companies/expo';
-import GiveCrypto from '../icons/companies/givecrypto'
+import GiveCrypto from '../icons/companies/givecrypto';
 
 export default () => (
   <Container padding wide>
@@ -18,14 +18,6 @@ export default () => (
 
       <div className="carousel-container">
         <Carousel>
-          <div className="col">
-            <a href="https://www.invisionapp.com/">
-              <img src="/static/images/showcases/showcases-16.jpg" alt="inVision" />
-            </a>
-            <div className="logo">
-              <Invision />
-            </div>
-          </div>
           <div className="col">
             <a href="https://hulu.com">
               <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
@@ -51,19 +43,19 @@ export default () => (
             </div>
           </div>
           <div className="col">
-            <a href="https://opencollective.com/">
-              <img src="/static/images/showcases/showcases-06.jpg" alt="Open Collective" />
-            </a>
-            <div className="logo">
-              <OpenCollective />
-            </div>
-          </div>
-          <div className="col">
             <a href="https://twitch.tv/">
               <img src="/static/images/showcases/twitch.jpg" alt="Twitch" />
             </a>
             <div className="logo">
               <Twitch />
+            </div>
+          </div>
+          <div className="col">
+            <a href="https://opencollective.com/">
+              <img src="/static/images/showcases/showcases-06.jpg" alt="Open Collective" />
+            </a>
+            <div className="logo">
+              <OpenCollective />
             </div>
           </div>
           <div className="col">
@@ -80,6 +72,14 @@ export default () => (
             </a>
             <div className="logo">
               <GiveCrypto />
+            </div>
+          </div>
+          <div className="col">
+            <a href="https://www.invisionapp.com/">
+              <img src="/static/images/showcases/showcases-16.jpg" alt="inVision" />
+            </a>
+            <div className="logo">
+              <Invision />
             </div>
           </div>
         </Carousel>
@@ -123,15 +123,13 @@ export default () => (
           margin-top: -2rem;
           cursor: pointer;
           border-radius: 7px;
-          box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1),
-            0px 10px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.08);
           opacity: 0.95;
         }
 
         img:hover {
           opacity: 1;
-          box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1),
-            0px 10px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.08);
         }
 
         .divider {

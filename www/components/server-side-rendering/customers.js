@@ -16,74 +16,72 @@ export default () => (
     <div className="col">
       <SectionHeader id="customers" title="Who's Using Server-Side Rendering" />
 
-      <div className="carousel-container">
-        <Carousel>
-          <div className="col">
-            <a href="https://hulu.com">
-              <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
-            </a>
-            <div className="logo">
-              <Hulu />
-            </div>
+      <Carousel>
+        <div className="col">
+          <a href="https://hulu.com">
+            <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
+          </a>
+          <div className="logo">
+            <Hulu />
           </div>
-          <div className="col">
-            <a href="https://boostedboards.com/">
-              <img src="/static/images/showcases/boosted.jpg" alt="Boosted Boards" />
-            </a>
-            <div className="logo">
-              <Boosted />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://boostedboards.com/">
+            <img src="/static/images/showcases/boosted.jpg" alt="Boosted Boards" />
+          </a>
+          <div className="logo">
+            <Boosted />
           </div>
-          <div className="col">
-            <a href="https://scale.ai/">
-              <img src="/static/images/showcases/showcases-04.jpg" alt="Scale ai" />
-            </a>
-            <div className="logo">
-              <Scale />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://scale.ai/">
+            <img src="/static/images/showcases/showcases-04.jpg" alt="Scale ai" />
+          </a>
+          <div className="logo">
+            <Scale />
           </div>
-          <div className="col">
-            <a href="https://twitch.tv/">
-              <img src="/static/images/showcases/twitch.jpg" alt="Twitch" />
-            </a>
-            <div className="logo">
-              <Twitch />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://twitch.tv/">
+            <img src="/static/images/showcases/twitch.jpg" alt="Twitch" />
+          </a>
+          <div className="logo">
+            <Twitch />
           </div>
-          <div className="col">
-            <a href="https://opencollective.com/">
-              <img src="/static/images/showcases/showcases-06.jpg" alt="Open Collective" />
-            </a>
-            <div className="logo">
-              <OpenCollective />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://opencollective.com/">
+            <img src="/static/images/showcases/showcases-06.jpg" alt="Open Collective" />
+          </a>
+          <div className="logo">
+            <OpenCollective />
           </div>
-          <div className="col">
-            <a href="https://expo.io/">
-              <img src="/static/images/showcases/showcases-13.jpg" alt="Expo" />
-            </a>
-            <div className="logo">
-              <Expo />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://expo.io/">
+            <img src="/static/images/showcases/showcases-13.jpg" alt="Expo" />
+          </a>
+          <div className="logo">
+            <Expo />
           </div>
-          <div className="col">
-            <a href="https://givecrypto.org/">
-              <img src="/static/images/showcases/givecrypto.jpg" alt="GiveCrypto" />
-            </a>
-            <div className="logo">
-              <GiveCrypto />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://givecrypto.org/">
+            <img src="/static/images/showcases/givecrypto.jpg" alt="GiveCrypto" />
+          </a>
+          <div className="logo">
+            <GiveCrypto />
           </div>
-          <div className="col">
-            <a href="https://www.invisionapp.com/">
-              <img src="/static/images/showcases/showcases-16.jpg" alt="inVision" />
-            </a>
-            <div className="logo">
-              <Invision />
-            </div>
+        </div>
+        <div className="col">
+          <a href="https://www.invisionapp.com/">
+            <img src="/static/images/showcases/showcases-16.jpg" alt="inVision" />
+          </a>
+          <div className="logo">
+            <Invision />
           </div>
-        </Carousel>
-      </div>
+        </div>
+      </Carousel>
     </div>
     <style jsx>
       {`
@@ -139,17 +137,7 @@ export default () => (
           margin: 6rem 0 3rem 0;
         }
 
-        .carousel-container {
-          margin-top: 3rem;
-          height: 22rem;
-          width: 100%;
-        }
-
         @media screen and (max-width: 960px) {
-          .carousel-container {
-            height: 12rem;
-          }
-
           img {
             flex-basis: 10rem;
             width: 19rem;
@@ -161,10 +149,6 @@ export default () => (
         }
 
         @media screen and (max-width: 640px) {
-          .carousel-container {
-            height: 10rem;
-          }
-
           img {
             flex-basis: 8rem;
             width: 14rem;

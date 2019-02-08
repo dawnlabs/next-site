@@ -110,30 +110,6 @@ export default () => (
           width: 12.5rem;
         }
 
-        .plotly-logo {
-          width: 7rem;
-        }
-
-        .expo {
-          background: url();
-        }
-        .blockchain {
-          background: url(/static/images/static-exporting/blockchain-screen.png);
-        }
-        .plotly {
-          background: url(/static/images/static-exporting/plotly-screen.png);
-        }
-        .material {
-          background: url(/static/images/static-exporting/material-screen.png);
-        }
-        .blockstack {
-          background: url(/static/images/static-exporting/blockstack-screen.png);
-        }
-
-        .twitch {
-          background: url(/static/images/static-exporting/blockstack-screen.png);
-        }
-
         img {
           display: flex;
           flex: 1;
@@ -152,7 +128,7 @@ export default () => (
           opacity: 0.95;
         }
 
-        .screen:hover {
+        img:hover {
           opacity: 1;
           box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1),
             0px 10px 10px rgba(0, 0, 0, 0.08);
@@ -176,7 +152,7 @@ export default () => (
             height: 12rem;
           }
 
-          .screen {
+          img {
             flex-basis: 10rem;
             width: 19rem;
           }
@@ -191,7 +167,7 @@ export default () => (
             height: 10rem;
           }
 
-          .screen {
+          img {
             flex-basis: 8rem;
             width: 14rem;
           }

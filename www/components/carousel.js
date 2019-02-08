@@ -1,8 +1,8 @@
 import React from 'react';
 import posed, { PoseGroup } from 'react-pose';
 
-import ArrowNext from '../icons/arrow-next';
-import ArrowPrev from '../icons/arrow-previous';
+import ArrowNext from './icons/arrow-next';
+import ArrowPrev from './icons/arrow-previous';
 
 const slideWidth = 43.5; //rem
 const tabletSlideWidth = 23; //rem

@@ -1,29 +1,33 @@
 import Container from '../container';
-import Button from '../button'
+import Button from '../button';
 
 export default () => (
   <Container wide padding>
     <div className="flex">
       <div className="col">
-        <h2 className="f0 fw6">
-          The Right Abstraction
-        </h2>
+        <h2 className="f0 fw6">The Right Abstraction</h2>
         <div className="content">
           <p>
-            Next.js extends React's lifecycle with `getInitialProps` to provide a powerful hook for loading a page's initial data.
-            With a single place to prepopulate page context, server-side rendering with Next.js seamlessly integrates with any existing data fetching strategy.
+            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a
+            powerful hook for loading a page's initial data. With a single place to prepopulate page
+            context, server-side rendering with Next.js seamlessly integrates with any existing data
+            fetching strategy.
           </p>
         </div>
         <div>
-          <Button invert href="/docs">View Documentation</Button>
+          <Button invert href="/docs">
+            View Documentation
+          </Button>
         </div>
       </div>
 
       <div className="placeholder" />
-
     </div>
     <style jsx>
       {`
+        code {
+          color: rgb(212, 0, 255);
+        }
         .placeholder {
           width: 200px;
           height: 200px;
@@ -71,4 +75,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

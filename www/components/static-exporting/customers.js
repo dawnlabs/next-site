@@ -6,7 +6,7 @@ import Blockstack from '../icons/companies/blockstack';
 import Material from '../icons/companies/material-ui';
 import Plotly from '../icons/companies/plotly';
 
-import Carousel from './carousel';
+import Carousel from '../carousel';
 
 export default () => (
   <Container padding wide>

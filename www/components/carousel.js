@@ -65,28 +65,36 @@ export default class Carousel extends React.PureComponent {
     });
 
     return (
-      <div className="carousel">
-        <div className="slides">
-          <PoseGroup animateOnMount={false}>
-            {newChildren.map((child, i) => (
-              <Item
-                style={{ visibility: i < pivot - 1 || i > pivot + 1 ? 'hidden' : 'visible' }}
-                pose={i === pivot ? 'selected' : 'unselected'}
-                key={child.props.children[0].props.href}
-              >
-                <div className={`slide ${i === pivot ? 'selected' : 'unselected'}`}>{child}</div>
-              </Item>
-            ))}
-          </PoseGroup>
-        </div>
+      <div className="container">
+        <div className="carousel">
+          <div className="slides">
+            <PoseGroup animateOnMount={false}>
+              {newChildren.map((child, i) => (
+                <Item
+                  style={{ visibility: i < pivot - 1 || i > pivot + 1 ? 'hidden' : 'visible' }}
+                  pose={i === pivot ? 'selected' : 'unselected'}
+                  key={child.props.children[0].props.href}
+                >
+                  <div className={`slide ${i === pivot ? 'selected' : 'unselected'}`}>{child}</div>
+                </Item>
+              ))}
+            </PoseGroup>
+          </div>
 
-        <div className="arrow next" onClick={this.next}>
-          <ArrowNext color="#8c8c8c" />
-        </div>
-        <div className="arrow previous" onClick={this.prev}>
-          <ArrowPrev color="#8c8c8c" />
+          <div className="arrow next" onClick={this.next}>
+            <ArrowNext color="#8c8c8c" />
+          </div>
+          <div className="arrow previous" onClick={this.prev}>
+            <ArrowPrev color="#8c8c8c" />
+          </div>
         </div>
         <style jsx>{`
+          .container {
+            margin-top: 3rem;
+            height: 22rem;
+            width: 100%;
+          }
+
           .carousel {
             position: relative;
             height: 100%;
@@ -134,6 +142,9 @@ export default class Carousel extends React.PureComponent {
           }
 
           @media screen and (max-width: 960px) {
+            .container {
+              height: 12rem;
+            }
             .next {
               right: 2rem;
             }
@@ -155,6 +166,9 @@ export default class Carousel extends React.PureComponent {
           }
 
           @media screen and (max-width: 640px) {
+            .container {
+              height: 10rem;
+            }
             .next {
               right: 1rem;
             }

@@ -20,17 +20,13 @@ export default () => (
     <Head>
       <title>Server Side Rendering - Next.js Features</title>
       <meta
-        name="description"
-        content="Leverage the speed and simplicity of static sites with the full power of Next.js"
-      />
-      <meta
         name="keywords"
         content="Server side rendering, Server rendering, SSR, Next, JavaScript, Web Framework"
       />
     </Head>
     <SocialMeta
       title="Server Side Rendering - Next.js Features"
-      description="Leverage the speed and simplicity of static sites with the full power of Next.js"
+      description="Leverage Server Side Rendering out of the box with Next.js"
       image="/static/twitter-cards/static-exporting.png"
       url="https://nexts.org/features/static-exporting"
     />

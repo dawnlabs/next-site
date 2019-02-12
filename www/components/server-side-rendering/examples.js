@@ -1,8 +1,13 @@
 import Container from '../container';
 import Button from '../button'
+import { Integrate } from './icons'
 
 export default () => (
   <Container wide padding gray center>
+    <div className="icon">
+      <Integrate />
+    </div>
+
     <h2 className="f0 fw6">Integrate Anywhere</h2>
 
     <div className="content">
@@ -25,12 +30,13 @@ export default () => (
           line-height: 1.3;
         }
 
-        .row {
+        .icon {
           display: flex;
+          justify-content: center;
         }
 
         .content {
-          margin-bottom: 7.5rem;
+          margin-bottom: 2.5rem;
         }
 
         @media screen and (max-width: 640px) {

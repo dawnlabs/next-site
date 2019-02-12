@@ -1,29 +1,6 @@
 import Container from '../container';
 import SectionHeader from '../section-header'
-import Discovery from './svg/discovery'
-import Performance from './svg/performance'
-import Lightning from './svg/lightning'
-
-const Circle = ({ children }) => (
-  <div className="circle">
-    {children}
-    <style jsx>
-      {`
-        .circle {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 1rem;
-          width: 64px;
-          height: 64px;
-          background-color: #fff;
-          border-radius: 32px;
-          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
-        }
-      `}
-    </style>
-  </div>
-)
+import { Lightning, Performance, Discovery } from './icons'
 
 export default () => (
   <Container padding>
@@ -35,7 +12,7 @@ export default () => (
 
     <div className="flex">
       <div className="col">
-        <Circle><Performance /></Circle>
+        <Performance />
         <h3 className="f3 fw6">
           Superior Performance
         </h3>
@@ -52,7 +29,7 @@ export default () => (
 
     <div className="flex">
       <div className="col">
-        <Circle><Discovery /></Circle>
+        <Discovery />
         <h3 className="f3 fw6">Optimized for Discovery</h3>
         <p>
           Server-side rendering guarantees your pages are easily indexable by search engines and preview able on social media platforms.
@@ -64,7 +41,7 @@ export default () => (
       <hr />
 
       <div className="col">
-        <Circle><Lightning /></Circle>
+        <Lightning />
         <h3 className="f3 fw6">Lightning Fast Delivery</h3>
         <p>
           Prefetching initial data and building pages on the server drastically reduces the number of round trips required to view your site.

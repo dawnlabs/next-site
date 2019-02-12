@@ -63,7 +63,7 @@ export default () => (
             justify-content: center;
           }
 
-          .no-switching-container {
+          .placeholder {
             display: none;
           }
 

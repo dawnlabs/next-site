@@ -1,28 +1,52 @@
 import Container from '../container';
-import SectionHeader from '../section-header'
-import Button from '../button'
+import Button from '../button';
+import { Integrate } from './icons';
 
 export default () => (
   <Container wide padding gray center>
-    <SectionHeader
-      title="Integrate Anywhere"
-    />
+    <div className="icon">
+      <Integrate />
+    </div>
 
-    <div>
+    <h2 className="f0 fw6">Integrate Anywhere</h2>
+
+    <div className="content">
       <p>
         Need a path for incremental adoption? No problem. Server-side rendering with Next.js <br />
         can be easily integrated with existing application runtimes such as Express and Electron.
       </p>
     </div>
 
-    <Button invert href="/examples">See Examples</Button>
+    <Button invert href="https://github.com/zeit/next.js/tree/master/examples">
+      See Examples
+    </Button>
 
     <style jsx>
       {`
-        .row {
+        p {
+          margin: 0 1rem;
+        }
+
+        h2 {
+          margin: 0 0 1rem 0;
+          line-height: 1.3;
+        }
+
+        .icon {
           display: flex;
+          justify-content: center;
+        }
+
+        .content {
+          margin-bottom: 2.5rem;
+        }
+
+        @media screen and (max-width: 640px) {
+          br {
+            display: none;
+          }
         }
       `}
     </style>
   </Container>
-)
+);

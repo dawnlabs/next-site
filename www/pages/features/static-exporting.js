@@ -24,16 +24,13 @@ export default () => (
         name="description"
         content="Leverage the speed and simplicity of static sites with the full power of Next.js"
       />
-      <meta
-        name="keywords"
-        content="Static site generation, Static exporting, Static exports, Next, JavaScript, Web Framework"
-      />
     </Head>
     <SocialMeta
       title="Features - Static Exporting | Next.js"
       description="Leverage the speed and simplicity of static sites with the full power of Next.js"
       image="/static/twitter-cards/static-exporting.png"
       url="https://nexts.org/features/static-exporting"
+      keywords="Static site generation, Static exporting, Static exports, Next, JavaScript, Web Framework"
     />
     <MediaQueryConsumer>
       {({ isMobile }) => (

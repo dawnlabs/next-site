@@ -1,5 +1,6 @@
 import Container from '../container';
 import Button from '../button';
+import Abstraction from './svg/abstraction';
 
 export default () => (
   <Container wide padding>
@@ -15,23 +16,24 @@ export default () => (
           </p>
         </div>
         <div>
-          <Button invert href="/docs">
+          <Button invert href="/docs#fetching-data-and-component-lifecycle">
             View Documentation
           </Button>
         </div>
       </div>
 
-      <div className="placeholder" />
+      <div className="abstraction">
+        <Abstraction />
+      </div>
     </div>
     <style jsx>
       {`
         code {
           color: rgb(212, 0, 255);
         }
-        .placeholder {
-          width: 200px;
-          height: 200px;
-          background: red;
+
+        h2 {
+          line-height: 1.3;
         }
 
         .flex {
@@ -49,13 +51,13 @@ export default () => (
           justify-content: center;
         }
 
-        h2 {
-          line-height: 1.3;
-        }
-
         .content {
           margin: 1rem 0 1.5rem;
           max-width: 25rem;
+        }
+
+        .abstraction {
+          margin-top: -24rem;
         }
 
         @media screen and (max-width: 960px) {
@@ -63,7 +65,7 @@ export default () => (
             justify-content: center;
           }
 
-          .placeholder {
+          .abstraction {
             display: none;
           }
 

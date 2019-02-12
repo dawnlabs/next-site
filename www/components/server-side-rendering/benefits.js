@@ -1,32 +1,9 @@
 import Container from '../container';
 import SectionHeader from '../section-header'
-import Discovery from './svg/discovery'
-import Performance from './svg/performance'
-import Lightning from './svg/lightning'
-
-const Circle = ({ children }) => (
-  <div className="circle">
-    {children}
-    <style jsx>
-      {`
-        .circle {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 1rem;
-          width: 64px;
-          height: 64px;
-          background-color: #fff;
-          border-radius: 32px;
-          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
-        }
-      `}
-    </style>
-  </div>
-)
+import { Lightning, Performance, Discovery } from './icons'
 
 export default () => (
-  <Container padding>
+  <div className="container">
     <SectionHeader
       anchor="benefits"
       title="Leave the Heavy Lifting to the Servers"
@@ -35,7 +12,7 @@ export default () => (
 
     <div className="flex">
       <div className="col">
-        <Circle><Performance /></Circle>
+        <Performance />
         <h3 className="f3 fw6">
           Superior Performance
         </h3>
@@ -52,7 +29,7 @@ export default () => (
 
     <div className="flex">
       <div className="col">
-        <Circle><Discovery /></Circle>
+        <Discovery />
         <h3 className="f3 fw6">Optimized for Discovery</h3>
         <p>
           Server-side rendering guarantees your pages are easily indexable by search engines and preview able on social media platforms.
@@ -64,7 +41,7 @@ export default () => (
       <hr />
 
       <div className="col">
-        <Circle><Lightning /></Circle>
+        <Lightning />
         <h3 className="f3 fw6">Lightning Fast Delivery</h3>
         <p>
           Prefetching initial data and building pages on the server drastically reduces the number of round trips required to view your site.
@@ -76,8 +53,17 @@ export default () => (
     <style jsx>
       {`
         hr {
+          border-style: solid;
+          opacity: .1;
           margin: 0;
           align-self: stretch;
+        }
+
+        .container {
+          width: 100%;
+          margin: 0 auto;
+          padding: 4rem 1rem 0 1rem;
+          max-width: 1024px;
         }
 
         .flex {
@@ -89,20 +75,16 @@ export default () => (
           min-height: 100%;
         }
 
-        .flex:first-child > .col {
-          margin-bottom: 4rem;
-        }
-
         .flex:last-child > .col {
-          margin-top: 4rem;
+          margin: 4rem 0;
         }
 
         .col {
           display: flex;
           flex-direction: column;
           max-width: 28rem;
+          margin: 0 0 4rem 0;
         }
-
 
         .placeholder {
           width: 480px;
@@ -125,10 +107,10 @@ export default () => (
           }
 
           .col {
-            margin: 3rem;
+            margin: 3rem 1rem !important;
           }
         }
       `}
     </style>
-  </Container>
+  </div>
 )

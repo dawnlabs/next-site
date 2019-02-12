@@ -53,6 +53,8 @@ export default () => (
     <style jsx>
       {`
         hr {
+          border-style: solid;
+          opacity: .1;
           margin: 0;
           align-self: stretch;
         }
@@ -66,20 +68,16 @@ export default () => (
           min-height: 100%;
         }
 
-        .flex:first-child > .col {
-          margin-bottom: 4rem;
-        }
-
         .flex:last-child > .col {
-          margin-top: 4rem;
+          margin: 4rem 0 0 0;
         }
 
         .col {
           display: flex;
           flex-direction: column;
           max-width: 28rem;
+          margin: 0 0 4rem 0;
         }
-
 
         .placeholder {
           width: 480px;
@@ -102,7 +100,7 @@ export default () => (
           }
 
           .col {
-            margin: 3rem;
+            margin: 3rem !important;
           }
         }
       `}

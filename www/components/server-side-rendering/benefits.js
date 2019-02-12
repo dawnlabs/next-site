@@ -3,7 +3,7 @@ import SectionHeader from '../section-header'
 import { Lightning, Performance, Discovery } from './icons'
 
 export default () => (
-  <Container padding>
+  <div className="container">
     <SectionHeader
       anchor="benefits"
       title="Leave the Heavy Lifting to the Servers"
@@ -59,6 +59,13 @@ export default () => (
           align-self: stretch;
         }
 
+        .container {
+          width: 100%;
+          margin: 0 auto;
+          padding: 4rem 1rem 0 1rem;
+          max-width: 1024px;
+        }
+
         .flex {
           display: flex;
           justify-content: space-between;
@@ -69,7 +76,7 @@ export default () => (
         }
 
         .flex:last-child > .col {
-          margin: 4rem 0 0 0;
+          margin: 4rem 0;
         }
 
         .col {
@@ -100,10 +107,10 @@ export default () => (
           }
 
           .col {
-            margin: 3rem !important;
+            margin: 3rem 1rem !important;
           }
         }
       `}
     </style>
-  </Container>
+  </div>
 )

@@ -65,6 +65,20 @@ export default () => (
           background: red;
           margin: 2rem;
         }
+
+        @media screen and (max-width: 1024px) {
+          .col {
+            flex-direction: column-reverse;
+          }
+          ul {
+            width: auto;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          li {
+            margin: 1rem 0;
+          }
+        }
       `}
     </style>
   </Container>

@@ -3,7 +3,7 @@ export default () => (
     <svg
       width="400"
       height="500"
-      viewBox="0 0 1200 1000"
+      viewBox="0 0 1200 1240"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       className="svg"
@@ -100,8 +100,8 @@ export default () => (
             opacity="0.15"
             strokeDasharray="3"
           />
-          <rect id="g1" fill="url(#linearGradient)" x="220" y="0" width="800" height="400" />
-          <rect id="g3" fill="url(#linearGradient)" x="220" y="-900" width="800" height="400" />
+          <rect id="g1" fill="url(#linearGradient)" x="220" y="100" width="800" height="200" />
+          <rect id="g3" fill="url(#linearGradient)" x="220" y="-800" width="800" height="200" />
         </g>
         <g id="aws" filter="url(#filter-3)" transform="translate(811, 360)">
           <circle id="Oval" fill="#FFFFFF" cx="35.533" cy="35.533" r="35.533" />
@@ -147,7 +147,7 @@ export default () => (
           <path
             d="M42.447,74.731 L49.389,74.731 L55.521,58.819 L55.95,58.819 L59.695,69.817 C60.984,73.682 62.749,74.97 66.661,74.97 C67.926,74.97 69.071,74.803 69.811,74.564 L69.811,69.292 C69.477,69.364 69.023,69.483 68.642,69.483 C66.852,69.483 66.137,68.886 65.349,66.715 L58.431,47.654 C55.592,39.805 53.135,37.802 48.077,37.802 C47.052,37.802 46.36,37.969 45.382,38.231 L45.382,43.479 C46.097,43.36 46.479,43.312 46.861,43.312 C49.771,43.312 50.702,44.123 52.181,47.917 L52.944,49.944 L42.447,74.731 Z"
             id="Path"
-            fill="#000000"
+            fill="#0076ff"
           />
         </g>
         <g id="azure" filter="url(#filter-6)" transform="translate(764, 553)">
@@ -165,9 +165,6 @@ export default () => (
       {`
         .svg {
           transform: scale(2.2);
-          position: absolute;
-          left: 0;
-          top: -82px;
           user-select: none;
           user-drag: none;
           pointer-events: none;

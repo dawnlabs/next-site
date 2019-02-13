@@ -1,5 +1,6 @@
-import Container from '../container';
-import Button from '../button';
+import Container from '../container'
+import Button from '../button'
+import Abstraction from './svg/abstraction'
 
 export default () => (
   <Container wide padding>
@@ -8,10 +9,9 @@ export default () => (
         <h2 className="f0 fw6">The Right Abstraction</h2>
         <div className="content">
           <p>
-            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a
-            powerful hook for loading a page's initial data. With a single place to prepopulate page
-            context, server-side rendering with Next.js seamlessly integrates with any existing data
-            fetching strategy.
+            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a powerful hook for loading a
+            page's initial data. With a single place to prepopulate page context, server-side rendering with Next.js
+            seamlessly integrates with any existing data fetching strategy.
           </p>
         </div>
         <div>
@@ -21,17 +21,18 @@ export default () => (
         </div>
       </div>
 
-      <div className="placeholder" />
+      <div className="abstraction">
+        <Abstraction />
+      </div>
     </div>
     <style jsx>
       {`
         code {
           color: rgb(212, 0, 255);
         }
-        .placeholder {
-          width: 200px;
-          height: 200px;
-          background: red;
+
+        h2 {
+          line-height: 1.3;
         }
 
         .flex {
@@ -49,13 +50,13 @@ export default () => (
           justify-content: center;
         }
 
-        h2 {
-          line-height: 1.3;
-        }
-
         .content {
           margin: 1rem 0 1.5rem;
           max-width: 25rem;
+        }
+
+        .abstraction {
+          margin-top: -24rem;
         }
 
         @media screen and (max-width: 960px) {
@@ -63,7 +64,7 @@ export default () => (
             justify-content: center;
           }
 
-          .placeholder {
+          .abstraction {
             display: none;
           }
 
@@ -75,4 +76,4 @@ export default () => (
       `}
     </style>
   </Container>
-);
+)

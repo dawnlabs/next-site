@@ -24,13 +24,18 @@ export default () => (
       {`
         h2 {
           line-height: 1.3;
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          margin: 0;
         }
 
         .flex {
           position: relative;
           display: flex;
           align-items: center;
-          justify-content: flex-end;
+          justify-content: space-between;
           max-width: 1024px;
           margin: 0 auto;
           padding: 0 1rem;
@@ -43,8 +48,11 @@ export default () => (
         }
 
         .content {
-          margin: 1rem 0 1.5rem;
-          max-width: 25rem;
+          max-width: 27rem;
+        }
+
+        .lambda {
+          height: 16rem;
         }
 
         @media screen and (max-width: 960px) {

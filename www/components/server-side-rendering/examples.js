@@ -1,6 +1,6 @@
 import Container from '../container';
-import Button from '../button'
-import { Integrate } from './icons'
+import Button from '../button';
+import { Integrate } from './icons';
 
 export default () => (
   <Container wide padding gray center>
@@ -17,7 +17,9 @@ export default () => (
       </p>
     </div>
 
-    <Button invert href="/examples">See Examples</Button>
+    <Button invert href="https://github.com/zeit/next.js/tree/master/examples">
+      See Examples
+    </Button>
 
     <style jsx>
       {`
@@ -47,4 +49,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

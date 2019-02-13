@@ -1,12 +1,12 @@
 export default () => (
   <svg width="512" height="757" viewBox="0 0 512 757" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#filter0_dd)">
-      <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="20" y="402" width="472" height="325">
+    <g filter="url(#abs-filter-1)">
+      <mask id="abs-mask-1" mask-type="alpha" maskUnits="userSpaceOnUse" x="20" y="402" width="472" height="325">
         <rect x="20" y="402" width="472" height="325" rx="7" fill="white" />
       </mask>
-      <g mask="url(#mask0)">
+      <g mask="url(#abs-mask-1)">
         <rect x="112" y="467" width="380" height="261" fill="white" />
-        <g filter="url(#filter1_d)">
+        <g filter="url(#abs-filter-2)">
           <rect x="20" y="435" width="92" height="293" fill="white" />
         </g>
         <rect x="20" y="435" width="472" height="32" fill="#007AFF" />
@@ -61,10 +61,10 @@ export default () => (
         <rect x="32" y="665" width="28" height="6" rx="1" fill="#EAEAEA" />
         <rect x="32" y="679" width="68" height="35" rx="1" fill="#CFCFCF" />
         <circle cx="474" cy="451" r="8" fill="#EAEAEA" />
-        <g filter="url(#filter2_d)">
+        <g filter="url(#abs-filter-3)">
           <path
             d="M20 409C20 405.134 23.134 402 27 402H485C488.866 402 492 405.134 492 409V434H20V409Z"
-            fill="url(#paint0_linear)"
+            fill="url(#abs-gradient-1)"
           />
         </g>
         <circle cx="41" cy="418" r="5" fill="#C4C4C4" />
@@ -140,15 +140,15 @@ export default () => (
     />
     <defs>
       <filter
-        id="filter0_dd"
+        id="abs-filter-1"
         x="0"
         y="392"
         width="512"
         height="365"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
         <feOffset dy="5" />
         <feGaussianBlur stdDeviation="6" />
@@ -162,15 +162,15 @@ export default () => (
         <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
       </filter>
       <filter
-        id="filter1_d"
+        id="abs-filter-2"
         x="20"
         y="435"
         width="93"
         height="293"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
         <feOffset dx="1" />
         <feColorMatrix type="matrix" values="0 0 0 0 0.921397 0 0 0 0 0.921397 0 0 0 0 0.921397 0 0 0 1 0" />
@@ -178,22 +178,22 @@ export default () => (
         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
       </filter>
       <filter
-        id="filter2_d"
+        id="abs-filter-3"
         x="20"
         y="402"
         width="472"
         height="33"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
         <feOffset dy="1" />
         <feColorMatrix type="matrix" values="0 0 0 0 0.8 0 0 0 0 0.8 0 0 0 0 0.8 0 0 0 1 0" />
         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
       </filter>
-      <linearGradient id="paint0_linear" x1="256" y1="402" x2="256" y2="434" gradientUnits="userSpaceOnUse">
+      <linearGradient id="abs-gradient-1" x1="256" y1="402" x2="256" y2="434" gradientUnits="userSpaceOnUse">
         <stop offset="0.121547" stop-color="#F5F5F5" />
         <stop offset="1" stop-color="#E8E8E8" />
       </linearGradient>

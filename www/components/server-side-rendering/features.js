@@ -30,7 +30,7 @@ export default () => (
       <div className="animation">
         <div className="browser-container">
           <svg className="line">
-            <line x1="-100" y1="131" x2="80" y2="131" stroke="#C7C7C7" strokeWidth="2" strokeDasharray="3 3" />
+            <line x1="-100" y1="127" x2="80" y2="127" stroke="#C7C7C7" strokeWidth="2" strokeDasharray="3 3" />
           </svg>
           <Browser>
             <div className="browser-content">
@@ -49,13 +49,13 @@ export default () => (
     <style jsx>
       {`
         ul {
-          padding: 0;
-          margin: 2.5rem 1rem 0 1rem;
+          padding: 0 1rem;
+          margin: 2.5rem auto 0 auto;
           display: flex;
           list-style-type: none;
           align-items: center;
           justify-content: space-between;
-          width: 64rem;
+          width: 100%;
         }
 
         li {
@@ -69,8 +69,7 @@ export default () => (
         }
 
         .col {
-          margin: 0 auto;
-          max-width: 1024px;
+          max-width: 64rem;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -86,8 +85,8 @@ export default () => (
 
         .browser-container {
           position: relative;
-          width: 350px;
-          height: 260px;
+          width: 22rem;
+          height: 16rem;
           margin-left: 5rem;
           margin-right: 6rem;
         }

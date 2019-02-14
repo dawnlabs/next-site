@@ -54,6 +54,7 @@ const Graph = ({ viewable }) => (
         .container {
           display: flex;
           flex-direction: column;
+          justify-content: flex-end;
         }
 
         .bar-container {
@@ -157,6 +158,7 @@ export default class Benefits extends React.PureComponent {
         <style jsx>
           {`
             hr {
+              border-top: 0;
               border-style: solid;
               opacity: 0.1;
               margin: 0;
@@ -190,11 +192,11 @@ export default class Benefits extends React.PureComponent {
             .first > .flex {
               flex: 1;
               justify-content: space-between;
-              margin: 1rem 0 0 0;
+              margin: 1rem 0 3rem 0;
             }
 
             .first > .flex > .col {
-              margin: 0 0 3rem 0;
+              margin: 0;
             }
 
             .col {

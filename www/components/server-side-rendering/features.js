@@ -50,7 +50,7 @@ export default () => (
       {`
         ul {
           padding: 0 1rem;
-          margin: 2.5rem auto 0 auto;
+          margin: 2.5rem 0 0 0;
           display: flex;
           list-style-type: none;
           align-items: center;
@@ -69,6 +69,7 @@ export default () => (
         }
 
         .col {
+          margin: 0 auto;
           max-width: 64rem;
           display: flex;
           flex-direction: column;

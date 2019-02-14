@@ -1,6 +1,6 @@
-import Container from '../container';
-import Button from '../button';
-import Abstraction from './svg/abstraction';
+import Container from '../container'
+import Button from '../button'
+import Abstraction from './svg/abstraction'
 
 export default () => (
   <Container wide padding>
@@ -9,10 +9,9 @@ export default () => (
         <h2 className="f0 fw6">The Right Abstraction</h2>
         <div className="content">
           <p>
-            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a
-            powerful hook for loading a page's initial data. With a single place to prepopulate page
-            context, server-side rendering with Next.js seamlessly integrates with any existing data
-            fetching strategy.
+            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a powerful hook for loading a
+            page's initial data. With a single place to prepopulate page context, server-side rendering with Next.js
+            seamlessly integrates with any existing data fetching strategy.
           </p>
         </div>
         <div>
@@ -28,11 +27,16 @@ export default () => (
     </div>
     <style jsx>
       {`
+        p {
+          margin: 0;
+        }
+
         code {
           color: rgb(212, 0, 255);
         }
 
         h2 {
+          margin: 0 0 1rem 0;
           line-height: 1.3;
         }
 
@@ -52,8 +56,8 @@ export default () => (
         }
 
         .content {
-          margin: 1rem 0 1.5rem;
-          max-width: 25rem;
+          margin: 0 0 2.5rem 0;
+          max-width: 27rem;
         }
 
         .abstraction {
@@ -62,19 +66,33 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           .flex {
-            justify-content: center;
+            justify-content: initial;
+            flex-direction: column-reverse;
           }
-
-          .abstraction {
-            display: none;
-          }
-
           .col {
             align-items: center;
             text-align: center;
+          }
+          .content {
+            max-width: 27rem;
+          }
+          .abstraction {
+            margin-top: -25rem;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .abstraction {
+            transform: scale(0.6);
+          }
+          .content {
+            margin: 0 1rem 2.5rem 1rem;
+          }
+          .col {
+            margin-top: -9rem;
           }
         }
       `}
     </style>
   </Container>
-);
+)

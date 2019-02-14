@@ -1,6 +1,6 @@
 export default () => (
   <>
-    <svg width="324" height="301" viewBox="-50 0 324 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="324" height="301" viewBox="-50 0 324 267" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g>
         <g>
           <rect x="50" y="36" width="223.612" height="62.8125" rx="4" fill="white" />

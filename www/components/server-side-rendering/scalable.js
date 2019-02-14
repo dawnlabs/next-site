@@ -1,6 +1,6 @@
-import Container from '../container';
-import Lambda from './svg/lambda';
-import { ExternalLink } from '../text/link';
+import Container from '../container'
+import Lambda from './svg/lambda'
+import { ExternalLink } from '../text/link'
 
 export default () => (
   <Container wide padding gray>
@@ -14,10 +14,10 @@ export default () => (
 
         <div className="content">
           <p>
-            When it comes to dynamic applications, scalability is often a concern. Fortunately,
-            Next.js supports serverless builds out of the box. Simply set the target and Next.js
-            will output an SSR-equipped lambda for each page which can be instantly deployed to
-            platforms like <ExternalLink href="https://zeit.co/blog/now-2">Now 2.0</ExternalLink>.
+            When it comes to dynamic applications, scalability is often a concern. Fortunately, Next.js supports
+            serverless builds out of the box. Simply set the target and Next.js will output an SSR-equipped lambda for
+            each page which can be instantly deployed to platforms like{' '}
+            <ExternalLink href="https://zeit.co/blog/now-2">Now 2.0</ExternalLink>.
           </p>
         </div>
       </div>
@@ -26,7 +26,7 @@ export default () => (
       {`
         h2 {
           line-height: 1.3;
-          margin-bottom: 1.5rem;
+          margin: 0 0 1rem 0;
         }
 
         p {
@@ -50,6 +50,7 @@ export default () => (
         }
 
         .content {
+          z-index: 1;
           max-width: 27rem;
         }
 
@@ -59,17 +60,26 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           .flex {
-            justify-content: center;
-          }
-          .lambda {
-            display: none;
+            flex-direction: column-reverse;
+            align-items: center;
           }
           .col {
             align-items: center;
             text-align: center;
           }
+
+          .lambda {
+            margin: 4rem 3rem 0 0;
+            height: 16rem;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .lambda {
+            transform: scale(0.85);
+          }
         }
       `}
     </style>
   </Container>
-);
+)

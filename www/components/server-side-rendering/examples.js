@@ -1,6 +1,6 @@
-import Container from '../container';
-import Button from '../button';
-import { Integrate } from './icons';
+import Container from '../container'
+import Button from '../button'
+import { Integrate } from './icons'
 
 export default () => (
   <Container wide padding gray center>
@@ -24,7 +24,7 @@ export default () => (
     <style jsx>
       {`
         p {
-          margin: 0 1rem;
+          margin: 0;
         }
 
         h2 {
@@ -38,7 +38,8 @@ export default () => (
         }
 
         .content {
-          margin-bottom: 2.5rem;
+          margin: 1rem 1rem 2.5rem 1rem;
+          max-width: 25rem;
         }
 
         @media screen and (max-width: 640px) {
@@ -49,4 +50,4 @@ export default () => (
       `}
     </style>
   </Container>
-);
+)

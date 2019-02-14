@@ -1,6 +1,6 @@
-import Container from '../container';
-import Button from '../button';
-import Abstraction from './svg/abstraction';
+import Container from '../container'
+import Button from '../button'
+import Abstraction from './svg/abstraction'
 
 export default () => (
   <Container wide padding>
@@ -9,10 +9,9 @@ export default () => (
         <h2 className="f0 fw6">The Right Abstraction</h2>
         <div className="content">
           <p>
-            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a
-            powerful hook for loading a page's initial data. With a single place to prepopulate page
-            context, server-side rendering with Next.js seamlessly integrates with any existing data
-            fetching strategy.
+            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a powerful hook for loading a
+            page's initial data. With a single place to prepopulate page context, server-side rendering with Next.js
+            seamlessly integrates with any existing data fetching strategy.
           </p>
         </div>
         <div>
@@ -28,6 +27,10 @@ export default () => (
     </div>
     <style jsx>
       {`
+        p {
+          margin: 0;
+        }
+
         code {
           color: rgb(212, 0, 255);
         }
@@ -52,7 +55,7 @@ export default () => (
         }
 
         .content {
-          margin: 1rem 0 1.5rem;
+          margin: 1rem 1rem 2.5rem 1rem;
           max-width: 25rem;
         }
 
@@ -77,4 +80,4 @@ export default () => (
       `}
     </style>
   </Container>
-);
+)

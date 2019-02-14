@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import Container from '../container';
-import Browser from '../browser';
-import Checkmark from '../icons/checkmark';
-import Servers from './svg/servers';
+import Container from '../container'
+import Browser from '../browser'
+import Checkmark from '../icons/checkmark'
+import Servers from './svg/servers'
 
 export default () => (
   <Container wide dark center>
@@ -30,15 +30,7 @@ export default () => (
       <div className="animation">
         <div className="browser-container">
           <svg className="line">
-            <line
-              x1="-100"
-              y1="131"
-              x2="80"
-              y2="131"
-              stroke="#C7C7C7"
-              strokeWidth="2"
-              strokeDasharray="3 3"
-            />
+            <line x1="-100" y1="131" x2="80" y2="131" stroke="#C7C7C7" strokeWidth="2" strokeDasharray="3 3" />
           </svg>
           <Browser>
             <div className="browser-content">
@@ -124,16 +116,22 @@ export default () => (
             width: auto;
             flex-direction: column;
             align-items: flex-start;
-            margin: 0rem 1rem 2.5rem 1rem;
+            margin: 0 1rem 2.5rem 1rem;
           }
           li {
             margin: 1rem 0;
           }
-          .animation {
-            margin: 0;
-          }
           .col {
             flex-direction: column-reverse;
+          }
+        }
+
+        @media screen and (max-width: 700px) {
+          ul {
+            margin: -1rem 1rem 2.5rem 1rem;
+          }
+          .animation {
+            margin: 0;
           }
           .browser-container {
             display: none;
@@ -145,4 +143,4 @@ export default () => (
       `}
     </style>
   </Container>
-);
+)

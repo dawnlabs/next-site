@@ -1,6 +1,8 @@
-import posed from 'react-pose';
-import SectionHeader from '../section-header';
-import { Lightning, Performance, Discovery } from './icons';
+import posed from 'react-pose'
+
+import IObserver from '../intersection-observer'
+import SectionHeader from '../section-header'
+import { Lightning, Performance, Discovery } from './icons'
 
 const Bar = posed.div({
   ssr: {
@@ -11,25 +13,25 @@ const Bar = posed.div({
   nonSsr: {
     width: '24rem',
     flip: true,
-    transition: { duration: 3000 }
+    transition: { duration: 2500 }
   }
-});
+})
 
 const barStyle = {
   width: '6rem',
   borderRadius: '6px',
   height: '3.5rem'
-};
+}
 const ssrStyle = {
   ...barStyle,
   background: '#007aff'
-};
+}
 const nonSsrStyle = {
   ...barStyle,
   border: '1px solid #999999'
-};
+}
 
-const Graph = ({ viewable }) => (
+const Graph = ({ viewable, innerRef }) => (
   <div className="container">
     <div className="bar-container ssr">
       <Bar pose={viewable && 'ssr'} style={ssrStyle} />
@@ -42,7 +44,9 @@ const Graph = ({ viewable }) => (
     <svg width="431" height="6" viewBox="0 0 431 6" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M431 3L426 0.113249V5.88675L431 3ZM0 3.5L426.5 3.5V2.5L0 2.5V3.5Z" fill="black" />
     </svg>
-    <div className="title">Time to First Meaningful Paint</div>
+    <div className="title" ref={innerRef}>
+      Time to First Meaningful Paint
+    </div>
     <style jsx>
       {`
         .title {
@@ -91,20 +95,17 @@ const Graph = ({ viewable }) => (
       `}
     </style>
   </div>
-);
+)
 
 export default class Benefits extends React.PureComponent {
   state = {
     viewable: false
-  };
-
-  componentDidMount() {
-    // just for testing, replace with scrollspy or other in-view solution
-    setTimeout(() => this.setState({ viewable: true }), 1000);
   }
 
+  setViewable = ({ isIntersecting: viewable }) => this.setState({ viewable })
+
   render() {
-    const { viewable } = this.state;
+    const { viewable } = this.state
 
     return (
       <div className="container">
@@ -120,13 +121,15 @@ export default class Benefits extends React.PureComponent {
               <Performance />
               <h3 className="f3 fw6">Superior Performance</h3>
               <p>
-                On slower devices, rendering an initial page can take a long time and lead to a
-                degraded experience. By offloading the computation to a more powerful server, you
-                minimize the time users spend waiting and ensure your conversion rate does not
-                suffer.
+                On slower devices, rendering an initial page can take a long time and lead to a degraded experience. By
+                offloading the computation to a more powerful server, you minimize the time users spend waiting and
+                ensure your conversion rate does not suffer.
               </p>
             </div>
-            <Graph viewable={viewable} />
+            <IObserver
+              onIntersect={this.setViewable}
+              render={({ innerRef }) => <Graph viewable={viewable} innerRef={innerRef} />}
+            />
           </div>
         </div>
 
@@ -137,10 +140,9 @@ export default class Benefits extends React.PureComponent {
             <Discovery />
             <h3 className="f3 fw6">Optimized for Discovery</h3>
             <p>
-              Server-side rendering guarantees your pages are easily indexable by search engines and
-              preview able on social media platforms. Even web crawlers (Google) struggle to account
-              for client-side routing solutions. Take your SEO to the next level and sidestep the
-              issue entirely with Next.js.
+              Server-side rendering guarantees your pages are easily indexable by search engines and preview able on
+              social media platforms. Even web crawlers (Google) struggle to account for client-side routing solutions.
+              Take your SEO to the next level and sidestep the issue entirely with Next.js.
             </p>
           </div>
 
@@ -150,10 +152,9 @@ export default class Benefits extends React.PureComponent {
             <Lightning />
             <h3 className="f3 fw6">Lightning Fast Delivery</h3>
             <p>
-              Prefetching initial data and building pages on the server drastically reduces the
-              number of round trips required to view your site. This translates to lower latency and
-              reduced bandwidth consumption. Both of which are essential for strong mobile
-              experiences.
+              Prefetching initial data and building pages on the server drastically reduces the number of round trips
+              required to view your site. This translates to lower latency and reduced bandwidth consumption. Both of
+              which are essential for strong mobile experiences.
             </p>
           </div>
         </div>
@@ -248,6 +249,6 @@ export default class Benefits extends React.PureComponent {
           `}
         </style>
       </div>
-    );
+    )
   }
 }

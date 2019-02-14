@@ -48,7 +48,9 @@ export default () => (
             </div>
           </Browser>
         </div>
-        <Servers />
+        <div className="servers-container">
+          <Servers />
+        </div>
       </div>
     </div>
 
@@ -90,10 +92,6 @@ export default () => (
           margin: 3rem;
         }
 
-        .server-container {
-          margin-left: -2rem;
-        }
-
         .browser-container {
           position: relative;
           width: 350px;
@@ -122,16 +120,26 @@ export default () => (
         }
 
         @media screen and (max-width: 1024px) {
-          .col {
-            flex-direction: column-reverse;
-          }
           ul {
             width: auto;
             flex-direction: column;
             align-items: flex-start;
+            margin: 0rem 1rem 2.5rem 1rem;
           }
           li {
             margin: 1rem 0;
+          }
+          .animation {
+            margin: 0;
+          }
+          .col {
+            flex-direction: column-reverse;
+          }
+          .browser-container {
+            display: none;
+          }
+          .servers-container {
+            margin: 0.8rem 0 0 -6.2rem;
           }
         }
       `}

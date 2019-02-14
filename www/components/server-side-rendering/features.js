@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Container from '../container'
-import Browser from '../browser'
-import Checkmark from '../icons/checkmark'
-import Servers from './svg/servers'
+import Container from '../container';
+import Browser from '../browser';
+import Checkmark from '../icons/checkmark';
+import Servers from './svg/servers';
 
 export default () => (
   <Container wide dark center>
@@ -30,13 +30,23 @@ export default () => (
       <div className="animation">
         <div className="browser-container">
           <svg className="line">
-            <line x1="-100" y1="127" x2="80" y2="127" stroke="#C7C7C7" strokeWidth="2" strokeDasharray="3 3" />
+            <line
+              x1="-100"
+              y1="127"
+              x2="80"
+              y2="127"
+              stroke="#C7C7C7"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
           </svg>
           <Browser>
             <div className="browser-content">
-              <p>
-                This site is <b>Server Side Rendered</b>
-              </p>
+              <div className="toast">
+                <p>
+                  This site is <b>Server Side Rendered</b>
+                </p>
+              </div>
             </div>
           </Browser>
         </div>
@@ -99,7 +109,21 @@ export default () => (
         }
 
         .browser-content {
+          width: 100%;
+          height: 100%;
           text-align: center;
+          display: flex;
+          justify-content: center;
+          background: linear-gradient(to bottom, #a9e4f7 0%, #0fb4e7 100%);
+        }
+
+        .toast {
+          background: white;
+          margin-top: 1rem;
+          position: absolute;
+          border-radius: 0.5rem;
+          width: 80%;
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
         }
 
         @keyframes shift {
@@ -143,4 +167,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

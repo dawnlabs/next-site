@@ -190,7 +190,7 @@ export default class Benefits extends React.PureComponent {
             .first > .flex {
               flex: 1;
               justify-content: space-between;
-              margin: 4rem 0 0 0;
+              margin: 1rem 0 0 0;
             }
 
             .first > .flex > .col {
@@ -200,7 +200,7 @@ export default class Benefits extends React.PureComponent {
             .col {
               display: flex;
               flex-direction: column;
-              max-width: 28rem;
+              max-width: 27rem;
               margin: 4rem 0;
             }
 

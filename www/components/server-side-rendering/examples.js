@@ -47,7 +47,6 @@ export default () => (
 
         .content {
           margin: 0 1rem 2.5rem 1rem;
-          max-width: 25rem;
         }
 
         @media screen and (max-width: 640px) {

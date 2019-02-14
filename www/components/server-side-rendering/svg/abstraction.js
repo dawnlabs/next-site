@@ -1,7 +1,7 @@
 export default () => (
   <svg width="512" height="757" viewBox="0 0 512 757" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#abs-filter-1)">
-      <mask id="abs-mask-1" mask-type="alpha" maskUnits="userSpaceOnUse" x="20" y="402" width="472" height="325">
+      <mask id="abs-mask-1" masktype="alpha" maskUnits="userSpaceOnUse" x="20" y="402" width="472" height="325">
         <rect x="20" y="402" width="472" height="325" rx="7" fill="white" />
       </mask>
       <g mask="url(#abs-mask-1)">
@@ -70,7 +70,7 @@ export default () => (
         <circle cx="41" cy="418" r="5" fill="#C4C4C4" />
         <circle cx="56" cy="418" r="5" fill="#C4C4C4" />
         <circle cx="71" cy="418" r="5" fill="#C4C4C4" />
-        <rect x="156" y="406" width="200" height="24" rx="5" fill="white" fill-opacity="0.65" />
+        <rect x="156" y="406" width="200" height="24" rx="5" fill="white" fillOpacity="0.65" />
         <rect x="20.5" y="402.5" width="471" height="324" rx="6.5" stroke="#E8E8E8" />
       </g>
     </g>
@@ -194,8 +194,8 @@ export default () => (
         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
       </filter>
       <linearGradient id="abs-gradient-1" x1="256" y1="402" x2="256" y2="434" gradientUnits="userSpaceOnUse">
-        <stop offset="0.121547" stop-color="#F5F5F5" />
-        <stop offset="1" stop-color="#E8E8E8" />
+        <stop offset="0.121547" stopColor="#F5F5F5" />
+        <stop offset="1" stopColor="#E8E8E8" />
       </linearGradient>
     </defs>
   </svg>

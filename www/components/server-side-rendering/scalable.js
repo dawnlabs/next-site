@@ -1,5 +1,6 @@
-import Container from '../container'
-import Lambda from './svg/lambda'
+import Container from '../container';
+import Lambda from './svg/lambda';
+import { ExternalLink } from '../text/link';
 
 export default () => (
   <Container wide padding gray>
@@ -13,9 +14,10 @@ export default () => (
 
         <div className="content">
           <p>
-            When it comes to dynamic applications, scalability is often a concern. Fortunately, Next.js supports
-            serverless builds out of the box. Simply set the target and Next.js will output an SSR-equipped lambda for
-            each page which can be instantly deployed to platforms like Now 2.0.
+            When it comes to dynamic applications, scalability is often a concern. Fortunately,
+            Next.js supports serverless builds out of the box. Simply set the target and Next.js
+            will output an SSR-equipped lambda for each page which can be instantly deployed to
+            platforms like <ExternalLink href="https://zeit.co/blog/now-2">Now 2.0</ExternalLink>.
           </p>
         </div>
       </div>
@@ -70,4 +72,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

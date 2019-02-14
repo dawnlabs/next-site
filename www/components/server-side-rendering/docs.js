@@ -36,6 +36,7 @@ export default () => (
         }
 
         h2 {
+          margin: 0 0 1rem 0;
           line-height: 1.3;
         }
 
@@ -55,7 +56,7 @@ export default () => (
         }
 
         .content {
-          margin: 1rem 1rem 2.5rem 1rem;
+          margin: 0 1rem 2.5rem 1rem;
           max-width: 25rem;
         }
 

@@ -75,6 +75,18 @@ const Graph = ({ viewable }) => (
           margin: 1.5rem 0 3rem 0;
           color: #999;
         }
+
+        @media screen and (max-width: 960px) {
+          .container {
+            margin: 3rem 0;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .container {
+            display: none;
+          }
+        }
       `}
     </style>
   </div>
@@ -101,17 +113,19 @@ export default class Benefits extends React.PureComponent {
           description={`Get your site to users faster, all while saving money, time, and headaches`}
         />
 
-        <div className="flex">
-          <div className="col">
-            <Performance />
-            <h3 className="f3 fw6">Superior Performance</h3>
-            <p>
-              On slower devices, rendering an initial page can take a long time and lead to a degraded experience. By
-              offloading the computation to a more powerful server, you minimize the time users spend waiting and ensure
-              your conversion rate does not suffer.
-            </p>
+        <div className="first">
+          <div className="flex">
+            <div className="col">
+              <Performance />
+              <h3 className="f3 fw6">Superior Performance</h3>
+              <p>
+                On slower devices, rendering an initial page can take a long time and lead to a degraded experience. By
+                offloading the computation to a more powerful server, you minimize the time users spend waiting and
+                ensure your conversion rate does not suffer.
+              </p>
+            </div>
+            <Graph viewable={viewable} />
           </div>
-          <Graph viewable={viewable} />
         </div>
 
         <hr />
@@ -149,11 +163,15 @@ export default class Benefits extends React.PureComponent {
               align-self: stretch;
             }
 
+            p {
+              margin: 1rem 0 0 0;
+            }
+
             .container {
               width: 100%;
               margin: 0 auto;
               padding: 4rem 1rem 0 1rem;
-              max-width: 1024px;
+              max-width: 64rem;
             }
 
             .flex {
@@ -165,28 +183,28 @@ export default class Benefits extends React.PureComponent {
               min-height: 100%;
             }
 
-            .flex:last-child > .col {
-              margin: 4rem 0;
+            .first {
+              display: flex;
+            }
+
+            .first > .flex {
+              flex: 1;
+              justify-content: space-between;
+              margin: 4rem 0 0 0;
+            }
+
+            .first > .flex > .col {
+              margin: 0 0 3rem 0;
             }
 
             .col {
               display: flex;
               flex-direction: column;
               max-width: 28rem;
-              margin: 0 0 4rem 0;
-            }
-
-            .placeholder {
-              width: 480px;
-              height: 312px;
-              background: red;
+              margin: 4rem 0;
             }
 
             @media screen and (max-width: 960px) {
-              .placeholder {
-                display: none;
-              }
-
               .flex {
                 flex-direction: column;
                 align-items: center;
@@ -196,8 +214,30 @@ export default class Benefits extends React.PureComponent {
                 display: block;
               }
 
-              .col {
-                margin: 3rem 1rem !important;
+              .flex > .col {
+                margin: 3rem 0;
+              }
+
+              .first {
+                justify-content: center;
+              }
+
+              .first > .flex {
+                flex: 0;
+                margin: 0;
+                align-items: flex-start;
+              }
+
+              .first > .flex > .col {
+                margin: 0;
+              }
+            }
+
+            @media screen and (max-width: 640px) {
+              .first > .flex {
+                flex: 1;
+                align-items: center;
+                margin: 0 0 3rem 0;
               }
             }
           `}

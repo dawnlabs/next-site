@@ -56,8 +56,8 @@ export default () => (
         }
 
         .content {
-          margin: 0 1rem 2.5rem 1rem;
-          max-width: 25rem;
+          margin: 0 0 2.5rem 0;
+          max-width: 27rem;
         }
 
         .abstraction {
@@ -66,16 +66,30 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           .flex {
-            justify-content: center;
+            justify-content: initial;
+            flex-direction: column-reverse;
           }
-
-          .abstraction {
-            display: none;
-          }
-
           .col {
             align-items: center;
             text-align: center;
+          }
+          .content {
+            max-width: 27rem;
+          }
+          .abstraction {
+            margin-top: -25rem;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .abstraction {
+            transform: scale(0.6);
+          }
+          .content {
+            margin: 0 1rem 2.5rem 1rem;
+          }
+          .col {
+            margin-top: -9rem;
           }
         }
       `}

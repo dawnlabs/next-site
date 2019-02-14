@@ -1,10 +1,10 @@
-import posed from 'react-pose'
-import SectionHeader from '../section-header'
-import { Lightning, Performance, Discovery } from './icons'
+import posed from 'react-pose';
+import SectionHeader from '../section-header';
+import { Lightning, Performance, Discovery } from './icons';
 
 const Bar = posed.div({
   ssr: {
-    width: '9rem',
+    width: '14.5rem',
     flip: true,
     transition: { duration: 500 }
   },
@@ -13,21 +13,21 @@ const Bar = posed.div({
     flip: true,
     transition: { duration: 3000 }
   }
-})
+});
 
 const barStyle = {
   width: '6rem',
   borderRadius: '6px',
   height: '3.5rem'
-}
+};
 const ssrStyle = {
   ...barStyle,
   background: '#007aff'
-}
+};
 const nonSsrStyle = {
   ...barStyle,
   border: '1px solid #999999'
-}
+};
 
 const Graph = ({ viewable }) => (
   <div className="container">
@@ -91,20 +91,20 @@ const Graph = ({ viewable }) => (
       `}
     </style>
   </div>
-)
+);
 
 export default class Benefits extends React.PureComponent {
   state = {
     viewable: false
-  }
+  };
 
   componentDidMount() {
     // just for testing, replace with scrollspy or other in-view solution
-    setTimeout(() => this.setState({ viewable: true }), 1000)
+    setTimeout(() => this.setState({ viewable: true }), 1000);
   }
 
   render() {
-    const { viewable } = this.state
+    const { viewable } = this.state;
 
     return (
       <div className="container">
@@ -120,9 +120,10 @@ export default class Benefits extends React.PureComponent {
               <Performance />
               <h3 className="f3 fw6">Superior Performance</h3>
               <p>
-                On slower devices, rendering an initial page can take a long time and lead to a degraded experience. By
-                offloading the computation to a more powerful server, you minimize the time users spend waiting and
-                ensure your conversion rate does not suffer.
+                On slower devices, rendering an initial page can take a long time and lead to a
+                degraded experience. By offloading the computation to a more powerful server, you
+                minimize the time users spend waiting and ensure your conversion rate does not
+                suffer.
               </p>
             </div>
             <Graph viewable={viewable} />
@@ -136,9 +137,10 @@ export default class Benefits extends React.PureComponent {
             <Discovery />
             <h3 className="f3 fw6">Optimized for Discovery</h3>
             <p>
-              Server-side rendering guarantees your pages are easily indexable by search engines and preview able on
-              social media platforms. Even web crawlers (Google) struggle to account for client-side routing solutions.
-              Take your SEO to the next level and sidestep the issue entirely with Next.js.
+              Server-side rendering guarantees your pages are easily indexable by search engines and
+              preview able on social media platforms. Even web crawlers (Google) struggle to account
+              for client-side routing solutions. Take your SEO to the next level and sidestep the
+              issue entirely with Next.js.
             </p>
           </div>
 
@@ -148,9 +150,10 @@ export default class Benefits extends React.PureComponent {
             <Lightning />
             <h3 className="f3 fw6">Lightning Fast Delivery</h3>
             <p>
-              Prefetching initial data and building pages on the server drastically reduces the number of round trips
-              required to view your site. This translates to lower latency and reduced bandwidth consumption. Both of
-              which are essential for strong mobile experiences.
+              Prefetching initial data and building pages on the server drastically reduces the
+              number of round trips required to view your site. This translates to lower latency and
+              reduced bandwidth consumption. Both of which are essential for strong mobile
+              experiences.
             </p>
           </div>
         </div>
@@ -245,6 +248,6 @@ export default class Benefits extends React.PureComponent {
           `}
         </style>
       </div>
-    )
+    );
   }
 }

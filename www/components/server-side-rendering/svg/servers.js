@@ -391,6 +391,10 @@ export default () => (
     </svg>
     <style jsx>
       {`
+        svg {
+          filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.48)) drop-shadow(0 14px 50px rgba(0, 0, 0.38));
+        }
+
         .dot-seq-1 {
           animation: sequence 1.5s ease 0.3s infinite;
         }

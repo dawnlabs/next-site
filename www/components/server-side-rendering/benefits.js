@@ -48,6 +48,7 @@ const Graph = ({ viewable }) => (
         .title {
           text-align: center;
           margin-top: 1rem;
+          font-size: 0.875rem;
         }
 
         .container {
@@ -85,8 +86,8 @@ export default class Benefits extends React.PureComponent {
   }
 
   componentDidMount() {
-    // This is just for testing, TODO: Replace with scroll spy or other in-view solution
-    setTimeout(() => this.setState({ viewable: true }), 3000)
+    // just for testing, replace with scrollspy or other in-view solution
+    setTimeout(() => this.setState({ viewable: true }), 1000)
   }
 
   render() {

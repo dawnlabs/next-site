@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Container from '../container'
-import Browser from '../browser'
-import Checkmark from '../icons/checkmark'
-import Servers from './svg/servers'
+import Container from '../container';
+import Browser from '../browser';
+import Checkmark from '../icons/checkmark';
+import Servers from './svg/servers';
 
 export default () => (
   <Container wide dark center>
@@ -30,7 +30,15 @@ export default () => (
       <div className="animation">
         <div className="browser-container">
           <svg className="line">
-            <line x1="-100" y1="131" x2="80" y2="131" stroke="#C7C7C7" strokeWidth="2" strokeDasharray="3 3" />
+            <line
+              x1="-100"
+              y1="131"
+              x2="80"
+              y2="131"
+              stroke="#C7C7C7"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
           </svg>
           <Browser>
             <div className="browser-content">
@@ -97,7 +105,7 @@ export default () => (
         .line {
           position: absolute;
           left: -5rem;
-          animation: 15s shift linear forwards infinite;
+          animation: 7.5s shift linear forwards infinite;
         }
 
         .browser-content {
@@ -129,4 +137,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

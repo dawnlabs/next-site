@@ -85,6 +85,7 @@ export default class Benefits extends React.PureComponent {
   }
 
   componentDidMount() {
+    // This is just for testing, TODO: Replace with scroll spy or other in-view solution
     setTimeout(() => this.setState({ viewable: true }), 3000)
   }
 

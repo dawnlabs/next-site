@@ -107,8 +107,16 @@ export default () => (
             opacity="0.15"
             strokeDasharray="3"
           />
-          <rect fill="url(#lambda-gradient-1)" x="220" y="100" width="800" height="200" />
-          <rect fill="url(#lambda-gradient-1)" x="220" y="-800" width="800" height="200" />
+          <rect className="lambda-rect" fill="url(#lambda-gradient-1)" x="220" y="100" width="800" height="200" />
+          <rect
+            className="lambda-rect"
+            fill="url(#lambda-gradient-1)"
+            x="220"
+            y="-800"
+            width="800"
+            height="200"
+            transform="scale(-1, 1) rotate(-180)"
+          />
         </g>
         <g id="aws" filter="url(#lambda-filter-1)" transform="translate(811, 360)">
           <circle fill="#FFFFFF" cx="35.533" cy="35.533" r="35.533" />
@@ -187,9 +195,6 @@ export default () => (
         #pulse4 {
           animation: rotate 45s linear infinite forwards,
             fade-in-15 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.4s forwards;
-        }
-        #g3 {
-          transform: scale(-1, 1) rotate(-180deg);
         }
 
         @keyframes rotate {

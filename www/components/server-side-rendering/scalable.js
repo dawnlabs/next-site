@@ -50,6 +50,7 @@ export default () => (
         }
 
         .content {
+          z-index: 1;
           max-width: 27rem;
         }
 
@@ -59,14 +60,23 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           .flex {
-            justify-content: center;
-          }
-          .lambda {
-            display: none;
+            flex-direction: column-reverse;
+            align-items: center;
           }
           .col {
             align-items: center;
             text-align: center;
+          }
+
+          .lambda {
+            margin: 4rem 3rem 0 0;
+            height: 16rem;
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          .lambda {
+            transform: scale(0.85);
           }
         }
       `}

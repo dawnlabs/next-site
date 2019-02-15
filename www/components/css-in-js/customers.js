@@ -8,6 +8,8 @@ import Ticketmaster from '../icons/companies/ticketmaster'
 import Auth0 from '../icons/companies/auth0'
 import Replit from '../icons/companies/replit'
 import Nike from '../icons/companies/nike'
+import Monday from '../icons/companies/monday'
+import Kap from '../icons/companies/kap'
 
 export default () => (
   <Container padding wide>
@@ -61,6 +63,22 @@ export default () => (
           </a>
           <div className="logo">
             <Ticketmaster />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://monday.com/">
+            <img src="/static/images/showcases/monday.jpg" alt="Monday" />
+          </a>
+          <div className="logo">
+            <Monday />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://getkap.co/">
+            <img src="/static/images/showcases/kap.jpg" alt="Kap" />
+          </a>
+          <div className="logo">
+            <Kap />
           </div>
         </div>
       </Carousel>

@@ -58,6 +58,7 @@ const Graph = ({ viewable, innerRef }) => (
 
         .container {
           padding-top: 1rem;
+          margin-bottom: -1rem;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -79,7 +80,7 @@ const Graph = ({ viewable, innerRef }) => (
         }
 
         .non-ssr {
-          margin: 1.5rem 0 3rem 0;
+          margin: 1.5rem 0 2rem 0;
           color: #999;
         }
 
@@ -111,12 +112,6 @@ export default class Benefits extends React.PureComponent {
 
     return (
       <div className="container">
-        {/* <SectionHeader
-          anchor="benefits"
-          title="Leave the Heavy Lifting to the Servers"
-          description={`Get your site to users faster, all while saving money, time, and headaches`}
-        /> */}
-
         <div className="first">
           <div className="flex">
             <div className="col">
@@ -179,7 +174,7 @@ export default class Benefits extends React.PureComponent {
             .container {
               width: 100%;
               margin: 0 auto;
-              padding: 4rem 0;
+              padding: 4rem 1rem 0;
               max-width: 64rem;
             }
 
@@ -239,6 +234,10 @@ export default class Benefits extends React.PureComponent {
 
               .first > .flex > .col {
                 margin: 0;
+              }
+
+              .container {
+                padding: 3rem 0 0;
               }
             }
 

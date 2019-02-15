@@ -64,7 +64,7 @@ export default class Animation extends React.Component {
           <Input />
         </div>
         <div className="terminal-wrapper">
-          <Terminal running="true" showResult={() => this.setState({ showResult: true })} />
+          <Terminal showResult={() => this.setState({ showResult: true })} />
         </div>
         <ResultRow showResult={this.state.showResult}>{this.props.children}</ResultRow>
         <style jsx>

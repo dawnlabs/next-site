@@ -2,6 +2,8 @@ import React from 'react';
 
 import Container from '../container';
 import Browser from '../browser';
+import Terminal from '../static-exporting/terminal/terminal';
+import Code from '../home/demos/code';
 import Checkmark from '../icons/checkmark';
 import Servers from './svg/servers';
 
@@ -21,13 +23,7 @@ const BrowserContent = () => (
           text-align: center;
           display: flex;
           justify-content: center;
-          background-image: radial-gradient(
-            circle,
-            #d7d7d7,
-            #d7d7d7 1px,
-            #fff 1px,
-            #fff
-          );
+          background-image: radial-gradient(circle, #d7d7d7, #d7d7d7 1px, #fff 1px, #fff);
           background-size: 28px 28px;
         }
 
@@ -51,6 +47,18 @@ const browserData = {
   }
 };
 
+const TERMINAL_CODE = `import Toast from './components/Toast'
+
+export default ({ req }) => (
+  <Toast>
+    This site is
+    <b>
+      {req ? 'Server' : 'Client'} 
+      Side Rendered
+    </b>
+  </Toast>
+)`;
+
 export default () => (
   <Container wide dark center>
     <div className="col">
@@ -73,11 +81,30 @@ export default () => (
         </li>
       </ul>
 
-      <div className="animation">
+      <div className="animation-row">
+        <div className="terminal-container">
+          <svg className="line">
+            <line
+              x1="0"
+              y1="127"
+              x2="82"
+              y2="127"
+              stroke="#C7C7C7"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
+          </svg>
+          <Terminal height={256}>
+            <Code style={{ padding: 0 }}>{TERMINAL_CODE}</Code>
+          </Terminal>
+        </div>
+        <div className="servers-container">
+          <Servers />
+        </div>
         <div className="browser-container">
           <svg className="line">
             <line
-              x1="-100"
+              x1="-2"
               y1="127"
               x2="80"
               y2="127"
@@ -87,9 +114,6 @@ export default () => (
             />
           </svg>
           <Browser data={browserData} height="16rem" />
-        </div>
-        <div className="servers-container">
-          <Servers />
         </div>
       </div>
     </div>
@@ -104,6 +128,7 @@ export default () => (
           align-items: center;
           justify-content: space-between;
           width: 100%;
+          max-width: 64rem;
         }
 
         li {
@@ -117,32 +142,46 @@ export default () => (
         }
 
         .col {
-          margin: 0 auto;
-          max-width: 64rem;
+          width: 100%;
           display: flex;
           flex-direction: column;
+          justify-content: center;
           align-items: center;
         }
 
-        .animation {
+        .animation-row {
           display: flex;
-          flex-direction: row-reverse;
           align-items: center;
           justify-content: center;
-          margin: 1rem 0 2rem;
+          margin: 2.25em 0 3rem;
         }
 
         .browser-container {
           position: relative;
           width: 22rem;
-          margin-left: 5rem;
-          margin-right: 6rem;
         }
 
         .line {
           position: absolute;
           left: -5rem;
           animation: 7.5s shift linear forwards infinite;
+        }
+
+        .servers-container {
+          margin: 0 0.5rem;
+          z-index: 1;
+        }
+
+        .terminal-container {
+          position: relative;
+          border-radius: 5px;
+          width: 352px;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.48), 0px 14px 50px rgba(0, 0, 0, 0.38);
+        }
+
+        .terminal-container .line {
+          left: unset;
+          right: -18.7rem;
         }
 
         @keyframes shift {
@@ -155,8 +194,14 @@ export default () => (
         }
 
         @media screen and (max-width: 1024px) {
-          .animation {
-            margin: 3rem 0 1.5rem;
+          .animation-row {
+            margin: 4.5rem 0 3rem;
+          }
+          .terminal-container {
+            display: none;
+          }
+          .servers-container {
+            margin-left: -3rem;
           }
           ul {
             width: auto;
@@ -176,14 +221,15 @@ export default () => (
           ul {
             margin: -1rem 1rem 2.5rem 1rem;
           }
-          .animation {
+          .animation-row {
             margin: 0;
           }
-          .browser-container {
+          .browser-container,
+          .terminal-container {
             display: none;
           }
           .servers-container {
-            margin: 0.8rem 0 0 -6.2rem;
+            margin: 0.8rem 0 0 0;
           }
         }
       `}

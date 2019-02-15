@@ -8,7 +8,7 @@ export default () => (
       viewBox="0 0 1200 1240"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      className="svg"
+      className="lambda-svg"
     >
       <defs>
         <linearGradient x1="50%" y1="54.6961%" x2="50%" y2="100%" id="lambda-gradient-1">
@@ -159,7 +159,7 @@ export default () => (
     </svg>
     <style jsx>
       {`
-        .svg {
+        .lambda-svg {
           transform: scale(2.2);
           user-select: none;
           user-drag: none;
@@ -177,26 +177,26 @@ export default () => (
         #azure,
         #lambda {
           opacity: 0;
-          animation: fade-in 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.6s forwards;
+          animation: fade-in 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s forwards;
         }
         #lambda {
-          animation-delay: 0.3s;
+          animation-delay: 0s;
         }
         #pulse1 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-70 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s forwards;
+            fade-in-70 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.4s forwards;
         }
         #pulse2 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-50 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s forwards;
+            fade-in-50 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.6s forwards;
         }
         #pulse3 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-30 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s forwards;
+            fade-in-30 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s forwards;
         }
         #pulse4 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-15 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.4s forwards;
+            fade-in-15 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s forwards;
         }
 
         @keyframes rotate {

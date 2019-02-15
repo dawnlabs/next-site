@@ -6,7 +6,7 @@ export default () => (
   <Container wide padding gray center>
     <div className="col">
       <div className="icon">
-        <Integrate large />
+        <Integrate />
       </div>
 
       <h2 className="f0 fw6">Integrate Anywhere</h2>
@@ -43,6 +43,7 @@ export default () => (
         .icon {
           display: flex;
           justify-content: center;
+          transform: scale(1.25);
         }
 
         .content {

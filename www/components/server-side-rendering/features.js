@@ -5,6 +5,52 @@ import Browser from '../browser';
 import Checkmark from '../icons/checkmark';
 import Servers from './svg/servers';
 
+const BrowserContent = () => (
+  <div className="browser-content">
+    <div className="toast">
+      <p>
+        This site is <b>Server Side Rendered</b>
+      </p>
+    </div>
+
+    <style jsx>
+      {`
+        .browser-content {
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          background-image: radial-gradient(
+            circle,
+            #d7d7d7,
+            #d7d7d7 1px,
+            #fff 1px,
+            #fff
+          );
+          background-size: 28px 28px;
+        }
+
+        .toast {
+          background: white;
+          margin-top: 1rem;
+          position: absolute;
+          border-radius: 0.5rem;
+          width: 80%;
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12);
+        }
+      `}
+    </style>
+  </div>
+);
+
+const browserData = {
+  browserTabs: ['http://nextjs-site.now.sh'],
+  browserMapping: {
+    'http://nextjs-site.now.sh': BrowserContent
+  }
+};
+
 export default () => (
   <Container wide dark center>
     <div className="col">
@@ -40,15 +86,7 @@ export default () => (
               strokeDasharray="3 3"
             />
           </svg>
-          <Browser>
-            <div className="browser-content">
-              <div className="toast">
-                <p>
-                  This site is <b>Server Side Rendered</b>
-                </p>
-              </div>
-            </div>
-          </Browser>
+          <Browser data={browserData} height="16rem" />
         </div>
         <div className="servers-container">
           <Servers />
@@ -97,7 +135,6 @@ export default () => (
         .browser-container {
           position: relative;
           width: 22rem;
-          height: 16rem;
           margin-left: 5rem;
           margin-right: 6rem;
         }
@@ -106,25 +143,6 @@ export default () => (
           position: absolute;
           left: -5rem;
           animation: 7.5s shift linear forwards infinite;
-        }
-
-        .browser-content {
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
-          background-size: 28px 28px;
-        }
-
-        .toast {
-          background: white;
-          margin-top: 1rem;
-          position: absolute;
-          border-radius: 0.5rem;
-          width: 80%;
-          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12);
         }
 
         @keyframes shift {
@@ -137,7 +155,6 @@ export default () => (
         }
 
         @media screen and (max-width: 1024px) {
-          
           .animation {
             margin: 3rem 0 1.5rem;
           }

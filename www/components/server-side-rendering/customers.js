@@ -1,15 +1,18 @@
-import Container from '../container';
-import SectionHeader from '../section-header';
-import Carousel from '../carousel';
+import Container from '../container'
+import SectionHeader from '../section-header'
+import Carousel from '../carousel'
 
-import Invision from '../icons/companies/invision';
-import Hulu from '../icons/companies/hulu';
-import Boosted from '../icons/companies/boosted';
-import Scale from '../icons/companies/scale';
-import OpenCollective from '../icons/companies/opencollective';
-import Twitch from '../icons/companies/twitch';
-import Expo from '../icons/companies/expo';
-import GiveCrypto from '../icons/companies/givecrypto';
+import Jet from '../icons/companies/jet'
+import Hulu from '../icons/companies/hulu'
+import ATT from '../icons/companies/att'
+import Twitch from '../icons/companies/twitch'
+import Binance from '../icons/companies/binance'
+import Staples from '../icons/companies/staples'
+import Framer from '../icons/companies/framer'
+import Boosted from '../icons/companies/boosted'
+import Marvel from '../icons/companies/marvel'
+import Deliveroo from '../icons/companies/deliveroo'
+import EuroVision from '../icons/companies/eurovision.js'
 
 export default () => (
   <Container padding wide>
@@ -17,6 +20,14 @@ export default () => (
       <SectionHeader id="customers" title="Who's Using Server-Side Rendering" />
 
       <Carousel>
+        <div className="col">
+          <a href="https://jet.com">
+            <img src="/static/images/showcases/jet.jpg" alt="Jet" />
+          </a>
+          <div className="logo">
+            <Jet />
+          </div>
+        </div>
         <div className="col">
           <a href="https://hulu.com">
             <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
@@ -26,19 +37,11 @@ export default () => (
           </div>
         </div>
         <div className="col">
-          <a href="https://boostedboards.com/">
-            <img src="/static/images/showcases/boosted.jpg" alt="Boosted Boards" />
+          <a href="https://att.com">
+            <img src="/static/images/showcases/att.jpg" alt="ATT" />
           </a>
           <div className="logo">
-            <Boosted />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://scale.ai/">
-            <img src="/static/images/showcases/showcases-04.jpg" alt="Scale ai" />
-          </a>
-          <div className="logo">
-            <Scale />
+            <ATT />
           </div>
         </div>
         <div className="col">
@@ -50,35 +53,59 @@ export default () => (
           </div>
         </div>
         <div className="col">
-          <a href="https://opencollective.com/">
-            <img src="/static/images/showcases/showcases-06.jpg" alt="Open Collective" />
+          <a href="https://binance.com/">
+            <img src="/static/images/showcases/binance.jpg" alt="Binance" />
           </a>
           <div className="logo">
-            <OpenCollective />
+            <Binance />
           </div>
         </div>
         <div className="col">
-          <a href="https://expo.io/">
-            <img src="/static/images/showcases/showcases-13.jpg" alt="Expo" />
+          <a href="https://www.staples.com/">
+            <img src="/static/images/showcases/staples.jpg" alt="Staples" />
           </a>
           <div className="logo">
-            <Expo />
+            <Staples />
           </div>
         </div>
         <div className="col">
-          <a href="https://givecrypto.org/">
-            <img src="/static/images/showcases/givecrypto.jpg" alt="GiveCrypto" />
+          <a href="https://store.framer.com/">
+            <img src="/static/images/showcases/framer.jpg" alt="Framer Store" />
           </a>
           <div className="logo">
-            <GiveCrypto />
+            <Framer />
           </div>
         </div>
         <div className="col">
-          <a href="https://www.invisionapp.com/">
-            <img src="/static/images/showcases/showcases-16.jpg" alt="inVision" />
+          <a href="https://boostedboards.com/">
+            <img src="/static/images/showcases/boosted.jpg" alt="Boosted Boards" />
           </a>
           <div className="logo">
-            <Invision />
+            <Boosted />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://marvel.com/">
+            <img src="/static/images/showcases/marvel.jpg" alt="Marvel" />
+          </a>
+          <div className="logo">
+            <Marvel />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://deliveroo.co.uk/">
+            <img src="/static/images/showcases/deliveroo.jpg" alt="Deliveroo" />
+          </a>
+          <div className="logo">
+            <Deliveroo />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://eurovision.tv/">
+            <img src="/static/images/showcases/eurovision.jpg" alt="EuroVision" />
+          </a>
+          <div className="logo">
+            <EuroVision />
           </div>
         </div>
       </Carousel>
@@ -109,9 +136,7 @@ export default () => (
         }
 
         img {
-          display: flex;
-          flex: 1;
-          flex-basis: 20.5rem;
+          max-height: 20.5rem;
           width: 36.5rem;
           user-select: none;
           user-drag: none;
@@ -137,7 +162,7 @@ export default () => (
 
         @media screen and (max-width: 960px) {
           img {
-            flex-basis: 10rem;
+            max-height: 10rem;
             width: 19rem;
           }
 
@@ -148,11 +173,11 @@ export default () => (
 
         @media screen and (max-width: 640px) {
           img {
-            flex-basis: 8rem;
+            max-height: 8rem;
             width: 14rem;
           }
         }
       `}
     </style>
   </Container>
-);
+)

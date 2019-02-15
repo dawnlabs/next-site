@@ -18,7 +18,8 @@ export default ({ children }) => (
           height: 100%;
           color: black;
           background: #ffffff;
-          box-shadow: 0 14px 50px 0 rgba(0, 0, 0, 0.38), 0 2px 10px 0 rgba(0, 0, 0, 0.48);
+          box-shadow: 0 14px 50px 0 rgba(0, 0, 0, 0.38),
+            0 2px 10px 0 rgba(0, 0, 0, 0.48);
           border-radius: 7px;
           overflow: hidden;
         }
@@ -72,4 +73,4 @@ export default ({ children }) => (
       `}
     </style>
   </div>
-)
+);

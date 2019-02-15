@@ -12,7 +12,7 @@ const Circle = ({ children }) => (
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 1rem;
+          margin-bottom: 1.25rem;
           width: 64px;
           height: 64px;
           background-color: #fff;

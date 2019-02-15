@@ -43,6 +43,7 @@ export default () => (
         .icon {
           display: flex;
           justify-content: center;
+          transform: scale(1.25);
         }
 
         .content {

@@ -13,8 +13,10 @@ export default () => (
 
       <div className="content">
         <p>
-          Need a path for incremental adoption? No problem. Server-side rendering with Next.js <br />
-          can be easily integrated with existing application runtimes such as Express and Electron.
+          Need a path for incremental adoption? No problem. Server-side rendering with Next.js can
+          be easily integrated with existing application runtimes such as Express and Electron. With
+          the ability to use Next.js programmatically, it's simple to incorporate it into your
+          current applications.
         </p>
       </div>
 
@@ -27,6 +29,7 @@ export default () => (
       {`
         p {
           margin: 0;
+          max-width: 43.5rem;
         }
 
         h2 {

@@ -9,9 +9,10 @@ export default () => (
         <h2 className="f0 fw6">The Right Abstraction</h2>
         <div className="content">
           <p>
-            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a powerful hook for loading a
-            page's initial data. With a single place to prepopulate page context, server-side rendering with Next.js
-            seamlessly integrates with any existing data fetching strategy.
+            Next.js extends React's lifecycle with <code>getInitialProps</code> to provide a
+            powerful method for loading a page's initial data. With a single place to prepopulate
+            page context, server-side rendering with Next.js seamlessly integrates with any existing
+            data fetching strategy.
           </p>
         </div>
         <div>

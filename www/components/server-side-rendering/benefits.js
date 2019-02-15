@@ -28,7 +28,7 @@ const ssrStyle = {
 }
 const nonSsrStyle = {
   ...barStyle,
-  border: '1px solid #999999'
+  border: '1px solid #ccc'
 }
 
 const Graph = ({ viewable, innerRef }) => (
@@ -44,7 +44,7 @@ const Graph = ({ viewable, innerRef }) => (
     <svg width="431" height="6" viewBox="0 0 431 6" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M431 3L426 0.113249V5.88675L431 3ZM0 3.5L426.5 3.5V2.5L0 2.5V3.5Z" fill="black" />
     </svg>
-    <div className="title" ref={innerRef}>
+    <div className="title subtitle" ref={innerRef}>
       Time to First Meaningful Paint
     </div>
     <style jsx>
@@ -53,9 +53,11 @@ const Graph = ({ viewable, innerRef }) => (
           text-align: center;
           margin-top: 1rem;
           font-size: 0.875rem;
+          color
         }
 
         .container {
+          padding-top: 1rem;
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
@@ -109,11 +111,11 @@ export default class Benefits extends React.PureComponent {
 
     return (
       <div className="container">
-        <SectionHeader
+        {/* <SectionHeader
           anchor="benefits"
           title="Leave the Heavy Lifting to the Servers"
           description={`Get your site to users faster, all while saving money, time, and headaches`}
-        />
+        /> */}
 
         <div className="first">
           <div className="flex">
@@ -163,6 +165,7 @@ export default class Benefits extends React.PureComponent {
           {`
             hr {
               border-top: 0;
+              border-right: 0;
               border-style: solid;
               opacity: 0.1;
               margin: 0;
@@ -196,7 +199,7 @@ export default class Benefits extends React.PureComponent {
             .first > .flex {
               flex: 1;
               justify-content: space-between;
-              margin: 1rem 0 3rem 0;
+              margin: 0 0 4rem;
             }
 
             .first > .flex > .col {

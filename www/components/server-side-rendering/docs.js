@@ -73,6 +73,11 @@ export default () => (
             align-items: center;
             text-align: center;
           }
+
+          h2 {
+            margin-top: 1.5rem;
+          }
+
           .content {
             max-width: 27rem;
           }

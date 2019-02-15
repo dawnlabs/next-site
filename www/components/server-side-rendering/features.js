@@ -91,7 +91,7 @@ export default () => (
           flex-direction: row-reverse;
           align-items: center;
           justify-content: center;
-          margin: 3rem;
+          margin: 1rem 0 2rem;
         }
 
         .browser-container {
@@ -114,7 +114,8 @@ export default () => (
           text-align: center;
           display: flex;
           justify-content: center;
-          background: linear-gradient(to bottom, #a9e4f7 0%, #0fb4e7 100%);
+          background-image: radial-gradient(circle, #D7D7D7, #D7D7D7 1px, #FFF 1px, #FFF);
+          background-size: 28px 28px;
         }
 
         .toast {
@@ -123,7 +124,7 @@ export default () => (
           position: absolute;
           border-radius: 0.5rem;
           width: 80%;
-          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12);
         }
 
         @keyframes shift {
@@ -136,6 +137,10 @@ export default () => (
         }
 
         @media screen and (max-width: 1024px) {
+          
+          .animation {
+            margin: 3rem 0 1.5rem;
+          }
           ul {
             width: auto;
             flex-direction: column;

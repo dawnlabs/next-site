@@ -1,5 +1,7 @@
+import React from 'react'
+
 export default () => (
-  <>
+  <React.Fragment>
     <svg
       className="servers"
       width="324"
@@ -399,8 +401,7 @@ export default () => (
     <style jsx>
       {`
         .servers {
-          filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.48))
-            drop-shadow(0 14px 50px rgba(0, 0, 0.38));
+          filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.48)) drop-shadow(0 14px 50px rgba(0, 0, 0.38));
         }
         .dot-seq-1 {
           animation: sequence 1.5s ease 0.3s infinite;
@@ -420,41 +421,41 @@ export default () => (
 
         @keyframes atom {
           0% {
-            fill: #E1E1E1;
+            fill: #e1e1e1;
           }
           80%,
           90% {
             fill: #61dafb;
           }
           100% {
-            fill: #E1E1E1;
+            fill: #e1e1e1;
           }
         }
         @keyframes nucleus {
           0% {
-            fill: #E1E1E1;
+            fill: #e1e1e1;
           }
           20%,
           90% {
             fill: #61dafb;
           }
           100% {
-            fill: #E1E1E1;
+            fill: #e1e1e1;
           }
         }
         @keyframes sequence {
           0% {
-            fill: #E1E1E1;
+            fill: #e1e1e1;
           }
           10% {
             fill: #0076ff;
           }
           20%,
           100% {
-            fill: #E1E1E1;
+            fill: #e1e1e1;
           }
         }
       `}
     </style>
-  </>
-);
+  </React.Fragment>
+)

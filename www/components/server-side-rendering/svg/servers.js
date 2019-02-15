@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 export default () => (
   <React.Fragment>
     <svg
       className="servers"
-      width="324"
-      height="301"
-      viewBox="-50 0 324 267"
+      width="272"
+      height="200"
+      viewBox="0 0 324 267"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -401,7 +401,7 @@ export default () => (
     <style jsx>
       {`
         .servers {
-          filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.48)) drop-shadow(0 14px 50px rgba(0, 0, 0.38));
+          filter: drop-shadow(0 2px 5px rgba(0,0,0,1)) drop-shadow(0 8px 16px rgba(0,0,0,0.3))
         }
         .dot-seq-1 {
           animation: sequence 1.5s ease 0.3s infinite;
@@ -417,6 +417,13 @@ export default () => (
         }
         .nucleus {
           animation: nucleus 2s ease forwards infinite;
+        }
+
+        @media screen and (max-width: 700px) {
+          .servers {
+            height: 360px;
+            width: 380px;
+          }
         }
 
         @keyframes atom {
@@ -458,4 +465,4 @@ export default () => (
       `}
     </style>
   </React.Fragment>
-)
+);

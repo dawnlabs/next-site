@@ -1,5 +1,7 @@
+import React from 'react'
+
 export default () => (
-  <>
+  <React.Fragment>
     <svg
       width="400"
       height="500"
@@ -247,5 +249,5 @@ export default () => (
         }
       `}
     </style>
-  </>
+  </React.Fragment>
 )

@@ -1,18 +1,18 @@
-import Container from '../container'
-import SectionHeader from '../section-header'
-import Carousel from '../carousel'
+import Container from '../container';
+import SectionHeader from '../section-header';
+import Carousel from '../carousel';
 
-import Jet from '../icons/companies/jet'
-import Hulu from '../icons/companies/hulu'
-import ATT from '../icons/companies/att'
-import Twitch from '../icons/companies/twitch'
-import Binance from '../icons/companies/binance'
-import Staples from '../icons/companies/staples'
-import Framer from '../icons/companies/framer'
-import Boosted from '../icons/companies/boosted'
-import Marvel from '../icons/companies/marvel'
-import Deliveroo from '../icons/companies/deliveroo'
-import EuroVision from '../icons/companies/eurovision.js'
+import Jet from '../icons/companies/jet';
+import Hulu from '../icons/companies/hulu';
+import ATT from '../icons/companies/att';
+import Twitch from '../icons/companies/twitch';
+import Binance from '../icons/companies/binance';
+import Staples from '../icons/companies/staples';
+import Framer from '../icons/companies/framer';
+import Boosted from '../icons/companies/boosted';
+import Marvel from '../icons/companies/marvel';
+import Deliveroo from '../icons/companies/deliveroo';
+import EuroVision from '../icons/companies/eurovision.js';
 
 export default () => (
   <Container padding wide>
@@ -20,22 +20,6 @@ export default () => (
       <SectionHeader id="customers" title="Who's Using Server-Side Rendering" />
 
       <Carousel>
-        <div className="col">
-          <a href="https://jet.com">
-            <img src="/static/images/showcases/jet.jpg" alt="Jet" />
-          </a>
-          <div className="logo">
-            <Jet />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://hulu.com">
-            <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
-          </a>
-          <div className="logo">
-            <Hulu />
-          </div>
-        </div>
         <div className="col">
           <a href="https://att.com">
             <img src="/static/images/showcases/att.jpg" alt="ATT" />
@@ -106,6 +90,22 @@ export default () => (
           </a>
           <div className="logo">
             <EuroVision />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://jet.com">
+            <img src="/static/images/showcases/jet.jpg" alt="Jet" />
+          </a>
+          <div className="logo">
+            <Jet />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://hulu.com">
+            <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
+          </a>
+          <div className="logo">
+            <Hulu />
           </div>
         </div>
       </Carousel>
@@ -180,4 +180,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

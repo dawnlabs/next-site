@@ -179,7 +179,7 @@ export default class Benefits extends React.PureComponent {
             .container {
               width: 100%;
               margin: 0 auto;
-              padding: 4rem 1rem 0 1rem;
+              padding: 4rem 0;
               max-width: 64rem;
             }
 
@@ -247,6 +247,9 @@ export default class Benefits extends React.PureComponent {
                 flex: 1;
                 align-items: center;
                 margin: 0 0 3rem 0;
+              }
+              .col {
+                padding: 0 1rem;
               }
             }
           `}

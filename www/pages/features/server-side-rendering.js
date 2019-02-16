@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 import Page from '../../components/page';
 import Header from '../../components/header';
 import Navbar from '../../components/navbar';
@@ -17,10 +15,7 @@ import Customers from '../../components/server-side-rendering/customers';
 
 const title = 'Features - Server Side Rendering | Next.js';
 export default () => (
-  <Page>
-    <Head>
-      <title>{title}</title>
-    </Head>
+  <Page title={title}>
     <SocialMeta
       title={title}
       description="Leverage Server Side Rendering out of the box with Next.js"

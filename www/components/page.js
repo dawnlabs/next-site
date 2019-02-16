@@ -15,7 +15,10 @@ export default withMediaQuery(({ title, description, children }) => (
       <title>{title || 'Next.js - The React Framework'}</title>
       <meta
         name="description"
-        content={description || 'Next.js is the React framework for production'}
+        content={
+          description ||
+          'Next.js is the React framework for production. The world’s leading companies have used Next.js to build cutting-edge applications, websites, and more'
+        }
       />
     </Head>
     <style jsx>

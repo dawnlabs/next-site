@@ -18,7 +18,7 @@ export default () => (
       image="/static/twitter-cards/home.jpg"
       title="Next.js - The React Framework"
       url="https://nextjs.org"
-      description="Next.js is the React framework for production"
+      description="Next.js is the React framework for production. The world’s leading companies have used Next.js to build cutting-edge applications, websites, and more"
     />
     <MediaQueryConsumer>
       {({ isMobile }) => (

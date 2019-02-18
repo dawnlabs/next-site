@@ -26,6 +26,22 @@ export default () => (
           </div>
         </div>
         <div className="col">
+          <a href="https://ticketmaster.com/">
+            <img src="/static/images/showcases/ticketmaster.jpg" alt="Ticketmaster" />
+          </a>
+          <div className="logo">
+            <Ticketmaster />
+          </div>
+        </div>
+        <div className="col">
+          <a href="https://monday.com/">
+            <img src="/static/images/showcases/monday.jpg" alt="Monday" />
+          </a>
+          <div className="logo">
+            <Monday />
+          </div>
+        </div>
+        <div className="col">
           <a href="https://nike.com/help/">
             <img src="/static/images/showcases/nike.jpg" alt="Nike" />
           </a>
@@ -55,22 +71,6 @@ export default () => (
           </a>
           <div className="logo repl-logo">
             <Replit />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://ticketmaster.com/">
-            <img src="/static/images/showcases/ticketmaster.jpg" alt="Ticketmaster" />
-          </a>
-          <div className="logo">
-            <Ticketmaster />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://monday.com/">
-            <img src="/static/images/showcases/monday.jpg" alt="Monday" />
-          </a>
-          <div className="logo">
-            <Monday />
           </div>
         </div>
         <div className="col">

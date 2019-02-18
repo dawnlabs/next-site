@@ -9,6 +9,9 @@ import SocialMeta from '../../components/social-meta'
 
 import Hero from '../../components/css-in-js/hero'
 import Features from '../../components/css-in-js/features'
+import Learn from '../../components/css-in-js/learn'
+import Links from '../../components/css-in-js/links'
+import Docs from '../../components/css-in-js/docs'
 import Customers from '../../components/css-in-js/customers'
 
 export default () => (
@@ -36,6 +39,9 @@ export default () => (
     </MediaQueryConsumer>
     <Hero />
     <Features />
+    <Learn />
+    <Links />
+    <Docs />
     <Customers />
     <Footer />
     <style jsx>

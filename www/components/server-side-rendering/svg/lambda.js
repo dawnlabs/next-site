@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default () => (
   <React.Fragment>
@@ -109,7 +109,14 @@ export default () => (
             opacity="0.15"
             strokeDasharray="3"
           />
-          <rect className="lambda-rect" fill="url(#lambda-gradient-1)" x="220" y="100" width="800" height="200" />
+          <rect
+            className="lambda-rect"
+            fill="url(#lambda-gradient-1)"
+            x="220"
+            y="100"
+            width="800"
+            height="200"
+          />
           <rect
             className="lambda-rect"
             fill="url(#lambda-gradient-1)"
@@ -177,26 +184,23 @@ export default () => (
         #azure,
         #lambda {
           opacity: 0;
-          animation: fade-in 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s forwards;
-        }
-        #lambda {
-          animation-delay: 0s;
+          animation: fade-in 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s forwards;
         }
         #pulse1 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-70 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.4s forwards;
+            fade-in-70 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s forwards;
         }
         #pulse2 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-50 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.6s forwards;
+            fade-in-50 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.4s forwards;
         }
         #pulse3 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-30 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s forwards;
+            fade-in-30 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.6s forwards;
         }
         #pulse4 {
           animation: rotate 45s linear infinite forwards,
-            fade-in-15 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s forwards;
+            fade-in-15 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s forwards;
         }
 
         @keyframes rotate {
@@ -250,4 +254,4 @@ export default () => (
       `}
     </style>
   </React.Fragment>
-)
+);

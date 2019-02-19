@@ -138,9 +138,9 @@ export default class Benefits extends React.PureComponent {
             <Discovery />
             <h3 className="f3 fw6">Optimized for Discovery</h3>
             <p>
-              Server-side rendering guarantees your pages are easily indexable by search engines and
-              previewable on social media platforms. Client-side only routing solutions can delay
-              web-crawling and in turn, tarnish discoverability. Take your SEO to the next level and
+              SSR guarantees your pages are easily indexable by search engines and
+              previewable on social media platforms. Client-side routing solutions can delay
+              web crawling and in turn, tarnish discoverability. Take your SEO to the next level and
               sidestep the issue entirely with Next.js.
             </p>
           </div>

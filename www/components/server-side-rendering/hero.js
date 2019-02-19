@@ -3,9 +3,7 @@ import Button from '../button';
 
 export default () => (
   <Container wide padding center dotBackground>
-    <h1>
-      Server-Side Rendering Done Right
-    </h1>
+    <h1>Server-Side Rendering Done Right</h1>
 
     <div className="content">
       <p>

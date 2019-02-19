@@ -1,8 +1,8 @@
-import posed from 'react-pose'
+import posed from 'react-pose';
 
-import IObserver from '../intersection-observer'
-import SectionHeader from '../section-header'
-import { Lightning, Performance, Discovery } from './icons'
+import IObserver from '../intersection-observer';
+import SectionHeader from '../section-header';
+import { Lightning, Performance, Discovery } from './icons';
 
 const Bar = posed.div({
   ssr: {
@@ -15,21 +15,21 @@ const Bar = posed.div({
     flip: true,
     transition: { duration: 2500 }
   }
-})
+});
 
 const barStyle = {
   width: '6rem',
   borderRadius: '6px',
   height: '3.5rem'
-}
+};
 const ssrStyle = {
   ...barStyle,
   background: '#007aff'
-}
+};
 const nonSsrStyle = {
   ...barStyle,
   border: '1px solid #ccc'
-}
+};
 
 const Graph = ({ viewable, innerRef }) => (
   <div className="container">
@@ -98,20 +98,20 @@ const Graph = ({ viewable, innerRef }) => (
       `}
     </style>
   </div>
-)
+);
 
 export default class Benefits extends React.PureComponent {
   state = {
     viewable: false
-  }
+  };
 
-  setViewable = ({ isIntersecting: viewable }) => this.setState({ viewable })
+  setViewable = ({ isIntersecting: viewable }) => this.setState({ viewable });
 
   render() {
-    const { viewable } = this.state
+    const { viewable } = this.state;
 
     return (
-      <div className="container">
+      <div className="container" id="benefits">
         <div className="first">
           <div className="flex">
             <div className="col">
@@ -138,10 +138,10 @@ export default class Benefits extends React.PureComponent {
             <Discovery />
             <h3 className="f3 fw6">Optimized for Discovery</h3>
             <p>
-              SSR guarantees your pages are easily indexable by search engines and
-              previewable on social media platforms. Client-side routing solutions can delay
-              web crawling and in turn, tarnish discoverability. Take your SEO to the next level and
-              sidestep the issue entirely with Next.js.
+              SSR guarantees your pages are easily indexable by search engines and previewable on
+              social media platforms. Client-side routing solutions can delay web crawling and in
+              turn, tarnish discoverability. Take your SEO to the next level and sidestep the issue
+              entirely with Next.js.
             </p>
           </div>
 
@@ -257,6 +257,6 @@ export default class Benefits extends React.PureComponent {
           `}
         </style>
       </div>
-    )
+    );
   }
 }

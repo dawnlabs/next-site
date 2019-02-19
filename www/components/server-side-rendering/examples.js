@@ -1,6 +1,9 @@
 import Container from '../container'
-import Button from '../button'
 import { Integrate } from './icons'
+import Electron from './svg/frameworks/electron'
+import Express from './svg/frameworks/express'
+import Koa from './svg/frameworks/koa'
+import Micro from './svg/frameworks/micro'
 
 export default () => (
   <Container wide padding gray center>
@@ -9,32 +12,51 @@ export default () => (
         <Integrate />
       </div>
 
-      <h2 className="f0 fw6">Integrate Anywhere</h2>
+      <h2 className="f0 fw6">Incrementally Adopt</h2>
+      <p>
+        Need a path for incremental adoption? No problem. With the ability to use Next.js programmatically, it’s simple to incorporate it into any existing application. Next.js also provides complete multi-zone support for exposing multiple deployments under a single domain.
+      </p>
 
-      <div className="content">
+      <hr />
+
+      <h2 className="f0 fw6">Integrate Anywhere</h2>
+      <div className="integrate-content">
         <p>
-          Need a path for incremental adoption? No problem. Server-side rendering with Next.js can
-          be easily integrated with existing application runtimes such as Express and Electron. With
-          the ability to use Next.js programmatically, it's simple to incorporate it into your
-          current applications.
+          With over 170 examples to follow, server-side rendering with Next.js can be easily integrated with your current Node.js backend, such as Express, Koa, or even Electron.
         </p>
       </div>
 
-      <Button invert href="https://github.com/zeit/next.js/tree/master/examples">
-        See Examples
-      </Button>
+      <div className="frameworks">
+        <div className="logo"><Koa /></div>
+        <div className="logo"><Electron /></div>
+        <div className="logo express"><Express /></div>
+        <div className="logo micro"><Micro /></div>
+      </div>
     </div>
 
     <style jsx>
       {`
         p {
-          margin: 0;
-          max-width: 43.5rem;
+          margin: 0 1rem;
+          max-width: 44rem;
+        }
+
+        .integrate-content {
+          max-width: 42rem;
         }
 
         h2 {
-          margin: 0.5rem 0 1.5rem;
+          margin-bottom: 1.5rem;
           line-height: 1.3;
+        }
+
+        hr {
+          border-top: 0;
+          border-right: 0;
+          border-style: solid;
+          opacity: 0.1;
+          margin: 4rem 0;
+          align-self: stretch;
         }
 
         .col {
@@ -47,15 +69,31 @@ export default () => (
           display: flex;
           justify-content: center;
           transform: scale(1.25);
-          margin-top: 1rem;
+          margin: 1rem 0 0.5rem;
         }
 
-        .content {
-          margin: 0 1rem 2.5rem 1rem;
+        .frameworks {
+          display: flex;
+          margin: 3rem 1rem 0;
+        }
+
+        .logo {
+          margin: 0 2.5rem;
+          opacity: 0.25;
+          height: 2rem;
+        }
+
+        .micro {
+          opacity: 0.7;
+          padding-top: 3px;
+        }
+
+        .express {
+          padding-top: 3px;
         }
 
         @media screen and (max-width: 640px) {
-          br {
+          br, .frameworks {
             display: none;
           }
         }

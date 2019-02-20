@@ -73,7 +73,7 @@ class Image extends Component {
                 ) : renderImage ? (
                   renderImage(rest)
                 ) : (
-                  <img src={this.state.src || null} />
+                  <img src={this.state.src || null} alt={rest.alt} />
                 )
               ) : null}
             </div>

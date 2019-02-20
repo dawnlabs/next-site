@@ -1,9 +1,9 @@
-import Container from '../container'
-import { Integrate } from './icons'
-import Electron from './svg/frameworks/electron'
-import Express from './svg/frameworks/express'
-import Koa from './svg/frameworks/koa'
-import Micro from './svg/frameworks/micro'
+import Container from '../container';
+import { Integrate } from './icons';
+import Express from './svg/frameworks/express';
+import Koa from './svg/frameworks/koa';
+import Electron from './svg/frameworks/electron';
+import Nginx from './svg/frameworks/nginx';
 
 export default () => (
   <Container wide padding gray center>
@@ -14,7 +14,10 @@ export default () => (
 
       <h2 className="f0 fw6">Incrementally Adopt</h2>
       <p>
-        Need a path for incremental adoption? No problem. With the ability to use Next.js programmatically, it’s simple to incorporate it into any existing application. Next.js also provides complete multi-zone support for exposing multiple deployments under a single domain.
+        Need a path for incremental adoption? No problem. With the ability to use Next.js
+        programmatically, it’s simple to incorporate it into any existing application. Next.js also
+        provides complete multi-zone support for exposing multiple deployments under a single
+        domain.
       </p>
 
       <hr />
@@ -22,15 +25,24 @@ export default () => (
       <h2 className="f0 fw6">Integrate Anywhere</h2>
       <div className="integrate-content">
         <p>
-          With over 170 examples to follow, server-side rendering with Next.js can be easily integrated with your current Node.js backend, such as Express, Koa, or even Electron.
+          With over 170 examples to follow, server-side rendering with Next.js can be easily
+          integrated with your current Node.js backend, such as Express, Koa, or even Electron.
         </p>
       </div>
 
       <div className="frameworks">
-        <div className="logo"><Koa /></div>
-        <div className="logo"><Electron /></div>
-        <div className="logo express"><Express /></div>
-        <div className="logo micro"><Micro /></div>
+        <div className="logo express">
+          <Express />
+        </div>
+        <div className="logo">
+          <Koa />
+        </div>
+        <div className="logo">
+          <Electron />
+        </div>
+        <div className="logo nginx">
+          <Nginx />
+        </div>
       </div>
     </div>
 
@@ -83,21 +95,21 @@ export default () => (
           height: 2rem;
         }
 
-        .micro {
-          opacity: 0.7;
-          padding-top: 3px;
-        }
-
         .express {
           padding-top: 3px;
         }
 
+        .nginx {
+          padding-top: 6px;
+        }
+
         @media screen and (max-width: 640px) {
-          br, .frameworks {
+          br,
+          .frameworks {
             display: none;
           }
         }
       `}
     </style>
   </Container>
-)
+);

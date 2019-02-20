@@ -47,17 +47,16 @@ const browserData = {
   }
 };
 
-const TERMINAL_CODE = `import Toast from './components/Toast'
+const TERMINAL_CODE = `import Toast from './react-components/toast'
 
-export default ({ req }) => (
-  <Toast>
-    This site is
-    <b>
-      {req ? 'Server' : 'Client'} 
-      Side Rendered
-    </b>
-  </Toast>
-)`;
+export default function HomePage() {
+  return (
+    <Toast>
+      This site is
+      <strong>Server Side Rendered</strong>
+    </Toast>
+  )
+}`;
 
 export default () => (
   <Container wide dark center>

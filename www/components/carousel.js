@@ -1,6 +1,8 @@
 import React from 'react';
 import posed, { PoseGroup } from 'react-pose';
 
+import Image from './image';
+import { MediaQueryConsumer } from './media-query';
 import ArrowNext from './icons/arrow-next';
 import ArrowPrev from './icons/arrow-previous';
 
@@ -41,75 +43,97 @@ export default class Carousel extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.count = React.Children.count(this.props.children);
-
-    this.pivot = Math.floor(this.count / 2);
+    this.pivot = Math.floor(props.slides.length / 2);
     this.state = {
       index: this.pivot
     };
   }
 
   next = () =>
-    this.setState(({ index }) => ({ index: (index + 1) % this.count }));
+    this.setState(({ index }) => ({
+      index: (index + 1) % this.props.slides.length
+    }));
 
   prev = () =>
     this.setState(({ index }) => ({
-      index: index === 0 ? this.count - 1 : index - 1
+      index: index === 0 ? this.props.slides.length - 1 : index - 1
     }));
 
   render() {
     const { pivot } = this;
+    const { slides } = this.props;
     const { index } = this.state;
 
-    let newChildren = [];
-    React.Children.forEach(this.props.children, (_, i) => {
-      newChildren.push(this.props.children[(index + i) % this.count]);
+    const newSlides = [];
+
+    slides.forEach((_, i) => {
+      newSlides.push(slides[(index + i) % slides.length]);
     });
 
     return (
       <div className="container">
-        <div className="carousel">
-          <div className="slides">
-            <PoseGroup animateOnMount={false}>
-              {newChildren.map((child, i) => (
-                <Item
-                  style={{
-                    visibility:
-                      i < pivot - 1 || i > pivot + 1 ? 'hidden' : 'visible'
-                  }}
-                  pose={i === pivot ? 'selected' : 'unselected'}
-                  key={child.props.children[0].props.href}
-                  onClick={
-                    i === pivot - 1
-                      ? this.prev
-                      : i === pivot + 1
-                        ? this.next
-                        : undefined
-                  }
-                >
-                  <div
-                    className={`slide ${
-                      i === pivot ? 'selected' : 'unselected'
-                    }`}
-                  >
-                    {child}
-                  </div>
-                </Item>
-              ))}
-            </PoseGroup>
-          </div>
+        <MediaQueryConsumer>
+          {({ isMobile, isTablet }) => {
+            const size = {
+              width: isMobile ? 224 : isTablet ? 304 : 584,
+              height: isMobile ? 128 : isTablet ? 160 : 328
+            };
+            return (
+              <div className="carousel">
+                <div className="slides">
+                  <PoseGroup animateOnMount={false}>
+                    {newSlides.map(({ image, alt, href, logo }, i) => (
+                      <Item
+                        style={{
+                          visibility:
+                            i < pivot - 1 || i > pivot + 1
+                              ? 'hidden'
+                              : 'visible'
+                        }}
+                        pose={i === pivot ? 'selected' : 'unselected'}
+                        key={href}
+                        onClick={
+                          i === pivot - 1
+                            ? this.prev
+                            : i === pivot + 1
+                              ? this.next
+                              : undefined
+                        }
+                      >
+                        <div className="slide-content">
+                          <a
+                            href={href}
+                            className={`slide ${
+                              i === pivot ? 'selected' : 'unselected'
+                            }`}
+                          >
+                            <Image
+                              src={image}
+                              alt={alt}
+                              {...size}
+                              renderImage={props => <img {...props} />}
+                            />
+                          </a>
+                          <div className="logo">{logo}</div>
+                        </div>
+                      </Item>
+                    ))}
+                  </PoseGroup>
+                </div>
 
-          <div className="arrow next" onClick={this.next}>
-            <ArrowNext color="#8c8c8c" />
-          </div>
-          <div className="arrow previous" onClick={this.prev}>
-            <ArrowPrev color="#8c8c8c" />
-          </div>
-        </div>
+                <div className="arrow next" onClick={this.next}>
+                  <ArrowNext color="#8c8c8c" />
+                </div>
+                <div className="arrow previous" onClick={this.prev}>
+                  <ArrowPrev color="#8c8c8c" />
+                </div>
+              </div>
+            );
+          }}
+        </MediaQueryConsumer>
         <style jsx>{`
           .container {
-            margin-top: 3rem;
-            height: 22rem;
+            height: 25rem;
             width: 100%;
           }
 
@@ -132,7 +156,17 @@ export default class Carousel extends React.PureComponent {
             );
           }
 
+          .logo {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            width: 12.5rem;
+          }
+
           .slide {
+            transform: translate3d(0, 0, 0); /* Work around for Chrome bug */
+            flex-direction: column;
+            align-items: center;
             margin: 0 3.5rem;
             pointer-events: none;
           }
@@ -141,12 +175,40 @@ export default class Carousel extends React.PureComponent {
             pointer-events: all;
           }
 
+          .slide-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 2rem;
+          }
+
+          .slide-content :global(img) {
+            user-select: none;
+            user-drag: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            cursor: pointer;
+            border-radius: 7px;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1),
+              0px 10px 20px rgba(0, 0, 0, 0.08);
+          }
+
+          .slide-content :global(img:hover) {
+            box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1),
+              0px 10px 10px rgba(0, 0, 0, 0.08);
+          }
+
+          .slide-content :global(figure) {
+            margin: 0;
+          }
+
           .arrow {
             display: flex;
             position: absolute;
             padding: 0.5rem;
             margin: -0.5rem;
-            top: 8rem;
+            top: 10rem;
             transform: scale(2.5);
             cursor: pointer;
             user-select: none;
@@ -184,7 +246,7 @@ export default class Carousel extends React.PureComponent {
               margin: 0 2rem;
             }
             .arrow {
-              top: 2rem;
+              top: 4rem;
               transform: scale(2);
             }
           }
@@ -210,7 +272,7 @@ export default class Carousel extends React.PureComponent {
               margin: 0 2rem;
             }
             .arrow {
-              top: 1rem;
+              top: 3rem;
               transform: scale(2);
             }
           }

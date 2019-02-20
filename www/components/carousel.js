@@ -49,7 +49,9 @@ export default class Carousel extends React.PureComponent {
     };
   }
 
-  next = () => this.setState(({ index }) => ({ index: (index + 1) % this.count }));
+  next = () =>
+    this.setState(({ index }) => ({ index: (index + 1) % this.count }));
+
   prev = () =>
     this.setState(({ index }) => ({
       index: index === 0 ? this.count - 1 : index - 1
@@ -71,11 +73,27 @@ export default class Carousel extends React.PureComponent {
             <PoseGroup animateOnMount={false}>
               {newChildren.map((child, i) => (
                 <Item
-                  style={{ visibility: i < pivot - 1 || i > pivot + 1 ? 'hidden' : 'visible' }}
+                  style={{
+                    visibility:
+                      i < pivot - 1 || i > pivot + 1 ? 'hidden' : 'visible'
+                  }}
                   pose={i === pivot ? 'selected' : 'unselected'}
                   key={child.props.children[0].props.href}
+                  onClick={
+                    i === pivot - 1
+                      ? this.prev
+                      : i === pivot + 1
+                        ? this.next
+                        : undefined
+                  }
                 >
-                  <div className={`slide ${i === pivot ? 'selected' : 'unselected'}`}>{child}</div>
+                  <div
+                    className={`slide ${
+                      i === pivot ? 'selected' : 'unselected'
+                    }`}
+                  >
+                    {child}
+                  </div>
                 </Item>
               ))}
             </PoseGroup>
@@ -107,7 +125,11 @@ export default class Carousel extends React.PureComponent {
             top: 0;
             left: 100%;
             transition: transform ease-out 400ms;
-            transform: translate3d(calc(-50vw - ${slideWidth / 2 + slideWidth * pivot}rem), 0, 0);
+            transform: translate3d(
+              calc(-50vw - ${slideWidth / 2 + slideWidth * pivot}rem),
+              0,
+              0
+            );
           }
 
           .slide {
@@ -122,8 +144,8 @@ export default class Carousel extends React.PureComponent {
           .arrow {
             display: flex;
             position: absolute;
-            padding: .5rem;
-            margin: -.5rem;
+            padding: 0.5rem;
+            margin: -0.5rem;
             top: 8rem;
             transform: scale(2.5);
             cursor: pointer;
@@ -153,7 +175,9 @@ export default class Carousel extends React.PureComponent {
             }
             .slides {
               transform: translateX(
-                calc(-50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * pivot}rem)
+                calc(
+                  -50vw - ${tabletSlideWidth / 2 + tabletSlideWidth * pivot}rem
+                )
               );
             }
             .slide {
@@ -177,7 +201,9 @@ export default class Carousel extends React.PureComponent {
             }
             .slides {
               transform: translateX(
-                calc(-50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * pivot}rem)
+                calc(
+                  -50vw - ${mobileSlideWidth / 2 + mobileSlideWidth * pivot}rem
+                )
               );
             }
             .slide {

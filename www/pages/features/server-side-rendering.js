@@ -19,13 +19,18 @@ export default () => (
     <SocialMeta
       title={title}
       description="Leverage Server Side Rendering out of the box with Next.js"
-      image="/static/twitter-cards/static-exporting.png"
-      url="https://nexts.org/features/static-exporting"
+      image="/static/twitter-cards/server-side-rendering.png"
+      url="https://nexts.org/features/server-side-rendering"
       keywords="Server side rendering, Server rendering, SSR, Next, JavaScript, Web Framework"
     />
     <MediaQueryConsumer>
       {({ isMobile }) => (
-        <Header height={64 + (isMobile ? 32 : 0)} shadow dotBackground active={64}>
+        <Header
+          height={64 + (isMobile ? 32 : 0)}
+          shadow
+          dotBackground
+          active={64}
+        >
           <Navbar />
         </Header>
       )}

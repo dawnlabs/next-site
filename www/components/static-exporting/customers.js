@@ -9,6 +9,7 @@ import Material from '../icons/companies/material-ui';
 import Plotly from '../icons/companies/plotly';
 import VergeCurrency from '../icons/companies/vergecurrency';
 import NuCypher from '../icons/companies/nucypher';
+import Rossmann from '../icons/companies/rossmann';
 
 export default () => (
   <Container padding wide>
@@ -20,6 +21,12 @@ export default () => (
           image: '/static/images/showcases/blockstack.png',
           alt: 'Blockstack',
           logo: <Blockstack />
+        },
+        {
+          href: 'https://www.rossmann.pl/',
+          image: '/static/images/showcases/rossmann.png',
+          alt: 'Rossmann',
+          logo: <Rossmann />
         },
         {
           href: 'https://vergecurrency.com/',

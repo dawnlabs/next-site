@@ -29,6 +29,19 @@ export default () => (
           logo: <Rossmann />
         },
         {
+          href: 'https://www.sapien.network/',
+          image: '/static/images/showcases/sapien.png',
+          alt: 'Sapien Network',
+          logo: (
+            <img
+              width={42}
+              height={42}
+              src="/static/images/showcase-thumbnails/sapien-icon.png"
+              alt="Sapiens Logo"
+            />
+          )
+        },
+        {
           href: 'https://vergecurrency.com/',
           image: '/static/images/showcases/verge.jpg',
           alt: 'Verge Currency',

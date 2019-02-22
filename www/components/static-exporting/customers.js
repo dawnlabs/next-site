@@ -8,6 +8,7 @@ import Blockstack from '../icons/companies/blockstack';
 import Material from '../icons/companies/material-ui';
 import Plotly from '../icons/companies/plotly';
 import VergeCurrency from '../icons/companies/vergecurrency';
+import NuCypher from '../icons/companies/nucypher';
 
 export default () => (
   <Container padding wide>
@@ -25,6 +26,12 @@ export default () => (
           image: '/static/images/showcases/verge.jpg',
           alt: 'Verge Currency',
           logo: <VergeCurrency />
+        },
+        {
+          href: 'https://www.nucypher.com/',
+          image: '/static/images/showcases/nucypher.png',
+          alt: 'NuCypher',
+          logo: <NuCypher />
         },
         {
           href: 'https://blockchain.com/',

@@ -7,6 +7,7 @@ import Expo from '../icons/companies/expo';
 import Blockstack from '../icons/companies/blockstack';
 import Material from '../icons/companies/material-ui';
 import Plotly from '../icons/companies/plotly';
+import VergeCurrency from '../icons/companies/vergecurrency';
 
 export default () => (
   <Container padding wide>
@@ -14,10 +15,16 @@ export default () => (
     <Carousel
       slides={[
         {
-          href: 'https://expo.io/',
-          image: '/static/images/showcases/showcases-13.jpg',
-          alt: 'Expo',
-          logo: <Expo />
+          href: 'https://blockstack.org/',
+          image: '/static/images/showcases/blockstack.png',
+          alt: 'Blockstack',
+          logo: <Blockstack />
+        },
+        {
+          href: 'https://vergecurrency.com/',
+          image: '/static/images/showcases/verge.jpg',
+          alt: 'Verge Currency',
+          logo: <VergeCurrency />
         },
         {
           href: 'https://blockchain.com/',
@@ -38,10 +45,10 @@ export default () => (
           logo: <Material />
         },
         {
-          href: 'https://blockstack.org/',
-          image: '/static/images/showcases/blockstack.png',
-          alt: 'Blockstack',
-          logo: <Blockstack />
+          href: 'https://expo.io/',
+          image: '/static/images/showcases/showcases-13.jpg',
+          alt: 'Expo',
+          logo: <Expo />
         }
       ]}
     />

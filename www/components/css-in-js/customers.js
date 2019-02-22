@@ -1,87 +1,73 @@
-import Container from '../container'
-import SectionHeader from '../section-header'
-import Carousel from '../carousel'
+import Container from '../container';
+import SectionHeader from '../section-header';
+import Carousel from '../carousel';
 
-import Scale from '../icons/companies/scale'
-import Hulu from '../icons/companies/hulu'
-import Ticketmaster from '../icons/companies/ticketmaster'
-import Auth0 from '../icons/companies/auth0'
-import Replit from '../icons/companies/replit'
-import Nike from '../icons/companies/nike'
-import Monday from '../icons/companies/monday'
-import Kap from '../icons/companies/kap'
+import Scale from '../icons/companies/scale';
+import Hulu from '../icons/companies/hulu';
+import Ticketmaster from '../icons/companies/ticketmaster';
+import Auth0 from '../icons/companies/auth0';
+import Replit from '../icons/companies/replit';
+import Nike from '../icons/companies/nike';
+import Monday from '../icons/companies/monday';
+import Kap from '../icons/companies/kap';
+
+const slides = [
+  {
+    href: 'https://hulu.com',
+    image: '/static/images/showcases/showcases-17.jpg',
+    alt: 'Hulu',
+    logo: <Hulu />
+  },
+  {
+    href: 'https://ticketmaster.com/',
+    image: '/static/images/showcases/ticketmaster.jpg',
+    alt: 'Ticketmaster',
+    logo: <Ticketmaster />
+  },
+  {
+    href: 'https://monday.com/',
+    image: '/static/images/showcases/monday.jpg',
+    alt: 'Monday',
+    logo: <Monday />
+  },
+  {
+    href: 'https://nike.com/help/',
+    image: '/static/images/showcases/nike.jpg',
+    alt: 'Nike',
+    logo: <Nike />
+  },
+  {
+    href: 'https://scale.ai/',
+    image: '/static/images/showcases/showcases-04.jpg',
+    alt: 'Scale AI',
+    logo: <Scale />
+  },
+  {
+    href: 'https://auth0.com/',
+    image: '/static/images/showcases/showcases-03.jpg',
+    alt: 'Auth0',
+    logo: <Auth0 />
+  },
+  {
+    href: 'https://repl.it/',
+    image: '/static/images/showcases/repl.it.jpg',
+    alt: 'Repl.it',
+    logo: <Replit />
+  },
+  {
+    href: 'https://getkap.co/',
+    image: '/static/images/showcases/kap.jpg',
+    alt: 'Kap',
+    logo: <Kap />
+  }
+];
 
 export default () => (
   <Container padding wide>
     <div className="first col">
       <SectionHeader id="customers" title="Who's Using CSS-in-JS" />
 
-      <Carousel>
-        <div className="col">
-          <a href="https://hulu.com">
-            <img src="/static/images/showcases/showcases-17.jpg" alt="Hulu" />
-          </a>
-          <div className="logo">
-            <Hulu />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://ticketmaster.com/">
-            <img src="/static/images/showcases/ticketmaster.jpg" alt="Ticketmaster" />
-          </a>
-          <div className="logo">
-            <Ticketmaster />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://monday.com/">
-            <img src="/static/images/showcases/monday.jpg" alt="Monday" />
-          </a>
-          <div className="logo">
-            <Monday />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://nike.com/help/">
-            <img src="/static/images/showcases/nike.jpg" alt="Nike" />
-          </a>
-          <div className="logo">
-            <Nike />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://scale.ai/">
-            <img src="/static/images/showcases/showcases-04.jpg" alt="Scale ai" />
-          </a>
-          <div className="logo">
-            <Scale />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://auth0.com/">
-            <img src="/static/images/showcases/showcases-03.jpg" alt="Auth0" />
-          </a>
-          <div className="logo">
-            <Auth0 />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://repl.it/">
-            <img src="/static/images/showcases/repl.it.jpg" alt="Repl.it" />
-          </a>
-          <div className="logo repl-logo">
-            <Replit />
-          </div>
-        </div>
-        <div className="col">
-          <a href="https://getkap.co/">
-            <img src="/static/images/showcases/kap.jpg" alt="Kap" />
-          </a>
-          <div className="logo">
-            <Kap />
-          </div>
-        </div>
-      </Carousel>
+      <Carousel slides={slides} />
     </div>
     <style jsx>
       {`
@@ -141,4 +127,4 @@ export default () => (
       `}
     </style>
   </Container>
-)
+);

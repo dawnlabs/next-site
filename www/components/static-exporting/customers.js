@@ -10,6 +10,7 @@ import Plotly from '../icons/companies/plotly';
 import VergeCurrency from '../icons/companies/vergecurrency';
 import NuCypher from '../icons/companies/nucypher';
 import Rossmann from '../icons/companies/rossmann';
+import Audiense from '../icons/companies/audiense';
 
 export default () => (
   <Container padding wide>
@@ -40,6 +41,12 @@ export default () => (
               alt="Sapiens Logo"
             />
           )
+        },
+        {
+          href: 'https://audiense.com/',
+          image: '/static/images/showcases/audiense.png',
+          alt: 'Audiense',
+          logo: <Audiense />
         },
         {
           href: 'https://vergecurrency.com/',

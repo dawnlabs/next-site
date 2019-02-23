@@ -11,81 +11,88 @@ import VergeCurrency from '../icons/companies/vergecurrency';
 import NuCypher from '../icons/companies/nucypher';
 import Rossmann from '../icons/companies/rossmann';
 import Audiense from '../icons/companies/audiense';
+import Motiv from '../icons/companies/motiv';
+
+const slides = [
+  {
+    href: 'https://blockstack.org/',
+    image: '/static/images/showcases/blockstack.png',
+    alt: 'Blockstack',
+    logo: <Blockstack />
+  },
+  {
+    href: 'https://plot.ly/',
+    image: '/static/images/showcases/plotly.jpg',
+    alt: 'Plotly',
+    logo: <Plotly />
+  },
+  {
+    href: 'https://www.rossmann.pl/',
+    image: '/static/images/showcases/rossmann.png',
+    alt: 'Rossmann',
+    logo: <Rossmann />
+  },
+  {
+    href: 'https://www.sapien.network/',
+    image: '/static/images/showcases/sapien.png',
+    alt: 'Sapien Network',
+    logo: (
+      <img
+        width={42}
+        height={42}
+        src="/static/images/showcase-thumbnails/sapien-icon.png"
+        alt="Sapiens Logo"
+      />
+    )
+  },
+  {
+    href: 'https://audiense.com/',
+    image: '/static/images/showcases/audiense.png',
+    alt: 'Audiense',
+    logo: <Audiense />
+  },
+  {
+    href: 'https://mymotiv.com/',
+    image: '/static/images/showcases/motiv.png',
+    alt: 'Motiv',
+    logo: <Motiv />
+  },
+  {
+    href: 'https://www.nucypher.com/',
+    image: '/static/images/showcases/nucypher.png',
+    alt: 'NuCypher',
+    logo: <NuCypher />
+  },
+  {
+    href: 'https://material-ui.com/',
+    image: '/static/images/showcases/material-ui.jpg',
+    alt: 'Material UI',
+    logo: <Material />
+  },
+  {
+    href: 'https://vergecurrency.com/',
+    image: '/static/images/showcases/verge.jpg',
+    alt: 'Verge Currency',
+    logo: <VergeCurrency />
+  },
+  {
+    href: 'https://expo.io/',
+    image: '/static/images/showcases/showcases-13.jpg',
+    alt: 'Expo',
+    logo: <Expo />
+  },
+  {
+    href: 'https://blockchain.com/',
+    image: '/static/images/showcases/blockchain.png',
+    alt: 'Blockchain',
+    logo: <Blockchain />
+  }
+];
 
 export default () => (
   <Container padding wide>
     <SectionHeader id="customers" title="Who's Using Static Exports" />
-    <Carousel
-      slides={[
-        {
-          href: 'https://blockstack.org/',
-          image: '/static/images/showcases/blockstack.png',
-          alt: 'Blockstack',
-          logo: <Blockstack />
-        },
-        {
-          href: 'https://www.rossmann.pl/',
-          image: '/static/images/showcases/rossmann.png',
-          alt: 'Rossmann',
-          logo: <Rossmann />
-        },
-        {
-          href: 'https://www.sapien.network/',
-          image: '/static/images/showcases/sapien.png',
-          alt: 'Sapien Network',
-          logo: (
-            <img
-              width={42}
-              height={42}
-              src="/static/images/showcase-thumbnails/sapien-icon.png"
-              alt="Sapiens Logo"
-            />
-          )
-        },
-        {
-          href: 'https://audiense.com/',
-          image: '/static/images/showcases/audiense.png',
-          alt: 'Audiense',
-          logo: <Audiense />
-        },
-        {
-          href: 'https://vergecurrency.com/',
-          image: '/static/images/showcases/verge.jpg',
-          alt: 'Verge Currency',
-          logo: <VergeCurrency />
-        },
-        {
-          href: 'https://www.nucypher.com/',
-          image: '/static/images/showcases/nucypher.png',
-          alt: 'NuCypher',
-          logo: <NuCypher />
-        },
-        {
-          href: 'https://blockchain.com/',
-          image: '/static/images/showcases/blockchain.png',
-          alt: 'Blockchain',
-          logo: <Blockchain />
-        },
-        {
-          href: 'https://plot.ly/',
-          image: '/static/images/showcases/plotly.jpg',
-          alt: 'Plotly',
-          logo: <Plotly />
-        },
-        {
-          href: 'https://material-ui.com/',
-          image: '/static/images/showcases/material-ui.jpg',
-          alt: 'Material UI',
-          logo: <Material />
-        },
-        {
-          href: 'https://expo.io/',
-          image: '/static/images/showcases/showcases-13.jpg',
-          alt: 'Expo',
-          logo: <Expo />
-        }
-      ]}
-    />
+    <Carousel slides={slides} />
     <style jsx>
       {`
         h4 {

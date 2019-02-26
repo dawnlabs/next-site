@@ -1,0 +1,96 @@
+import React from 'react';
+import Highlight from 'react-highlight';
+
+import Window from '../window';
+import File from './svg/file';
+
+export default ({ files = [] }) => {
+  const [selected, select] = React.useState(0);
+  const { content, name } = files[selected];
+
+  return (
+    <Window title={name} height={297} mobileHeight={275} borderColor="#EEEEEE">
+      <div className="editor">
+        <div className="files">
+          {files.map(({ name }, i) => (
+            <div
+              className={i === selected ? 'selected' : ''}
+              onClick={() => select(i)}
+            >
+              <File />
+              <span>{name}</span>
+            </div>
+          ))}
+        </div>
+        <div className="content">
+          <Highlight className="html">{content}</Highlight>
+        </div>
+      </div>
+      <style jsx>
+        {`
+          .editor {
+            display: flex;
+            overflow: hidden;
+          }
+
+          .files {
+            padding: 0 1rem;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            flex-basis: 12rem;
+          }
+
+          .files > div {
+            display: flex;
+            align-items: center;
+            margin: 0.2rem 0;
+            cursor: pointer;
+          }
+
+          .files span {
+            font-size: 12px;
+            margin-left: 0.6rem;
+          }
+
+          .files :global(svg) {
+            opacity: 0.3;
+          }
+
+          .files > .selected {
+            cursor: auto;
+          }
+
+          .selected span {
+            font-weight: 600;
+          }
+
+          .selected :global(svg) {
+            opacity: 1;
+          }
+
+          .content {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+          }
+
+          .content :global(pre) {
+            margin: 0;
+          }
+
+          .content :global(.hljs-meta) {
+            color: blue;
+          }
+          .content :global(.hljs-tag) {
+            color: orange;
+          }
+          .content :global(.hljs-name) {
+            color: red;
+          }
+        `}
+      </style>
+    </Window>
+  );
+};

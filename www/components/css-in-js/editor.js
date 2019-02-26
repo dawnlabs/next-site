@@ -43,9 +43,8 @@ export default ({ files = [] }) => {
             padding: 0 1rem;
             align-items: flex-start;
             display: flex;
+            flex: 0 0 12rem;
             flex-direction: column;
-            overflow: hidden;
-            flex-basis: 12rem;
           }
 
           .files > div {
@@ -79,11 +78,12 @@ export default ({ files = [] }) => {
           .content {
             display: flex;
             flex: 1;
-            overflow: hidden;
+            padding: 0 0.5rem;
           }
 
           .content :global(pre) {
             margin: 0;
+            white-space: pre-wrap;
           }
 
           .content :global(.hljs-meta) {
@@ -94,6 +94,12 @@ export default ({ files = [] }) => {
           }
           .content :global(.hljs-name) {
             color: red;
+          }
+
+          @media screen and (max-width: 700px) {
+            .files {
+              display: none;
+            }
           }
         `}
       </style>

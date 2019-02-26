@@ -61,7 +61,8 @@ export default () => (
         }
 
         .editor-container {
-          width: 44rem;
+          width: 100%;
+          max-width: 44rem;
           margin-top: 6rem;
         }
       `}

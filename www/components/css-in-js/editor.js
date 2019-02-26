@@ -9,7 +9,13 @@ export default ({ files = [] }) => {
   const { content, name } = files[selected];
 
   return (
-    <Window title={name} height={297} mobileHeight={275} borderColor="#EEEEEE">
+    <Window
+      title={name}
+      height={297}
+      mobileHeight={275}
+      borderColor="#EEEEEE"
+      boxShadow="0px 20px 50px rgba(0, 0, 0, 0.12)"
+    >
       <div className="editor">
         <div className="files">
           {files.map(({ name }, i) => (

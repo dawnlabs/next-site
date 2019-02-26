@@ -63,7 +63,6 @@ export default () => (
         .editor-container {
           width: 44rem;
           margin-top: 6rem;
-          box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.12);
         }
       `}
     </style>

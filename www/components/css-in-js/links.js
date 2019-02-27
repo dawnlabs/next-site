@@ -27,7 +27,7 @@ export default () => (
         <p>
           CSS-in-JS solutions harness the full power of CSS using the syntax you
           already know. While you have complete control to do whatever you
-          please, libraries also manage the annoying parts like vendor prefixing
+          please, libraries can manage the annoying parts like vendor prefixing
           so you don't have to.
         </p>
         <Button href="#">Learn Next.js</Button>

@@ -5,7 +5,7 @@ import Editor from './editor';
 
 const files = [
   {
-    name: 'styled-jsx.js',
+    name: 'global.js',
     content: `<!doctype html>
 <html>
   <head>
@@ -17,12 +17,12 @@ const files = [
 </html>`
   },
   {
-    name: 'styled-components.js',
-    content: 'some styled components code?'
+    name: 'dynamic.js',
+    content: 'need something here'
   },
   {
-    name: 'emotion.js',
-    content: 'some emotion code?'
+    name: 'etc.js',
+    content: 'something goes here?'
   }
 ];
 

@@ -20,6 +20,7 @@ export default ({ files = [] }) => {
         <div className="files">
           {files.map(({ name }, i) => (
             <div
+              key={name}
               className={i === selected ? 'selected' : ''}
               onClick={() => select(i)}
             >

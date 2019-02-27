@@ -73,11 +73,14 @@ export default () => {
   const { name } = files[selected];
 
   React.useEffect(() => {
-    const interval = setInterval(() => {
-      select(current => ++current % 3);
-    }, 3000);
-
-    return () => clearInterval(interval);
+    if (window.innerWidth < 640) {
+      select(1);
+    } else {
+      const interval = setInterval(() => {
+        select(current => ++current % 3);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
   }, []);
 
   return (
@@ -243,6 +246,12 @@ export default () => {
             }
             .site-container {
               display: none;
+            }
+          }
+
+          @media screen and (max-width: 540px) {
+            .terminal-container {
+              width: 18rem;
             }
           }
         `}

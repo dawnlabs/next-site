@@ -3,7 +3,7 @@ import Button from '../button';
 
 export default () => (
   <Container wide padding center dotBackground>
-    <h1>Level Up your Styles with CSS-in-JS</h1>
+    <h1>Level up Your Styles with CSS-in-JS</h1>
 
     <div className="content">
       <p>

@@ -6,23 +6,64 @@ import Editor from './editor';
 const files = [
   {
     name: 'global.js',
-    content: `<!doctype html>
-<html>
-  <head>
-    <title>A simple deployment with the Now API!</title>
-  </head>
-  <body>
-    <h1>Welcome to a simple static file</h1>
-  </body>
-</html>`
+    content: `export default () => (
+  <div>
+    <ExternalComponent />
+
+    <style jsx>{\`
+      div > :global(.external-element) {
+        color: red
+      }
+    \`}</style>
+  </div>
+)`
   },
   {
     name: 'dynamic.js',
-    content: 'need something here'
+    content: `export default ({ children, large, theme }) => (
+  <button>
+      { children }
+      <style jsx>{\`
+        button {
+          padding: \${ large ? '50' : '20' }px;
+          background: \${theme.background};
+        }
+      \`}</style>
+  </button>
+)`
   },
   {
-    name: 'etc.js',
-    content: 'something goes here?'
+    name: 'external.js',
+    content: `import css from 'styled-jsx/css'
+    
+const button = css\`button { color: hotpink; }\`
+
+export default () => (
+  <div>
+    <button>styled-jsx</button>
+    <style jsx>{button}</style>
+  </div>
+)`
+  },
+  {
+    name: 'file.js',
+    content: `import styles from './styles.css'
+
+export default () => (
+  <div>
+    <button>styled-jsx</button>
+    <style jsx>{styles}</style>
+  </div>
+)`
+  },
+  {
+    name: 'fragment.js',
+    content: `export default = ({ src, alt = '' }) => (
+  <React.Fragment>
+    <img src={src} alt={alt} />
+    <style jsx>{\`img { max-width: 100% }\`}</style>
+  </React.Fragment>
+)`
   }
 ];
 

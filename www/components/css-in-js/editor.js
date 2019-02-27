@@ -4,15 +4,15 @@ import Highlight from 'react-highlight';
 import Window from '../window';
 import File from './svg/file';
 
-export default ({ files = [] }) => {
+export default ({ files = [], height = 340 }) => {
   const [selected, select] = React.useState(0);
   const { content, name } = files[selected];
+  const lines = ['', ...content.match(/\n/g)];
 
   return (
     <Window
       title={name}
-      height={297}
-      mobileHeight={275}
+      height={height}
       borderColor="#EEEEEE"
       boxShadow="0px 20px 50px rgba(0, 0, 0, 0.12)"
     >
@@ -30,6 +30,11 @@ export default ({ files = [] }) => {
           ))}
         </div>
         <div className="content">
+          <div className="line-numbers">
+            {lines.map((_, i) => (
+              <div>{i + 1}</div>
+            ))}
+          </div>
           <Highlight className="html">{content}</Highlight>
         </div>
       </div>
@@ -77,6 +82,7 @@ export default ({ files = [] }) => {
           }
 
           .content {
+            position: relative;
             display: flex;
             flex: 1;
             padding: 0 0.5rem;
@@ -90,11 +96,16 @@ export default ({ files = [] }) => {
           .content :global(.hljs-meta) {
             color: blue;
           }
-          .content :global(.hljs-tag) {
-            color: orange;
-          }
+          .content :global(.hljs-tag),
           .content :global(.hljs-name) {
-            color: red;
+            font-weight: 600;
+          }
+
+          .line-numbers {
+            left: -1rem;
+            color: #222222;
+            opacity: 0.2;
+            position: absolute;
           }
 
           @media screen and (max-width: 700px) {

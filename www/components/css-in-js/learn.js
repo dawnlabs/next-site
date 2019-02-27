@@ -8,10 +8,10 @@ const files = [
     name: 'global.js',
     content: `export default () => (
   <div>
-    <ExternalComponent />
+    <ExternalButton />
 
     <style jsx>{\`
-      div > :global(.external-element) {
+      div > :global(button) {
         color: red
       }
     \`}</style>

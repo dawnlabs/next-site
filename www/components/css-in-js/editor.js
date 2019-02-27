@@ -90,7 +90,6 @@ export default ({ files = [], height = 340 }) => {
 
           .content :global(pre) {
             margin: 0;
-            white-space: pre-wrap;
           }
 
           .content :global(.hljs-meta) {
@@ -111,6 +110,12 @@ export default ({ files = [], height = 340 }) => {
           @media screen and (max-width: 700px) {
             .files {
               display: none;
+            }
+            .line-numbers {
+              left: -1rem;
+            }
+            .content {
+              margin: 0 0 0 1.5rem;
             }
           }
         `}

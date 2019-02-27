@@ -30,8 +30,8 @@ export default () => (
   <Container padding>
     <div className="col">
       <SectionHeader
-        title="CSS for React that Just Works"
-        description={`Next.js provides styled-jsx out-of-the-box, with zero setup required, so you can stop endlessly configuring your tools and get back to building beautiful websites.`}
+        title="Unlock the Potential of CSS"
+        description={`For Next.js applications, CSS-in-JS offers a compelling set of features to supercharge your developer experience and ensure your team can move fast.`}
       />
 
       <Button invert href="#">

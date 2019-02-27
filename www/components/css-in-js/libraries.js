@@ -18,11 +18,15 @@ export default () => (
         </p>
       </div>
 
-      <div className="row">
-        <StyledComponents />
-        <Linaria />
-        <Radium />
-        <Emotion />
+      <div className="icons">
+        <div className="flex">
+          <StyledComponents />
+          <Linaria />
+        </div>
+        <div className="flex">
+          <Radium />
+          <Emotion />
+        </div>
       </div>
     </div>
 
@@ -34,18 +38,23 @@ export default () => (
           align-items: center;
         }
 
-        .row {
+        .flex {
           display: flex;
+          align-items: center;
           opacity: 0.3;
         }
 
-        .row > :global(svg) {
+        .flex > :global(svg) {
           margin: 0 2.25rem;
         }
 
         .content {
           margin: 0 0 2.5rem 0;
           max-width: 40rem;
+        }
+
+        .icons {
+          display: flex;
         }
 
         @media screen and (max-width: 960px) {
@@ -55,9 +64,21 @@ export default () => (
         }
 
         @media screen and (max-width: 640px) {
-          .row {
-            display: none;
+          .icons {
+            flex-direction: column;
           }
+          .flex {
+            justify-content: space-between;
+            width: 16rem;
+          }
+          .flex:last-child {
+            margin-top: 2rem;
+            flex-direction: row-reverse;
+          }
+          .flex > :global(svg) {
+            margin: 0;
+          }
+
           .content {
             margin: 0 1rem 2.5rem 1rem;
           }

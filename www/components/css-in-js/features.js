@@ -180,7 +180,6 @@ export default () => {
             align-items: center;
           }
           h4 {
-            height: 2rem;
             margin: 0 0 0 0.5rem;
           }
           img {

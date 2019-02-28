@@ -47,13 +47,18 @@ export default () => (
         width="1"
         height="1"
       >
-        <use href="#emotion-image-1" transform="scale(0.000972763)" />
+        <use
+          href="#emotion-image-1"
+          xlinkHref="#emotion-image-1"
+          transform="scale(0.000972763)"
+        />
       </pattern>
       <image
         id="emotion-image-1"
         width="1028"
         height="1028"
         href="/static/images/icons/emotion.jpg"
+        xlinkHref="/static/images/icons/emotion.jpg"
       />
     </defs>
   </svg>

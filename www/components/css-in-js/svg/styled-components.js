@@ -99,13 +99,18 @@ export default () => (
         width="1"
         height="1"
       >
-        <use href="#styled-components-image-1" transform="scale(0.0015625)" />
+        <use
+          href="#styled-components-image-1"
+          xlinkHref="#styled-components-image-1"
+          transform="scale(0.0015625)"
+        />
       </pattern>
       <image
         id="styled-components-image-1"
         width="640"
         height="640"
         href="/static/images/icons/styled-components.jpg"
+        xlinkHref="/static/images/icons/styled-components.jpg"
       />
     </defs>
   </svg>

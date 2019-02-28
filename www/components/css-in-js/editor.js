@@ -4,7 +4,7 @@ import Highlight from 'react-highlight';
 import Window from '../window';
 import File from './svg/file';
 
-export default ({ files = [], height = 340 }) => {
+export default ({ files = [], height = 320 }) => {
   const [selected, select] = React.useState(0);
   const { content, name } = files[selected];
   const lines = ['', ...content.match(/\n/g)];
@@ -32,7 +32,7 @@ export default ({ files = [], height = 340 }) => {
         <div className="content">
           <div className="line-numbers">
             {lines.map((_, i) => (
-              <div>{i + 1}</div>
+              <div key={i}>{i + 1}</div>
             ))}
           </div>
           <Highlight className="html">{content}</Highlight>
@@ -115,7 +115,7 @@ export default ({ files = [], height = 340 }) => {
               left: -1rem;
             }
             .content {
-              margin: 0 0 0 1.5rem;
+              margin: 0 0 0 2rem;
             }
           }
         `}

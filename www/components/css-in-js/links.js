@@ -4,7 +4,6 @@ import Checkmark from '../icons/checkmark';
 export default () => (
   <div className="container">
     <div className="content">
-      <hr />
 
       <div className="col">
         <h3 className="f3 fw6">Maintainable at Scale</h3>
@@ -30,7 +29,7 @@ export default () => (
           please, libraries can manage the annoying parts like vendor prefixing
           so you don't have to.
         </p>
-        <Button href="#">Learn Next.js</Button>
+        <Button href="/learn/basics/styling-components">Learn Next.js</Button>
       </div>
     </div>
 
@@ -48,7 +47,7 @@ export default () => (
           and remove components without constantly ballooning stylesheet size
           and complexity.
         </p>
-        <Button href="/docs">View Full Documentation</Button>
+        <Button href="/docs#css-in-js">View Full Documentation</Button>
       </div>
 
       <hr />
@@ -119,7 +118,7 @@ export default () => (
         .container {
           display: flex;
           justify-content: center;
-          margin: 4rem 0;
+          margin: 4rem 0 9rem;
         }
 
         .content {
@@ -155,6 +154,7 @@ export default () => (
           }
           .container {
             flex-direction: column-reverse;
+            margin-bottom: 0;
           }
           .content {
             flex-direction: column-reverse;

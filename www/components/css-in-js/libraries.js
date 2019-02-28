@@ -5,7 +5,7 @@ import Radium from './svg/radium';
 import Emotion from './svg/emotion';
 
 export default () => (
-  <Container wide padding center>
+  <Container wide center>
     <div className="col">
       <h2 className="f0 fw6">CSS for React that Just Works</h2>
 
@@ -36,6 +36,8 @@ export default () => (
           display: flex;
           flex-direction: column;
           align-items: center;
+          border-top: 1px solid rgba(0,0,0,0.1);
+          padding: 4rem 0;
         }
 
         .flex {
@@ -72,8 +74,9 @@ export default () => (
             width: 16rem;
           }
           .flex:last-child {
-            margin-top: 2rem;
+            margin: 2.5rem auto 0;
             flex-direction: row-reverse;
+            width: 12rem;
           }
           .flex > :global(svg) {
             margin: 0;

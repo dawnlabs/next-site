@@ -76,7 +76,7 @@ export default () => (
         description={`For Next.js applications, CSS-in-JS offers a compelling set of features to supercharge your developer experience and ensure your team can move fast.`}
       />
 
-      <Button invert href="#">
+      <Button invert href="/learn/basics/styling-components">
         Learn Next.js
       </Button>
 
@@ -104,8 +104,9 @@ export default () => (
 
         .editor-container {
           width: 100%;
-          max-width: 44rem;
+          max-width: 40rem;
           margin-top: 6rem;
+          font-size: 0.85rem;
         }
       `}
     </style>

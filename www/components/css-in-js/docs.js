@@ -15,7 +15,7 @@ export default () => (
         </p>
       </div>
       <div>
-        <Button invert href="#">
+        <Button invert href="/docs#css-in-js">
           View Documentation
         </Button>
       </div>

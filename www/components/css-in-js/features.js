@@ -191,7 +191,7 @@ export default () => {
             justify-content: space-between;
             align-items: center;
             align-self: stretch;
-            margin: 2rem 1rem;
+            margin: 2.5rem 1rem 3rem;
           }
           .terminal-container {
             width: 29.5rem;
@@ -200,11 +200,16 @@ export default () => {
             margin: 0;
             white-space: pre-wrap;
             font-size: 12px;
+            line-height: 1.5;
             padding: 0 1rem;
           }
           .site-container {
             display: flex;
             position: relative;
+          }
+          .terminal-container, .site-container {
+            box-shadow: rgba(0, 0, 0, 0.48) 0px 2px 10px, rgba(0, 0, 0, 0.38) 0px 14px 50px;
+            border-radius: 4px;
           }
           .overlay-container {
             position: absolute;
@@ -242,6 +247,7 @@ export default () => {
             }
             .flex {
               align-self: initial;
+              margin: 4rem 0 3rem;
             }
             .site-container {
               display: none;
@@ -250,7 +256,7 @@ export default () => {
 
           @media screen and (max-width: 540px) {
             .terminal-container {
-              width: 18rem;
+              width: 22rem;
             }
           }
         `}

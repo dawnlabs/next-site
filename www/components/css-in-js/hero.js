@@ -13,7 +13,7 @@ export default () => (
       </p>
     </div>
 
-    <Button invert href="#links">
+    <Button invert href="#unlock">
       Learn More
     </Button>
 

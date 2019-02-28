@@ -71,6 +71,7 @@ export default () => (
   <Container padding>
     <div className="col">
       <SectionHeader
+        anchor="unlock"
         title="Unlock the Potential of CSS"
         description={`For Next.js applications, CSS-in-JS offers a compelling set of features to supercharge your developer experience and ensure your team can move fast.`}
       />

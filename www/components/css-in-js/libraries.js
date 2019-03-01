@@ -1,7 +1,5 @@
 import Container from '../container';
 import StyledComponents from './svg/styled-components';
-import Linaria from './svg/linaria';
-import Radium from './svg/radium';
 import Emotion from './svg/emotion';
 
 export default () => (
@@ -19,14 +17,15 @@ export default () => (
       </div>
 
       <div className="icons">
-        <div className="flex">
+        <a href="https://github.com/zeit/next.js/tree/canary/examples/with-styled-components/">
           <StyledComponents />
-          <Linaria />
-        </div>
-        <div className="flex">
-          <Radium />
+        </a>
+        <a href="https://github.com/zeit/next.js/tree/canary/examples/with-fela/">
+          <img src="/static/images/icons/fela.jpg" alt="fela" height={57.6} />
+        </a>
+        <a href="https://github.com/zeit/next.js/tree/canary/examples/with-emotion/">
           <Emotion />
-        </div>
+        </a>
       </div>
     </div>
 
@@ -36,27 +35,29 @@ export default () => (
           display: flex;
           flex-direction: column;
           align-items: center;
-          border-top: 1px solid rgba(0,0,0,0.1);
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
           padding: 4rem 0;
         }
 
-        .flex {
+        .icons {
           display: flex;
           align-items: center;
+        }
+
+        .icons a {
+          display: block;
+          cursor: pointer;
+          margin: 0 2.25rem;
           opacity: 0.3;
         }
 
-        .flex > :global(svg) {
-          margin: 0 2.25rem;
+        .icons a:hover {
+          opacity: 1;
         }
 
         .content {
           margin: 0 0 2.5rem 0;
           max-width: 40rem;
-        }
-
-        .icons {
-          display: flex;
         }
 
         @media screen and (max-width: 960px) {
@@ -66,20 +67,8 @@ export default () => (
         }
 
         @media screen and (max-width: 640px) {
-          .icons {
-            flex-direction: column;
-          }
-          .flex {
-            justify-content: space-between;
-            width: 16rem;
-          }
-          .flex:last-child {
-            margin: 2.5rem auto 0;
-            flex-direction: row-reverse;
-            width: 12rem;
-          }
-          .flex > :global(svg) {
-            margin: 0;
+          .icons a {
+            margin: 0 1rem;
           }
 
           .content {

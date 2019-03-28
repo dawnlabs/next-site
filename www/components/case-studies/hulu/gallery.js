@@ -136,8 +136,8 @@ function MobileTile({ link, ...props }) {
 
 const MobileGallery = () => (
   <>
-    {images.map(row => (
-      <div className="slider-container">
+    {images.map((row, i) => (
+      <div className="slider-container" key={i}>
         <div className="slider">
           {row.map(_ => (
             <MobileTile key={`a-${_.src}`} {..._} />

@@ -59,6 +59,7 @@ const Testimony = () => (
         }
 
         span {
+          text-align: center;
           font-size: 0.75rem;
           font-weight: 600;
           color: rgba(0, 0, 0, 0.4);

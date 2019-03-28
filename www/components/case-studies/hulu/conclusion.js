@@ -26,23 +26,18 @@ export default () => (
     <style jsx>{`
       .placeholder {
         width: 100%;
+        max-width: 1440px;
         height: 300px;
         background: #ffadad;
-        z-index: 1;
         margin: 8rem 0;
       }
 
       .container {
+        z-index: 1;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #1c1c1c;
-        padding-bottom: 8rem;
-      }
-
-      .content {
-        color: #fff;
-        max-width: 30rem;
       }
 
       a {

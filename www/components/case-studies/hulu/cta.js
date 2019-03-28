@@ -1,12 +1,9 @@
 export default () => (
   <div className="container">
-    <div className="content">
-      <h2>
-        Find Out How Next.js Can
-        <br /> Empower Your Team Today
-      </h2>
-      <a href="/now">
-        <button>Learn More</button>
+    <div>
+      <h2>Find Out How Next.js Can Empower Your Team Today</h2>
+      <a href="/learn">
+        <button>Read More</button>
       </a>
     </div>
 
@@ -22,7 +19,7 @@ export default () => (
           border-bottom: 2px solid #333333;
         }
 
-        .content {
+        .container > div {
           color: #fff;
           display: flex;
           justify-content: space-between;
@@ -39,6 +36,7 @@ export default () => (
         }
 
         h2 {
+          max-width: 28rem;
           line-height: 1.4;
         }
 
@@ -53,14 +51,13 @@ export default () => (
             margin-bottom: 50px;
           }
 
-          .content {
+          .container > div {
             flex-direction: column;
           }
 
           h3 {
             display: block;
             margin: 0 0 2.5rem 0;
-            max-width: 28rem;
           }
 
           a {

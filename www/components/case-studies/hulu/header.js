@@ -11,7 +11,6 @@ const Header = () => (
     <style jsx>{`
       header {
         z-index: 2;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -44,8 +43,9 @@ const Header = () => (
           display: none;
         }
         header {
+          justify-content: center;
           padding: 0 2rem;
-          top: 1rem;
+          top: 3rem;
         }
       }
 

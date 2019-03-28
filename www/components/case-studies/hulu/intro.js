@@ -1,12 +1,13 @@
 const Intro = () => (
-  <section>
-    <img
-      src={`/static/images/case-studies/hulu/hulu.png`}
-      alt="Hulu logo"
-      className="hulu"
-    />
-
-    <div className="container">
+  <>
+    <div className="hulu-container">
+      <img
+        src={`/static/images/case-studies/hulu/hulu.png`}
+        alt="Hulu logo"
+        className="hulu"
+      />
+    </div>
+    <section>
       <div className="content">
         <h4>TODO TODO TODO TODO</h4>
 
@@ -31,15 +32,15 @@ const Intro = () => (
           <button>Read More</button>
         </a>
       </div>
-    </div>
 
-    <img
-      src={`/static/images/case-studies/hulu/zach.png`}
-      alt="Zach Tanner"
-      className="zach"
-    />
+      <div className="img-container">
+        <img
+          src={`/static/images/case-studies/hulu/zach.png`}
+          alt="Zach Tanner"
+          className="zach"
+        />
+      </div>
 
-    <div className="container">
       <div className="content">
         <h4>TODO TODO TODO TODO</h4>
 
@@ -67,12 +68,11 @@ const Intro = () => (
           example for them to follow.
         </p>
       </div>
-    </div>
+    </section>
 
     <style jsx>
       {`
         section {
-          background-color: #000;
           display: flex;
           z-index: 1;
           flex-direction: column;
@@ -81,13 +81,13 @@ const Intro = () => (
           overflow: hidden;
         }
 
-        section::after {
+        section::before {
+          z-index: 0;
           content: '';
-          position: absolute;
-          top: 90rem;
-          background-color: #fff;
+          background-color: #000;
           transform: skewY(-45deg);
-          height: 170rem;
+          height: 180rem;
+          margin-top: -130em;
           width: 100%;
         }
 
@@ -105,41 +105,42 @@ const Intro = () => (
           text-decoration: underline;
         }
 
+        .hulu-container {
+          display: flex;
+          justify-content: center;
+          background-color: #000;
+        }
+
         .hulu {
+          height: 427px;
+          max-width: 1440px;
+        }
+
+        .content:first-child {
+          margin: -56rem 10rem 10rem 0;
+          z-index: 1;
+          color: #fff;
+        }
+
+        .img-container {
+          z-index: 1;
+          max-width: 64rem;
           width: 100%;
+          padding: 0 4rem;
+          margin: 0 0 12rem 0;
         }
 
         .zach {
-          z-index: 1;
+          width: 100%;
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08),
             0px 39px 69px rgba(0, 0, 0, 0.15);
           border-radius: 8px;
-          margin: 10rem 0 12rem 0;
         }
 
-        .container {
-          margin: 0 auto;
-          width: 100%;
-          max-width: 42rem;
-          display: flex;
-        }
-
-        .container:first-of-type > .content {
-          color: #fff;
-          max-width: 32rem;
-          padding-right: 2rem;
-        }
-
-        .container:last-of-type > .content {
+        .content:last-child {
           position: relative;
-          z-index: 2;
+          z-index: 1;
           color: #000;
-          max-width: 31rem;
-          margin-left: 20%;
-        }
-
-        .container:last-of-type h2 {
-          margin: 2rem 0 0 0;
         }
 
         .button {
@@ -147,68 +148,60 @@ const Intro = () => (
           margin-top: 1rem;
         }
 
-        .hulu {
-          height: 23rem;
-          margin-bottom: 10rem;
-        }
-
-        @media screen and (max-width: 800px) {
-          .container:first-child > .content {
-            left: 20%;
+        @media screen and (max-width: 1200px) {
+          .content:first-child {
+            margin: -42rem 10rem 10rem 0;
           }
         }
-
         @media screen and (max-width: 640px) {
-          section::after {
-            height: 400vw;
-            top: 58rem;
+          section {
+            align-items: flex-start;
+          }
+          section::before {
+            height: 180rem;
             transform: skewY(-22.5deg);
           }
-          .container:first-of-type {
-            padding-top: 48rem;
+          .content:first-child {
+            margin: -44rem 0 8rem 0;
           }
-          .container:first-child > .content {
-            top: 8rem;
-            left: 2rem;
-            padding-right: 2rem;
+          .hulu {
+            height: 242px;
+            margin-right: 1rem;
+            width: 170%;
           }
-          .container:last-child > .content {
-            margin: 6rem 2rem 0 2rem;
-          }
-          .button {
-            text-align: center;
-          }
-        }
-        @media screen and (max-width: 480px) {
-          section::after {
-            top: 58rem;
-          }
-          br {
-            display: none;
-          }
-          .container:first-of-type {
-            padding-top: 50rem;
+          .img-container {
+            max-width: unset;
+            width: 100%;
+            padding: 0 2rem;
           }
         }
-        @media screen and (max-width: 390px) {
-          section::after {
-            top: 58rem;
+        @media screen and (max-width: 490px) {
+          section::before {
+            height: 185rem;
           }
-          .container:first-of-type {
-            padding-top: 52rem;
+          .content:first-child {
+            margin: -50rem 0 8rem 0;
           }
         }
-        @media screen and (max-width: 345px) {
-          section::after {
-            top: 65rem;
+        @media screen and (max-width: 400px) {
+          section::before {
+            height: 190rem;
           }
-          .container:first-of-type {
-            padding-top: 60rem;
+          .content:first-child {
+            margin: -55rem 0 10rem 0;
+          }
+        }
+        @media screen and (max-width: 350px) {
+          section::before {
+            height: 195rem;
+          }
+          .content:first-child {
+            margin: -60rem 0 10rem 0;
           }
         }
       `}
     </style>
-  </section>
+  </>
 );
 
 export default Intro;

@@ -41,7 +41,7 @@ export default () => {
       <Gallery />
       <Testimony />
       <Improvements />
-      <Conclusion />
+      {/* <Conclusion /> */}
       <CTA />
       <Footer />
       <style global jsx>
@@ -107,6 +107,19 @@ export default () => {
             cursor: pointer;
             overflow: hidden;
             outline: none;
+          }
+
+          .content {
+            padding: 0 2rem;
+            max-width: 38rem;
+            color: #fff;
+          }
+
+          @media screen and (max-width: 640px) {
+            .content {
+              max-width: unset;
+              width: 100%;
+            }
           }
 
           @media screen and (max-width: 1200px) {

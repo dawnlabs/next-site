@@ -9,7 +9,7 @@ const Testimony = () => (
       <span>Zack Tanner, Hulu Software Engineer</span>
     </div>
 
-    <p className="content">
+    <p>
       Tanner also found that Next forces developers to avoid common pitfalls. By
       having a single abstraction for handling difficult UI tasks, Next prevents
       developers from introducing problems incidentally—for example from
@@ -38,29 +38,6 @@ const Testimony = () => (
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        span {
-          font-size: 0.75rem;
-          font-weight: 600;
-          color: rgba(0, 0, 0, 0.4);
-          letter-spacing: 1.6px;
-          text-transform: uppercase;
-        }
-
-        .content {
-          margin: 3rem 0 0 0;
-          text-align: center;
-          max-width: 32rem;
-        }
-
-        .container p {
-          text-align: center;
-          line-height: 1.5;
-          font-size: 1.4rem;
-          font-weight: 500;
-          margin: 0 0 1.5rem 0;
-          max-width: 38rem;
-        }
-
         .container {
           display: flex;
           flex-direction: column;
@@ -72,18 +49,42 @@ const Testimony = () => (
           box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12);
         }
 
-        @media screen and (max-width: 750px) {
-          span {
-            font-size: 16px;
-            margin: 2rem 0;
-          }
+        .container p {
+          text-align: center;
+          line-height: 1.5;
+          font-size: 1.4rem;
+          font-weight: 500;
+          margin: 0 0 1.5rem 0;
+          max-width: 38rem;
+        }
 
-          .content {
-            align-self: flex-start;
-          }
+        span {
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.4);
+          letter-spacing: 1.6px;
+          text-transform: uppercase;
+        }
 
+        p:last-child {
+          margin: 3rem 0 0 0;
+          text-align: center;
+          max-width: 32rem;
+        }
+
+        @media screen and (max-width: 640px) {
           .container {
-            padding: 4rem 2rem;
+            padding: 3.5rem 1.5rem;
+          }
+
+          .container p {
+            max-width: unset;
+            font-size: 18px;
+          }
+
+          p:last-child {
+            text-align: left;
+            align-self: flex-start;
           }
         }
       `}

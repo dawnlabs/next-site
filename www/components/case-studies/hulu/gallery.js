@@ -136,26 +136,18 @@ function MobileTile({ link, ...props }) {
 
 const MobileGallery = () => (
   <>
-    <div className="slider-container">
-      <div className="slider">
-        {images[0].map(_ => (
-          <MobileTile key={`a-${_.src}`} {..._} />
-        ))}
-        {images[0].map(_ => (
-          <MobileTile key={`b-${_.src}`} {..._} />
-        ))}
+    {images.map(row => (
+      <div className="slider-container">
+        <div className="slider">
+          {row.map(_ => (
+            <MobileTile key={`a-${_.src}`} {..._} />
+          ))}
+          {row.map(_ => (
+            <MobileTile key={`b-${_.src}`} {..._} />
+          ))}
+        </div>
       </div>
-    </div>
-    <div className="slider-container bottom">
-      <div className="slider">
-        {images[1].map(_ => (
-          <MobileTile key={`a-${_.src}`} {..._} />
-        ))}
-        {images[1].map(_ => (
-          <MobileTile key={`b-${_.src}`} {..._} />
-        ))}
-      </div>
-    </div>
+    ))}
     <style jsx>
       {`
         div {

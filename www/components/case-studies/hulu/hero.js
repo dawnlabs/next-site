@@ -54,13 +54,13 @@ const Hero = () => (
         }
 
         section {
+          z-index: 2;
           position: relative;
           color: #fff;
           overflow: hidden;
           display: flex;
           flex-direction: column;
           align-items: center;
-          background: black;
         }
 
         section::before {

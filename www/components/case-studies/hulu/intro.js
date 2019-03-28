@@ -78,7 +78,6 @@ const Intro = () => (
           flex-direction: column;
           align-items: center;
           position: relative;
-          overflow: hidden;
         }
 
         section::before {
@@ -106,6 +105,8 @@ const Intro = () => (
         }
 
         .hulu-container {
+          position: relative;
+          z-index: 2;
           display: flex;
           justify-content: center;
           background-color: #000;

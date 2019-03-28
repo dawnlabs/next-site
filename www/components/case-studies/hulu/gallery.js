@@ -3,66 +3,66 @@ import Tilt from 'react-tilt';
 const images = [
   [
     {
-      src: `/static/case-studies/hulu/gallery/gallery-future-1.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Future',
       link: 'https://music.freebandz.com/'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-gab3.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Gab3',
       link: 'https://www.instagram.com/gab3'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-21-savage.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: '21 Savage',
       link: 'https://www.21savage.com/'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-sza.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'SZA',
       link: 'https://szactrl.com'
     }
   ],
   [
     {
-      src: `/static/case-studies/hulu/gallery/gallery-tiffany-1.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Tiffany Young',
       link: 'https://tiffanyyoungmusic.us/'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-killy.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Killy',
       link: 'https://Killy.co'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-vintage-lee.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Vintage Lee',
       link: 'https://vintageLee.com'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-future-2.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Future',
       link: 'https://music.freebandz.com/'
     }
   ],
   [
     {
-      src: `/static/case-studies/hulu/gallery/gallery-tiffany-1.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Tiffany Young',
       link: 'https://tiffanyyoungmusic.us/'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-killy.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Killy',
       link: 'https://Killy.co'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-vintage-lee.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Vintage Lee',
       link: 'https://vintageLee.com'
     },
     {
-      src: `/static/case-studies/hulu/gallery/gallery-future-2.jpg`,
+      src: `/static/images/case-studies/hulu/zach.png`,
       alt: 'Future',
       link: 'https://music.freebandz.com/'
     }
@@ -159,9 +159,7 @@ const MobileGallery = () => (
           white-space: nowrap;
           height: 10rem;
           width: 100%;
-        }
-        .bottom {
-          margin: 2rem 0 5rem 0;
+          margin: 1rem 0;
         }
         .slider {
           position: absolute;
@@ -203,9 +201,7 @@ const DesktopGallery = () => (
         div {
           display: flex;
           width: 115%;
-        }
-        div:last-child {
-          margin: 2rem 0 7rem 0;
+          margin: 1rem 0;
         }
         div > :global(.Tilt) {
           margin: 0 1rem;
@@ -234,13 +230,14 @@ const Gallery = () => (
       {`
         section {
           position: relative;
+          background: transparent;
           display: flex;
           flex-direction: column;
           align-items: center;
           overflow-x: hidden;
           margin-top: 2.5rem;
           /* account for image scaling on hover */
-          padding-top: 1.5rem;
+          padding: 1.5rem 0 8rem 0;
         }
         #read-more {
           position: absolute;
@@ -248,6 +245,11 @@ const Gallery = () => (
           top: -40rem;
         }
 
+        @media screen and (max-width: 640px) {
+          section {
+            padding: 1.5rem 0 6rem 0;
+          }
+        }
         @media screen and (max-width: 480px) {
           #read-more {
             top: -62rem;

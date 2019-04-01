@@ -10,7 +10,6 @@ import Intro from '../../components/case-studies/hulu/intro';
 import Gallery from '../../components/case-studies/hulu/gallery';
 import Testimony from '../../components/case-studies/hulu/testimony';
 import Improvements from '../../components/case-studies/hulu/improvements';
-import Conclusion from '../../components/case-studies/hulu/conclusion';
 import CTA from '../../components/case-studies/hulu/cta';
 
 const title = 'Case Study - Hulu | Next.js';
@@ -37,11 +36,13 @@ export default () => {
         keywords="TODO TODO TODO TODO TODO"
       />
       <Hero />
+      <div className="link" id="about" />
       <Intro />
       <Gallery />
       <Testimony />
+      <div className="link" id="technology" />
       <Improvements />
-      {/* <Conclusion /> */}
+      <div className="link" id="conclusion" />
       <CTA />
       <Footer />
       <style global jsx>
@@ -146,10 +147,18 @@ export default () => {
       </style>
       <style jsx>
         {`
-          #conclusion {
+          .link {
             position: absolute;
             visibility: hidden;
-            bottom: 116rem;
+          }
+          #about {
+            top: 64rem;
+          }
+          #technology {
+            bottom: 222rem;
+          }
+          #conclusion {
+            bottom: 75rem;
           }
         `}
       </style>

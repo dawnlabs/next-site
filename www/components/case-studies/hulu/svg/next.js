@@ -31,7 +31,7 @@ export default () => (
       stroke="white"
       stroke-dasharray="3 3"
     />
-    <g filter="url(#filter0_d)">
+    <g filter="url(#next-rings-filter-1)">
       <circle cx="216" cy="216" r="56" fill="white" />
     </g>
     <path
@@ -40,7 +40,7 @@ export default () => (
     />
     <defs>
       <filter
-        id="filter0_d"
+        id="next-rings-filter-1"
         x="155"
         y="156"
         width="122"

@@ -1,10 +1,11 @@
-import NextRings from './svg/next-rings';
+import Next from './svg/next';
+import Lightning from './svg/lightning';
 
 const Intro = () => (
   <>
     <div className="hulu-container">
-      <div className="rings-container">
-        <NextRings />
+      <div className="next-container">
+        <Next />
       </div>
       <img
         src={`/static/images/case-studies/hulu/hulu.png`}
@@ -44,6 +45,9 @@ const Intro = () => (
           alt="Zach Tanner"
           className="zach"
         />
+        <div className="lightning-container">
+          <Lightning />
+        </div>
       </div>
 
       <div className="content">
@@ -124,7 +128,7 @@ const Intro = () => (
           width: 100%;
         }
 
-        .rings-container {
+        .next-container {
           position: absolute;
           top: -13rem;
           width: 100%;
@@ -132,7 +136,7 @@ const Intro = () => (
           justify-content: center;
         }
 
-        .rings-container :global(svg) {
+        .next-container :global(svg) {
           flex-shrink: 0;
           width: 100%;
           margin-right: 38rem;
@@ -145,6 +149,7 @@ const Intro = () => (
         }
 
         .img-container {
+          position: relative;
           z-index: 1;
           max-width: 64rem;
           width: 100%;
@@ -157,6 +162,15 @@ const Intro = () => (
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08),
             0px 39px 69px rgba(0, 0, 0, 0.15);
           border-radius: 8px;
+        }
+
+        .lightning-container {
+          position: absolute;
+          top: -14rem;
+          margin-left: 18rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
 
         .content:last-child {
@@ -173,6 +187,12 @@ const Intro = () => (
         @media screen and (max-width: 1200px) {
           .content:first-child {
             margin: -42rem 10rem 10rem 0;
+          }
+        }
+        @media screen and (max-width: 900px) {
+          .lightning-container {
+            top: -16rem;
+            margin-left: 12rem;
           }
         }
         @media screen and (max-width: 640px) {
@@ -196,7 +216,8 @@ const Intro = () => (
             width: 100%;
             padding: 0 2rem;
           }
-          .rings-container {
+          .next-container,
+          .lightning-container {
             display: none;
           }
         }

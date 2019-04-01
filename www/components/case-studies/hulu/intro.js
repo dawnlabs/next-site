@@ -1,6 +1,11 @@
+import NextRings from './svg/next-rings';
+
 const Intro = () => (
   <>
     <div className="hulu-container">
+      <div className="rings-container">
+        <NextRings />
+      </div>
       <img
         src={`/static/images/case-studies/hulu/hulu.png`}
         alt="Hulu logo"
@@ -106,15 +111,31 @@ const Intro = () => (
 
         .hulu-container {
           position: relative;
+          margin: 0 auto;
           z-index: 2;
           display: flex;
           justify-content: center;
           background-color: #000;
+          max-width: 1440px;
         }
 
         .hulu {
-          height: 427px;
-          max-width: 1440px;
+          height: 100%;
+          width: 100%;
+        }
+
+        .rings-container {
+          position: absolute;
+          top: -13rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .rings-container :global(svg) {
+          flex-shrink: 0;
+          width: 100%;
+          margin-right: 38rem;
         }
 
         .content:first-child {
@@ -174,6 +195,9 @@ const Intro = () => (
             max-width: unset;
             width: 100%;
             padding: 0 2rem;
+          }
+          .rings-container {
+            display: none;
           }
         }
         @media screen and (max-width: 490px) {

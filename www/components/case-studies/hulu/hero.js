@@ -36,7 +36,6 @@ const Hero = () => (
     <style jsx>
       {`
         .macbook {
-          margin: 0% 0 15% 0;
           z-index: 1;
           width: 50%;
           max-width: 2400px;
@@ -89,11 +88,9 @@ const Hero = () => (
             rgba(44, 56, 94, 0.7) 51.79%,
             rgba(35, 20, 55, 0.7) 100%
           );
-          //min-height: 100rem;
         }
 
         .img-hero img {
-          object-position: 10% 100%;
           object-fit: cover;
           width: 100%;
           height: 100%;
@@ -113,11 +110,10 @@ const Hero = () => (
         }
 
         .about {
-          margin: 0 0 0 40%;
-          padding-bottom: 8%;
+          margin: 12rem 0 10rem 40%;
+          padding: 0 2rem 0 0;
           z-index: 1;
-          width: 50%;
-          max-width: 31.25rem;
+          max-width: 30rem;
         }
 
         @media screen and (max-width: 640px) {
@@ -141,16 +137,6 @@ const Hero = () => (
           .macbook {
             width: 70%;
             margin: 0% 0 35% 0;
-          }
-        }
-        @media screen and (min-width: 1800px) {
-          .about {
-            padding-bottom: 12%;
-          }
-        }
-        @media screen and (min-width: 2800px) {
-          .about {
-            padding-bottom: 16%;
           }
         }
       `}

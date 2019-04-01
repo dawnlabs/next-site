@@ -1,4 +1,5 @@
 import Conclusion from './conclusion';
+import Rings from './svg/rings';
 
 const Improvements = () => (
   <section>
@@ -49,6 +50,9 @@ const Improvements = () => (
     </div>
 
     <div className="img-container">
+      <div className="rings-container">
+        <Rings />
+      </div>
       <img
         src={`/static/images/case-studies/hulu/engineers.png`}
         alt="Hulu engineers working together"
@@ -117,6 +121,8 @@ const Improvements = () => (
         }
 
         .img-engineers {
+          position: relative;
+          z-index: 2;
           width: 100%;
           max-width: 56rem;
           margin: 0 auto;
@@ -127,9 +133,22 @@ const Improvements = () => (
         }
 
         .img-container {
-          z-index: 1;
+          position: relative;
           padding: 0 2rem;
           margin: 7.5rem 0;
+        }
+
+        .rings-container {
+          position: absolute;
+          z-index: 1;
+          top: -10rem;
+          right: -11rem;
+        }
+
+        .rings-container > :global(svg) {
+          position: relative;
+          z-index: 0;
+          width: 100%;
         }
 
         .content:first-of-type {
@@ -190,8 +209,13 @@ const Improvements = () => (
           .bg {
             height: 20%;
           }
+          .rings-container {
+            width: 100vw;
+            top: -14rem;
+            right: -8rem;
+          }
         }
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 555px) {
           section::after {
             height: 100rem;
             margin-top: -96rem;
@@ -206,6 +230,10 @@ const Improvements = () => (
         @media screen and (max-width: 440px) {
           section::after {
             margin-top: -106rem;
+          }
+          .rings-container {
+            top: -18rem;
+            right: -6rem;
           }
         }
         @media screen and (max-width: 380px) {

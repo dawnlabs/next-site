@@ -37,10 +37,11 @@ export default () => (
       stroke="white"
       stroke-dasharray="3 3"
     />
-    <g filter="url(#lightning-rings-filter-1)">
+    <g filter="url(#lightning-rings-filter-1)" className="icon">
       <circle cx="241" cy="241" r="62.4815" fill="white" />
     </g>
     <path
+      className="icon"
       d="M255.668 237.095H242.464L248.859 214.287C248.969 213.738 248.298 213.42 247.98 213.872L225.563 243.27C225.099 243.953 225.538 244.905 226.331 244.905H239.536L233.141 267.713C233.031 268.262 233.702 268.58 234.02 268.128L256.437 238.742C256.889 238.047 256.462 237.095 255.668 237.095Z"
       fill="black"
     />

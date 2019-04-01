@@ -179,8 +179,19 @@ const Intro = () => (
             padding: 0 2rem;
             width: 100%;
           }
-          .next-container,
+          .next-container {
+            display: none;
+          }
+          .img-container img {
+            position: relative;
+            z-index: 2;
+          }
           .lightning-container {
+            transform: scale(0.8);
+            top: -11rem;
+            margin-left: 8rem;
+          }
+          .lightning-container :global(.icon) {
             display: none;
           }
           .container .content {

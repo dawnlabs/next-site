@@ -230,14 +230,13 @@ const Gallery = () => (
       {`
         section {
           position: relative;
-          background: transparent;
+          background: #fff;
           display: flex;
           flex-direction: column;
           align-items: center;
           overflow-x: hidden;
-          margin-top: 2.5rem;
           /* account for image scaling on hover */
-          padding: 1.5rem 0 8rem 0;
+          padding: 4rem 0 8rem 0;
         }
         #read-more {
           position: absolute;

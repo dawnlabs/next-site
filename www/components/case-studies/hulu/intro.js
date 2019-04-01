@@ -1,19 +1,8 @@
-import Next from './svg/next';
 import Lightning from './svg/lightning';
 
 const Intro = () => (
-  <>
-    <div className="hulu-container">
-      <div className="next-container">
-        <Next />
-      </div>
-      <img
-        src={`/static/images/case-studies/hulu/hulu.png`}
-        alt="Hulu logo"
-        className="hulu"
-      />
-    </div>
-    <section>
+  <section>
+    <div className="container">
       <div className="content">
         <h4>TODO TODO TODO TODO</h4>
 
@@ -38,65 +27,65 @@ const Intro = () => (
           <button>Read More</button>
         </a>
       </div>
+    </div>
 
-      <div className="img-container">
-        <img
-          src={`/static/images/case-studies/hulu/zach.png`}
-          alt="Zach Tanner"
-          className="zach"
-        />
-        <div className="lightning-container">
-          <Lightning />
-        </div>
+    <div className="img-container">
+      <img
+        src={`/static/images/case-studies/hulu/zach.png`}
+        alt="Zach Tanner"
+        className="zach"
+      />
+      <div className="lightning-container">
+        <Lightning />
       </div>
+    </div>
 
-      <div className="content">
-        <h4>TODO TODO TODO TODO</h4>
+    <div className="content">
+      <h4>TODO TODO TODO TODO</h4>
 
-        <h2>A Process Upgrade</h2>
+      <h2>A Process Upgrade</h2>
 
-        <p>
-          One of the most common challenges teams face when executing an
-          incremental migration is handling the transition between the new and
-          old systems. Fortunately, with Next.js there was never an issue with
-          running both versions at once. With out-of-the-box support for
-          prefetching new pages while jumping into the legacy app when needed,
-          Zack and the team were able to easily migrate pages one-by-one. And
-          since the intermediary hybrid-site was intelligently routed by
-          Next.js, there was no need to maintain the overhead of explicitly
-          tracking the migration's progress in the code itself.
-        </p>
+      <p>
+        One of the most common challenges teams face when executing an
+        incremental migration is handling the transition between the new and old
+        systems. Fortunately, with Next.js there was never an issue with running
+        both versions at once. With out-of-the-box support for prefetching new
+        pages while jumping into the legacy app when needed, Zack and the team
+        were able to easily migrate pages one-by-one. And since the intermediary
+        hybrid-site was intelligently routed by Next.js, there was no need to
+        maintain the overhead of explicitly tracking the migration's progress in
+        the code itself.
+      </p>
 
-        <p>
-          In fact, throughout the migration, the ability of Next.js to make the
-          extraction of common issues and patterns as easy as possible was a
-          recurring theme. With each new version of Next.js, Tanner found they
-          were constantly deleting internal code in favor of framework
-          integrated tooling. Whenever the team needed to incorporate a new
-          technology, Next.js had either first-class support or an endorsed
-          example for them to follow.
-        </p>
-      </div>
-    </section>
+      <p>
+        In fact, throughout the migration, the ability of Next.js to make the
+        extraction of common issues and patterns as easy as possible was a
+        recurring theme. With each new version of Next.js, Tanner found they
+        were constantly deleting internal code in favor of framework integrated
+        tooling. Whenever the team needed to incorporate a new technology,
+        Next.js had either first-class support or an endorsed example for them
+        to follow.
+      </p>
+    </div>
 
     <style jsx>
       {`
         section {
           display: flex;
-          z-index: 1;
           flex-direction: column;
           align-items: center;
           position: relative;
+          background: #fff;
         }
 
         section::before {
-          z-index: 0;
           content: '';
           background-color: #000;
           transform: skewY(-45deg);
           height: 180rem;
-          margin-top: -130em;
+          margin-top: -112rem;
           width: 100%;
+          z-index: 1;
         }
 
         section p {
@@ -113,39 +102,19 @@ const Intro = () => (
           text-decoration: underline;
         }
 
-        .hulu-container {
-          position: relative;
-          margin: 0 auto;
-          z-index: 2;
+        .container {
           display: flex;
-          justify-content: center;
-          background-color: #000;
-          max-width: 1440px;
-        }
-
-        .hulu {
-          height: 100%;
-          width: 100%;
-        }
-
-        .next-container {
+          flex-direction: column;
+          align-items: center;
           position: absolute;
-          top: -13rem;
+          z-index: 2;
           width: 100%;
-          display: flex;
-          justify-content: center;
+          top: 0;
         }
 
-        .next-container :global(svg) {
-          flex-shrink: 0;
-          width: 100%;
-          margin-right: 38rem;
-        }
-
-        .content:first-child {
-          margin: -56rem 10rem 10rem 0;
-          z-index: 1;
+        .container .content {
           color: #fff;
+          margin: 10rem 10rem 0 0;
         }
 
         .img-container {
@@ -154,7 +123,7 @@ const Intro = () => (
           max-width: 64rem;
           width: 100%;
           padding: 0 4rem;
-          margin: 0 0 12rem 0;
+          margin: -20rem 0 16rem 0;
         }
 
         .zach {
@@ -184,11 +153,6 @@ const Intro = () => (
           margin-top: 1rem;
         }
 
-        @media screen and (max-width: 1200px) {
-          .content:first-child {
-            margin: -42rem 10rem 10rem 0;
-          }
-        }
         @media screen and (max-width: 900px) {
           .lightning-container {
             top: -16rem;
@@ -202,9 +166,7 @@ const Intro = () => (
           section::before {
             height: 180rem;
             transform: skewY(-22.5deg);
-          }
-          .content:first-child {
-            margin: -44rem 0 8rem 0;
+            margin-top: -130rem;
           }
           .hulu {
             height: 242px;
@@ -212,42 +174,40 @@ const Intro = () => (
             width: 170%;
           }
           .img-container {
+            margin: -10rem 0 8rem 0;
             max-width: unset;
-            width: 100%;
             padding: 0 2rem;
+            width: 100%;
           }
           .next-container,
           .lightning-container {
             display: none;
           }
+          .container .content {
+            margin: 6rem 0 0 0;
+          }
         }
         @media screen and (max-width: 490px) {
           section::before {
-            height: 185rem;
+            margin-top: -125rem;
           }
-          .content:first-child {
-            margin: -50rem 0 8rem 0;
-          }
-        }
-        @media screen and (max-width: 400px) {
-          section::before {
-            height: 190rem;
-          }
-          .content:first-child {
-            margin: -55rem 0 10rem 0;
+          .img-container {
+            margin: -8rem 0 8rem 0;
           }
         }
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: 420px) {
           section::before {
-            height: 195rem;
+            margin-top: -120rem;
           }
-          .content:first-child {
-            margin: -60rem 0 10rem 0;
+        }
+        @media screen and (max-width: 370px) {
+          section::before {
+            margin-top: -115rem;
           }
         }
       `}
     </style>
-  </>
+  </section>
 );
 
 export default Intro;

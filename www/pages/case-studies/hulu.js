@@ -6,6 +6,7 @@ import Page from '../../components/page';
 import Footer from '../../components/footer';
 import SocialMeta from '../../components/social-meta';
 import Hero from '../../components/case-studies/hulu/hero';
+import Banner from '../../components/case-studies/hulu/banner';
 import Intro from '../../components/case-studies/hulu/intro';
 import Gallery from '../../components/case-studies/hulu/gallery';
 import Testimony from '../../components/case-studies/hulu/testimony';
@@ -37,6 +38,7 @@ export default () => {
       />
       <Hero />
       <div className="link" id="about" />
+      <Banner />
       <Intro />
       <Gallery />
       <Testimony />
@@ -50,6 +52,10 @@ export default () => {
           html {
             scroll-behavior: smooth;
             font-size: 18px;
+            background: #000;
+          }
+
+          body {
             background: #000;
           }
 

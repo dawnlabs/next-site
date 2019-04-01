@@ -9,37 +9,38 @@ const Hero = () => (
       <img src={`/static/images/case-studies/hulu/hero-mobile.png`} />
     </div>
 
-    <div className="title">
-      <span>Case Study</span>
-      <h1>Hulu</h1>
-    </div>
+    <div className="container">
+      <div className="title">
+        <span>Case Study</span>
+        <h1>Hulu</h1>
+      </div>
 
-    <img src="/static/svg/desktop.svg" className="macbook" />
+      <img src="/static/svg/desktop.svg" className="macbook" />
 
-    <div className="about">
-      <Logos />
+      <div className="about">
+        <Logos />
 
-      <h2>TODO TODO TODO</h2>
+        <h2>TODO TODO TODO</h2>
 
-      <p>
-        <a href="https://hulu.tv">Hulu</a> makes the world's TV and movies
-        easily accessible online—a feat which would be impossible without
-        powerful engineering practices and tools. While the team at Hulu has
-        been using Next.js since it's initial release, they recently made a push
-        to spread the framework deeply throughout their organization. Next.js
-        gave Hulu the confidence to migrate to a modern frontend environment,
-        all while reducing their code surface area and shipping faster in the
-        process.
-      </p>
+        <p>
+          <a href="https://hulu.tv">Hulu</a> makes the world's TV and movies
+          easily accessible online—a feat which would be impossible without
+          powerful engineering practices and tools. While the team at Hulu has
+          been using Next.js since it's initial release, they recently made a
+          push to spread the framework deeply throughout their organization.
+          Next.js gave Hulu the confidence to migrate to a modern frontend
+          environment, all while reducing their code surface area and shipping
+          faster in the process.
+        </p>
+      </div>
     </div>
 
     <style jsx>
       {`
         .macbook {
-          z-index: 1;
-          width: 50%;
+          width: 70%;
           max-width: 2400px;
-          transform: scale(1.4);
+          margin: 6rem 0 0 0;
         }
 
         h1 {
@@ -53,23 +54,23 @@ const Hero = () => (
         }
 
         section {
-          z-index: 2;
           position: relative;
-          color: #fff;
-          overflow: hidden;
           display: flex;
           flex-direction: column;
           align-items: center;
+          color: #fff;
+          overflow: hidden;
+          z-index: 2;
+          min-height: 86rem;
         }
 
-        section::before {
+        section::after {
           content: '';
           position: absolute;
-          z-index: 1;
-          top: 56vw;
+          top: 58vw;
           background-color: #000;
           transform: skewY(-45deg);
-          height: 200vw;
+          height: 250vw;
           width: 100%;
         }
 
@@ -78,8 +79,17 @@ const Hero = () => (
           text-decoration: underline;
         }
 
+        .container {
+          z-index: 2;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          top: 10%;
+        }
+
         .img-hero {
-          z-index: 0;
           width: 100%;
           height: 100%;
           background: linear-gradient(
@@ -97,8 +107,6 @@ const Hero = () => (
         }
 
         .title {
-          z-index: 1;
-          margin: -95% 0 15% 0;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -110,9 +118,8 @@ const Hero = () => (
         }
 
         .about {
-          margin: 12rem 0 10rem 40%;
+          margin: 12rem 0 0 40%;
           padding: 0 2rem 0 0;
-          z-index: 1;
           max-width: 30rem;
         }
 
@@ -120,23 +127,27 @@ const Hero = () => (
           h1 {
             font-size: 4rem;
           }
-          section::before {
+          section {
+            min-height: unset;
+          }
+          section::after {
             top: 90vw;
             transform: skewY(-22.5deg);
             height: 450vw;
           }
+          .container {
+            position: relative;
+            margin: -80% 0 0 0;
+          }
           .about {
-            margin: 0;
-            padding: 0 2rem 6rem 2rem;
+            margin: 6rem 0 0 0;
+            padding: 0 2rem 4rem 2rem;
             width: 100%;
             max-width: unset;
           }
-          .title {
-            margin: -83% 0 25% 0;
-          }
           .macbook {
-            width: 70%;
-            margin: 0% 0 35% 0;
+            margin: 10% 0 0 0;
+            width: 90%;
           }
         }
       `}

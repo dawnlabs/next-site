@@ -61,7 +61,7 @@ const Hero = () => (
           color: #fff;
           overflow: hidden;
           z-index: 2;
-          min-height: 86rem;
+          min-height: 90rem;
         }
 
         section::after {
@@ -118,7 +118,7 @@ const Hero = () => (
         }
 
         .about {
-          margin: 12rem 0 0 40%;
+          margin: 8rem 0 0 40%;
           padding: 0 2rem 0 0;
           max-width: 30rem;
         }

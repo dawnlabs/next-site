@@ -78,9 +78,9 @@ const Improvements = () => (
 
     <Conclusion />
 
-    <div className="bg" />
-
     <div className="gradient" />
+
+    <div className="bg" />
 
     <style jsx>
       {`
@@ -197,8 +197,6 @@ const Improvements = () => (
           width: 100%;
           height: 50%;
           background: linear-gradient(180deg, #fff 0%, #333 80%), #fff;
-          // border-top: 1px solid transparent;
-          // background-clip: content-box;
         }
 
         @media screen and (max-width: 640px) {

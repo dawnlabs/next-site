@@ -12,10 +12,7 @@ export default () => (
         .container {
           display: flex;
           justify-content: center;
-          width: 100%;
           background-color: #1c1c1c;
-          padding: 4rem 0;
-          border-top: 2px solid #000;
           border-bottom: 2px solid #333333;
         }
 
@@ -26,7 +23,8 @@ export default () => (
           align-items: center;
           max-width: 64rem;
           width: 100%;
-          padding: 0 2rem;
+          padding: 6rem 2rem;
+          border-top: 1px solid #000;
         }
 
         a {

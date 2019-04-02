@@ -114,7 +114,7 @@ const Improvements = () => (
 
         p {
           max-width: 35rem;
-          margin: 2rem 1rem 0 0;
+          margin: 1rem 0;
         }
 
         a {
@@ -262,6 +262,11 @@ const Improvements = () => (
           section::after {
             height: 120rem;
             margin-top: -116rem;
+          }
+        }
+        @media screen and (min-width: 1200px) {
+          .img-container {
+            margin: 14rem 0 7rem 0;
           }
         }
         @media screen and (min-width: 2800px) {

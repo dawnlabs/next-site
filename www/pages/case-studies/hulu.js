@@ -36,17 +36,20 @@ export default () => {
         url="https://nexts.org/case-studies/hulu"
         keywords="TODO TODO TODO TODO TODO"
       />
-      <Hero />
-      <div className="link" id="about" />
-      <Banner />
-      <Intro />
-      <Gallery />
-      <Testimony />
-      <div className="link" id="technology" />
-      <Improvements />
-      <div className="link" id="conclusion" />
-      <CTA />
+      <div className="container">
+        <Hero />
+        <div className="link" id="about" />
+        <Banner />
+        <Intro />
+        <Gallery />
+        <Testimony />
+        <div className="link" id="technology" />
+        <Improvements />
+        <div className="link" id="conclusion" />
+        <CTA />
+      </div>
       <Footer />
+
       <style global jsx>
         {`
           html {
@@ -64,18 +67,18 @@ export default () => {
             color: #fff;
           }
 
-          h2 {
+          .container h2 {
             font-size: 2.25rem;
             margin: 0;
           }
 
-          h3 {
+          .container h3 {
             font-size: 1.8rem;
             font-weight: 400;
             margin: 0 0 2.5rem 0;
           }
 
-          h4 {
+          .container h4 {
             margin: 0;
             color: #666666;
             font-size: 0.8rem;
@@ -84,14 +87,14 @@ export default () => {
             text-transform: uppercase;
           }
 
-          p {
+          .container p {
             padding: 0;
             font-size: 1rem;
             line-height: 1.5rem;
             font-weight: 400;
           }
 
-          button {
+          .container button {
             appearance: none;
             position: relative;
             display: inline-block;
@@ -116,14 +119,14 @@ export default () => {
             outline: none;
           }
 
-          .content {
+          .container .content {
             padding: 0 2rem;
             max-width: 38rem;
             color: #fff;
           }
 
           @media screen and (max-width: 640px) {
-            .content {
+            .container .content {
               max-width: unset;
               width: 100%;
             }

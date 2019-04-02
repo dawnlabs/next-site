@@ -1,7 +1,9 @@
 export default () => (
   <div className="container">
     <div>
-      <h2>Find Out How Next.js Can Empower Your Team Today</h2>
+      <h2>
+        Find Out How Next.js Can Empower <br /> Your Team Today
+      </h2>
       <a href="/learn">
         <button>Read More</button>
       </a>
@@ -34,7 +36,6 @@ export default () => (
         }
 
         h2 {
-          max-width: 28rem;
           line-height: 1.4;
         }
 
@@ -55,7 +56,7 @@ export default () => (
 
           h3 {
             display: block;
-            margin: 0 0 2.5rem 0;
+            margin: 0 0 3rem 0;
           }
 
           a {

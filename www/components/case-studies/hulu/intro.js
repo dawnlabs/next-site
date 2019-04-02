@@ -32,7 +32,7 @@ const Intro = () => (
 
     <div className="img-container">
       <img
-        src={`/static/images/case-studies/hulu/zach.png`}
+        src={`/static/images/case-studies/hulu/zach.jpg`}
         alt="Zach Tanner"
         className="zach"
       />

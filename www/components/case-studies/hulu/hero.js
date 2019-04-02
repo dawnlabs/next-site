@@ -6,7 +6,7 @@ const Hero = () => (
     <Header />
 
     <div className="img-hero">
-      <img src={`/static/images/case-studies/hulu/hero-mobile.png`} />
+      <img src={`/static/images/case-studies/hulu/hero.jpg`} />
     </div>
 
     <div className="container">
@@ -67,7 +67,7 @@ const Hero = () => (
         section::after {
           content: '';
           position: absolute;
-          top: 58vw;
+          top: 67vw;
           background-color: #000;
           transform: skewY(-45deg);
           height: 250vw;

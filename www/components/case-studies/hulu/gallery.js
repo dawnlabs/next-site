@@ -3,66 +3,66 @@ import Tilt from 'react-tilt';
 const images = [
   [
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Future',
       link: 'https://music.freebandz.com/'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Gab3',
       link: 'https://www.instagram.com/gab3'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: '21 Savage',
       link: 'https://www.21savage.com/'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'SZA',
       link: 'https://szactrl.com'
     }
   ],
   [
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Tiffany Young',
       link: 'https://tiffanyyoungmusic.us/'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Killy',
       link: 'https://Killy.co'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Vintage Lee',
       link: 'https://vintageLee.com'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Future',
       link: 'https://music.freebandz.com/'
     }
   ],
   [
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Tiffany Young',
       link: 'https://tiffanyyoungmusic.us/'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Killy',
       link: 'https://Killy.co'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Vintage Lee',
       link: 'https://vintageLee.com'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.png`,
+      src: `/static/images/case-studies/hulu/zach.jpg`,
       alt: 'Future',
       link: 'https://music.freebandz.com/'
     }

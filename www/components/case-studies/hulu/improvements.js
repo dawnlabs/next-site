@@ -54,7 +54,7 @@ const Improvements = () => (
         <Rings />
       </div>
       <img
-        src={`/static/images/case-studies/hulu/engineers.png`}
+        src={`/static/images/case-studies/hulu/engineers.jpg`}
         alt="Hulu engineers working together"
         className="img-engineers"
       />

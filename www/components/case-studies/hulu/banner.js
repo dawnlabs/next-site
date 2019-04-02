@@ -5,12 +5,13 @@ export default () => (
     <div className="svg-container">
       <Next />
     </div>
-    <img src={`/static/images/case-studies/hulu/hulu.png`} alt="Hulu logo" />
+    <img src={`/static/images/case-studies/hulu/hulu.jpg`} alt="Hulu logo" />
 
     <style jsx>{`
       img {
         height: 100%;
         width: 100%;
+        border-radius: 8px;
       }
 
       .container {

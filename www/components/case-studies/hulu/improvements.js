@@ -80,6 +80,8 @@ const Improvements = () => (
 
     <div className="bg" />
 
+    <div className="gradient" />
+
     <style jsx>
       {`
         .tablet {
@@ -186,6 +188,17 @@ const Improvements = () => (
           width: 50%;
           height: 50%;
           background-color: #1c1c1c;
+        }
+
+        .gradient {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          background: linear-gradient(180deg, #fff 0%, #333 80%), #fff;
+          // border-top: 1px solid transparent;
+          // background-clip: content-box;
         }
 
         @media screen and (max-width: 640px) {

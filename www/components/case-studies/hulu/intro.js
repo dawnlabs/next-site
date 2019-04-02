@@ -2,6 +2,7 @@ import Lightning from './svg/lightning';
 
 const Intro = () => (
   <section>
+    <div className="gradient" />
     <div className="container">
       <div className="content">
         <h4>TODO TODO TODO TODO</h4>
@@ -151,6 +152,23 @@ const Intro = () => (
         .button {
           display: block;
           margin-top: 1rem;
+        }
+
+        .gradient {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 55%;
+          background: linear-gradient(
+              180deg,
+              #ffffff 0%,
+              rgba(255, 255, 255, 0) 164%
+            ),
+            #333333;
+          transform: rotate(180deg);
+          border-top: 1px solid transparent;
+          background-clip: content-box;
         }
 
         @media screen and (max-width: 900px) {

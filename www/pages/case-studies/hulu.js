@@ -119,6 +119,12 @@ export default () => {
             outline: none;
           }
 
+          .container button:hover {
+            color: #fff;
+            border: 1px solid #fff;
+            background: #000;
+          }
+
           .container .content {
             padding: 0 2rem;
             max-width: 38rem;

@@ -40,7 +40,7 @@ export default () => (
         }
 
         @media screen and (max-width: 640px) {
-          h2 {
+          .container h2 {
             text-align: center;
             margin-bottom: 3.125rem;
           }

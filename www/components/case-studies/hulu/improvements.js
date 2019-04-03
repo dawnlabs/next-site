@@ -203,7 +203,7 @@ const Improvements = () => (
           section::after {
             height: 95rem;
             transform: skewY(-22.5deg);
-            margin-top: -90rem;
+            margin-top: -82rem;
           }
           section {
             align-items: flex-start;

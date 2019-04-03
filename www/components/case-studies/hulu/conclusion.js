@@ -1,6 +1,8 @@
+import LinesGallery from './lines-gallery';
+
 export default () => (
   <div className="container">
-    <div className="placeholder" />
+    <LinesGallery />
 
     <div className="content">
       <h4>The benefits of Next.js</h4>

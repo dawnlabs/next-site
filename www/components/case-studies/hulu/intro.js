@@ -7,7 +7,7 @@ const Intro = () => (
       <div className="content">
         <h4>TODO TODO TODO TODO</h4>
 
-        <h2>TODO TODO TODO TODO</h2>
+        <h2>Getting Started</h2>
 
         <p>
           At the beginning of 2018, software engineer Zack Tanner began leading
@@ -42,9 +42,9 @@ const Intro = () => (
     </div>
 
     <div className="content">
-      <h4>TODO TODO TODO TODO</h4>
+      <h4>Process Improvements</h4>
 
-      <h2>A Process Upgrade</h2>
+      <h2>Migration Made Easy</h2>
 
       <p>
         One of the most common challenges teams face when executing an

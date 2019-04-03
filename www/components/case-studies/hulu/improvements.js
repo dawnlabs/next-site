@@ -63,7 +63,7 @@ const Improvements = () => (
     <div className="content">
       <h4>TODO TODO TODO TODO</h4>
 
-      <h2>Organizational Improvements</h2>
+      <h2>One Framework for Everyone</h2>
 
       <p>
         With the migration complete, a large amount of technical debt had

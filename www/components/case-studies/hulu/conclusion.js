@@ -3,9 +3,9 @@ export default () => (
     <div className="placeholder" />
 
     <div className="content">
-      <h4>TODO TODO TODO TODO</h4>
+      <h4>The benefits of Next.js</h4>
 
-      <h2>TODO TODO TODO TODO</h2>
+      <h2>A Happier, More Productive Org</h2>
 
       <p>
         One year into their journey, Tanner credits Next for fewer bugs, greater

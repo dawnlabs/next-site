@@ -20,7 +20,9 @@ const Hero = () => (
       <div className="about">
         <Logos />
 
-        <h2>TODO TODO TODO</h2>
+        <h2>
+          Powering the Next Generation <br /> of Entertainment
+        </h2>
 
         <p>
           <a href="https://hulu.tv">Hulu</a> makes the world's TV and movies
@@ -120,6 +122,9 @@ const Hero = () => (
         .about {
           margin: 8rem 0 0 40%;
           padding: 0 2rem 0 0;
+        }
+
+        .about p {
           max-width: 30rem;
         }
 

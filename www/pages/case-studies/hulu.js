@@ -63,7 +63,7 @@ export default () => {
           }
 
           ::selection {
-            background: #ff0080;
+            background: #1ce783;
             color: #fff;
           }
 
@@ -79,7 +79,7 @@ export default () => {
           }
 
           .container h4 {
-            margin: 0;
+            margin: 0 0 1rem;
             color: #666666;
             font-size: 0.8rem;
             font-weight: 600;

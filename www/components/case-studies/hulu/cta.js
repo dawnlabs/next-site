@@ -39,24 +39,14 @@ export default () => (
           line-height: 1.4;
         }
 
-        h3 {
-          display: inline;
-          margin: 0;
-        }
-
         @media screen and (max-width: 640px) {
           h2 {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 3.125rem;
           }
 
           .container > div {
             flex-direction: column;
-          }
-
-          h3 {
-            display: block;
-            margin: 0 0 3rem 0;
           }
 
           a {

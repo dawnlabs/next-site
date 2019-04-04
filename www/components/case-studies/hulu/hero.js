@@ -71,7 +71,7 @@ const Hero = () => (
           content: '';
           bottom: 0;
           width: 100%;
-          height: 100%;
+          height: 108%;
           position: absolute;
           background: linear-gradient(135deg, transparent 50%, #000 50%);
         }
@@ -131,6 +131,12 @@ const Hero = () => (
           max-width: 30rem;
         }
 
+        @media screen and (max-width: 1400px) {
+          section::before {
+            height: 115%;
+          }
+        }
+
         @media screen and (max-width: 1080px) {
           .img-hero {
             max-height: unset;
@@ -141,7 +147,7 @@ const Hero = () => (
             height: 70%;
           }
           section::before {
-            height: 110%;
+            height: 120%;
           }
           .about {
             margin: 0 0 12rem 16rem;
@@ -175,13 +181,14 @@ const Hero = () => (
 
         @media screen and (min-width: 1800px) {
           .title {
-            margin: 16rem 0 0;
+            margin: 12rem 0 0;
           }
           .macbook {
-            margin: 24rem 0 12rem 0;
+            margin: 20rem 0 12rem 0;
           }
           section::before {
-            background: linear-gradient(160deg, transparent 50%, #000 50%);
+            height: 100%;
+            background: linear-gradient(155deg, transparent 50%, #000 50%);
           }
         }
       `}

@@ -1,11 +1,10 @@
-import Conclusion from './conclusion';
 import Rings from './svg/rings';
 
 const Improvements = () => (
   <section>
     <img src="/static/svg/desktop.svg" className="tablet" />
 
-    <div className="content">
+    <div className="content" id="improvements">
       <h4>TODO TODO TODO TODO TODO</h4>
 
       <h2>Technical Improvements (SEO)</h2>
@@ -76,18 +75,13 @@ const Improvements = () => (
       </p>
     </div>
 
-    <Conclusion />
-
-    <div className="gradient" />
-
-    <div className="bg" />
-
+    <div className="corner-gradient" />
     <style jsx>
       {`
         .tablet {
           max-width: 1600px;
           width: 80%;
-          margin: 7rem 0;
+          margin: 7rem 0 0;
         }
 
         section {
@@ -99,13 +93,13 @@ const Improvements = () => (
           overflow: hidden;
         }
 
-        section::after {
+        section::before {
           content: '';
-          height: 106rem;
+          top: 36rem;
           width: 100%;
-          transform: skewY(-45deg);
-          background-color: #1c1c1c;
-          margin-top: -96rem;
+          height: 100%;
+          position: absolute;
+          background: linear-gradient(135deg, transparent 50%, #1c1c1c 50%);
         }
 
         h4 {
@@ -154,6 +148,7 @@ const Improvements = () => (
         }
 
         .content:first-of-type {
+          padding: 8rem 2rem 0 2rem;
           color: #000;
         }
 
@@ -181,29 +176,19 @@ const Improvements = () => (
           text-transform: uppercase;
         }
 
-        .bg {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 50%;
-          height: 50%;
-          background-color: #1c1c1c;
-        }
-
-        .gradient {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 50%;
-          background: linear-gradient(180deg, #fff 0%, #333 80%), #fff;
+        @media screen and (max-width: 1080px) {
+          .content:first-of-type {
+            padding: 8rem 2rem 0rem 2rem;
+          }
+          .rings-container {
+            transform: scale(0.8);
+          }
         }
 
         @media screen and (max-width: 640px) {
-          section::after {
-            height: 95rem;
-            transform: skewY(-22.5deg);
-            margin-top: -82rem;
+          section::before {
+            top: 34rem;
+            background: linear-gradient(160deg, transparent 50%, #1c1c1c 50%);
           }
           section {
             align-items: flex-start;
@@ -217,61 +202,28 @@ const Improvements = () => (
           .quote {
             margin: 3.5rem 0;
           }
-          .bg {
-            height: 20%;
-          }
           .rings-container {
             width: 100vw;
             top: -14rem;
             right: -8rem;
           }
-        }
-        @media screen and (max-width: 555px) {
-          section::after {
-            height: 100rem;
-            margin-top: -96rem;
+          .rings-container > :global(svg) {
+            transform: scale(1);
           }
         }
-        @media screen and (max-width: 490px) {
-          section::after {
-            height: 110rem;
-            margin-top: -102rem;
-          }
-        }
-        @media screen and (max-width: 440px) {
-          section::after {
-            margin-top: -106rem;
-          }
-          .rings-container {
-            top: -18rem;
-            right: -6rem;
-          }
-        }
-        @media screen and (max-width: 380px) {
-          section::after {
-            height: 115rem;
-            margin-top: -110rem;
-          }
-        }
-        @media screen and (max-width: 360px) {
-          section::after {
-            margin-top: -112rem;
-          }
-        }
-        @media screen and (max-width: 340px) {
-          section::after {
-            height: 120rem;
-            margin-top: -116rem;
+        @media screen and (max-width: 430px) {
+          section::before {
+            top: 40rem;
           }
         }
         @media screen and (min-width: 1200px) {
-          .img-container {
-            margin: 14rem 0 7rem 0;
+          .content:first-of-type {
+            padding: 8rem 2rem 8rem 2rem;
           }
         }
-        @media screen and (min-width: 2800px) {
-          section::after {
-            margin-top: -90rem;
+        @media screen and (min-width: 1800px) {
+          section::before {
+            top: 48rem;
           }
         }
       `}

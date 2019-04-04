@@ -26,18 +26,20 @@ const LinesGallery = () => (
     <style jsx>{`
       .container {
         position: relative;
-        width: 105%;
-        max-width: 1440px;
-        margin: 12rem 0 8rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 12rem 0 8rem;
+        background: #1c1c1c;
       }
 
       .images {
-        width: 100%;
+        max-width: 1440px;
         display: flex;
       }
 
       .lines-container {
-        top: 0;
+        top: 0.5rem;
         left: 0;
         display: flex;
         position: absolute;
@@ -47,8 +49,15 @@ const LinesGallery = () => (
         align-items: center;
       }
 
+      .lines-container > :global(svg) {
+        width: 100%;
+      }
+
       .images > div {
         flex: 1;
+      }
+
+      .images > div:not(:last-child) {
         margin-right: 16px;
       }
 
@@ -59,26 +68,28 @@ const LinesGallery = () => (
       }
 
       .images > div:nth-of-type(2n) {
-        transform: translateY(-16px);
+        transform: translateY(-36px);
       }
 
       .images > div:nth-of-type(2n -1) {
         z-index: 2;
-        transform: translateY(16px);
       }
 
       @media screen and (max-width: 640px) {
         .container {
+          padding: 10rem 0 6rem;
+        }
+        .images {
           max-width: unset;
-          margin: 10rem 0 6rem 0;
+          min-width: 107%;
+        }
+        .lines-container {
+          top: 2rem;
         }
         .images > div:nth-of-type(2n) {
           transform: translateY(-12px);
         }
-        .images > div:nth-of-type(2n -1) {
-          transform: translateY(4px);
-        }
-        .images > div {
+        .images > div:not(:last-child) {
           margin-right: 6px;
         }
       }

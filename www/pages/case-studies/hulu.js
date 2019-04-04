@@ -11,6 +11,8 @@ import Intro from '../../components/case-studies/hulu/intro';
 import Gallery from '../../components/case-studies/hulu/gallery';
 import Testimony from '../../components/case-studies/hulu/testimony';
 import Improvements from '../../components/case-studies/hulu/improvements';
+import LinesGallery from '../../components/case-studies/hulu/lines-gallery';
+import Conclusion from '../../components/case-studies/hulu/conclusion';
 import CTA from '../../components/case-studies/hulu/cta';
 
 const title = 'Case Study - Hulu | Next.js';
@@ -38,14 +40,13 @@ export default () => {
       />
       <div className="container">
         <Hero />
-        <div className="link" id="about" />
         <Banner />
         <Intro />
         <Gallery />
         <Testimony />
-        <div className="link" id="technology" />
         <Improvements />
-        <div className="link" id="conclusion" />
+        <LinesGallery />
+        <Conclusion />
         <CTA />
       </div>
       <Footer />
@@ -157,23 +158,6 @@ export default () => {
             html {
               font-size: 24px;
             }
-          }
-        `}
-      </style>
-      <style jsx>
-        {`
-          .link {
-            position: absolute;
-            visibility: hidden;
-          }
-          #about {
-            top: 64rem;
-          }
-          #technology {
-            bottom: 222rem;
-          }
-          #conclusion {
-            bottom: 75rem;
           }
         `}
       </style>

@@ -3,6 +3,8 @@ import Logos from './logos';
 
 const Hero = () => (
   <section>
+    <div className="gradient" />
+
     <Header />
 
     <div className="img-hero">
@@ -17,7 +19,7 @@ const Hero = () => (
 
       <img src="/static/svg/desktop.svg" className="macbook" />
 
-      <div className="about">
+      <div className="about" id="about">
         <Logos />
 
         <h2>
@@ -40,9 +42,9 @@ const Hero = () => (
     <style jsx>
       {`
         .macbook {
-          width: 70%;
+          width: 85%;
           max-width: 2400px;
-          margin: 6rem 0 0 0;
+          margin: 10rem 0 12rem 0;
         }
 
         h1 {
@@ -62,18 +64,16 @@ const Hero = () => (
           align-items: center;
           color: #fff;
           overflow: hidden;
-          z-index: 2;
-          min-height: 90rem;
         }
 
-        section::after {
+        section::before {
+          z-index: 1;
           content: '';
-          position: absolute;
-          top: 67vw;
-          background-color: #000;
-          transform: skewY(-45deg);
-          height: 250vw;
+          bottom: 0;
           width: 100%;
+          height: 100%;
+          position: absolute;
+          background: linear-gradient(135deg, transparent 50%, #000 50%);
         }
 
         a {
@@ -83,17 +83,18 @@ const Hero = () => (
 
         .container {
           z-index: 2;
-          position: absolute;
+          position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 100%;
-          top: 10%;
         }
 
         .img-hero {
-          width: 100%;
-          height: 100%;
+          z-index: 0;
+          position: absolute;
+          max-width: 100%;
+          max-height: 100%;
           background: linear-gradient(
             180deg,
             rgba(51, 110, 107, 0.7) 0%,
@@ -103,6 +104,7 @@ const Hero = () => (
         }
 
         .img-hero img {
+          object-position: top;
           object-fit: cover;
           width: 100%;
           height: 100%;
@@ -112,6 +114,7 @@ const Hero = () => (
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin: 8rem 0 0;
         }
 
         .title span {
@@ -120,39 +123,65 @@ const Hero = () => (
         }
 
         .about {
-          margin: 8rem 0 0 40%;
-          padding: 0 2rem 0 0;
+          margin: 0 0 12rem 32rem;
+          padding: 0 4rem 0 0;
         }
 
         .about p {
           max-width: 30rem;
         }
 
+        @media screen and (max-width: 1080px) {
+          .img-hero {
+            max-height: unset;
+            height: 100%;
+          }
+          .img-hero img {
+            object-position: top left;
+            height: 70%;
+          }
+          section::before {
+            height: 110%;
+          }
+          .about {
+            margin: 0 0 12rem 16rem;
+          }
+        }
+
         @media screen and (max-width: 640px) {
           h1 {
             font-size: 4rem;
           }
-          section {
-            min-height: unset;
+          section::before {
+            height: 135%;
+            background: linear-gradient(160deg, transparent 50%, #000 50%);
           }
-          section::after {
-            top: 90vw;
-            transform: skewY(-22.5deg);
-            height: 450vw;
+          br {
+            display: none;
           }
-          .container {
-            position: relative;
-            margin: -80% 0 0 0;
+          .title {
+            margin: 3rem 0 0;
           }
           .about {
-            margin: 6rem 0 0 0;
-            padding: 0 2rem 4rem 2rem;
-            width: 100%;
-            max-width: unset;
+            padding: 0 2rem;
+            margin: 0 0 4.5rem 0;
           }
           .macbook {
-            margin: 10% 0 0 0;
             width: 90%;
+            max-width: unset;
+            margin: 3.5rem 0 8rem 0;
+          }
+        }
+
+        @media screen and (min-width: 1800px) {
+          .title {
+            margin: 16rem 0 0;
+          }
+          .macbook {
+            margin: 24rem 0 12rem 0;
+          }
+          section::before {
+            background: linear-gradient(160deg, transparent 50%, #000 50%);
           }
         }
       `}

@@ -21,7 +21,6 @@ export default () => (
         display: flex;
         justify-content: center;
         max-width: 1440px;
-        background-color: #000;
       }
 
       .svg-container {

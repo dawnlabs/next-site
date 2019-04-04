@@ -1,8 +1,11 @@
 import Lightning from './svg/lightning';
+import Arrow from './svg/arrow';
+import Icon from '../../icon-circle';
 
 const Intro = () => (
-  <section>
-    <div className="gradient" />
+  <section id="process">
+    <div className="corner-gradient" />
+
     <div className="container">
       <div className="content">
         <h4>TODO TODO TODO TODO</h4>
@@ -42,6 +45,10 @@ const Intro = () => (
     </div>
 
     <div className="content">
+      <Icon large>
+        <Arrow />
+      </Icon>
+
       <h4>Process Improvements</h4>
 
       <h2>Migration Made Easy</h2>
@@ -81,12 +88,11 @@ const Intro = () => (
 
         section::before {
           content: '';
-          background-color: #000;
-          transform: skewY(-45deg);
-          height: 180rem;
-          margin-top: -112rem;
+          top: 0rem;
           width: 100%;
-          z-index: 1;
+          height: 100%;
+          position: absolute;
+          background: linear-gradient(135deg, #000 50%, transparent 50%);
         }
 
         section p {
@@ -104,18 +110,24 @@ const Intro = () => (
         }
 
         .container {
+          position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
-          position: absolute;
-          z-index: 2;
           width: 100%;
-          top: 0;
         }
 
         .container .content {
-          color: #fff;
-          margin: 10rem 10rem 0 0;
+          max-width: 34rem;
+          margin: 10rem 10rem 0;
+        }
+
+        .content:not(:first-child) {
+          color: #000;
+        }
+
+        .content:not(:first-child) :global(div:first-child) {
+          margin-bottom: 3rem;
         }
 
         .img-container {
@@ -124,7 +136,7 @@ const Intro = () => (
           max-width: 64rem;
           width: 100%;
           padding: 0 4rem;
-          margin: -20rem 0 16rem 0;
+          margin: 10rem 0 14rem;
         }
 
         .zach {
@@ -135,18 +147,11 @@ const Intro = () => (
         }
 
         .lightning-container {
+          top: -250px;
+          right: -72px;
           position: absolute;
-          top: -14rem;
-          margin-left: 18rem;
-          width: 100%;
           display: flex;
           justify-content: center;
-        }
-
-        .content:last-child {
-          position: relative;
-          z-index: 1;
-          color: #000;
         }
 
         .button {
@@ -154,9 +159,11 @@ const Intro = () => (
           margin-top: 1rem;
         }
 
-        .gradient {
+        .corner-gradient {
           position: absolute;
-          top: 0;
+          display: none;
+          z-index: 0;
+          top: 40rem;
           left: 0;
           width: 100%;
           height: 55%;
@@ -171,67 +178,55 @@ const Intro = () => (
           background-clip: content-box;
         }
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 1080px) {
           .lightning-container {
-            top: -16rem;
-            margin-left: 12rem;
+            width: 50%;
           }
         }
+
         @media screen and (max-width: 640px) {
           section {
             align-items: flex-start;
           }
+
           section::before {
-            height: 180rem;
-            transform: skewY(-22.5deg);
-            margin-top: -130rem;
+            top: -6%;
+            background: linear-gradient(160deg, #000 50%, transparent 50%);
           }
-          .hulu {
-            height: 242px;
-            margin-right: 1rem;
-            width: 170%;
+
+          .container .content {
+            margin: 6rem 0 0 0;
           }
+
           .img-container {
-            margin: -10rem 0 8rem 0;
             max-width: unset;
             padding: 0 2rem;
+            margin: 6rem 0 7.5rem;
             width: 100%;
           }
+
+          .lightning-container {
+            top: -180px;
+            width: 80%;
+          }
+
           .next-container {
             display: none;
           }
+
           .img-container img {
             position: relative;
             z-index: 2;
           }
-          .lightning-container {
-            transform: scale(0.8);
-            top: -11rem;
-            margin-left: 8rem;
-          }
+
           .lightning-container :global(.icon) {
             display: none;
           }
-          .container .content {
-            margin: 6rem 0 0 0;
-          }
         }
-        @media screen and (max-width: 490px) {
+
+        @media screen and (max-width: 380px) {
           section::before {
-            margin-top: -125rem;
-          }
-          .img-container {
-            margin: -8rem 0 8rem 0;
-          }
-        }
-        @media screen and (max-width: 420px) {
-          section::before {
-            margin-top: -120rem;
-          }
-        }
-        @media screen and (max-width: 370px) {
-          section::before {
-            margin-top: -115rem;
+            top: -8%;
           }
         }
       `}

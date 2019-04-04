@@ -5,7 +5,8 @@ const Header = () => (
     <NextLogo color="#fff" />
     <nav>
       <a href="#about">About</a>
-      <a href="#technology">Technology</a>
+      <a href="#process">Process</a>
+      <a href="#improvements">Improvements</a>
       <a href="#conclusion">Conclusion</a>
     </nav>
     <style jsx>{`
@@ -14,11 +15,10 @@ const Header = () => (
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: absolute;
-        top: 2rem;
         max-width: 64rem;
         width: 100%;
         padding: 0 2rem;
+        margin: 2rem 0 0 0;
       }
 
       a {

@@ -223,7 +223,6 @@ const DesktopGallery = () => (
 
 const Gallery = () => (
   <section>
-    <div id="read-more" />
     <MobileGallery />
     <DesktopGallery />
     <style jsx>
@@ -236,22 +235,12 @@ const Gallery = () => (
           align-items: center;
           overflow-x: hidden;
           /* account for image scaling on hover */
-          padding: 4rem 0 8rem 0;
-        }
-        #read-more {
-          position: absolute;
-          visibility: hidden;
-          top: -40rem;
+          padding: 4rem 0;
         }
 
         @media screen and (max-width: 640px) {
           section {
             padding: 1.5rem 0 6rem 0;
-          }
-        }
-        @media screen and (max-width: 480px) {
-          #read-more {
-            top: -62rem;
           }
         }
       `}

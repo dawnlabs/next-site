@@ -1,9 +1,5 @@
-import LinesGallery from './lines-gallery';
-
 export default () => (
-  <div className="container">
-    <LinesGallery />
-
+  <section id="conclusion">
     <div className="content">
       <h4>The benefits of Next.js</h4>
 
@@ -26,20 +22,14 @@ export default () => (
     </div>
 
     <style jsx>{`
-      .placeholder {
-        width: 100%;
-        max-width: 1440px;
-        height: 300px;
-        background: #ffadad;
-        margin: 8rem 0;
-      }
-
-      .container {
+      section {
         z-index: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 0 8rem;
+        background: #1c1c1c;
       }
 
       a {
@@ -47,5 +37,5 @@ export default () => (
         color: #fff;
       }
     `}</style>
-  </div>
+  </section>
 );

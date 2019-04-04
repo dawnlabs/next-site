@@ -3,68 +3,68 @@ import Tilt from 'react-tilt';
 const images = [
   [
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Future',
-      link: 'https://music.freebandz.com/'
+      src: `/static/images/case-studies/hulu/gallery-0.jpg`,
+      alt: '11.22.63',
+      link: 'https://www.hulu.com/press/show/11-22-63'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Gab3',
-      link: 'https://www.instagram.com/gab3'
+      src: `/static/images/case-studies/hulu/gallery-1.jpg`,
+      alt: 'All Night',
+      link: 'https://www.hulu.com/press/show/all-night'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: '21 Savage',
-      link: 'https://www.21savage.com/'
+      src: `/static/images/case-studies/hulu/gallery-2.jpg`,
+      alt: 'Ask Dr. Ruth',
+      link: 'https://www.hulu.com/press/show/ask-dr-ruth/'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'SZA',
-      link: 'https://szactrl.com'
+      src: `/static/images/case-studies/hulu/gallery-3.jpg`,
+      alt: 'Ballet Now',
+      link: 'https://www.hulu.com/press/show/ballet-now'
     }
   ],
   [
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Tiffany Young',
-      link: 'https://tiffanyyoungmusic.us/'
+      src: `/static/images/case-studies/hulu/gallery-4.jpg`,
+      alt: 'Batman & Bill',
+      link: 'https://www.hulu.com/press/show/batman-and-bill'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Killy',
-      link: 'https://Killy.co'
+      src: `/static/images/case-studies/hulu/gallery-5.jpg`,
+      alt: 'Becoming Bond',
+      link: 'https://www.hulu.com/press/show/becoming-bond'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Vintage Lee',
-      link: 'https://vintageLee.com'
+      src: `/static/images/case-studies/hulu/gallery-6.jpg`,
+      alt: 'Castle Rock',
+      link: 'https://www.hulu.com/press/show/castle-rock'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Future',
-      link: 'https://music.freebandz.com/'
+      src: `/static/images/case-studies/hulu/gallery-7.jpg`,
+      alt: 'Casual',
+      link: 'https://www.hulu.com/press/show/casual'
     }
   ],
   [
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Tiffany Young',
-      link: 'https://tiffanyyoungmusic.us/'
+      src: `/static/images/case-studies/hulu/gallery-8.jpg`,
+      alt: 'Catch-22',
+      link: 'https://www.hulu.com/press/show/catch-22'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Killy',
-      link: 'https://Killy.co'
+      src: `/static/images/case-studies/hulu/gallery-9.jpg`,
+      alt: 'Chance',
+      link: 'https://www.hulu.com/press/show/chance'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Vintage Lee',
-      link: 'https://vintageLee.com'
+      src: `/static/images/case-studies/hulu/gallery-10.jpg`,
+      alt: 'Crime + Punishment',
+      link: 'https://www.hulu.com/press/show/crime-+-punishment'
     },
     {
-      src: `/static/images/case-studies/hulu/zach.jpg`,
-      alt: 'Future',
-      link: 'https://music.freebandz.com/'
+      src: `/static/images/case-studies/hulu/gallery-11.jpg`,
+      alt: 'Difficult People',
+      link: 'https://www.hulu.com/press/show/difficult-people'
     }
   ]
 ];
@@ -200,7 +200,7 @@ const DesktopGallery = () => (
       {`
         div {
           display: flex;
-          width: 115%;
+          width: 105%;
           margin: 1rem 0;
         }
         div > :global(.Tilt) {

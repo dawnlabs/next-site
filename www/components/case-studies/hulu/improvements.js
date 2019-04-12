@@ -2,12 +2,12 @@ import Rings from './svg/rings';
 
 const Improvements = () => (
   <section>
-    <img src="/static/svg/desktop.svg" className="tablet" />
+    <img src="/static/svg/desktop.svg" className="tablet" alt="Tablet" />
 
     <div className="content" id="improvements">
-      <h4>TODO TODO TODO TODO TODO</h4>
+      <h4>Technical Improvements</h4>
 
-      <h2>Technical Improvements (SEO)</h2>
+      <h2>TODO Technical Improvements (SEO)</h2>
 
       <p>
         A critical requirement for Hulu was{' '}
@@ -53,14 +53,14 @@ const Improvements = () => (
         <Rings />
       </div>
       <img
-        src={`/static/images/case-studies/hulu/engineers.jpg`}
+        src="/static/images/case-studies/hulu/engineers.jpg"
         alt="Hulu engineers working together"
         className="img-engineers"
       />
     </div>
 
     <div className="content">
-      <h4>TODO TODO TODO TODO</h4>
+      <h4>Organizational Improvements</h4>
 
       <h2>One Framework for Everyone</h2>
 

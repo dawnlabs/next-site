@@ -8,7 +8,7 @@ const Intro = () => (
 
     <div className="container">
       <div className="content">
-        <h4>TODO TODO TODO TODO</h4>
+        <h4>TODO</h4>
 
         <h2>Getting Started</h2>
 
@@ -35,7 +35,7 @@ const Intro = () => (
 
     <div className="img-container">
       <img
-        src={`/static/images/case-studies/hulu/zach.jpg`}
+        src="/static/images/case-studies/hulu/zach.jpg"
         alt="Zach Tanner"
         className="zach"
       />

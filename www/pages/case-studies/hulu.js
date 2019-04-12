@@ -33,10 +33,10 @@ export default () => {
       )}
       <SocialMeta
         title={title}
-        description="TODO TODO TODO TODO TOD"
-        image="TODOTODOTODO"
+        description="TODO"
+        image="TODO"
         url="https://nexts.org/case-studies/hulu"
-        keywords="TODO TODO TODO TODO TODO"
+        keywords="React, Migration, Web applications, TODO"
       />
       <div className="container">
         <Hero />

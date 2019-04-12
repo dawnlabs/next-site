@@ -31,7 +31,7 @@ const Improvements = () => (
       </div>
 
       <p>
-        Even when issues arose, Tanner found that error tracing with
+        Even when issues arose, Zack found that error tracing with
         server-rendered pages was far superior compared to any other solution
         he'd tried. By acting as a unified tool for managing both client and
         server-side rendering, Next.js provides amazing developer experience.
@@ -39,9 +39,9 @@ const Improvements = () => (
 
       <p>
         Finally, by using the CSS-in-JS solution that Next.js provides by
-        default, Tanner and team were able to implement optimized styles that
-        were code-split automatically. This meant each page would load only the
-        CSS it needed, keeping page-size small without compromising on on
+        default, Zack and team were able to implement optimized styles that were
+        code-split automatically. This meant each page would load only the CSS
+        it needed, keeping page-size small without compromising on on
         functionality. The Hulu teams also extended these defaults using
         sanctioned <code>next-plugins</code>, enhancing their setup to support
         existing global Sass files with minimal overhead.
@@ -68,7 +68,7 @@ const Improvements = () => (
         With the migration complete, a large amount of technical debt had
         vanished, but another powerful benefit arose. The frontend teams at Hulu
         were unified around a single platform, making it easier for developers
-        to be instantly productive no matter which codebase they were in. Tanner
+        to be instantly productive no matter which codebase they were in. Zack
         confirms, “devs would come and go and switch teams, but everyone
         understands Next. Everyone is on the same page.” The number of
         operational wins Hulu earned were on par with the technical ones.

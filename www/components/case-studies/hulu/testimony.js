@@ -6,11 +6,11 @@ const Testimony = () => (
         development and improving our product without getting bogged down with
         more advanced APIs / dev tooling.”
       </p>
-      <span>Zack Tanner, Hulu Software Engineer</span>
+      <span>Zack Tanner, Hulu Senior Software Engineer</span>
     </div>
 
     <p>
-      Tanner also found that Next forces developers to avoid common pitfalls. By
+      Zack also found that Next helps developers avoid common pitfalls. By
       having a single abstraction for handling difficult UI tasks, Next prevents
       developers from introducing problems incidentally—for example from
       over-fetching deep in the component tree. If a developer needed to fetch

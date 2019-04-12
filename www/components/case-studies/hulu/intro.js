@@ -68,11 +68,11 @@ const Intro = () => (
       <p>
         In fact, throughout the migration, the ability of Next.js to make the
         extraction of common issues and patterns as easy as possible was a
-        recurring theme. With each new version of Next.js, Tanner found they
-        were constantly deleting internal code in favor of framework integrated
-        tooling. Whenever the team needed to incorporate a new technology,
-        Next.js had either first-class support or an endorsed example for them
-        to follow.
+        recurring theme. With each new version of Next.js, Zack and the team
+        found they were constantly deleting internal code in favor of framework
+        integrated tooling. Whenever the team needed to incorporate a new
+        technology, Next.js had either first-class support or an endorsed
+        example for them to follow.
       </p>
     </div>
 

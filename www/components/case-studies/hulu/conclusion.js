@@ -6,7 +6,7 @@ export default () => (
       <h2>A Happier, More Productive Org</h2>
 
       <p>
-        One year into their journey, Tanner credits Next for fewer bugs, greater
+        One year into their journey, Zack credits Next for fewer bugs, greater
         productivity, and a happier engineering organization. As Next.js
         continues to improve, the Hulu team is excited to continually reap the
         rewards, passing them on to their users in the form of a more robust,

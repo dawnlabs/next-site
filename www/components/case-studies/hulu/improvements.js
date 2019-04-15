@@ -65,13 +65,20 @@ const Improvements = () => (
       <h2>One Framework for Everyone</h2>
 
       <p>
-        With the migration complete, a large amount of technical debt had
-        vanished, but another powerful benefit arose. The frontend teams at Hulu
-        were unified around a single platform, making it easier for developers
-        to be instantly productive no matter which codebase they were in. Zack
-        confirms, “devs would come and go and switch teams, but everyone
-        understands Next. Everyone is on the same page.” The number of
-        operational wins Hulu earned were on par with the technical ones.
+        Adopting Next.js early on in it's history required writing lots of
+        custom code to deal with the team's specific use cases. However, as the
+        ecosystem evolved, they were able to chip away at old abstractions and
+        let Next.js handle them directly.
+      </p>
+
+      <p>
+        As the migration progressed, a large amount of technical debt tapered,
+        but another powerful benefit arose. The frontend teams at Hulu were
+        unified around a single platform, reducing the time it would take
+        developers to be productive in a new codebase. Zack confirms, "devs
+        would come and go and switch teams, but everyone understands Next.
+        Everyone is on the same page." The number of operational wins Hulu
+        earned were on par with the technical ones.
       </p>
     </div>
 

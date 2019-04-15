@@ -6,14 +6,14 @@ export default () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="216" cy="216" r="95.5" stroke="white" stroke-dasharray="3 3" />
+    <circle cx="216" cy="216" r="95.5" stroke="white" strokeDasharray="3 3" />
     <circle
       opacity="0.6"
       cx="216"
       cy="216"
       r="135.5"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <circle
       opacity="0.5"
@@ -21,7 +21,7 @@ export default () => (
       cy="216"
       r="175.5"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <circle
       opacity="0.3"
@@ -29,7 +29,7 @@ export default () => (
       cy="216"
       r="215.5"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <g filter="url(#next-rings-filter-1)">
       <circle cx="216" cy="216" r="56" fill="white" />
@@ -46,9 +46,9 @@ export default () => (
         width="122"
         height="122"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

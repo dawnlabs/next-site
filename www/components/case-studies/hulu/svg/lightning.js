@@ -11,7 +11,7 @@ export default () => (
       cy="241"
       r="106.611"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <circle
       opacity="0.6"
@@ -19,7 +19,7 @@ export default () => (
       cy="241"
       r="151.241"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <circle
       opacity="0.5"
@@ -27,7 +27,7 @@ export default () => (
       cy="241"
       r="195.87"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <circle
       opacity="0.3"
@@ -35,7 +35,7 @@ export default () => (
       cy="241"
       r="240.5"
       stroke="white"
-      stroke-dasharray="3 3"
+      strokeDasharray="3 3"
     />
     <g filter="url(#lightning-rings-filter-1)" className="icon">
       <circle cx="241" cy="241" r="62.4815" fill="white" />
@@ -53,9 +53,9 @@ export default () => (
         width="140.963"
         height="140.963"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

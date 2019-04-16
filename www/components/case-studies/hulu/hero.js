@@ -186,6 +186,21 @@ const Hero = () => (
             max-width: unset;
           }
         }
+        @media screen and (max-width: 480px) {
+          section::before {
+            height: 130%;
+          }
+        }
+        @media screen and (max-width: 380px) {
+          section::before {
+            height: 135%;
+          }
+        }
+        @media screen and (max-width: 340px) {
+          section::before {
+            height: 140%;
+          }
+        }
 
         @media screen and (min-width: 1800px) {
           .title {

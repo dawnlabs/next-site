@@ -1,5 +1,6 @@
 import Header from './header';
 import Logos from './logos';
+import Macbook from './svg/macbook';
 
 const Hero = () => (
   <section>
@@ -17,7 +18,9 @@ const Hero = () => (
         <h1>Hulu</h1>
       </div>
 
-      <img src="/static/svg/desktop.svg" className="macbook" />
+      <div className="macbook">
+        <Macbook />
+      </div>
 
       <div className="about" id="about">
         <Logos />
@@ -41,12 +44,6 @@ const Hero = () => (
 
     <style jsx>
       {`
-        .macbook {
-          width: 85%;
-          max-width: 2400px;
-          margin: 10rem 0 12rem 0;
-        }
-
         h1 {
           line-height: 1.2;
           font-size: 6rem;
@@ -122,6 +119,14 @@ const Hero = () => (
           font-size: 1.5rem;
         }
 
+        .macbook {
+          display: flex;
+          justify-content: center;
+          width: 85%;
+          max-width: 2400px;
+          margin: 10rem 0;
+        }
+
         .about {
           margin: 0 0 12rem 32rem;
           padding: 0 4rem 0 0;
@@ -149,6 +154,9 @@ const Hero = () => (
           section::before {
             height: 120%;
           }
+          .macbook {
+            margin: 10rem 0 6rem;
+          }
           .about {
             margin: 0 0 12rem 16rem;
           }
@@ -159,7 +167,7 @@ const Hero = () => (
             font-size: 4rem;
           }
           section::before {
-            height: 135%;
+            height: 125%;
             background: linear-gradient(160deg, transparent 50%, #000 50%);
           }
           br {
@@ -173,9 +181,9 @@ const Hero = () => (
             margin: 0 0 4.5rem 0;
           }
           .macbook {
-            width: 90%;
+            width: 100%;
+            margin: 4rem 0 4rem;
             max-width: unset;
-            margin: 3.5rem 0 8rem 0;
           }
         }
 

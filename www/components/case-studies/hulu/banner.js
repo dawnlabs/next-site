@@ -11,7 +11,6 @@ export default () => (
       img {
         height: 100%;
         width: 100%;
-        border-radius: 8px;
       }
 
       .container {
@@ -37,9 +36,19 @@ export default () => (
         margin-right: 38rem;
       }
 
+      @media screen and (max-width: 760px) {
+        .svg-container :global(svg) {
+          margin-right: 28rem;
+        }
+      }
       @media screen and (max-width: 640px) {
         .svg-container {
           display: none;
+        }
+      }
+      @media screen and (min-width: 1440px) {
+        img {
+          border-radius: 8px;
         }
       }
     `}</style>

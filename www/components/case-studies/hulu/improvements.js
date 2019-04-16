@@ -1,8 +1,11 @@
 import Rings from './svg/rings';
+import Ipad from './svg/ipad';
 
 const Improvements = () => (
   <section>
-    <img src="/static/svg/desktop.svg" className="tablet" alt="Tablet" />
+    <div className="ipad">
+      <Ipad />
+    </div>
 
     <div className="content" id="improvements">
       <h4>Technical Improvements</h4>
@@ -85,12 +88,6 @@ const Improvements = () => (
     <div className="corner-gradient" />
     <style jsx>
       {`
-        .tablet {
-          max-width: 1600px;
-          width: 80%;
-          margin: 7rem 0 0;
-        }
-
         section {
           position: relative;
           display: flex;
@@ -121,6 +118,14 @@ const Improvements = () => (
         a {
           color: #000;
           text-decoration: underline;
+        }
+
+        .ipad {
+          display: flex;
+          justify-content: center;
+          max-width: 1440px;
+          width: 80%;
+          margin: 7rem 0 0;
         }
 
         .img-engineers {
@@ -154,7 +159,7 @@ const Improvements = () => (
           width: 100%;
         }
 
-        .content:first-of-type {
+        #improvements {
           padding: 8rem 2rem 0 2rem;
           color: #000;
         }
@@ -200,8 +205,10 @@ const Improvements = () => (
           section {
             align-items: flex-start;
           }
-          .tablet {
-            width: 100%;
+          .ipad {
+            width: 90%;
+            max-width: unset;
+            margin: 6rem auto 0 auto;
           }
           .img-engineers {
             width: 100%;
@@ -217,6 +224,10 @@ const Improvements = () => (
           .rings-container > :global(svg) {
             transform: scale(1);
           }
+          #improvements {
+            padding: 6rem 2rem 0 2rem;
+            color: #000;
+          }
         }
         @media screen and (max-width: 430px) {
           section::before {
@@ -224,8 +235,8 @@ const Improvements = () => (
           }
         }
         @media screen and (min-width: 1200px) {
-          .content:first-of-type {
-            padding: 8rem 2rem 8rem 2rem;
+          #improvements {
+            padding: 8rem 2rem;
           }
         }
         @media screen and (min-width: 1800px) {

@@ -7,7 +7,7 @@ const Improvements = () => (
       <Ipad />
     </div>
 
-    <div className="content" id="improvements">
+    <div className="top content" id="improvements">
       <h4>Technical Improvements</h4>
 
       <h2>TODO Technical Improvements (SEO)</h2>
@@ -62,7 +62,7 @@ const Improvements = () => (
       />
     </div>
 
-    <div className="content">
+    <div className="bottom content">
       <h4>Organizational Improvements</h4>
 
       <h2>One Framework for Everyone</h2>
@@ -159,7 +159,7 @@ const Improvements = () => (
           width: 100%;
         }
 
-        #improvements {
+        .content.top {
           padding: 8rem 2rem 0 2rem;
           color: #000;
         }
@@ -189,11 +189,13 @@ const Improvements = () => (
         }
 
         @media screen and (max-width: 1080px) {
-          .content:first-of-type {
-            padding: 8rem 2rem 0rem 2rem;
-          }
           .rings-container {
             transform: scale(0.8);
+          }
+        }
+        @media screen and (max-width: 760px) {
+          section::before {
+            top: 32rem;
           }
         }
 
@@ -224,18 +226,18 @@ const Improvements = () => (
           .rings-container > :global(svg) {
             transform: scale(1);
           }
-          #improvements {
+          .content.top {
             padding: 6rem 2rem 0 2rem;
             color: #000;
           }
         }
-        @media screen and (max-width: 430px) {
+        @media screen and (max-width: 360px) {
           section::before {
-            top: 40rem;
+            top: 36.5rem;
           }
         }
         @media screen and (min-width: 1200px) {
-          #improvements {
+          .content.top {
             padding: 8rem 2rem;
           }
         }

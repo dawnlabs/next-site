@@ -46,7 +46,7 @@ const Hero = () => (
       {`
         h1 {
           line-height: 1.2;
-          font-size: 6rem;
+          font-size: 5.5rem;
           margin: 0;
         }
 
@@ -68,7 +68,7 @@ const Hero = () => (
           content: '';
           bottom: 0;
           width: 100%;
-          height: 108%;
+          height: 100%;
           position: absolute;
           background: linear-gradient(135deg, transparent 50%, #000 50%);
         }
@@ -111,7 +111,7 @@ const Hero = () => (
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin: 8rem 0 0;
+          margin: 7rem 0 0;
         }
 
         .title span {
@@ -124,7 +124,7 @@ const Hero = () => (
           justify-content: center;
           width: 85%;
           max-width: 2400px;
-          margin: 10rem 0;
+          margin: 6rem 0;
         }
 
         .about {
@@ -155,7 +155,7 @@ const Hero = () => (
             height: 120%;
           }
           .macbook {
-            margin: 10rem 0 6rem;
+            margin: 4rem 0;
           }
           .about {
             margin: 0 0 12rem 16rem;

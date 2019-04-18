@@ -223,8 +223,12 @@ const DesktopGallery = () => (
 
 const Gallery = () => (
   <section>
-    <MobileGallery />
-    <DesktopGallery />
+    <img
+      src="/static/images/case-studies/hulu/devices.svg"
+      width={860}
+      height={442}
+      alt="Hulu displayed on all your devices"
+    />
     <style jsx>
       {`
         section {
@@ -234,8 +238,7 @@ const Gallery = () => (
           flex-direction: column;
           align-items: center;
           overflow-x: hidden;
-          /* account for image scaling on hover */
-          padding: 4rem 0;
+          padding: 7rem 0;
         }
 
         @media screen and (max-width: 640px) {

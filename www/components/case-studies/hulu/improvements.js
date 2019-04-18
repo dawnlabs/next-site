@@ -125,7 +125,7 @@ const Improvements = () => (
           justify-content: center;
           max-width: 1440px;
           width: 80%;
-          margin: 7rem 0 0;
+          margin: 0;
         }
 
         .img-engineers {
@@ -160,7 +160,7 @@ const Improvements = () => (
         }
 
         .content.top {
-          padding: 8rem 2rem 0 2rem;
+          padding: 0rem 2rem;
           color: #000;
         }
 

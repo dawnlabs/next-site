@@ -126,6 +126,7 @@ const Improvements = () => (
           max-width: 1440px;
           width: 80%;
           margin: 0;
+          padding: 4rem 0 0 0;
         }
 
         .img-engineers {
@@ -238,7 +239,7 @@ const Improvements = () => (
         }
         @media screen and (min-width: 1200px) {
           .content.top {
-            padding: 8rem 2rem;
+            padding: 0rem 2rem;
           }
         }
         @media screen and (min-width: 1800px) {

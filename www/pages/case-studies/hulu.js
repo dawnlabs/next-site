@@ -33,10 +33,10 @@ export default () => {
       )}
       <SocialMeta
         title={title}
-        description="TODO"
-        image="TODO"
+        description="TODO Find out how Hulu migrated to Next.js in order to modernize their frontend stack and ship code faster."
+        image="/static/twitter-cards/hulu.png"
         url="https://nexts.org/case-studies/hulu"
-        keywords="React, Migration, Web applications, TODO"
+        keywords="React, Migrate to Next.js, web applications, migration"
       />
       <div className="container">
         <Hero />

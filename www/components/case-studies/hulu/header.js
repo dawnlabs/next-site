@@ -6,7 +6,7 @@ const Header = () => (
     <nav>
       <a href="#about">About</a>
       <a href="#process">Process</a>
-      <a href="#improvements">Improvements</a>
+      <a href="#improvements">Technology</a>
       <a href="#conclusion">Conclusion</a>
     </nav>
     <style jsx>{`

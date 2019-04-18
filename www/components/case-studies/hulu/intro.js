@@ -8,9 +8,9 @@ const Intro = () => (
 
     <div className="container">
       <div className="content">
-        <h4>TODO</h4>
+        <h4>Getting Started</h4>
 
-        <h2>Getting Started</h2>
+        <h2>Upgrading the Developer Experience</h2>
 
         <p>
           At the beginning of 2018, software engineer Zack Tanner began leading

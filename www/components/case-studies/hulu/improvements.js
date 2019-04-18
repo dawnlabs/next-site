@@ -10,7 +10,7 @@ const Improvements = () => (
     <div className="top content" id="improvements">
       <h4>Technical Improvements</h4>
 
-      <h2>TODO Technical Improvements (SEO)</h2>
+      <h2>Supercharged Applications</h2>
 
       <p>
         A critical requirement for Hulu was{' '}

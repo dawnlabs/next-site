@@ -32,6 +32,12 @@ export default () => (
         background: #1c1c1c;
       }
 
+      @media screen and (max-width: 640px) {
+        section {
+          padding-bottom: 5rem;
+        }
+      }
+
       a {
         text-decoration: underline;
         color: #fff;

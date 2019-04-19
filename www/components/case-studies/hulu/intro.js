@@ -87,6 +87,7 @@ const Intro = () => (
         }
 
         section::before {
+          z-index: 1;
           content: '';
           top: 0rem;
           width: 100%;
@@ -120,6 +121,7 @@ const Intro = () => (
         .container .content {
           max-width: 34rem;
           margin: 10rem 10rem 0;
+          z-index: 2;
         }
 
         .content:not(:first-child) {
@@ -136,7 +138,7 @@ const Intro = () => (
 
         .img-container {
           position: relative;
-          z-index: 1;
+          z-index: 3;
           max-width: 64rem;
           width: 100%;
           padding: 0 4rem;
@@ -165,20 +167,18 @@ const Intro = () => (
 
         .corner-gradient {
           position: absolute;
-          display: none;
           z-index: 0;
-          top: 40rem;
+          top: 42rem;
           left: 0;
           width: 100%;
-          height: 55%;
+          height: 30%;
           background: linear-gradient(
               180deg,
               #ffffff 0%,
-              rgba(255, 255, 255, 0) 164%
+              rgba(255, 255, 255, 0) 164.16%
             ),
             #333333;
           transform: rotate(180deg);
-          border-top: 1px solid transparent;
           background-clip: content-box;
         }
 
@@ -198,8 +198,13 @@ const Intro = () => (
             background: linear-gradient(160deg, #000 50%, transparent 50%);
           }
 
-          .container .content {
+          .container .content,
+          .container .content.getting-started {
             margin: 6rem 0 0 0;
+          }
+
+          .corner-gradient {
+            display: none;
           }
 
           .img-container {

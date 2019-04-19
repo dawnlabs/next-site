@@ -104,6 +104,7 @@ const Improvements = () => (
           height: 100%;
           position: absolute;
           background: linear-gradient(135deg, transparent 50%, #1c1c1c 50%);
+          z-index: 1;
         }
 
         h4 {
@@ -189,6 +190,22 @@ const Improvements = () => (
           text-transform: uppercase;
         }
 
+        .corner-gradient {
+          position: absolute;
+          z-index: 0;
+          top: 105rem;
+          left: 0;
+          width: 100%;
+          height: 30%;
+          background: linear-gradient(
+              180deg,
+              #ffffff 0%,
+              rgba(255, 255, 255, 0) 164.16%
+            ),
+            #333333;
+          background-clip: content-box;
+        }
+
         @media screen and (max-width: 1080px) {
           .rings-container {
             transform: scale(0.8);
@@ -230,6 +247,9 @@ const Improvements = () => (
           .content.top {
             padding: 6rem 2rem 0 2rem;
             color: #000;
+          }
+          .corner-gradient {
+            display: none;
           }
         }
         @media screen and (max-width: 360px) {

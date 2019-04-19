@@ -259,19 +259,22 @@ const Improvements = () => (
             top: 36.5rem;
           }
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1100px) {
           .content.top {
             padding: 0rem 2rem;
+          }
+          .corner-gradient {
+            top: 112rem;
           }
         }
         @media screen and (min-width: 1600px) {
           .corner-gradient {
-            top: 118rem;
+            top: 121rem;
           }
         }
         @media screen and (min-width: 1800px) {
           section::before {
-            top: 48rem;
+            top: 36rem;
           }
         }
       `}

@@ -157,6 +157,9 @@ const Hero = () => (
           .macbook {
             margin: 4rem 0;
           }
+          .macbook :global(svg) {
+            height: 360px;
+          }
           .about {
             margin: 0 0 12rem 16rem;
           }
@@ -184,6 +187,9 @@ const Hero = () => (
             width: 100%;
             margin: 4rem 0 4rem;
             max-width: unset;
+          }
+          .macbook :global(svg) {
+            height: 248px;
           }
         }
         @media screen and (max-width: 480px) {

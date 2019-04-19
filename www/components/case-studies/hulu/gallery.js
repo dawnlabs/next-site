@@ -11,8 +11,6 @@ const Gallery = () => (
     <img
       className="devices"
       src="/static/images/case-studies/hulu/devices.svg"
-      width={860}
-      height={442}
       alt="Hulu displayed on all your devices"
     />
     <style jsx>
@@ -36,6 +34,24 @@ const Gallery = () => (
 
         .devices {
           z-index: 1;
+          width: 860px;
+          height: 442px;
+        }
+
+        @media screen and (max-width: 860px) {
+          section {
+            overflow: hidden;
+          }
+          .devices {
+            width: 90%;
+            height: auto;
+          }
+          .rings-container {
+            top: 12rem;
+            left: 40%;
+            width: 100%;
+            transform: translateX(-50%);
+          }
         }
 
         @media screen and (max-width: 640px) {

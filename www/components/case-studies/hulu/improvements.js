@@ -230,6 +230,9 @@ const Improvements = () => (
             max-width: unset;
             margin: 0 auto;
           }
+          .ipad :global(svg) {
+            height: 300px;
+          }
           .img-engineers {
             width: 100%;
           }
@@ -245,7 +248,7 @@ const Improvements = () => (
             transform: scale(1);
           }
           .content.top {
-            padding: 6rem 2rem 0 2rem;
+            padding: 4rem 2rem 0 2rem;
             color: #000;
           }
           .corner-gradient {

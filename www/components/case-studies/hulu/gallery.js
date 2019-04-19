@@ -1,22 +1,22 @@
 const Gallery = () => (
   <section>
-    <div className="rings-container">
+    <div className="wrapper">
+      <img
+        className="devices"
+        src="/static/images/case-studies/hulu/devices.svg"
+        alt="Hulu displayed on all your devices"
+      />
       <img
         src="/static/images/case-studies/hulu/rings.svg"
         width={494}
         height={494}
         alt="Floating rings backdrop"
+        className="rings"
       />
     </div>
-    <img
-      className="devices"
-      src="/static/images/case-studies/hulu/devices.svg"
-      alt="Hulu displayed on all your devices"
-    />
     <style jsx>
       {`
         section {
-          position: relative;
           background: #fff;
           display: flex;
           flex-direction: column;
@@ -25,15 +25,19 @@ const Gallery = () => (
           padding: 5rem 0 7rem;
         }
 
-        .rings-container {
+        .wrapper {
+          position: relative;
+          z-index: 1;
+        }
+
+        .rings {
           position: absolute;
-          z-index: 0;
-          top: 3rem;
-          left: 26rem;
+          z-index: -1;
+          top: -1rem;
+          left: 14rem;
         }
 
         .devices {
-          z-index: 1;
           width: 860px;
           height: 442px;
         }
@@ -43,20 +47,20 @@ const Gallery = () => (
             overflow: hidden;
           }
           .devices {
+            position: relative;
             width: 90%;
             height: auto;
-          }
-          .rings-container {
-            top: 12rem;
-            left: 40%;
-            width: 100%;
+            left: 50%;
             transform: translateX(-50%);
+          }
+          .rings {
+            display: none;
           }
         }
 
         @media screen and (max-width: 640px) {
           section {
-            padding: 1.5rem 0 6rem 0;
+            padding: 3rem 0 5rem 0;
           }
         }
       `}

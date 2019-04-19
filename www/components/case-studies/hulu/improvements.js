@@ -211,7 +211,7 @@ const Improvements = () => (
           .ipad {
             width: 90%;
             max-width: unset;
-            margin: 6rem auto 0 auto;
+            margin: 0 auto;
           }
           .img-engineers {
             width: 100%;

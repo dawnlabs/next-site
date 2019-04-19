@@ -7,7 +7,7 @@ const Intro = () => (
     <div className="corner-gradient" />
 
     <div className="container">
-      <div className="content">
+      <div className="content getting-started">
         <h4>Getting Started</h4>
 
         <h2>Upgrading the Developer Experience</h2>
@@ -35,7 +35,7 @@ const Intro = () => (
 
     <div className="img-container">
       <img
-        src="/static/images/case-studies/hulu/zach.jpg"
+        src="/static/images/case-studies/hulu/zack.png"
         alt="Zach Tanner"
         className="zach"
       />
@@ -113,7 +113,7 @@ const Intro = () => (
           position: relative;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: start;
           width: 100%;
         }
 
@@ -124,6 +124,10 @@ const Intro = () => (
 
         .content:not(:first-child) {
           color: #000;
+        }
+
+        .container .content.getting-started {
+          margin: 10rem 0 0 10rem;
         }
 
         .content:not(:first-child) :global(div:first-child) {

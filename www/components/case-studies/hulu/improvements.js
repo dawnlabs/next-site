@@ -193,7 +193,7 @@ const Improvements = () => (
         .corner-gradient {
           position: absolute;
           z-index: 0;
-          top: 105rem;
+          top: 106rem;
           left: 0;
           width: 100%;
           height: 30%;
@@ -203,7 +203,6 @@ const Improvements = () => (
               rgba(255, 255, 255, 0) 164.16%
             ),
             #333333;
-          background-clip: content-box;
         }
 
         @media screen and (max-width: 1080px) {
@@ -263,6 +262,11 @@ const Improvements = () => (
         @media screen and (min-width: 1200px) {
           .content.top {
             padding: 0rem 2rem;
+          }
+        }
+        @media screen and (min-width: 1600px) {
+          .corner-gradient {
+            top: 118rem;
           }
         }
         @media screen and (min-width: 1800px) {

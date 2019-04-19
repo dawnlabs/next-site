@@ -168,7 +168,7 @@ const Intro = () => (
         .corner-gradient {
           position: absolute;
           z-index: 0;
-          top: 42rem;
+          top: 38rem;
           left: 0;
           width: 100%;
           height: 30%;
@@ -179,7 +179,6 @@ const Intro = () => (
             ),
             #333333;
           transform: rotate(180deg);
-          background-clip: content-box;
         }
 
         @media screen and (max-width: 1080px) {
@@ -236,6 +235,12 @@ const Intro = () => (
         @media screen and (max-width: 380px) {
           section::before {
             top: -8%;
+          }
+        }
+
+        @media screen and (min-width: 1600px) {
+          .corner-gradient {
+            top: 20rem;
           }
         }
       `}

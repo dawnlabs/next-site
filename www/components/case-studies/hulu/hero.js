@@ -1,6 +1,5 @@
 import Header from './header';
 import Logos from './logos';
-import Macbook from './svg/macbook';
 
 const Hero = () => (
   <section>
@@ -19,7 +18,10 @@ const Hero = () => (
       </div>
 
       <div className="macbook">
-        <Macbook />
+        <img
+          src="/static/images/case-studies/hulu/macbook.png"
+          alt="Hulu landing page on desktop computer"
+        />
       </div>
 
       <div className="about" id="about">
@@ -132,6 +134,12 @@ const Hero = () => (
           margin: 6rem 0;
         }
 
+        .macbook img {
+          max-width: 90%;
+          max-height: 628.22px;
+          box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12);
+        }
+
         .about {
           margin: 0 0 12rem 32rem;
           padding: 0 4rem 0 0;
@@ -162,8 +170,8 @@ const Hero = () => (
           .macbook {
             margin: 4rem 0;
           }
-          .macbook :global(svg) {
-            height: 360px;
+          .macbook img {
+            height: 400px;
           }
           .about {
             margin: 0 0 12rem 16rem;
@@ -193,7 +201,7 @@ const Hero = () => (
             margin: 4rem 0 4rem;
             max-width: unset;
           }
-          .macbook :global(svg) {
+          .macbook img {
             height: 248px;
           }
         }

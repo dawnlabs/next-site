@@ -34,10 +34,13 @@ const Intro = () => (
     </div>
 
     <div className="img-container">
-      <img
+      <amp-img
         src="/static/images/case-studies/hulu/zack.png"
         alt="Zack Tanner"
         className="zack"
+        width={980}
+        height={653}
+        layout="responsive"
       />
       <div className="lightning-container">
         <amp-img

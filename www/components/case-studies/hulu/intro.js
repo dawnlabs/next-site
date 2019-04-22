@@ -1,4 +1,3 @@
-import Lightning from './svg/lightning';
 import Arrow from './svg/arrow';
 import Icon from '../../icon-circle';
 
@@ -40,7 +39,11 @@ const Intro = () => (
         className="zack"
       />
       <div className="lightning-container">
-        <Lightning />
+        <amp-img
+          src="/static/images/case-studies/hulu/lightning.svg"
+          width={482}
+          height={482}
+        />
       </div>
     </div>
 

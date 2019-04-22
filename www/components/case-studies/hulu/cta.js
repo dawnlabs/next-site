@@ -2,7 +2,7 @@ export default () => (
   <div className="container">
     <div>
       <h2>
-        Find Out How Next.js Can Empower <br /> Your Team Today
+        Find Out How Next.js Can <br /> Empower Your Team Today
       </h2>
       <a href="/learn">
         <button>Read More</button>
@@ -25,7 +25,7 @@ export default () => (
           align-items: center;
           max-width: 64rem;
           width: 100%;
-          padding: 6rem 2rem;
+          padding: 5rem 2rem;
           border-top: 1px solid #000;
         }
 
@@ -37,6 +37,7 @@ export default () => (
 
         h2 {
           line-height: 1.4;
+          margin: 0;
         }
 
         @media screen and (max-width: 640px) {

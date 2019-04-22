@@ -70,7 +70,8 @@ export default () => {
 
           .container h2 {
             font-size: 2.25rem;
-            margin: 0;
+            margin: 1.75rem 0 2rem;
+            line-height: 1.2;
           }
 
           .container h3 {

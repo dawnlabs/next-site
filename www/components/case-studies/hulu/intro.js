@@ -36,8 +36,8 @@ const Intro = () => (
     <div className="img-container">
       <img
         src="/static/images/case-studies/hulu/zack.png"
-        alt="Zach Tanner"
-        className="zach"
+        alt="Zack Tanner"
+        className="zack"
       />
       <div className="lightning-container">
         <Lightning />
@@ -129,7 +129,8 @@ const Intro = () => (
         }
 
         .container .content.getting-started {
-          margin: 10rem 0 0 10rem;
+          margin: 10rem auto 0;
+          max-width: 38rem;
         }
 
         .content:not(:first-child) :global(div:first-child) {
@@ -145,10 +146,11 @@ const Intro = () => (
           margin: 10rem 0 14rem;
         }
 
-        .zach {
+        .zack {
           width: 100%;
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08),
-            0px 39px 69px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25),
+            0 18px 36px -18px rgba(0, 0, 0, 0.3),
+            0 -12px 36px -8px rgba(0, 0, 0, 0.025);
           border-radius: 8px;
         }
 

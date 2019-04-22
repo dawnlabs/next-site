@@ -44,7 +44,7 @@ const Improvements = () => (
         Finally, by using the CSS-in-JS solution that Next.js provides by
         default, Zack and team were able to implement optimized styles that were
         code-split automatically. This meant each page would load only the CSS
-        it needed, keeping page-size small without compromising on on
+        it needed, keeping page-size small without compromising on
         functionality. The Hulu teams also extended these defaults using
         sanctioned <code>next-plugins</code>, enhancing their setup to support
         existing global Sass files with minimal overhead.
@@ -162,6 +162,7 @@ const Improvements = () => (
         }
 
         .content.top {
+          margin-top: 2rem;
           padding: 0rem 2rem;
           color: #000;
         }

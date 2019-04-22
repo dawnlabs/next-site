@@ -50,6 +50,11 @@ const Hero = () => (
           margin: 0;
         }
 
+        h2 {
+          line-height: 1.2;
+          margin: 2rem 0;
+        }
+
         h4 {
           margin: 0 0 1.6rem;
         }

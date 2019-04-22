@@ -136,6 +136,8 @@ const Improvements = () => (
           max-width: 822px;
           max-height: 632px;
 
+          border-radius: 37px;
+          overflow: hidden;
           box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12),
             0px -12px 36px rgba(0, 0, 0, 0.03);
         }
@@ -264,6 +266,9 @@ const Improvements = () => (
           }
           .corner-gradient {
             display: none;
+          }
+          .ipad img {
+            border-radius: 16px;
           }
         }
         @media screen and (max-width: 360px) {

@@ -231,7 +231,7 @@ const Intro = () => (
             display: none;
           }
 
-          .img-container img {
+          .img-container > amp-img {
             position: relative;
             z-index: 2;
           }

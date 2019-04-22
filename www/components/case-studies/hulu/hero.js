@@ -18,9 +18,12 @@ const Hero = () => (
       </div>
 
       <div className="macbook">
-        <img
+        <amp-img
           src="/static/images/case-studies/hulu/macbook.png"
           alt="Hulu landing page on desktop computer"
+          width={1093}
+          height={628}
+          sizes="(max-width: 480px) 423px, (max-width: 860px) 683px, 100vw"
         />
       </div>
 
@@ -129,14 +132,12 @@ const Hero = () => (
         .macbook {
           display: flex;
           justify-content: center;
-          width: 85%;
           max-width: 2400px;
           margin: 6rem 0;
         }
 
-        .macbook img {
+        .macbook amp-img {
           max-width: 90%;
-          max-height: 628.22px;
           box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12);
         }
 
@@ -170,9 +171,6 @@ const Hero = () => (
           .macbook {
             margin: 4rem 0;
           }
-          .macbook img {
-            height: 400px;
-          }
           .about {
             margin: 0 0 12rem 16rem;
           }
@@ -200,9 +198,6 @@ const Hero = () => (
             width: 100%;
             margin: 4rem 0 4rem;
             max-width: unset;
-          }
-          .macbook img {
-            height: 248px;
           }
         }
         @media screen and (max-width: 480px) {

@@ -44,7 +44,7 @@ const Intro = () => (
       </div>
     </div>
 
-    <div className="content">
+    <div className="content" id="read-more">
       <Icon large>
         <Arrow />
       </Icon>

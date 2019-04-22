@@ -1,14 +1,22 @@
-import Next from './svg/next';
-
 export default () => (
   <div className="container">
+    <amp-img
+      width={1442 / 427}
+      height={1}
+      src="/static/images/case-studies/hulu/hulu.jpg"
+      alt="Hulu logo"
+      layout="responsive"
+    />
     <div className="svg-container">
-      <Next />
+      <amp-img
+        src="/static/images/case-studies/hulu/next.js.svg"
+        width={432}
+        height={432}
+      />
     </div>
-    <img src={`/static/images/case-studies/hulu/hulu.jpg`} alt="Hulu logo" />
 
     <style jsx>{`
-      img {
+      amp-img {
         height: 100%;
         width: 100%;
       }
@@ -30,14 +38,14 @@ export default () => (
         justify-content: center;
       }
 
-      .svg-container :global(svg) {
+      .svg-container amp-img {
         flex-shrink: 0;
         width: 100%;
         margin-right: 38rem;
       }
 
       @media screen and (max-width: 760px) {
-        .svg-container :global(svg) {
+        .svg-container amp-img {
           margin-right: 28rem;
         }
       }
@@ -47,7 +55,7 @@ export default () => (
         }
       }
       @media screen and (min-width: 1440px) {
-        img {
+        .container > amp-img {
           border-radius: 8px;
         }
       }

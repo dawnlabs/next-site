@@ -3,9 +3,12 @@ import Rings from './svg/rings';
 const Improvements = () => (
   <section>
     <div className="ipad">
-      <img
+      <amp-img
         src="/static/images/case-studies/hulu/ipad-pro.png"
         alt="Hulu on iPad Pro"
+        width={822}
+        height={632}
+        sizes="(max-width: 480px) 300px, 100vw"
       />
     </div>
 
@@ -132,10 +135,7 @@ const Improvements = () => (
           padding: 7.5rem 0;
         }
 
-        .ipad img {
-          max-width: 822px;
-          max-height: 632px;
-
+        .ipad amp-img {
           border-radius: 37px;
           overflow: hidden;
           box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12),
@@ -242,10 +242,6 @@ const Improvements = () => (
             margin: 0 auto;
             padding: 6rem 0;
           }
-          .ipad img {
-            height: 100%;
-            width: 100%;
-          }
           .img-engineers {
             width: 100%;
           }
@@ -267,7 +263,7 @@ const Improvements = () => (
           .corner-gradient {
             display: none;
           }
-          .ipad img {
+          .ipad amp-img {
             border-radius: 16px;
           }
         }

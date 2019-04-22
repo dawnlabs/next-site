@@ -1,10 +1,12 @@
 import Rings from './svg/rings';
-import Ipad from './svg/ipad';
 
 const Improvements = () => (
   <section>
     <div className="ipad">
-      <Ipad />
+      <img
+        src="/static/images/case-studies/hulu/ipad-pro.png"
+        alt="Hulu on iPad Pro"
+      />
     </div>
 
     <div className="top content" id="improvements">
@@ -127,7 +129,15 @@ const Improvements = () => (
           max-width: 1440px;
           width: 80%;
           margin: 0;
-          padding: 4rem 0 0 0;
+          padding: 7.5rem 0;
+        }
+
+        .ipad img {
+          max-width: 822px;
+          max-height: 632px;
+
+          box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12),
+            0px -12px 36px rgba(0, 0, 0, 0.03);
         }
 
         .img-engineers {
@@ -162,7 +172,6 @@ const Improvements = () => (
         }
 
         .content.top {
-          margin-top: 2rem;
           padding: 0rem 2rem;
           color: #000;
         }
@@ -229,9 +238,11 @@ const Improvements = () => (
             width: 90%;
             max-width: unset;
             margin: 0 auto;
+            padding: 6rem 0;
           }
-          .ipad :global(svg) {
-            height: 300px;
+          .ipad img {
+            height: 100%;
+            width: 100%;
           }
           .img-engineers {
             width: 100%;
@@ -248,7 +259,7 @@ const Improvements = () => (
             transform: scale(1);
           }
           .content.top {
-            padding: 4rem 2rem 0 2rem;
+            padding: 0rem 2rem;
             color: #000;
           }
           .corner-gradient {

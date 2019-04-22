@@ -8,7 +8,7 @@ const Hero = () => (
     <Header />
 
     <div className="img-hero">
-      <img src={`/static/images/case-studies/hulu/hero.jpg`} />
+      <img src="/static/images/case-studies/hulu/hero.jpg" />
     </div>
 
     <div className="container">
@@ -110,7 +110,7 @@ const Hero = () => (
         .img-hero img {
           object-position: top;
           object-fit: cover;
-          width: 100%;
+          width: 100vw;
           height: 100%;
         }
 

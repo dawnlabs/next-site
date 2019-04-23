@@ -8,7 +8,12 @@ const Hero = () => (
     <Header />
 
     <div className="img-hero">
-      <img src="/static/images/case-studies/hulu/hero.jpg" />
+      <amp-img
+        width={3159}
+        height={1777}
+        src="/static/images/case-studies/hulu/hero.jpg"
+        sizes="100vw"
+      />
     </div>
 
     <div className="container">
@@ -102,6 +107,7 @@ const Hero = () => (
           position: absolute;
           max-width: 100%;
           max-height: 100%;
+          height: 100%;
           background: linear-gradient(
             180deg,
             rgba(51, 110, 107, 0.7) 0%,
@@ -110,10 +116,9 @@ const Hero = () => (
           );
         }
 
-        .img-hero img {
+        .img-hero amp-img {
           object-position: top;
           object-fit: cover;
-          width: 100vw;
           height: 100%;
         }
 
@@ -157,11 +162,7 @@ const Hero = () => (
         }
 
         @media screen and (max-width: 1080px) {
-          .img-hero {
-            max-height: unset;
-            height: 100%;
-          }
-          .img-hero img {
+          .img-hero amp-img {
             object-position: top left;
             height: 70%;
           }

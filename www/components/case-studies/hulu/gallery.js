@@ -6,7 +6,7 @@ const Gallery = () => (
         src="/static/images/case-studies/hulu/devices.svg"
         alt="Hulu displayed on all your devices"
       />
-      <img
+      <amp-img
         src="/static/images/case-studies/hulu/rings.svg"
         width={494}
         height={494}

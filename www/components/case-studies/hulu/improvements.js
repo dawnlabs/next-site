@@ -60,10 +60,13 @@ const Improvements = () => (
       <div className="rings-container">
         <Rings />
       </div>
-      <img
+      <amp-img
         src="/static/images/case-studies/hulu/engineers.jpg"
         alt="Hulu engineers working together"
         className="img-engineers"
+        width={932}
+        height={547}
+        sizes="(max-width: 1080px) 90vw, 100vw"
       />
     </div>
 
@@ -241,9 +244,6 @@ const Improvements = () => (
             max-width: unset;
             margin: 0 auto;
             padding: 6rem 0;
-          }
-          .img-engineers {
-            width: 100%;
           }
           .quote {
             margin: 3.5rem 0;

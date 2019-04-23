@@ -1,12 +1,16 @@
 const Gallery = () => (
   <section>
     <div className="wrapper">
-      <img
+      <amp-img
+        width={860}
+        height={442}
         className="devices"
         src="/static/images/case-studies/hulu/devices.svg"
         alt="Hulu displayed on all your devices"
+        sizes="(max-width: 1080px) 90vw, 100vw"
       />
       <amp-img
+        noloading
         src="/static/images/case-studies/hulu/rings.svg"
         width={494}
         height={494}
@@ -37,19 +41,12 @@ const Gallery = () => (
           left: 14rem;
         }
 
-        .devices {
-          width: 860px;
-          height: 442px;
-        }
-
         @media screen and (max-width: 860px) {
           section {
             overflow: hidden;
           }
           .devices {
             position: relative;
-            width: 90%;
-            height: auto;
             left: 50%;
             transform: translateX(-50%);
           }

@@ -10,7 +10,7 @@ const Gallery = () => (
         sizes="(max-width: 1080px) 90vw, 100vw"
       />
       <amp-img
-        noloading
+        noloading=""
         src="/static/images/case-studies/hulu/rings.svg"
         width={494}
         height={494}

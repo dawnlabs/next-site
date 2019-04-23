@@ -4,19 +4,49 @@ const LinesGallery = () => (
   <div className="container">
     <div className="images">
       <div>
-        <img src="/static/images/case-studies/hulu/lines-0.jpg" alt="" />
+        <amp-img
+          width={282}
+          height={166}
+          src="/static/images/case-studies/hulu/lines-0.jpg"
+          alt="Hulu lifestyle image"
+          sizes="(min-width: 1440px) 282px, 18.5vw"
+        />
       </div>
       <div>
-        <img src="/static/images/case-studies/hulu/lines-1.jpg" alt="" />
+        <amp-img
+          width={282}
+          height={166}
+          src="/static/images/case-studies/hulu/lines-1.jpg"
+          alt="Hulu lifestyle image"
+          sizes="(min-width: 1440px) 282px, 18.5vw"
+        />
       </div>
       <div>
-        <img src="/static/images/case-studies/hulu/lines-2.jpg" alt="" />
+        <amp-img
+          width={282}
+          height={166}
+          src="/static/images/case-studies/hulu/lines-2.jpg"
+          alt="Hulu lifestyle image"
+          sizes="(min-width: 1440px) 282px, 18.5vw"
+        />
       </div>
       <div>
-        <img src="/static/images/case-studies/hulu/lines-3.jpg" alt="" />
+        <amp-img
+          width={282}
+          height={166}
+          src="/static/images/case-studies/hulu/lines-3.jpg"
+          alt="Hulu lifestyle image"
+          sizes="(min-width: 1440px) 282px, 18.5vw"
+        />
       </div>
       <div>
-        <img src="/static/images/case-studies/hulu/lines-4.jpg" alt="" />
+        <amp-img
+          width={282}
+          height={166}
+          src="/static/images/case-studies/hulu/lines-4.jpg"
+          alt="Hulu lifestyle image"
+          sizes="(min-width: 1440px) 282px, 18.5vw"
+        />
       </div>
     </div>
 
@@ -61,6 +91,7 @@ const LinesGallery = () => (
         margin-right: 16px;
       }
 
+      amp-img,
       img {
         width: 100%;
         box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12);

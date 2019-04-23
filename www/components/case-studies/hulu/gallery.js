@@ -16,6 +16,7 @@ const Gallery = () => (
         height={494}
         alt="Floating rings backdrop"
         className="rings"
+        sizes="(min-width: 1200px) 60vw, 494px"
       />
     </div>
     <style jsx>
@@ -37,8 +38,8 @@ const Gallery = () => (
         .rings {
           position: absolute;
           z-index: -1;
-          top: -1rem;
-          left: 14rem;
+          top: -8%;
+          left: 27%;
         }
 
         @media screen and (max-width: 860px) {

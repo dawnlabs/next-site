@@ -29,7 +29,7 @@ const Hero = () => (
           alt="Hulu landing page on desktop computer"
           width={1093}
           height={628}
-          sizes="(max-width: 480px) 423px, (max-width: 860px) 683px, 100vw"
+          sizes="(max-width: 480px) 423px, (max-width: 860px) 683px, 76vw"
         />
       </div>
 

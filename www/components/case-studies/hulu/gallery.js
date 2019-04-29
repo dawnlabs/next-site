@@ -7,7 +7,7 @@ const Gallery = () => (
         className="devices"
         src="/static/images/case-studies/hulu/devices.svg"
         alt="Hulu displayed on all your devices"
-        sizes="(max-width: 1080px) 90vw, 100vw"
+        sizes="(max-width: 1080px) 90vw, 60vw"
       />
       <amp-img
         noloading=""
@@ -16,7 +16,7 @@ const Gallery = () => (
         height={494}
         alt="Floating rings backdrop"
         className="rings"
-        sizes="(min-width: 1200px) 60vw, 494px"
+        sizes="(min-width: 1200px) 34vw, 494px"
       />
     </div>
     <style jsx>

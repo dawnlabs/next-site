@@ -8,7 +8,7 @@ const Improvements = () => (
         alt="Hulu on iPad Pro"
         width={822}
         height={632}
-        sizes="(max-width: 480px) 300px, 100vw"
+        sizes="(max-width: 480px) 300px, 57vw"
       />
     </div>
 
@@ -66,7 +66,7 @@ const Improvements = () => (
         className="img-engineers"
         width={932}
         height={547}
-        sizes="(max-width: 1080px) 90vw, 100vw"
+        sizes="(max-width: 1080px) 90vw, 65vw"
       />
     </div>
 

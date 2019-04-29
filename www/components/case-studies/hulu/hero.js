@@ -10,8 +10,8 @@ const Hero = () => (
     <div className="img-hero">
       <amp-img
         noloading=""
-        width={3159}
-        height={1777}
+        width={2880}
+        height={3404}
         src="/static/images/case-studies/hulu/hero.jpg"
         sizes="100vw"
       />

@@ -284,9 +284,14 @@ const Improvements = () => (
             top: 112rem;
           }
         }
+        @media screen and (min-width: 1400px) {
+          .corner-gradient {
+            top: 120rem;
+          }
+        }
         @media screen and (min-width: 1600px) {
           .corner-gradient {
-            top: 121rem;
+            top: 128rem;
           }
         }
         @media screen and (min-width: 1800px) {

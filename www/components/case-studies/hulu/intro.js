@@ -245,7 +245,11 @@ const Intro = () => (
             top: 34rem;
           }
         }
-
+        @media screen and (min-width: 1400px) {
+          .corner-gradient {
+            top: 28rem;
+          }
+        }
         @media screen and (min-width: 1600px) {
           .corner-gradient {
             top: 20rem;

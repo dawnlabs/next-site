@@ -114,26 +114,18 @@ const Intro = () => (
           position: relative;
           display: flex;
           flex-direction: column;
-          align-items: start;
+          align-items: center;
           width: 100%;
         }
 
-        .container .content {
+        .content.getting-started {
           max-width: 34rem;
-          margin: 10rem 10rem 0;
+          margin: 10rem 20rem 0 0;
           z-index: 2;
         }
 
-        .content:not(:first-child) {
+        #read-more {
           color: #000;
-        }
-
-        .container .content.getting-started {
-          margin: 10rem auto 0;
-          max-width: 38rem;
-        }
-
-        .content:not(:first-child) :global(div:first-child) {
           margin-bottom: 3rem;
         }
 
@@ -186,6 +178,12 @@ const Intro = () => (
         @media screen and (max-width: 1080px) {
           .lightning-container {
             width: 50%;
+          }
+        }
+
+        @media screen and (max-width: 960px) {
+          .content.getting-started {
+            margin: 10rem 10rem 0 0;
           }
         }
 
@@ -253,6 +251,16 @@ const Intro = () => (
         @media screen and (min-width: 1600px) {
           .corner-gradient {
             top: 20rem;
+          }
+        }
+        @media screen and (min-width: 1800px) {
+          .corner-gradient {
+            top: 10rem;
+          }
+        }
+        @media screen and (min-width: 2000px) {
+          .corner-gradient {
+            top: 0rem;
           }
         }
       `}

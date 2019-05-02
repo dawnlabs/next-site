@@ -10,13 +10,13 @@ const Testimony = () => (
     </div>
 
     <p>
-      Zack also found that Next helps developers avoid common pitfalls. By
-      having a single abstraction for handling difficult UI tasks, Next prevents
-      developers from introducing problems incidentally—for example from
-      over-fetching deep in the component tree. If a developer needed to fetch
-      new data, they knew exactly where to look. Nobody needed to learn any of
-      the cumbersome underlying APIs and the team could trust Next to handle the
-      hard parts.
+      Zack also found that Next.js helps developers avoid common pitfalls. By
+      having a single abstraction for handling difficult UI tasks, Next.js
+      prevents developers from introducing problems incidentally—for example
+      from over-fetching deep in the component tree. If a developer needed to
+      fetch new data, they knew exactly where to look. Nobody needed to learn
+      any of the cumbersome underlying APIs and the team could trust Next.js to
+      handle the hard parts.
     </p>
 
     <style jsx>

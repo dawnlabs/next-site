@@ -20,7 +20,7 @@ const Intro = () => (
         </p>
 
         <p>
-          Hulu had already been using Next for greenfield applications, so it
+          Hulu had already been using Next.js for greenfield applications, so it
           was an obvious option when it came to choosing which framework to move
           to. This time, however, the team needed to migrate an existing
           production app—a challenge that comes with new difficulties of its

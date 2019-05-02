@@ -3,8 +3,8 @@ const Testimony = () => (
     <div className="container">
       <p>
         “Productivity has sky rocketed. We’re able to focus on feature
-        development and improving our product without getting bogged down with
-        more advanced APIs / dev tooling.”
+        development and improving our product, while Next.js handles the more
+        difficult tooling for us.”
       </p>
       <span>Zack Tanner, Hulu Senior Software Engineer</span>
     </div>

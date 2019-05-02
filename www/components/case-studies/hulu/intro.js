@@ -12,11 +12,11 @@ const Intro = () => (
         <h2>Upgrading the Developer Experience</h2>
 
         <p>
-          At the beginning of 2018, software engineer Zack Tanner and team began
-          leading the migration of the Hulu Account app off of a legacy
-          tech-stack, with the goal of unifying the developer organization and
-          modernizing their code in an effort to prevent bugs and increase
-          velocity.
+          At the beginning of 2018, senior software engineer Zack Tanner and
+          team began leading the migration of the Hulu Account app off of a
+          legacy tech-stack, with the goal of unifying the developer
+          organization and modernizing their code in an effort to prevent bugs
+          and increase velocity.
         </p>
 
         <p>

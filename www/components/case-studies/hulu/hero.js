@@ -108,7 +108,6 @@ const Hero = () => (
           position: absolute;
           max-width: 100%;
           max-height: 100%;
-          height: 100%;
           background: linear-gradient(
             180deg,
             rgba(51, 110, 107, 0.7) 0%,
@@ -118,8 +117,6 @@ const Hero = () => (
         }
 
         .img-hero amp-img {
-          object-position: top;
-          object-fit: cover;
           height: 100%;
         }
 
@@ -166,10 +163,6 @@ const Hero = () => (
         }
 
         @media screen and (max-width: 1080px) {
-          .img-hero amp-img {
-            object-position: top left;
-            height: 70%;
-          }
           section::before {
             height: 120%;
           }

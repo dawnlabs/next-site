@@ -1,8 +1,7 @@
 <svg width="482" height="482" viewBox="0 0 482 482" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="241" cy="241" r="106.611" stroke="white" stroke-dasharray="3 3"/>
 <circle opacity="0.6" cx="241" cy="241" r="151.241" stroke="white" stroke-dasharray="3 3"/>
-<circle opacity="0.5" cx="241" cy="241" r="195.87" stroke="white" stroke-dasharray="3 3"/>
-<circle opacity="0.3" cx="241" cy="241" r="240.5" stroke="white" stroke-dasharray="3 3"/>
+<circle opacity="0.4" cx="241" cy="241" r="195.87" stroke="white" stroke-dasharray="3 3"/>
 <g filter="url(#filter0_d)">
 <circle cx="241" cy="241" r="62.4815" fill="white"/>
 </g>

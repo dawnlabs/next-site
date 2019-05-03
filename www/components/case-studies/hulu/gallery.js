@@ -3,20 +3,11 @@ const Gallery = () => (
     <div className="wrapper">
       <amp-img
         width={860}
-        height={442}
+        height={492}
         className="devices"
-        src="/static/images/case-studies/hulu/devices.svg"
+        src="/static/images/case-studies/hulu/devices.jpg"
         alt="Hulu displayed on all your devices"
         sizes="(max-width: 1080px) 90vw, 60vw"
-      />
-      <amp-img
-        noloading=""
-        src="/static/images/case-studies/hulu/rings.svg"
-        width={494}
-        height={494}
-        alt="Floating rings backdrop"
-        className="rings"
-        sizes="(min-width: 1200px) 34vw, 494px"
       />
     </div>
     <style jsx>

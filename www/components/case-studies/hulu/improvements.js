@@ -65,7 +65,7 @@ const Improvements = () => (
         alt="Hulu engineers working together"
         className="img-engineers"
         width={932}
-        height={547}
+        height={635}
         sizes="(max-width: 1080px) 90vw, 65vw"
       />
     </div>
@@ -135,14 +135,11 @@ const Improvements = () => (
           max-width: 1440px;
           width: 80%;
           margin: 0;
-          padding: 7.5rem 0;
+          padding: 10rem 0;
         }
 
         .ipad amp-img {
-          border-radius: 37px;
           overflow: hidden;
-          box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12),
-            0px -12px 36px rgba(0, 0, 0, 0.03);
         }
 
         .img-engineers {
@@ -248,6 +245,12 @@ const Improvements = () => (
           .quote {
             margin: 3.5rem 0;
           }
+
+          .img-container {
+            padding: 0;
+            margin: 7.5rem auto;
+          }
+
           .rings-container {
             width: 100vw;
             top: -14rem;
@@ -262,9 +265,6 @@ const Improvements = () => (
           }
           .corner-gradient {
             display: none;
-          }
-          .ipad amp-img {
-            border-radius: 16px;
           }
         }
         @media screen and (max-width: 360px) {

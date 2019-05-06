@@ -107,6 +107,10 @@ const Intro = () => (
           margin: 2rem 0;
         }
 
+        section :global(.icon) {
+          margin-bottom: 3rem;
+        }
+
         a {
           display: inline-block;
           text-decoration: none;
